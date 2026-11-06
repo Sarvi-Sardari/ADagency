@@ -1,0 +1,133 @@
+2026-08-11 12:31:11 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:31:11 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:31:11 | INFO     | __main__ | Dataset  : carpet
+2026-08-11 12:31:11 | INFO     | __main__ | Classes  : single
+2026-08-11 12:31:11 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:31:11 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/carpet_123111_log.txt
+2026-08-11 12:31:11 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:31:12 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:31:12 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:31:14 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:31:14 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:31:14 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/carpet/train/good/183.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/carpet/train/good/024.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/carpet/train/good/215.png']
+2026-08-11 12:31:14 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:31:14 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:31:14 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:31:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:31:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:31:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:31:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1817518 44
+2026-08-11 12:31:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1817574 1304
+2026-08-11 12:31:14 | INFO     | models | [VLM] Inference completed in 0.485s (max_new_tokens=2040)
+2026-08-11 12:31:14 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/carpet/train/good/100.png in 0.485s
+2026-08-11 12:31:17 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['fabric']
+2026-08-11 12:31:17 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/carpet_object_labels.txt
+2026-08-11 12:31:17 | INFO     | __main__ | Object names: ['fabric']
+2026-08-11 12:31:17 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:31:17 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/carpet/good
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1850119 44
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1850175 1304
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1868459 44
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1868515 1304
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1895738 44
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1895794 1304
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:31:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:31:21 | INFO     | models | [VLM] Inference completed in 4.235s (max_new_tokens=2040)
+2026-08-11 12:31:21 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/carpet/good/processed_good_183_2026-08-11 12:31:21.json (inference_time=4.235s)
+2026-08-11 12:31:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:31:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:31:26 | INFO     | models | [VLM] Inference completed in 4.347s (max_new_tokens=2040)
+2026-08-11 12:31:26 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/carpet/good/processed_good_024_2026-08-11 12:31:26.json (inference_time=4.347s)
+2026-08-11 12:31:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:31:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:31:30 | INFO     | models | [VLM] Inference completed in 4.203s (max_new_tokens=2040)
+2026-08-11 12:31:30 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/carpet/good/processed_good_215_2026-08-11 12:31:30.json (inference_time=4.203s)
+2026-08-11 12:31:30 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:31:30 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:31:31 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:31:31 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/carpet/good
+2026-08-11 12:31:31 | DEBUG    | descriptor | Processing image description: processed_good_215_2026-08-11 12:31:30.json
+2026-08-11 12:31:31 | DEBUG    | descriptor | Raw description data: - Object 1 fabric
+    - Attribute 1 Type - woven textile with a consistent, tight interlacing pattern of threads forming a grid-like structure
+    - Attribute 2 Color - predominantly gray with subtle variations in tone; some threads appear lighter or darker, creating a mottled effect
+    - Attribute 3 Size - full frame coverage; dimensions not specified but occupies entire visual field
+    - Attribute 4 Material - composed of fine, possibly synthetic or natural fibers with a slightly textured surface
+    - Attribute 5 Composition - woven using intersecting warp and weft threads, likely in a plain weave pattern
+    - Attribute 6 Quantity - single continuous piece; no separate or multiple instances present
+    - Attribute 7 Relative Location - centered and fills the entire image area; no other objects or regions to define its position relative to
+    - Attribute 8 Orientation - flat, horizontal, and vertically aligned; no discernible tilt or rotation
+    - Attribute 9 Connection or Attachments - no visible seams, fasteners, or attachments; appears as a standalone, unattached fabric surface
+2026-08-11 12:31:31 | DEBUG    | descriptor | Processing image description: processed_good_024_2026-08-11 12:31:26.json
+2026-08-11 12:31:31 | DEBUG    | descriptor | Raw description data: - Object 1 fabric
+    - Attribute 1 Type - woven textile with a consistent, tight interlacing pattern of threads forming a grid-like structure
+    - Attribute 2 Color - predominantly dark gray with subtle variations in shade, creating a textured appearance with lighter gray threads interspersed
+    - Attribute 3 Size - full frame coverage, no specific dimensions provided; appears as a uniform rectangular surface
+    - Attribute 4 Material - synthetic or natural fiber threads, exhibiting a slightly rough texture with visible fiber ends and slight irregularities
+    - Attribute 5 Composition - composed of interwoven threads, likely a blend of fibers, with a balanced weave pattern showing no discernible dominant thread direction
+    - Attribute 6 Quantity - singular piece, no multiple instances present
+    - Attribute 7 Relative Location - occupies entire visual field, no other objects or surfaces adjacent to it
+    - Attribute 8 Orientation - flat, horizontal and vertical alignment of threads, consistent weave pattern across entire surface
+    - Attribute 9 Connection or Attachments - no visible seams, fasteners, or attachments; appears as a standalone, unconnected fabric surface
+2026-08-11 12:31:31 | DEBUG    | descriptor | Processing image description: processed_good_183_2026-08-11 12:31:21.json
+2026-08-11 12:31:31 | DEBUG    | descriptor | Raw description data: - Object 1 fabric
+    - Attribute 1 Type - woven textile with a consistent, tight grid pattern formed by interlaced threads
+    - Attribute 2 Color - dark gray with subtle variations in tone due to thread texture and lighting, creating a slightly mottled appearance
+    - Attribute 3 Size - full frame coverage, no specific dimensions provided; appears as a continuous, uniform surface
+    - Attribute 4 Material - textile fibers, likely synthetic or blended, with a slightly rough, matte finish
+    - Attribute 5 Composition - composed of interwoven threads forming a twill or basketweave pattern, with no visible reinforcements or additional layers
+    - Attribute 6 Quantity - single piece, no multiple instances present
+    - Attribute 7 Relative Location - occupies entire visible area of the image, centered and framed
+    - Attribute 8 Orientation - flat, horizontal and vertical threads aligned perpendicularly, forming a regular grid
+    - Attribute 9 Connection or Attachments - no visible seams, fastenings, or attachments; appears as a standalone, unattached surface
+2026-08-11 12:31:31 | DEBUG    | descriptor | Unique object keys found: {'fabric'}
+2026-08-11 12:31:31 | DEBUG    | descriptor | Class 'good' object description: {'fabric': ['-  Type - woven textile with a consistent, tight interlacing pattern of threads forming a grid-like structure\n    -  Color - predominantly gray with subtle variations in tone; some threads appear lighter or darker, creating a mottled effect\n    -  Size - full frame coverage; dimensions not specified but occupies entire visual field\n    -  Material - composed of fine, possibly synthetic or natural fibers with a slightly textured surface\n    -  Composition - woven using intersecting warp and weft threads, likely in a plain weave pattern\n    -  Quantity - single continuous piece; no separate or multiple instances present\n    -  Relative Location - centered and fills the entire image area; no other objects or regions to define its position relative to\n    -  Orientation - flat, horizontal, and vertically aligned; no discernible tilt or rotation\n    -  Connection or Attachments - no visible seams, fasteners, or attachments; appears as a standalone, unattached fabric surface', '-  Type - woven textile with a consistent, tight interlacing pattern of threads forming a grid-like structure\n    -  Color - predominantly dark gray with subtle variations in shade, creating a textured appearance with lighter gray threads interspersed\n    -  Size - full frame coverage, no specific dimensions provided; appears as a uniform rectangular surface\n    -  Material - synthetic or natural fiber threads, exhibiting a slightly rough texture with visible fiber ends and slight irregularities\n    -  Composition - composed of interwoven threads, likely a blend of fibers, with a balanced weave pattern showing no discernible dominant thread direction\n    -  Quantity - singular piece, no multiple instances present\n    -  Relative Location - occupies entire visual field, no other objects or surfaces adjacent to it\n    -  Orientation - flat, horizontal and vertical alignment of threads, consistent weave pattern across entire surface\n    -  Connection or Attachments - no visible seams, fasteners, or attachments; appears as a standalone, unconnected fabric surface', '-  Type - woven textile with a consistent, tight grid pattern formed by interlaced threads\n    -  Color - dark gray with subtle variations in tone due to thread texture and lighting, creating a slightly mottled appearance\n    -  Size - full frame coverage, no specific dimensions provided; appears as a continuous, uniform surface\n    -  Material - textile fibers, likely synthetic or blended, with a slightly rough, matte finish\n    -  Composition - composed of interwoven threads forming a twill or basketweave pattern, with no visible reinforcements or additional layers\n    -  Quantity - single piece, no multiple instances present\n    -  Relative Location - occupies entire visible area of the image, centered and framed\n    -  Orientation - flat, horizontal and vertical threads aligned perpendicularly, forming a regular grid\n    -  Connection or Attachments - no visible seams, fastenings, or attachments; appears as a standalone, unattached surface']}
+2026-08-11 12:31:35 | INFO     | models | [LLM] Inference completed in 4.096s (max_new_tokens=3000)
+2026-08-11 12:31:35 | INFO     | descriptor | [fabric] Object summarisation completed in 4.096s
+2026-08-11 12:31:35 | DEBUG    | descriptor | Summarised description for 'fabric': {
+  "fabric": {
+    "Type": "woven textile with a consistent, tight interlacing pattern of threads forming a grid-like structure, likely in a plain weave or twill/basketweave pattern",
+    "Color": "predominantly dark gray with subtle variations in tone and shade, creating a mottled or textured appearance due to thread texture and lighting",
+    "Size": "full frame coverage; no specific dimensions provided",
+    "Material": "synthetic or blended textile fibers with a slightly rough, matte finish and visible fiber ends",
+    "Composition": "composed of interwoven warp and weft threads in a balanced weave pattern, likely a blend of fibers with no visible reinforcements or additional layers",
+    "Quantity": "single continuous piece with no separate or multiple instances present",
+    "Relative Location": "centered and occupies the entire visual field, with no adjacent objects or surfaces",
+    "Orientation": "flat, horizontally and vertically aligned threads forming a regular grid with perpendicular alignment",
+    "Connection or Attachments": "no visible seams, fasteners, or attachments; appears as a standalone, unattached fabric surface"
+  }
+}
+2026-08-11 12:31:35 | DEBUG    | descriptor | Master description: {'fabric': {'Type': 'woven textile with a consistent, tight interlacing pattern of threads forming a grid-like structure, likely in a plain weave or twill/basketweave pattern', 'Color': 'predominantly dark gray with subtle variations in tone and shade, creating a mottled or textured appearance due to thread texture and lighting', 'Size': 'full frame coverage; no specific dimensions provided', 'Material': 'synthetic or blended textile fibers with a slightly rough, matte finish and visible fiber ends', 'Composition': 'composed of interwoven warp and weft threads in a balanced weave pattern, likely a blend of fibers with no visible reinforcements or additional layers', 'Quantity': 'single continuous piece with no separate or multiple instances present', 'Relative Location': 'centered and occupies the entire visual field, with no adjacent objects or surfaces', 'Orientation': 'flat, horizontally and vertically aligned threads forming a regular grid with perpendicular alignment', 'Connection or Attachments': 'no visible seams, fasteners, or attachments; appears as a standalone, unattached fabric surface'}}
+2026-08-11 12:31:35 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:31:35 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['carpet'] directly (no generation, no compiled file).
+2026-08-11 12:31:35 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:31:35 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:31:36 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:31:37 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:31:37 | DEBUG    | planner | Class directories for dataset 'carpet': ['good']
+2026-08-11 12:31:37 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/carpet/good
+2026-08-11 12:31:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:31:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:31:37 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:31:35_master_description.json
+2026-08-11 12:31:40 | INFO     | models | [VLM] Inference completed in 2.856s (max_new_tokens=2040)
+2026-08-11 12:31:40 | INFO     | planner | Planner steps generated in 2.856s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-11 12:31:40 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/carpet/good/good_2026-08-11 12:31:40_planner.txt
+2026-08-11 12:31:40 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the fabric surface?
+Step 2: Is there any bent, warped, crushed, punctured, torn, or broken thread or component?
+Step 3: Is there any missing thread, warp, or weft that is visible in the reference but absent in the candidate?
+Step 4: Is there any foreign object, debris, or loose part present on the fabric?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the fabric?
+Step 6: Is there any significant misalignment or incorrect assembly in the thread pattern compared to the reference?
+2026-08-11 12:31:40 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/carpet/performance/performance_20260811_123140.json
+2026-08-11 12:31:40 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/carpet
+2026-08-11 12:31:40 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/carpet_123111_log.txt

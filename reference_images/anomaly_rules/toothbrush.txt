@@ -1,0 +1,20 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Toothbrush",
+      "category": "structural_deformation",
+      "part_or_region": "bristle tufts on the toothbrush head",
+      "anomaly_name": "deformed or overlong bristles",
+      "visual_description": "One or more bristle tufts are conspicuously longer, bent, splayed, or spread across adjacent rows compared with the compact, separated tufts of a normal brush of the same color. Look at the top, sides, lower end, and interior of the head, including long strands that project beyond its outline. Do not flag the short loose tips and modest tuft texture variation visible on normal brushes."
+    },
+    {
+      "id": "A002",
+      "object_name": "Toothbrush",
+      "category": "foreign_object",
+      "part_or_region": "toothbrush head and bristle bed",
+      "anomaly_name": "foreign material on or between bristles",
+      "visual_description": "A distinct material or object lies on, crosses, or is lodged among the bristle tufts, interrupting their normal color and row pattern. Evidence may be a dark speck, pale lump, thin straight strand, or other bounded shape; these examples do not limit the rule to those materials. Distinguish it from normal dark or colored tuft bases, bristle tips, and lighting changes by its separate outline or texture."
+    }
+  ]
+}

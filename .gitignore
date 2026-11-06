@@ -1,0 +1,22 @@
+# Python / tooling caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Local data, checkpoints and results (see README: "not included in the repository")
+datasets/
+models/
+outputs/
+logs/
+
+# Private or machine-specific configuration
+configs/model_cluster_configs.yaml
+configs/experiments/
+
+# Managed vLLM server logs
+cluster_deployment/logs/

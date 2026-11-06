@@ -1,0 +1,124 @@
+2026-08-11 12:39:11 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:39:11 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:39:11 | INFO     | __main__ | Dataset  : leather
+2026-08-11 12:39:11 | INFO     | __main__ | Classes  : single
+2026-08-11 12:39:11 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:39:11 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/leather_123911_log.txt
+2026-08-11 12:39:11 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:39:12 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:39:12 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:39:13 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:39:13 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:39:13 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/leather/train/good/160.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/leather/train/good/021.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/leather/train/good/188.png']
+2026-08-11 12:39:13 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:39:13 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/leather_object_labels.txt
+2026-08-11 12:39:13 | INFO     | __main__ | Object names: ['Leather Surface']
+2026-08-11 12:39:13 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:39:13 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/leather/good
+2026-08-11 12:39:13 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:39:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:39:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:39:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:39:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1450196 44
+2026-08-11 12:39:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1450252 1304
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1370267 44
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1370323 1304
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1347123 44
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1347179 1304
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:39:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:39:16 | INFO     | models | [VLM] Inference completed in 2.635s (max_new_tokens=2040)
+2026-08-11 12:39:16 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/leather/good/processed_good_160_2026-08-11 12:39:16.json (inference_time=2.635s)
+2026-08-11 12:39:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:39:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:39:19 | INFO     | models | [VLM] Inference completed in 2.337s (max_new_tokens=2040)
+2026-08-11 12:39:19 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/leather/good/processed_good_021_2026-08-11 12:39:19.json (inference_time=2.337s)
+2026-08-11 12:39:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:39:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:39:21 | INFO     | models | [VLM] Inference completed in 2.338s (max_new_tokens=2040)
+2026-08-11 12:39:21 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/leather/good/processed_good_188_2026-08-11 12:39:21.json (inference_time=2.338s)
+2026-08-11 12:39:21 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:39:21 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:39:22 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:39:22 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/leather/good
+2026-08-11 12:39:22 | DEBUG    | descriptor | Processing image description: processed_good_188_2026-08-11 12:39:21.json
+2026-08-11 12:39:22 | DEBUG    | descriptor | Raw description data: - Object 1 Leather Surface
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:39:22 | DEBUG    | descriptor | Processing image description: processed_good_021_2026-08-11 12:39:19.json
+2026-08-11 12:39:22 | DEBUG    | descriptor | Raw description data: - Object 1 Leather Surface
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:39:22 | DEBUG    | descriptor | Processing image description: processed_good_160_2026-08-11 12:39:16.json
+2026-08-11 12:39:22 | DEBUG    | descriptor | Raw description data: - Object 1 Leather Surface
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:39:22 | DEBUG    | descriptor | Unique object keys found: {'Leather Surface'}
+2026-08-11 12:39:22 | DEBUG    | descriptor | Class 'good' object description: {'Leather Surface': ['-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description']}
+2026-08-11 12:39:25 | INFO     | models | [LLM] Inference completed in 2.268s (max_new_tokens=3000)
+2026-08-11 12:39:25 | INFO     | descriptor | [Leather Surface] Object summarisation completed in 2.268s
+2026-08-11 12:39:25 | DEBUG    | descriptor | Summarised description for 'Leather Surface': {
+  "Leather Surface": {
+    "Type": "Leather surface",
+    "Color": "Natural brown with subtle grain variation",
+    "Size": "5x5cm / 2x2 inches",
+    "Material": "Natural leather",
+    "Composition": "Animal hide (typically cowhide) tanned and finished with vegetable-based agents",
+    "Quantity": "One piece",
+    "Relative Location": "Attached to the underside of a wooden table surface",
+    "Orientation": "Horizontal and flat, aligned with the tabletop",
+    "Connection or Attachments": "Secured with hidden screws and a non-invasive adhesive layer"
+  }
+}
+2026-08-11 12:39:25 | DEBUG    | descriptor | Master description: {'Leather Surface': {'Type': 'Leather surface', 'Color': 'Natural brown with subtle grain variation', 'Size': '5x5cm / 2x2 inches', 'Material': 'Natural leather', 'Composition': 'Animal hide (typically cowhide) tanned and finished with vegetable-based agents', 'Quantity': 'One piece', 'Relative Location': 'Attached to the underside of a wooden table surface', 'Orientation': 'Horizontal and flat, aligned with the tabletop', 'Connection or Attachments': 'Secured with hidden screws and a non-invasive adhesive layer'}}
+2026-08-11 12:39:25 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:39:25 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['leather'] directly (no generation, no compiled file).
+2026-08-11 12:39:25 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:39:25 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:39:25 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:39:26 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:39:26 | DEBUG    | planner | Class directories for dataset 'leather': ['good']
+2026-08-11 12:39:26 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/leather/good
+2026-08-11 12:39:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:39:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:39:26 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:39:25_master_description.json
+2026-08-11 12:39:29 | INFO     | models | [VLM] Inference completed in 2.620s (max_new_tokens=2040)
+2026-08-11 12:39:29 | INFO     | planner | Planner steps generated in 2.620s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-11 12:39:29 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/leather/good/good_2026-08-11 12:39:29_planner.txt
+2026-08-11 12:39:29 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the leather surface?
+Step 2: Is there any warping, bending, crushing, puncturing, tearing, or snapping on the leather surface?
+Step 3: Is there any missing component compared to the reference image?
+Step 4: Is there any extra debris, foreign object, or liquid on the leather surface?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the leather surface?
+Step 6: Is there any significant misalignment or incorrect assembly orientation on the leather surface?
+2026-08-11 12:39:29 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/leather/performance/performance_20260811_123929.json
+2026-08-11 12:39:29 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/leather
+2026-08-11 12:39:29 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/leather_123911_log.txt

@@ -1,0 +1,3 @@
+Two_Pin_Connector: Two matching two-port lever splicing connector blocks joined by one yellow cable
+Three_Pin_Connector: Two matching three-port lever splicing connector blocks joined by one blue cable
+Five_Pin_Connector: Two matching five-port lever splicing connector blocks joined by one red cable

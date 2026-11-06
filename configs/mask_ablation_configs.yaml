@@ -1,0 +1,291 @@
+# Standalone XAI mask-ablation study
+# ==================================
+#
+# This stage reads an EXISTING anomaly-detection run. It never reruns or
+# changes anomaly detection, planner generation, rerun, standard mask
+# generation, or metrics.
+#
+# Safe default: compare dense/SLIC/SAM3/hybrid across keywords, phrases, and
+# keywords+phrases, using both YES-step and final reason/details evidence, on
+# one explicitly selected anomalous pilot image:
+#   python run_mask_ablation.py
+#
+# After inspecting the pilot heatmaps, overlays, and sharp binary masks, run
+# the same configured grid over every image and dataset explicitly with:
+#   python run_mask_ablation.py --full
+#
+# Resume after interruption by running the same command again. Existing valid
+# image masks are skipped. If any setting/evidence changed, the fingerprint
+# check stops that arm; explicitly pass --overwrite to regenerate it.
+
+# Existing run containing <dataset>/all_data_summary.jsonl.
+run_dir: "outputs/runs_mvtec_ad_v2/2026-09-08 17-13-49_ablation_001"
+
+# A simple list is sufficient. A per-dataset override is also accepted:
+#   - name: rs_darkblue_box
+#     include_rerun: false
+datasets:
+  - bottle
+  - cable
+  - capsule
+  - carpet
+  - grid
+  - hazelnut
+  - leather
+  - metal_nut
+  - pill
+  - screw
+  - tile
+  - transistor
+  - wood
+  - zipper
+
+# When true, rerun_result.jsonl is overlaid by image identity. A flipped image
+# uses the actual anomalous rerun step's question/reason/details. Rerun results
+# are never appended as duplicate images.
+include_rerun: true
+
+# Running the CLI without selectors uses this deliberately small pilot. All
+# configured datasets and methods remain available through --dataset/--method;
+# --full disables these defaults and the pilot image limit.
+default_datasets: [bottle]
+# Every selected method uses these exact images, making the comparison fair.
+# Change the basename here whenever you want a different pilot example.
+pilot_images:
+  #zivid_set_box: [processed_00036.png]
+  #zivid_lightblue_box: [processed_00001.png]
+  #zivid_darkblue_box: [processed_00042.png]
+  #rs_set_box: [processed_00057.png]
+default_methods:
+  #- paper_original_03
+  #- paper_original_04
+  #- final_dense_keywords_02
+  #- steps_dense_keywords
+  #- steps_dense_phrases
+  #- steps_dense_keywords_phrases
+  #- steps_slic_keywords
+  #- steps_slic_phrases
+  #- steps_slic_keywords_phrases
+  #- steps_sam3_keywords
+  #- steps_sam3_phrases
+  #- steps_sam3_keywords_phrases
+  #- steps_hybrid_keywords
+  #- steps_hybrid_phrases
+  #- steps_hybrid_keywords_phrases
+  #- final_dense_keywords
+  #- final_dense_phrases
+  #- final_dense_keywords_phrases
+  #- final_slic_keywords
+  #- final_slic_phrases
+  #- final_slic_keywords_phrases
+  #- final_sam3_keywords
+  #- final_sam3_phrases
+  #- final_sam3_keywords_phrases
+  #- final_hybrid_keywords
+  #- final_hybrid_phrases
+  #- final_hybrid_keywords_phrases
+max_attribution_images_per_dataset: 1
+
+models:
+  # The orchestration is adapter-based. qwen3_vl is bundled; a new model
+  # family is added by registering a differentiable adapter in xai_engine.py.
+  # Merely changing checkpoint size within Qwen3-VL needs no code change.
+  - name: qwen3_vl_8b
+    adapter: qwen3_vl
+    source: local
+    local_path: "models/Qwen3-VL-8B-Instruct"
+    huggingface_name: "Qwen/Qwen3-VL-8B-Instruct"
+
+final_only_defaults: &final_only_defaults
+  baseline_mode: blur
+  blur_kernel_mode: strong
+  reference_mode: none
+  method: "iGOS+"
+  L1: 1.0
+  L2: 0.05
+  L3: 15.0
+  gamma: 0.08
+  opt: NAG
+  momentum: 3
+  iterations: 4 #15 #12 #8 #4
+  ig_iter: 1 #5 #3 #2 #1
+  ig_schedule: fixed
+  ig_noise_std: 0.05
+  ig_noise_samples: 1
+  lr: 0.025
+  input_size: 336
+  size: 336
+  keyword_percentile: 50
+  keyword_threshold: 0.5
+  token_weighting: llr_sqrt
+  exclude_first_token: false
+  ensemble_seeds: [20]
+  num_superpixels: [120]
+  sp_compactness: 5.0
+  iter_schedule_base_n_seg: 120
+  iter_schedule_min_iterations: 4 #15 #12 #8 #4
+  iter_schedule_max_iterations: 4 #15 #12 #8 #4
+  iter_schedule_min_ig_iter: 1 #5 #3 #2 #1
+  iter_schedule_max_ig_iter: 1 #5 #3 #2 #1
+  sam3_model_id: "models/sam3_model"
+  sam3_repo_dir: "models/sam3"
+  sam3_text_prompts: ["object", "part", "component"] #"surface defect", "damaged area", "irregular region", "scratch", "crack", "stain", "dent", "contamination"]
+  sam3_confidence_threshold: 0.5
+  sam3_min_mask_area: 50
+  phrase_joint_iterations: 8 #4
+  phrase_union_weight: 0.85
+  phrase_min_deletion_score: 0.0
+  dense_l2_reduction: mean
+  mask_clamp_range: [0.02, 0.98]
+  grad_clip_norm: 5.0
+  dense_l2_floor_fraction: 0.01
+  # Select one intact reasoning-step map. Deletion AUC is minimized;
+  # insertion AUC is maximized, with their harmonic mean used for ranking.
+  step_map_filter: none
+  final_map_selection: balanced_auc
+  # Four curve points = eight metric forwards instead of roughly 100.
+  metric_num_steps: 4
+  save_intermediate_outputs: false
+  save_diagnostics: false
+  save_joint_heatmap: false
+  save_per_keyword_heatmaps: false
+  mask_smoothing: none
+  published_mask_mode: heatmap_hot_regions
+  published_mask_threshold: 0.60
+
+# Locked paper-fidelity profile. Select only this method with either:
+#   python3 run_mask_ablation.py --method paper_original
+# or put ``paper_original`` alone in ``default_methods`` above.
+#
+# These values come from Eqs. (6)--(8), the supplementary parameter study,
+# and the canonical repository defaults. The engine validates them together,
+# so changing one cannot silently produce a run labelled "paper" that uses a
+# notebook optimization shortcut. The method uses one continuous 32x32 mask,
+# bilinearly expanded to Qwen's grid and to the saved image; it does not use
+# SLIC, SAM3, phrases, per-patch trainable masks, or display Gaussian blur.
+paper_original_defaults: &paper_original_defaults
+  #implementation_profile: paper_original
+  mask_generation_mode: decision_output
+  segmentation_method: none
+  mask_content_mode: keyword_only
+  baseline_mode: blur
+  blur_kernel_mode: paper_repo
+  reference_mode: none
+  method: "iGOS+"
+  L1: 1.0
+  L2: 0.1
+  L3: 10.0
+  gamma: 0.2
+  opt: NAG
+  momentum: 3
+  iterations: 5
+  ig_iter: 5
+  ig_schedule: fixed
+  ig_noise_std: 0.2
+  ig_noise_samples: 1
+  lr: 10.0
+  input_size: 336
+  size: 32
+  keyword_threshold: 1.0
+  keyword_percentile: null
+  token_weighting: paper_sum
+  exclude_first_token: true
+  ensemble_seeds: [0]
+  step_map_filter: none
+  final_map_selection: balanced_auc
+  metric_num_steps: 50
+  save_intermediate_outputs: false
+  save_diagnostics: false
+  save_joint_heatmap: false
+  save_per_keyword_heatmaps: false
+  mask_smoothing: gaussian #none
+  published_mask_mode: continuous
+  published_mask_threshold: 0.60
+
+methods:
+  # Original paper calculation and repository-style heatmap/overlay rendering.
+  - name: paper_original
+    args: {<<: *paper_original_defaults}
+  - name: paper_original_02
+    args: {<<: *paper_original_defaults, input_size: 336, size: 336}
+  - name: paper_original_03
+    args: {<<: *paper_original_defaults, input_size: 32, size: 336}
+  - name: paper_original_04
+    args: {<<: *paper_original_defaults, input_size: 336, size: 336}
+
+  # Step-wise evidence: generate one candidate map per YES reasoning step and
+  # retain only the best balanced insertion/deletion candidate.
+  - name: steps_dense_keywords
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: none, mask_content_mode: keyword_only, iterations: 8, ig_iter: 2, iter_schedule_min_iterations: 8, iter_schedule_max_iterations: 8, iter_schedule_min_ig_iter: 2, iter_schedule_max_ig_iter: 2}
+  - name: steps_dense_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: none, mask_content_mode: phrase_only}
+  - name: steps_dense_keywords_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: none, mask_content_mode: both_combined,  iterations: 8, ig_iter: 2, iter_schedule_min_iterations: 8, iter_schedule_max_iterations: 8, iter_schedule_min_ig_iter: 2, iter_schedule_max_ig_iter: 2}
+  - name: steps_slic_keywords
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: slic, mask_content_mode: keyword_only}
+  - name: steps_slic_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: slic, mask_content_mode: phrase_only}
+  - name: steps_slic_keywords_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: slic, mask_content_mode: both_combined, iterations: 8, ig_iter: 2, iter_schedule_min_iterations: 8, iter_schedule_max_iterations: 8, iter_schedule_min_ig_iter: 2, iter_schedule_max_ig_iter: 2}
+  - name: steps_sam3_keywords
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: sam3, mask_content_mode: keyword_only}
+  - name: steps_sam3_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: sam3, mask_content_mode: phrase_only}
+  - name: steps_sam3_keywords_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: sam3, mask_content_mode: both_combined, iterations: 8, ig_iter: 2, iter_schedule_min_iterations: 8, iter_schedule_max_iterations: 8, iter_schedule_min_ig_iter: 2, iter_schedule_max_ig_iter: 2}
+  - name: steps_sam3_keywords_phrases_02
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: sam3, mask_content_mode: both_combined, iterations: 8, ig_iter: 2, iter_schedule_min_iterations: 8, iter_schedule_max_iterations: 8, iter_schedule_min_ig_iter: 2, iter_schedule_max_ig_iter: 2}
+  - name: steps_hybrid_keywords
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: hybrid, mask_content_mode: keyword_only}
+  - name: steps_hybrid_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: hybrid, mask_content_mode: phrase_only}
+  - name: steps_hybrid_keywords_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: hybrid, mask_content_mode: both_combined, iterations: 8, ig_iter: 2, iter_schedule_min_iterations: 8, iter_schedule_max_iterations: 8, iter_schedule_min_ig_iter: 2, iter_schedule_max_ig_iter: 2}
+  - name: steps_hybrid_keywords_phrases_02
+    args: {<<: *final_only_defaults, mask_generation_mode: yes_steps, segmentation_method: hybrid, mask_content_mode: both_combined, iterations: 8, ig_iter: 2, iter_schedule_min_iterations: 8, iter_schedule_max_iterations: 8, iter_schedule_min_ig_iter: 2, iter_schedule_max_ig_iter: 2}
+
+  # Consolidated evidence: one candidate made from final reason + details.
+  - name: final_dense_keywords
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: none, mask_content_mode: keyword_only, iterations: 12, ig_iter: 3, iter_schedule_min_iterations: 12, iter_schedule_max_iterations: 12, iter_schedule_min_ig_iter: 3, iter_schedule_max_ig_iter: 3}
+  #- name: final_dense_keywords_02
+  #- args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: none, mask_content_mode: keyword_only, iterations: 12, ig_iter: 3, iter_schedule_min_iterations: 12, iter_schedule_max_iterations: 12, iter_schedule_min_ig_iter: 3, iter_schedule_max_ig_iter: 3}
+  - name: final_dense_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: none, mask_content_mode: phrase_only}
+  - name: final_dense_keywords_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: none, mask_content_mode: both_combined, iterations: 12, ig_iter: 3, iter_schedule_min_iterations: 12, iter_schedule_max_iterations: 12, iter_schedule_min_ig_iter: 3, iter_schedule_max_ig_iter: 3}
+  - name: final_slic_keywords
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: slic, mask_content_mode: keyword_only}
+  - name: final_slic_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: slic, mask_content_mode: phrase_only}
+  - name: final_slic_keywords_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: slic, mask_content_mode: both_combined, iterations: 12, ig_iter: 3, iter_schedule_min_iterations: 12, iter_schedule_max_iterations: 12, iter_schedule_min_ig_iter: 3, iter_schedule_max_ig_iter: 3}
+  - name: final_sam3_keywords
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: sam3, mask_content_mode: keyword_only}
+  - name: final_sam3_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: sam3, mask_content_mode: phrase_only}
+  - name: final_sam3_keywords_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: sam3, mask_content_mode: both_combined, iterations: 12, ig_iter: 3, iter_schedule_min_iterations: 12, iter_schedule_max_iterations: 12, iter_schedule_min_ig_iter: 3, iter_schedule_max_ig_iter: 3}
+  - name: final_sam3_keywords_phrases_02
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: sam3, mask_content_mode: both_combined, iterations: 12, ig_iter: 3, iter_schedule_min_iterations: 12, iter_schedule_max_iterations: 12, iter_schedule_min_ig_iter: 3, iter_schedule_max_ig_iter: 3}
+  - name: final_hybrid_keywords
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: hybrid, mask_content_mode: keyword_only}
+  - name: final_hybrid_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: hybrid, mask_content_mode: phrase_only}
+  - name: final_hybrid_keywords_phrases
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: hybrid, mask_content_mode: both_combined, iterations: 12, ig_iter: 3, iter_schedule_min_iterations: 12, iter_schedule_max_iterations: 12, iter_schedule_min_ig_iter: 3, iter_schedule_max_ig_iter: 3}
+  - name: final_hybrid_keywords_phrases_02
+    args: {<<: *final_only_defaults, mask_generation_mode: final_reason_details, segmentation_method: hybrid, mask_content_mode: both_combined, iterations: 12, ig_iter: 3, iter_schedule_min_iterations: 12, iter_schedule_max_iterations: 12, iter_schedule_min_ig_iter: 3, iter_schedule_max_ig_iter: 3}
+
+# Each method/image retains one final colored heatmap and one exact float map.
+# The corresponding binary metrics mask is published under
+# masks/<xai_model_method>/. Logs and timing summaries remain available here.
+diagnostics_subdir: xai_mask_ablation
+
+# After masks are complete, invoke the unchanged metrics stage with a generated,
+# dataset-filtered config. Its verbose output is captured in the same XAI log;
+# the terminal only receives the final best XAI AUPRO / Pixel-AUROC summary.
+# Automatically suppressed during the one-image pilot; enabled by --full.
+evaluate_after_generation: true
+
+overwrite: false
+continue_on_error: true

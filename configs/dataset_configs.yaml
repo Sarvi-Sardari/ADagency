@@ -1,0 +1,48 @@
+dataset:
+  # Name used for generated folders, planners, descriptions and reports.
+  name: "toothbrush" # Name of the dataset. Used for generated folders, planners, descriptions and reports.
+
+  # Root directory of this dataset.
+  # Relative paths are resolved from the project root.
+  root_dir: "datasets/mvtec_ad/toothbrush"
+
+  # Number of classes of images in the dataset
+  # Allowed values:
+  # single   - Single class
+  # multi    - Multiple classes of images are present
+  classes: "multi"
+  # Required only when classes: "multi". One example image per class label, from dataset.train/good.
+  # Format: {class_label: "image_name.png"}
+  class_examples: {
+    Blue_Toothbrush: "000.png",
+    Red_Toothbrush: "020.png",
+    Yellow_Toothbrush: "040.png"
+  }
+
+  reference_selection:
+    number_of_images: 3 # Number of reference images selected per dataset or class.
+    random_seed: 42 # Makes random selection reproducible. #(Not used anywhere)
+    explicit_images: [] # Optional. For single-class datasets, non-empty paths override number_of_images and are resolved from dataset.root_dir.
+
+  anomaly_rules:
+    file: "prompts/anomaly_definition.json" # Legacy JSON: source of truth in method: "manual"; fallback source for the user-input generator otherwise.
+    key: "toothbrush" # Required (non-empty) when method is "manual". Optional fallback key otherwise.
+    method: "automatic" # "manual" uses anomaly_rules.file[key] directly; "automatic" interactively compiles reference_images/anomaly_rules/<dataset>.txt. ("manual" is recommended)
+    overwrite: false # Only checked when method: "automatic". false reuses the existing compiled file if present; true always regenerates it.    
+  
+  object_labels:
+    #Image name or id in <dataset>/train/good for getting the labels
+    label_example: "000.png" 
+    #If the object labels for description of image are already present then keep it as true and keep the classes in a the file prompts/object_labels/<dataset_name>_object_labels.txt. For eg, prompts/juice_bottle_object_labels.txt
+    # Set false to interactively generate batches of labels. Approved labels are appended
+    # after each batch; press q or quit when no more batches are needed.
+    use_previous_labels: true # If true, read labels from the existing cache without VLM generation.
+  
+  prompts_dir: "prompts/planner_pipeline" #Directory with all the prompts used in the pipeline
+
+  output:
+    reference_images_dir: "reference_images" # Selected reference images, outside outputs after config path resolution is updated.
+    preprocessed_reference_dir: "reference_images/preprocessed"
+    descriptions_dir: "reference_images/descriptions" #Directory that holds the initial descriptions of the 
+    master_descriptions_dir: "reference_images/master_descriptions"
+    planners_dir: "reference_images/planners/mvtec_ad_8B_planners"

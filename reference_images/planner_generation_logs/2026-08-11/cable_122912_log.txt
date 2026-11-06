@@ -1,0 +1,133 @@
+2026-08-11 12:29:12 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:29:12 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:29:12 | INFO     | __main__ | Dataset  : cable
+2026-08-11 12:29:12 | INFO     | __main__ | Classes  : single
+2026-08-11 12:29:12 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:29:12 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/cable_122912_log.txt
+2026-08-11 12:29:12 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:29:14 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:29:14 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:29:15 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:29:15 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:29:15 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/cable/train/good/146.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/cable/train/good/019.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/cable/train/good/172.png']
+2026-08-11 12:29:15 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:29:15 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:29:15 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:29:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:29:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:29:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:29:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1332717 44
+2026-08-11 12:29:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1332773 1304
+2026-08-11 12:29:15 | INFO     | models | [VLM] Inference completed in 0.505s (max_new_tokens=2040)
+2026-08-11 12:29:15 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/cable/train/good/100.png in 0.505s
+2026-08-11 12:29:18 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['cable']
+2026-08-11 12:29:18 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/cable_object_labels.txt
+2026-08-11 12:29:18 | INFO     | __main__ | Object names: ['cable']
+2026-08-11 12:29:18 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:29:18 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/cable/good
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1345619 44
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1345675 1304
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1369142 44
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1369198 1304
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1323119 44
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1323175 1304
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:29:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:29:21 | INFO     | models | [VLM] Inference completed in 2.326s (max_new_tokens=2040)
+2026-08-11 12:29:21 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/cable/good/processed_good_146_2026-08-11 12:29:21.json (inference_time=2.326s)
+2026-08-11 12:29:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:29:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:29:23 | INFO     | models | [VLM] Inference completed in 2.320s (max_new_tokens=2040)
+2026-08-11 12:29:23 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/cable/good/processed_good_019_2026-08-11 12:29:23.json (inference_time=2.320s)
+2026-08-11 12:29:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:29:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:29:25 | INFO     | models | [VLM] Inference completed in 2.299s (max_new_tokens=2040)
+2026-08-11 12:29:25 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/cable/good/processed_good_172_2026-08-11 12:29:25.json (inference_time=2.299s)
+2026-08-11 12:29:25 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:29:26 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:29:27 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:29:27 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/cable/good
+2026-08-11 12:29:27 | DEBUG    | descriptor | Processing image description: processed_good_172_2026-08-11 12:29:25.json
+2026-08-11 12:29:27 | DEBUG    | descriptor | Raw description data: - Object 1 cable
+    - Attribute 1 <Type> - detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:29:27 | DEBUG    | descriptor | Processing image description: processed_good_019_2026-08-11 12:29:23.json
+2026-08-11 12:29:27 | DEBUG    | descriptor | Raw description data: - Object 1 cable
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:29:27 | DEBUG    | descriptor | Processing image description: processed_good_146_2026-08-11 12:29:21.json
+2026-08-11 12:29:27 | DEBUG    | descriptor | Raw description data: - Object 1 cable
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:29:27 | DEBUG    | descriptor | Unique object keys found: {'cable'}
+2026-08-11 12:29:27 | DEBUG    | descriptor | Class 'good' object description: {'cable': ['-  <Type> - detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description']}
+2026-08-11 12:29:29 | INFO     | models | [LLM] Inference completed in 2.068s (max_new_tokens=3000)
+2026-08-11 12:29:29 | INFO     | descriptor | [cable] Object summarisation completed in 2.068s
+2026-08-11 12:29:29 | DEBUG    | descriptor | Summarised description for 'cable': {
+  "cable": {
+    "Type": "electrical cable",
+    "Color": "black with yellow stripes",
+    "Size": "5x5cm / 2x2 inches",
+    "Material": "flexible PVC sheath",
+    "Composition": "copper conductor core with insulating PVC layer",
+    "Quantity": "one unit",
+    "Relative Location": "mounted on the wall near the power outlet",
+    "Orientation": "horizontal and slightly angled downward",
+    "Connection or Attachments": "connected to a wall-mounted outlet with a screw terminal"
+  }
+}
+2026-08-11 12:29:29 | DEBUG    | descriptor | Master description: {'cable': {'Type': 'electrical cable', 'Color': 'black with yellow stripes', 'Size': '5x5cm / 2x2 inches', 'Material': 'flexible PVC sheath', 'Composition': 'copper conductor core with insulating PVC layer', 'Quantity': 'one unit', 'Relative Location': 'mounted on the wall near the power outlet', 'Orientation': 'horizontal and slightly angled downward', 'Connection or Attachments': 'connected to a wall-mounted outlet with a screw terminal'}}
+2026-08-11 12:29:29 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:29:29 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['cable'] directly (no generation, no compiled file).
+2026-08-11 12:29:29 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:29:29 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:29:29 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:29:30 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:29:30 | DEBUG    | planner | Class directories for dataset 'cable': ['good']
+2026-08-11 12:29:30 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/cable/good
+2026-08-11 12:29:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:29:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:29:30 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:29:29_master_description.json
+2026-08-11 12:29:34 | INFO     | models | [VLM] Inference completed in 3.563s (max_new_tokens=2040)
+2026-08-11 12:29:34 | INFO     | planner | Planner steps generated in 3.563s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-11 12:29:34 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/cable/good/good_2026-08-11 12:29:34_planner.txt
+2026-08-11 12:29:34 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any physical damage such as cracks, fractures, chips, scratches, dents, or cuts on the surface of the cable or its components?
+Step 2: Is there any structural deformation such as bending, warping, crushing, puncturing, tearing, or snapping in the cable or its internal conductors?
+Step 3: Is there any missing component compared to the reference image, such as a missing screw terminal or wall-mounted outlet connection?
+Step 4: Is there any extra debris, foreign objects, or loose parts present in the cable or its surroundings that are not present in the reference image?
+Step 5: Is there any coloration, rust, corrosion, fluid stains, or peeling coating on the cable’s sheath or conductors?
+Step 6: Is there any significant misalignment, incorrect assembly orientation, or components in the wrong pose compared to the reference image?
+2026-08-11 12:29:34 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/cable/performance/performance_20260811_122934.json
+2026-08-11 12:29:34 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/cable
+2026-08-11 12:29:34 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/cable_122912_log.txt

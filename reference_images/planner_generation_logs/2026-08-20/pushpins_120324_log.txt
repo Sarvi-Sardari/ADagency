@@ -1,0 +1,190 @@
+2026-08-20 12:03:24 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-20 12:03:24 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-20 12:03:24 | INFO     | __main__ | Dataset  : pushpins
+2026-08-20 12:03:24 | INFO     | __main__ | Classes  : single
+2026-08-20 12:03:24 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-20 12:03:24 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-20/pushpins_120324_log.txt
+2026-08-20 12:03:24 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-20 12:03:26 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-20 12:03:26 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-20 12:03:28 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-20 12:03:28 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-20 12:03:28 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/pushpins/train/good/243.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/pushpins/train/good/033.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/pushpins/train/good/287.png']
+2026-08-20 12:03:28 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-20 12:03:28 | INFO     | object_namer | [Object Namer] Loaded 2 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/pushpins_object_labels.txt
+2026-08-20 12:03:28 | INFO     | __main__ | Object names: ['yellow pushpin', 'plastic storage box']
+2026-08-20 12:03:28 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-20 12:03:28 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/pushpins/good
+2026-08-20 12:03:28 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 12:03:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 12:03:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 12:03:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 12:03:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 12:03:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 12:03:29 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 12:03:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 12:03:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 12:03:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 12:03:38 | INFO     | models | [VLM] Inference completed in 8.633s (max_new_tokens=2040)
+2026-08-20 12:03:38 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pushpins/good/processed_good_243_2026-08-20 12:03:38.json (inference_time=8.633s)
+2026-08-20 12:03:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 12:03:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 12:03:50 | INFO     | models | [VLM] Inference completed in 12.476s (max_new_tokens=2040)
+2026-08-20 12:03:50 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pushpins/good/processed_good_033_2026-08-20 12:03:50.json (inference_time=12.476s)
+2026-08-20 12:03:50 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 12:03:50 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 12:04:01 | INFO     | models | [VLM] Inference completed in 10.891s (max_new_tokens=2040)
+2026-08-20 12:04:01 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pushpins/good/processed_good_287_2026-08-20 12:04:01.json (inference_time=10.891s)
+2026-08-20 12:04:01 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-20 12:04:01 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-20 12:04:03 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-20 12:04:03 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pushpins/good
+2026-08-20 12:04:03 | DEBUG    | descriptor | Processing image description: processed_good_287_2026-08-20 12:04:01.json
+2026-08-20 12:04:03 | DEBUG    | descriptor | Raw description data: - Object 1 yellow pushpin
+    - Attribute 1 Type - A standard pushpin with a round, flat plastic head and a slender metal pin.
+    - Attribute 2 Color - Bright yellow plastic head with a metallic silver pin.
+    - Attribute 3 Size - Approximately 2.5 cm in total length (head to tip), with a head diameter of about 0.8 cm and a pin length of about 2 cm.
+    - Attribute 4 Material - The head is made of plastic, and the pin is made of metal.
+    - Attribute 5 Composition - Composed of a plastic head and a metal pin, connected together as a single unit.
+    - Attribute 6 Quantity - There are 14 yellow pushpins visible in the image.
+    - Attribute 7 Relative Location - The pushpins are scattered within a transparent plastic storage box, occupying various compartments.
+    - Attribute 8 Orientation - Each pushpin is oriented differently; some are upright, some are tilted, and others are lying horizontally or diagonally.
+    - Attribute 9 Connection or Attachments - The plastic head is attached to the metal pin, forming a single functional unit; no other attachments are present.
+
+- Object 2 plastic storage box
+    - Attribute 1 Type - A transparent, rectangular storage box with a grid of compartments for organizing small items.
+    - Attribute 2 Color - Clear, transparent plastic with no visible color.
+    - Attribute 3 Size - Approximately 15 cm in width, 10 cm in height, and 2 cm in depth (estimated based on standard size for such boxes).
+    - Attribute 4 Material - Made of transparent plastic, likely polystyrene or acrylic.
+    - Attribute 5 Composition - Composed of a lid and base, with internal dividers forming a 3x5 grid of compartments.
+    - Attribute 6 Quantity - One plastic storage box is present in the image.
+    - Attribute 7 Relative Location - The box is positioned horizontally, occupying the central area of the image.
+    - Attribute 8 Orientation - The box is oriented with its lid open and facing upwards, revealing the compartments.
+    - Attribute 9 Connection or Attachments - The lid is connected to the base via a snap-fit mechanism or hinges, and the internal dividers are molded into the box structure to create compartments.
+2026-08-20 12:04:03 | DEBUG    | descriptor | Processing image description: processed_good_033_2026-08-20 12:03:50.json
+2026-08-20 12:04:03 | DEBUG    | descriptor | Raw description data: - Object 1 yellow pushpin
+    - Attribute 1 Type - A small, pin-like fastener with a rounded plastic head and a sharp metal point.
+    - Attribute 2 Color - Bright yellow, consistent across all instances.
+    - Attribute 3 Size - Approximately 2.5 cm in total length (head to point), with the head being about 0.8 cm in diameter and the metal pin being about 1.7 cm long.
+    - Attribute 4 Material - The head is made of plastic, and the pin is made of metal.
+    - Attribute 5 Composition - Composed of a plastic head and a metal pin, with the plastic head designed to be pushed into a surface and the metal pin to hold the item in place.
+    - Attribute 6 Quantity - There are 15 yellow pushpins visible in the image.
+    - Attribute 7 Relative Location - The pushpins are scattered within the compartments of the plastic storage box, occupying various positions across the grid.
+    - Attribute 8 Orientation - Each pushpin is oriented differently, with some standing upright, some lying horizontally, and others at various angles.
+    - Attribute 9 Connection or Attachments - The pushpins are not connected to each other or to any other objects; they are individually contained within the compartments of the storage box.
+
+- Object 2 plastic storage box
+    - Attribute 1 Type - A rectangular, transparent plastic container with a grid of compartments for organizing small items.
+    - Attribute 2 Color - Clear, transparent plastic with a slight tint, allowing the contents to be visible.
+    - Attribute 3 Size - Approximately 15 cm in width, 10 cm in height, and 2 cm in depth, based on the visible grid layout and the size of the pushpins.
+    - Attribute 4 Material - Made of transparent plastic, likely a type of polystyrene or acrylic, with a smooth surface.
+    - Attribute 5 Composition - Composed of a rigid plastic body with a grid of internal partitions creating 15 individual compartments.
+    - Attribute 6 Quantity - One plastic storage box is present in the image.
+    - Attribute 7 Relative Location - The box is positioned centrally in the image, occupying the entire frame from left to right and top to bottom.
+    - Attribute 8 Orientation - The box is oriented horizontally, with its longer side facing left to right.
+    - Attribute 9 Connection or Attachments - The box has a hinged lid (partially visible) and internal partitions that divide the interior into 15 compartments, each designed to hold a single pushpin.
+2026-08-20 12:04:03 | DEBUG    | descriptor | Processing image description: processed_good_243_2026-08-20 12:03:38.json
+2026-08-20 12:04:03 | DEBUG    | descriptor | Raw description data: - Object 1 yellow pushpin
+    - Attribute 1 Type - standard pushpin with a round plastic head and a sharp metal pin
+    - Attribute 2 Color - bright yellow plastic head, metallic silver pin
+    - Attribute 3 Size - head diameter approximately 1 cm, pin length approximately 2.5 cm
+    - Attribute 4 Material - plastic head, metal pin
+    - Attribute 5 Composition - plastic head made of polypropylene or similar polymer, metal pin made of steel
+    - Attribute 6 Quantity - 14
+    - Attribute 7 Relative Location - distributed across multiple compartments of the plastic storage box
+    - Attribute 8 Orientation - each pushpin is positioned at various angles, some upright, some tilted or lying horizontally
+    - Attribute 9 Connection or Attachments - each pushpin is a standalone item, not connected to any other object
+
+- Object 2 plastic storage box
+    - Attribute 1 Type - rectangular compartmentalized storage box with a grid of 12 compartments
+    - Attribute 2 Color - transparent plastic with black interior visible through compartments
+    - Attribute 3 Size - approximately 15 cm wide, 10 cm tall, 3 cm deep
+    - Attribute 4 Material - clear, rigid plastic
+    - Attribute 5 Composition - molded plastic with integrated grid dividers and a snap-on lid mechanism
+    - Attribute 6 Quantity - 1
+    - Attribute 7 Relative Location - centrally positioned in the image, containing the yellow pushpins
+    - Attribute 8 Orientation - lying flat, open top facing upward
+    - Attribute 9 Connection or Attachments - compartments are connected by molded plastic walls, lid is connected to the base via a snap-fit mechanism
+2026-08-20 12:04:03 | DEBUG    | descriptor | Unique object keys found: {'plastic storage box', 'yellow pushpin'}
+2026-08-20 12:04:03 | DEBUG    | descriptor | Class 'good' object description: {'plastic storage box': ['-  Type - A transparent, rectangular storage box with a grid of compartments for organizing small items.\n    -  Color - Clear, transparent plastic with no visible color.\n    -  Size - Approximately 15 cm in width, 10 cm in height, and 2 cm in depth (estimated based on standard size for such boxes).\n    -  Material - Made of transparent plastic, likely polystyrene or acrylic.\n    -  Composition - Composed of a lid and base, with internal dividers forming a 3x5 grid of compartments.\n    -  Quantity - One plastic storage box is present in the image.\n    -  Relative Location - The box is positioned horizontally, occupying the central area of the image.\n    -  Orientation - The box is oriented with its lid open and facing upwards, revealing the compartments.\n    -  Connection or Attachments - The lid is connected to the base via a snap-fit mechanism or hinges, and the internal dividers are molded into the box structure to create compartments.', '-  Type - A rectangular, transparent plastic container with a grid of compartments for organizing small items.\n    -  Color - Clear, transparent plastic with a slight tint, allowing the contents to be visible.\n    -  Size - Approximately 15 cm in width, 10 cm in height, and 2 cm in depth, based on the visible grid layout and the size of the pushpins.\n    -  Material - Made of transparent plastic, likely a type of polystyrene or acrylic, with a smooth surface.\n    -  Composition - Composed of a rigid plastic body with a grid of internal partitions creating 15 individual compartments.\n    -  Quantity - One plastic storage box is present in the image.\n    -  Relative Location - The box is positioned centrally in the image, occupying the entire frame from left to right and top to bottom.\n    -  Orientation - The box is oriented horizontally, with its longer side facing left to right.\n    -  Connection or Attachments - The box has a hinged lid (partially visible) and internal partitions that divide the interior into 15 compartments, each designed to hold a single pushpin.', '-  Type - rectangular compartmentalized storage box with a grid of 12 compartments\n    -  Color - transparent plastic with black interior visible through compartments\n    -  Size - approximately 15 cm wide, 10 cm tall, 3 cm deep\n    -  Material - clear, rigid plastic\n    -  Composition - molded plastic with integrated grid dividers and a snap-on lid mechanism\n    -  Quantity - 1\n    -  Relative Location - centrally positioned in the image, containing the yellow pushpins\n    -  Orientation - lying flat, open top facing upward\n    -  Connection or Attachments - compartments are connected by molded plastic walls, lid is connected to the base via a snap-fit mechanism'], 'yellow pushpin': ['-  Type - A standard pushpin with a round, flat plastic head and a slender metal pin.\n    -  Color - Bright yellow plastic head with a metallic silver pin.\n    -  Size - Approximately 2.5 cm in total length (head to tip), with a head diameter of about 0.8 cm and a pin length of about 2 cm.\n    -  Material - The head is made of plastic, and the pin is made of metal.\n    -  Composition - Composed of a plastic head and a metal pin, connected together as a single unit.\n    -  Quantity - There are 14 yellow pushpins visible in the image.\n    -  Relative Location - The pushpins are scattered within a transparent plastic storage box, occupying various compartments.\n    -  Orientation - Each pushpin is oriented differently; some are upright, some are tilted, and others are lying horizontally or diagonally.\n    -  Connection or Attachments - The plastic head is attached to the metal pin, forming a single functional unit; no other attachments are present.', '-  Type - A small, pin-like fastener with a rounded plastic head and a sharp metal point.\n    -  Color - Bright yellow, consistent across all instances.\n    -  Size - Approximately 2.5 cm in total length (head to point), with the head being about 0.8 cm in diameter and the metal pin being about 1.7 cm long.\n    -  Material - The head is made of plastic, and the pin is made of metal.\n    -  Composition - Composed of a plastic head and a metal pin, with the plastic head designed to be pushed into a surface and the metal pin to hold the item in place.\n    -  Quantity - There are 15 yellow pushpins visible in the image.\n    -  Relative Location - The pushpins are scattered within the compartments of the plastic storage box, occupying various positions across the grid.\n    -  Orientation - Each pushpin is oriented differently, with some standing upright, some lying horizontally, and others at various angles.\n    -  Connection or Attachments - The pushpins are not connected to each other or to any other objects; they are individually contained within the compartments of the storage box.', '-  Type - standard pushpin with a round plastic head and a sharp metal pin\n    -  Color - bright yellow plastic head, metallic silver pin\n    -  Size - head diameter approximately 1 cm, pin length approximately 2.5 cm\n    -  Material - plastic head, metal pin\n    -  Composition - plastic head made of polypropylene or similar polymer, metal pin made of steel\n    -  Quantity - 14\n    -  Relative Location - distributed across multiple compartments of the plastic storage box\n    -  Orientation - each pushpin is positioned at various angles, some upright, some tilted or lying horizontally\n    -  Connection or Attachments - each pushpin is a standalone item, not connected to any other object']}
+2026-08-20 12:04:09 | INFO     | models | [LLM] Inference completed in 5.828s (max_new_tokens=3000)
+2026-08-20 12:04:09 | INFO     | descriptor | [plastic storage box] Object summarisation completed in 5.828s
+2026-08-20 12:04:09 | DEBUG    | descriptor | Summarised description for 'plastic storage box': 
+
+{
+  "plastic storage box": {
+    "Type": "A transparent, rectangular storage box with a grid of compartments for organizing small items, featuring a 3x5 or 15-compartment layout",
+    "Color": "Clear, transparent plastic with a slight tint, allowing the contents to be visible, and black interior visible through compartments",
+    "Size": "15 cm in width, 10 cm in height, and 2-3 cm in depth",
+    "Material": "Clear, rigid plastic, likely polystyrene or acrylic, with a smooth surface",
+    "Composition": "Molded plastic body with integrated grid dividers and a snap-on lid mechanism, composed of a lid and base with internal partitions forming compartments",
+    "Quantity": "One plastic storage box is present in the image",
+    "Relative Location": "Centrally positioned in the image, occupying the central area and containing the yellow pushpins",
+    "Orientation": "Horizontally oriented with its longer side facing left to right, open top facing upward, and lid open",
+    "Connection/Attachments": "The lid is connected to the base via a snap-fit mechanism, and internal partitions are molded into the box structure to create compartments"
+  }
+}
+2026-08-20 12:04:16 | INFO     | models | [LLM] Inference completed in 7.158s (max_new_tokens=3000)
+2026-08-20 12:04:16 | INFO     | descriptor | [yellow pushpin] Object summarisation completed in 7.158s
+2026-08-20 12:04:16 | DEBUG    | descriptor | Summarised description for 'yellow pushpin': 
+
+{
+  "yellow pushpin": {
+    "Type": "A standard pushpin with a round, flat plastic head and a slender metal pin, designed as a small, pin-like fastener with a rounded plastic head and a sharp metal point.",
+    "Color": "Bright yellow plastic head with a metallic silver pin, consistent across all instances.",
+    "Size": "Approximately 2.5 cm in total length (head to tip), with a head diameter of about 0.8 cm and a pin length of about 2 cm / head diameter approximately 1 cm, pin length approximately 2.5 cm",
+    "Material": "The head is made of plastic, and the pin is made of metal.",
+    "Composition": "Composed of a plastic head and a metal pin, connected together as a single unit; the plastic head is made of polypropylene or similar polymer, and the metal pin is made of steel.",
+    "Quantity": "14 yellow pushpins visible in the image.",
+    "Relative Location": "Scattered within a transparent plastic storage box, occupying various compartments and distributed across multiple compartments of the plastic storage box.",
+    "Orientation": "Each pushpin is oriented differently; some are upright, some are tilted, and others are lying horizontally or diagonally, with some standing upright, some lying horizontally, and others at various angles.",
+    "Connection/Attachments": "The plastic head is attached to the metal pin, forming a single functional unit; each pushpin is a standalone item, not connected to any other object."
+  }
+}
+2026-08-20 12:04:16 | DEBUG    | descriptor | Master description: {'plastic storage box': {'Type': 'A transparent, rectangular storage box with a grid of compartments for organizing small items, featuring a 3x5 or 15-compartment layout', 'Color': 'Clear, transparent plastic with a slight tint, allowing the contents to be visible, and black interior visible through compartments', 'Size': '15 cm in width, 10 cm in height, and 2-3 cm in depth', 'Material': 'Clear, rigid plastic, likely polystyrene or acrylic, with a smooth surface', 'Composition': 'Molded plastic body with integrated grid dividers and a snap-on lid mechanism, composed of a lid and base with internal partitions forming compartments', 'Quantity': 'One plastic storage box is present in the image', 'Relative Location': 'Centrally positioned in the image, occupying the central area and containing the yellow pushpins', 'Orientation': 'Horizontally oriented with its longer side facing left to right, open top facing upward, and lid open', 'Connection/Attachments': 'The lid is connected to the base via a snap-fit mechanism, and internal partitions are molded into the box structure to create compartments'}, 'yellow pushpin': {'Type': 'A standard pushpin with a round, flat plastic head and a slender metal pin, designed as a small, pin-like fastener with a rounded plastic head and a sharp metal point.', 'Color': 'Bright yellow plastic head with a metallic silver pin, consistent across all instances.', 'Size': 'Approximately 2.5 cm in total length (head to tip), with a head diameter of about 0.8 cm and a pin length of about 2 cm / head diameter approximately 1 cm, pin length approximately 2.5 cm', 'Material': 'The head is made of plastic, and the pin is made of metal.', 'Composition': 'Composed of a plastic head and a metal pin, connected together as a single unit; the plastic head is made of polypropylene or similar polymer, and the metal pin is made of steel.', 'Quantity': '14 yellow pushpins visible in the image.', 'Relative Location': 'Scattered within a transparent plastic storage box, occupying various compartments and distributed across multiple compartments of the plastic storage box.', 'Orientation': 'Each pushpin is oriented differently; some are upright, some are tilted, and others are lying horizontally or diagonally, with some standing upright, some lying horizontally, and others at various angles.', 'Connection/Attachments': 'The plastic head is attached to the metal pin, forming a single functional unit; each pushpin is a standalone item, not connected to any other object.'}}
+2026-08-20 12:04:16 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-20 12:04:16 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/pushpins.txt
+2026-08-20 12:04:16 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=17)
+2026-08-20 12:04:16 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-20 12:04:16 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-20 12:04:18 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-20 12:04:18 | DEBUG    | planner | Class directories for dataset 'pushpins': ['good']
+2026-08-20 12:04:18 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/pushpins/good
+2026-08-20 12:04:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 12:04:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 12:04:18 | DEBUG    | planner | Generating planner steps from: good_2026-08-20 12:04:16_master_description.json
+2026-08-20 12:04:25 | INFO     | models | [VLM] Inference completed in 6.461s (max_new_tokens=2040)
+2026-08-20 12:04:25 | INFO     | planner | Planner steps generated in 6.461s (attempt=1, steps=17, approved_rules=17)
+2026-08-20 12:04:25 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/pushpins/good/good_2026-08-20 12:04:25_planner.txt
+2026-08-20 12:04:25 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any loose compartment in the plastic storage box?
+Step 2: Is there any detached compartment in the plastic storage box?
+Step 3: Is there any scratched plastic storage box divider walls?
+Step 4: Is there any dented plastic storage box base?
+Step 5: Is there any missing pin in the plastic storage box compartment?
+Step 6: Is there any extra pin in the plastic storage box compartment?
+Step 7: Is there any misaligned compartment grid in the plastic storage box?
+Step 8: Is there any bent yellow pushpin pin?
+Step 9: Is there any cracked yellow pushpin head?
+Step 10: Is there any scratched yellow pushpin head?
+Step 11: Is there any dented yellow pushpin head?
+Step 12: Is there any discolored yellow pushpin head?
+Step 13: Is there any deformed yellow pushpin head?
+Step 14: Is there any missing yellow pushpin pin?
+Step 15: Is there any broken pushpin metal pin?
+Step 16: Is there any more than 15 pushpins total?
+Step 17: Is there any fewer than 15 pushpins total?
+2026-08-20 12:04:25 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/pushpins/performance/performance_20260820_120425.json
+2026-08-20 12:04:25 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/pushpins
+2026-08-20 12:04:25 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-20/pushpins_120324_log.txt

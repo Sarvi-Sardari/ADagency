@@ -1,0 +1,10 @@
+Step 1: Is there any crack, fracture, chip, scratch, dent, or cut on the mesh surface?
+Step 2: Is there any bent, warped, crushed, punctured, torn, or broken component in the mesh?
+Step 3: Are there any missing components visible in the reference image but absent in the candidate image?
+Step 4: Are there any extra debris, foreign objects, or loose parts in the candidate image not present in the reference image?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the mesh?
+Step 6: Is there any significant misalignment or incorrect assembly in the mesh pattern?
+Step 7: Is there any deviation from the uniform cell size or spacing in the mesh?
+Step 8: Is there any inconsistency in the curvature or continuity of the mesh lines?
+Step 9: Is there any visible seam, joint, or attachment point in the mesh structure?
+Step 10: Is there any deviation in the diagonal orientation of the diamond-shaped cells from the 45-degree angle?

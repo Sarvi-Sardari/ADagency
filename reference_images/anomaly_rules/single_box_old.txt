@@ -1,0 +1,12 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "white plastic organizer tray",
+      "category": "residual_content",
+      "part_or_region": "all compartment interiors, floors, corners, seams, dividers, side walls, rims, openings and visible tray regions",
+      "anomaly_name": "any foreign object or residual content",
+      "visual_description": "The organizer is anomalous if any separate foreign object, component, material, or fragment is present anywhere inside or resting on it; normal means every compartment and tray region is empty. Detect objects of any identity, function, material, shape, color, or size, including large items, tiny parts, thin cables, fragments, partially visible items, and objects hidden behind dividers, rims, walls, corners, or image boundaries. A complete object outline is not required. Look for reliable evidence such as a full or partial foreign contour, protruding end, closed outline, unexpected edge, thickness, raised surface, side face, depth discontinuity, occlusion of the tray surface, interrupted compartment geometry, localized texture change, displaced reflection, highlight, cast shadow, or self-shadow. Objects may closely match or blend with black, white, colored, reflective, or shadowed inner surfaces, so do not determine emptiness from color similarity alone; compare local geometry, texture, depth, boundaries, shadows, and reflections with the expected empty organizer. Flag any reliably supported foreign content, whether it occupies only a few pixels or covers multiple compartments. Exclude permanent molded organizer features such as fixed dividers, ribs, walls, corners, handles, seams, normal surface texture, ordinary illumination gradients, reflections, and sensor noise."
+    }
+  ]
+}

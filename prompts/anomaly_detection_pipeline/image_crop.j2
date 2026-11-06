@@ -1,0 +1,18 @@
+You are locating the inspected product in an industrial inspection image.
+
+The product is identified by these object labels (the product itself and/or its visible parts):
+{% for label in object_labels %}
+- {{ label }}
+{% endfor %}
+
+Task: find the ONE complete product that these labels belong to and return a single bounding box that encloses all of it.
+
+Rules:
+- The box must contain the entire product, including every listed part that is visible, not only one part.
+- The product may be defective: parts can be missing, broken, misplaced, or foreign items can lie on or inside it. Still box the whole product that is present, including anything lying on or inside it.
+- Do not extend the box over background, fixtures, holders, or other objects that are not part of the product.
+- Use coordinates relative to this image on a 0-1000 scale in [x1, y1, x2, y2] order, where (x1, y1) is the top-left corner and (x2, y2) is the bottom-right corner.
+- Reply with ONLY one JSON object and no other text:
+{"found": true, "bbox_2d": [x1, y1, x2, y2], "label": "<short product name>"}
+- If the product is not visible in the image, reply with ONLY:
+{"found": false, "bbox_2d": null, "label": "<short product name>", "reason": "<one sentence explaining what is visible instead>"}

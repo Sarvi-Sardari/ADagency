@@ -1,0 +1,57 @@
+{
+    "Bottom Label": {
+        "Type": "rectangular label with rounded corners, containing printed text",
+        "Color": "golden-yellow background with dark, possibly black, text and a thin black border, with a slightly textured or metallic sheen matching the top label",
+        "Size": "2 cm in height and 3 cm in width / 2.5 cm in width and 1.5 cm in height",
+        "Material": "paper or thin cardboard with a glossy or semi-gloss finish",
+        "Composition": "printed text reading '100% Juice' in black, centered within the label",
+        "Quantity": "one",
+        "Relative Location": "affixed to the lower portion of the bottle’s front surface, below the top label, centered horizontally on the lower portion of the bottle’s front surface, above the base",
+        "Orientation": "horizontally aligned, facing forward, parallel to the bottle’s front surface",
+        "Connection/Attachments": "adhered directly to the glass bottle surface with no visible fasteners or adhesive residue"
+    },
+    "Bottle": {
+        "Type": "small, rectangular glass bottle with slightly curved sides and a narrow neck",
+        "Color": "clear glass, allowing visibility of the liquid inside",
+        "Size": "10 cm in height and 3 cm in width at the widest point",
+        "Material": "glass, transparent and smooth",
+        "Composition": "glass with a slightly reflective surface, designed for holding liquid",
+        "Quantity": "one",
+        "Relative Location": "positioned upright and centered in the frame",
+        "Orientation": "upright, aligned vertically",
+        "Connection/Attachments": "the cap is screwed onto the neck, and the labels are adhered to the front surface of the bottle’s body"
+    },
+    "Cap": {
+        "Type": "screw-on cap with a threaded neck for sealing",
+        "Color": "transparent or clear glass, allowing visibility of the bottle’s neck and liquid level",
+        "Size": "2 cm in height and 2 cm in diameter at the widest point / 2.5 cm in diameter and 1.5 cm in height",
+        "Material": "glass, matching the bottle’s material",
+        "Composition": "solid, transparent glass with a slightly textured or ribbed interior threading",
+        "Quantity": "one",
+        "Relative Location": "positioned at the very top of the bottle, sealing the opening",
+        "Orientation": "upright, aligned with the bottle’s vertical axis",
+        "Connection/Attachments": "screwed onto the bottle’s neck, forming a tight seal"
+    },
+    "Liquid": {
+        "Type": "orange-colored juice",
+        "Color": "pale yellow-orange, consistent with orange juice",
+        "Size": "fills the bottle to approximately 80% of its total volume",
+        "Material": "liquid, transparent with slight turbidity",
+        "Composition": "juice, likely containing pulp or suspended solids, as indicated by the '100% Juice' label",
+        "Quantity": "one quantity, filling the bottle",
+        "Relative Location": "contained entirely within the bottle, from the bottom to just below the cap",
+        "Orientation": "level, resting at the base of the bottle",
+        "Connection/Attachments": "contained within the bottle, in direct contact with the glass walls"
+    },
+    "Top Label": {
+        "Type": "rectangular label with rounded corners, featuring a graphic of an orange with a green leaf",
+        "Color": "golden-yellow with a slightly textured or glittery appearance, with a thin black border",
+        "Size": "2.5 cm in width and 3 cm in height / 1 inch in width and 1.18 inches in height",
+        "Material": "paper or thin cardboard with a glossy or semi-gloss finish",
+        "Composition": "printed graphic of an orange fruit with a green leaf, enclosed within a thin black border",
+        "Quantity": "one",
+        "Relative Location": "centered horizontally on the upper portion of the bottle’s front surface, below the neck",
+        "Orientation": "horizontally aligned, facing forward, parallel to the bottle’s front surface",
+        "Connection/Attachments": "adhered directly to the glass bottle surface with no visible fasteners or adhesive residue"
+    }
+}

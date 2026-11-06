@@ -1,0 +1,122 @@
+# configs/metrics_configs.yaml
+#
+# Standalone metrics stage. Run any time with:
+#   python run_metrics.py
+#   python run_metrics.py --combine --include-rerun
+#   python run_metrics.py --combine --base-results
+#
+# Prediction-source precedence:
+#   --include-rerun  overrides every datasets[].include_rerun value to true.
+#   --base-results   overrides every datasets[].include_rerun value to false.
+#   neither flag     preserves the per-dataset values configured below.
+# The two flags are mutually exclusive.
+#
+# Secondary-metrics selection:
+#   --include-secondary runs datasets that have secondary_metrics enabled.
+#   --binary-only skips all secondary metrics even when YAML enables them.
+#   neither flag uses the per-dataset YAML configuration below.
+#
+# This reads ONLY files already written under <run_dir>/<dataset_name>/ by a
+# previous run_anomaly_detection.py run (all_data_summary.jsonl) and,
+# optionally, a previous rerun.py run. No VLM/CLIP is loaded, so this is
+# cheap and safe to re-run as often as you like — e.g. to compare "before
+# rerun" vs "after rerun" metrics, just flip include_rerun and run this
+# script again. A timestamped CSV is written each run (never overwritten):
+# <run_dir>/<dataset_name>/<output.subdir>/metrics_<timestamp>.csv, or
+# metrics_w_rerun_<timestamp>.csv when include_rerun is true.
+#
+# Each anomaly class present in the run (every test/ subfolder other than
+# "good", e.g. "logical_anomalies"/"structural_anomalies") gets its own row
+# with accuracy/F1/confusion-matrix/image-AUROC; an "overall" row is added
+# automatically when a dataset has more than one anomaly class.
+
+run_dir: "outputs/runs_ibadas_task_01/2026-09-09 10-28-54_ablation_001"   # same folder as anomaly_detection_configs.yaml's output.root_dir/output.runs_dir
+
+# datasets: (Format)
+#   - name:            Dataset name (must match a folder under run_dir, i.e. the dataset's `name` in anomaly_detection_configs.yaml)
+#     include_rerun:    When true, predictions/scores are overridden per-image from
+#                       <run_dir>/<dataset>/rerun_results/rerun_result.jsonl wherever a
+#                       matching (label_folder, source_label_folder, img_name)
+#                       entry exists (rerun.py writes
+#                       one entry per image, whether or not it actually qualified for
+#                       rerun, so this always safely applies to the full dataset).
+#     root_dir:         OPTIONAL. Path to the ORIGINAL dataset root. Pixel metrics
+#                       auto-detect either <root_dir>/ground_truth (label-nested or
+#                       flat) or <root_dir>/mask_all (all masks in one folder).
+#     ground_truth_dir: OPTIONAL BINARY-mask override. It is unrelated to the
+#                       class-specific paths under secondary_metrics.
+#                       Use this for any other layout or folder name. It may be used
+#                       with or without root_dir.
+#                       Pixel AUROC/AUPRO are computed only when ground truth resolves AND
+#                       <run_dir>/<dataset>/masks/ exists. masks/ should contain one
+#                       subfolder per mask-generation method actually run for this
+#                       dataset (e.g. masks/sam3, masks/bounding_box, masks/xai) —
+#                       the CSV gets a "Pixel AUROC (<method>)" / "AUPRO (<method>)"
+#                       column pair per subfolder found, so this is fully dynamic.
+#
+# OPTIONAL secondary_metrics fields:
+#   secondary_metrics: omit it, or set enabled: false, for binary metrics only.
+#   enabled: true requires both ground_truth_file and ground_truth_masks.
+#   ground_truth_file: JSON object mapping image stem to one configured class,
+#                      e.g. {"00001": "non_empty"}. Relative paths are resolved
+#                      from this dataset entry's root_dir.
+#   ground_truth_masks: mapping whose keys must EXACTLY equal the class names in
+#                       the run's saved secondary profile. A relative directory
+#                       is resolved from root_dir. Use null for a class whose
+#                       ground truth is always an all-black mask (empty_clean).
+#
+# Secondary metrics are one-vs-rest for every class. Pixel AUROC/AUPRO are
+# calculated only for classes with a non-null mask directory. For empty_clean,
+# pixel AUROC/AUPRO are intentionally unavailable; instead, clean-image false
+# positive mask-area diagnostics are reported. Predicted secondary masks must
+# first be generated under secondary_masks/ with the same include_rerun choice.
+# include_rerun controls BOTH binary and secondary predictions/scores.
+#
+# Correct relative-path example when root_dir is datasets/ibadas_02/<dataset>:
+#   ground_truth_file: "test/secondary_classification_ground_truth.json"
+#   empty_dirty: "mask_empty_dirty"
+# Do not repeat datasets/ibadas_02/<dataset> inside these nested fields; root_dir
+# would be prepended a second time.
+datasets:
+  - name: "rs_darkblue_box"
+    include_rerun: true
+    root_dir: "datasets/ibadas/rs_darkblue_box"
+    ground_truth_dir: "datasets/ibadas/rs_darkblue_box/mask_all"
+    secondary_metrics:
+      enabled: false
+  - name: "rs_lightblue_box"
+    include_rerun: true
+    root_dir: "datasets/ibadas/rs_lightblue_box"
+    ground_truth_dir: "datasets/ibadas/rs_lightblue_box/mask_all"
+    secondary_metrics:
+      enabled: false
+  - name: "rs_set_box"
+    include_rerun: true
+    root_dir: "datasets/ibadas/rs_set_box"
+    ground_truth_dir: "datasets/ibadas/rs_set_box/mask_all"
+    secondary_metrics:
+      enabled: false
+  - name: "zivid_darkblue_box"
+    include_rerun: true
+    root_dir: "datasets/ibadas/zivid_darkblue_box"
+    ground_truth_dir: "datasets/ibadas/zivid_darkblue_box/mask_all"
+    secondary_metrics:
+      enabled: false
+  - name: "zivid_lightblue_box"
+    include_rerun: true
+    root_dir: "datasets/ibadas/zivid_lightblue_box"
+    ground_truth_dir: "datasets/ibadas/zivid_lightblue_box/mask_all"
+    secondary_metrics:
+      enabled: false
+  - name: "zivid_set_box"
+    include_rerun: true
+    root_dir: "datasets/ibadas/zivid_set_box"
+    ground_truth_dir: "datasets/ibadas/zivid_set_box/mask_all"
+    secondary_metrics:
+      enabled: false
+    
+output:
+  # Metrics CSVs are written to <run_dir>/<dataset_name>/<subdir>/ so that
+  # re-running metrics never overwrites the run's own preproc/texts/*.jsonl
+  # files.
+  subdir: "metrics"

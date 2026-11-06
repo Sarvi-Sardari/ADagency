@@ -1,0 +1,12 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "plastic organizers or trays in the shelf rack",
+      "category": "residual_content",
+      "part_or_region": "every visible compartment and interior region of every organizer on both the upper and lower shelf levels, including the upper-left, upper-right, lower-left, and lower-right organizers",
+      "anomaly_name": "foreign object or residual content in any organizer",
+      "visual_description": "The scene is anomalous if any separate foreign object, component, material, or fragment is present inside or resting on any of the visible organizers or trays. Normal means every visible compartment and interior tray region across all upper and lower organizers is empty. Inspect each organizer independently and systematically, including compartment floors, corners, seams, divider intersections, side walls, rims, and openings. Detect foreign content of any identity, material, shape, color, or size, including large objects, tiny parts, thin cables, fragments, partially visible objects, objects occluded by compartment dividers or tray rims, and objects that blend with black, white, colored, reflective, or shadowed inner surfaces. A complete object outline is not required. Use reliable evidence such as full or partial foreign contours, unexpected edges, protruding ends, thickness, raised surfaces, side faces, depth discontinuities, localized texture changes, interruption or occlusion of expected compartment geometry, displaced reflections, highlights, cast shadows, or self-shadows. Any reliably supported foreign content in any one organizer is sufficient to flag the entire image as anomalous. Do not treat the expected arrangement, stacking, overlap, or perspective of the organizers as anomalous. Exclude permanent molded dividers, ribs, walls, handles, normal seams and textures, shelf or rack structures, expected organizer-to-organizer overlap, ordinary lighting gradients, reflections, shadows, and sensor noise. Evaluate visible evidence only; do not claim an anomaly inside a completely hidden region with no observable evidence."
+    }
+  ]
+}

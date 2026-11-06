@@ -1,0 +1,92 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Woven Fabric Texture",
+      "category": "finish_color",
+      "part_or_region": "any visible thread or weave intersection",
+      "anomaly_name": "discolored thread",
+      "visual_description": "a thread appears darker or lighter than surrounding threads, creating a noticeable color mismatch."
+    },
+    {
+      "id": "A002",
+      "object_name": "Woven Fabric Texture",
+      "category": "surface_integrity",
+      "part_or_region": "any visible weave intersection",
+      "anomaly_name": "broken thread",
+      "visual_description": "a thread is visibly snapped or cut, leaving a gap in the weave pattern."
+    },
+    {
+      "id": "A003",
+      "object_name": "Woven Fabric Texture",
+      "category": "surface_integrity",
+      "part_or_region": "any visible weave intersection",
+      "anomaly_name": "loose thread",
+      "visual_description": "a thread is visibly frayed or protruding from the weave, not tightly interlaced."
+    },
+    {
+      "id": "A004",
+      "object_name": "Woven Fabric Texture",
+      "category": "geometry_alignment",
+      "part_or_region": "any visible weave row or column",
+      "anomaly_name": "misaligned weave",
+      "visual_description": "a row or column of threads is visibly offset from the regular grid pattern."
+    },
+    {
+      "id": "A005",
+      "object_name": "Woven Fabric Texture",
+      "category": "surface_integrity",
+      "part_or_region": "any visible weave intersection",
+      "anomaly_name": "punctured weave",
+      "visual_description": "a small hole or indentation where threads are missing or compressed."
+    },
+    {
+      "id": "A006",
+      "object_name": "Woven Fabric Texture",
+      "category": "contamination",
+      "part_or_region": "any visible thread or weave intersection",
+      "anomaly_name": "stained thread",
+      "visual_description": "a thread or small area shows a visible stain or discoloration from external substance."
+    },
+    {
+      "id": "A007",
+      "object_name": "Woven Fabric Texture",
+      "category": "surface_integrity",
+      "part_or_region": "any visible weave intersection",
+      "anomaly_name": "torn weave",
+      "visual_description": "a localized area where threads are pulled apart, creating an irregular opening."
+    },
+    {
+      "id": "A008",
+      "object_name": "Woven Fabric Texture",
+      "category": "geometry_alignment",
+      "part_or_region": "any visible weave row or column",
+      "anomaly_name": "rotated weave section",
+      "visual_description": "a small section of weave appears rotated relative to the surrounding pattern."
+    },
+    {
+      "id": "A009",
+      "object_name": "Woven Fabric Texture",
+      "category": "surface_integrity",
+      "part_or_region": "any visible weave intersection",
+      "anomaly_name": "cracked thread",
+      "visual_description": "a thread shows visible splitting or fissuring along its length."
+    },
+    {
+      "id": "A010",
+      "object_name": "Woven Fabric Texture",
+      "category": "finish_color",
+      "part_or_region": "any visible thread or weave intersection",
+      "anomaly_name": "faded thread",
+      "visual_description": "a thread appears significantly lighter or washed out compared to surrounding threads."
+    },
+    {
+      "id": "A011",
+      "object_name": "Woven Fabric Texture",
+      "category": "surface_integrity",
+      "part_or_region": "entire surface",
+      "anomaly_name": "embedded foreign particle",
+      "visual_description": "a small, visible foreign object within the weave section."
+    }
+  ]
+}

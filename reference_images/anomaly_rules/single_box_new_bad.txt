@@ -1,0 +1,12 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "white plastic organizer tray",
+      "category": "residual_content",
+      "part_or_region": "compartments and top surface",
+      "anomaly_name": "foreign item inside or resting on the tray",
+      "visual_description": "a separate item with its own visible outline, not the robot hand/arm or blue box/bin even where they overlap the tray, and not molded tray parts, shadows or reflections alone"
+    }
+  ]
+}

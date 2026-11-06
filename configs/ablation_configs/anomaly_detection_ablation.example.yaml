@@ -1,0 +1,71 @@
+# Standalone orchestration config for run_anomaly_detection_ablation.py.
+# Copy this file once per dataset family (mvtec_ad, mvtec_loco, ibadas) and
+# change experiment.name, experiment.runs_dir, and the three stage configs.
+
+experiment:
+  name: "mvtec_ad"
+  num_runs: 10
+  # The orchestrator creates and remembers timestamped run directories here.
+  # It passes each one through --resume-dir, so output.runs_dir inside the
+  # anomaly-detection YAML does not need to be edited.
+  runs_dir: "outputs/runs_mvtec_ad"
+  command_prefix: ["taskset", "-c", "0-7,10-31"]
+  # Optional. Selects the decision prompt by ablation run number. A single
+  # entry is reused for every run; with multiple entries, entry N is used by
+  # run N. The prompts live under the anomaly config's prompts_dir.
+  # decision_prompt_sequence:
+  #   - decision_maker_v2_original.j2
+  #   - decision_maker_v2.j2
+  #   - decision_maker_v2_rich_targets.j2
+  #   - decision_maker_v2_compact_targets.j2
+  # Optional pause between complete first-run repetitions. Keep zero for
+  # maximum throughput; use a fixed pause if thermal consistency matters more.
+  cooldown_seconds: 0
+
+configs:
+  anomaly_detection: "configs/anomaly_detection_configs_mvtec_ad.yaml"
+  model: "configs/model_configs.yaml"
+  mask_generation: "configs/mask_generation_configs_mvtec_ad.yaml"
+  metrics: "configs/metrics_configs_mvtec_ad.yaml"
+
+stages:
+  detection: true
+  rerun: true
+  masks: true
+  metrics: true
+
+# CLI stage examples:
+#   --runs 3
+#   --stages detection
+#   --skip masks
+#   --skip rerun --prediction-source base
+# Re-run the same command after Ctrl+C to resume from ablation_manifest.json.
+
+rerun:
+  num_steps: 3
+
+masks:
+  include_rerun: true
+
+metrics:
+  include_rerun: true
+  combine: true
+  # To omit all pixel-level metrics, omit BOTH Pixel AUROC and AUPRO.
+  omit: ["pixel-auroc", "aupro"]
+
+telemetry:
+  # This is the existing anomaly pipeline monitor. The aggregator derives GPU
+  # utilization, memory, power, and estimated energy only during VLM calls.
+  interval_seconds: 1.0
+  # Track the pipeline PID's own memory and utilization through NVML. Device
+  # power/temperature/energy remain device-wide because NVIDIA does not expose
+  # per-process counters for them.
+  process_specific: true
+  # Add generated-token counts, average output length, and tokens/second to
+  # ablation progress, logs, performance JSON, and aggregate CSV files.
+  generation_profile: true
+
+aggregation:
+  # 1 = sample standard deviation (recommended for repeated experiments).
+  # 0 = population standard deviation.
+  std_ddof: 1

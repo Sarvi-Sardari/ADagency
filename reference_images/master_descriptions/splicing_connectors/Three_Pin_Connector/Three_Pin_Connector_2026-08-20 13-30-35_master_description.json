@@ -1,0 +1,35 @@
+{
+    "RJ45 Connector (Left)": {
+        "Type": "A standard 8P8C modular plug, commonly used for Ethernet connections, featuring a clear plastic housing and orange locking tabs.",
+        "Color": "Transparent plastic housing with bright orange locking tabs and internal metallic contacts.",
+        "Size": "5x5cm / 2x2 inches (approximately 2.5 cm in width and 3 cm in height, with a depth of about 1.5 cm)",
+        "Material": "Transparent thermoplastic for the housing and metal for the internal contacts.",
+        "Composition": "Composed of a transparent plastic shell, orange locking mechanism, and internal metal pins designed to interface with Ethernet ports.",
+        "Quantity": "One unit.",
+        "Relative Location": "Located on the left side of the image, attached to the left end of the Ethernet cable.",
+        "Orientation": "Oriented horizontally, facing right, with the locking tabs visible on the top and bottom.",
+        "Connection/Attachments": "Connected to the left end of the Ethernet cable, with the cable's internal wires inserted into the connector's metal contacts."
+    },
+    "RJ45 Connector (Right)": {
+        "Type": "A standard 8P8C modular plug, commonly used for Ethernet connections, featuring a clear plastic housing and orange locking tabs.",
+        "Color": "Transparent plastic housing with bright orange locking tabs and internal metallic contacts.",
+        "Size": "2.5 cm in width and 3 cm in height, with a depth of about 1.5 cm / 1.5 to 2 centimeters in width and 1 to 1.5 centimeters in height",
+        "Material": "Transparent thermoplastic for the housing and metal for the internal contacts.",
+        "Composition": "Composed of a transparent plastic shell, orange locking mechanism, and internal metal pins designed to interface with Ethernet ports.",
+        "Quantity": "One unit.",
+        "Relative Location": "Located on the right side of the image, attached to the right end of the Ethernet cable.",
+        "Orientation": "Oriented horizontally, facing left, with the locking tabs visible on the top and bottom, aligned with the cable’s direction.",
+        "Connection/Attachments": "Connected to the right end of the Ethernet cable, with the cable's internal wires inserted into the connector's metal contacts."
+    },
+    "Ethernet Cable": {
+        "Type": "A standard twisted-pair network cable designed for Ethernet connectivity, featuring a blue or yellow outer sheath and printed specifications, with two RJ45 connectors at each end.",
+        "Color": "Blue outer sheath with white printed text indicating specifications, and a bright yellow jacket in another description.",
+        "Size": "Length between connectors is approximately 10-15 cm, with connectors measuring 1.5-2 cm in width and 2.5 cm in width by 3 cm in height. The cable is very short, approximately 5-10 cm in length.",
+        "Material": "Flexible plastic or PVC sheath, with internal copper conductors and transparent plastic connectors with orange locking mechanisms.",
+        "Composition": "Composed of twisted-pair copper wires inside the jacket, terminated with RJ45 connectors containing eight metallic contacts. The cable consists of a central copper wire pair, insulated individually, and bundled within a blue or yellow plastic jacket.",
+        "Quantity": "One unit.",
+        "Relative Location": "Positioned horizontally across the image, connecting the left and right RJ45 connectors, with the left connector on the left side and the right connector on the right side.",
+        "Orientation": "Oriented horizontally, running from left to right across the frame, and parallel to the bottom edge of the image.",
+        "Connection/Attachments": "Both ends are terminated with RJ45 connectors, secured within their respective plastic housings, and connected to both RJ45 connectors at each end."
+    }
+}

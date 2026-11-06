@@ -1,0 +1,114 @@
+2026-08-14 17:30:36 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-14 17:30:36 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-14 17:30:36 | INFO     | __main__ | Dataset  : zivid_darkblue_box
+2026-08-14 17:30:36 | INFO     | __main__ | Classes  : single
+2026-08-14 17:30:36 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-14 17:30:36 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/zivid_darkblue_box_173036_log.txt
+2026-08-14 17:30:36 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-14 17:30:37 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-14 17:30:37 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:30:39 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:30:39 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-14 17:30:39 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_darkblue_box/train/good/zivid_rgb_00330.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_darkblue_box/train/good/zivid_rgb_00015.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_darkblue_box/train/good/zivid_rgb_00353.png']
+2026-08-14 17:30:39 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-14 17:30:39 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/zivid_darkblue_box_object_labels.txt
+2026-08-14 17:30:39 | INFO     | __main__ | Object names: ['blue plastic storage bin']
+2026-08-14 17:30:39 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-14 17:30:39 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/zivid_darkblue_box/good
+2026-08-14 17:30:39 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-14 17:30:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:30:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:30:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:30:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:30:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:30:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:30:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:30:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:30:46 | INFO     | models | [VLM] Inference completed in 5.557s (max_new_tokens=2040)
+2026-08-14 17:30:46 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_darkblue_box/good/processed_good_zivid_rgb_00330_2026-08-14 17:30:46.json (inference_time=5.557s)
+2026-08-14 17:30:46 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:30:46 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:30:53 | INFO     | models | [VLM] Inference completed in 6.406s (max_new_tokens=2040)
+2026-08-14 17:30:53 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_darkblue_box/good/processed_good_zivid_rgb_00015_2026-08-14 17:30:53.json (inference_time=6.406s)
+2026-08-14 17:30:53 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:30:53 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:30:59 | INFO     | models | [VLM] Inference completed in 6.452s (max_new_tokens=2040)
+2026-08-14 17:30:59 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_darkblue_box/good/processed_good_zivid_rgb_00353_2026-08-14 17:30:59.json (inference_time=6.452s)
+2026-08-14 17:30:59 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-14 17:30:59 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-14 17:31:01 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-14 17:31:01 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_darkblue_box/good
+2026-08-14 17:31:01 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00353_2026-08-14 17:30:59.json
+2026-08-14 17:31:01 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic storage bin
+    - Attribute 1 Type - rectangular, open-top container with reinforced edges and integrated handles or latches on the sides
+    - Attribute 2 Color - solid dark blue with a slightly glossy finish; some surface reflections and minor scuffs are visible
+    - Attribute 3 Size - rectangular shape with approximate length greater than width; exact dimensions not measurable from image, but appears to be medium-sized for storage purposes
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic suitable for industrial or commercial storage
+    - Attribute 5 Composition - single-piece molded construction with raised rim, internal base, and side walls; features include small holes or slots along the rim for stacking or attachment
+    - Attribute 6 Quantity - one (1)
+    - Attribute 7 Relative Location - positioned centrally within the frame, angled diagonally, occupying most of the visual space
+    - Attribute 8 Orientation - tilted slightly, with one corner closer to the bottom-left of the frame and the opposite corner closer to the top-right, suggesting a diagonal perspective
+    - Attribute 9 Connection or Attachments - no visible lids, locks, or external attachments; the rim has pre-molded slots and holes, possibly for stacking or securing with other bins or fixtures
+2026-08-14 17:31:01 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00015_2026-08-14 17:30:53.json
+2026-08-14 17:31:01 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic storage bin
+    - Attribute 1 Type - rectangular, open-top, stackable plastic container with reinforced corners and integrated handles on the sides
+    - Attribute 2 Color - deep blue with a matte finish; interior shows some white residue or staining
+    - Attribute 3 Size - approximately 18 inches in length, 12 inches in width, and 6 inches in height (estimated based on proportions relative to other bins and visible structure)
+    - Attribute 4 Material - molded high-density polyethylene (HDPE) plastic, typical for industrial or warehouse storage bins
+    - Attribute 5 Composition - single-piece molded construction with integrated structural reinforcements at corners and edges; no visible seams or separate components
+    - Attribute 6 Quantity - one primary bin in focus, with at least two other similar bins partially visible in the background
+    - Attribute 7 Relative Location - positioned centrally in the foreground on a flat surface, with other bins stacked or placed behind it
+    - Attribute 8 Orientation - viewed from a top-down perspective with a slight angle, showing the interior and side profiles
+    - Attribute 9 Connection or Attachments - no visible latches, lids, or attachments; designed for standalone or stackable use; side handles are molded into the bin’s structure for grip and transport
+2026-08-14 17:31:01 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00330_2026-08-14 17:30:46.json
+2026-08-14 17:31:01 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic storage bin
+    - Attribute 1 Type - rectangular, open-top container with reinforced rim and integrated latches on corners
+    - Attribute 2 Color - solid blue with a slightly translucent quality, showing some surface wear and light reflections
+    - Attribute 3 Size - approximately 18 inches long, 12 inches wide, and 4 inches deep (estimated from visual proportions)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE), exhibiting smooth yet slightly textured surface
+    - Attribute 5 Composition - single-piece construction with raised rim, internal grid pattern on base, and corner latches for closure
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - centered within the frame, occupying the majority of the visual space
+    - Attribute 8 Orientation - viewed from directly above, with the open top facing the camera
+    - Attribute 9 Connection or Attachments - features four corner latches designed for interlocking with another bin or lid, and multiple small holes along the rim for stacking or securing
+2026-08-14 17:31:01 | DEBUG    | descriptor | Unique object keys found: {'blue plastic storage bin'}
+2026-08-14 17:31:01 | DEBUG    | descriptor | Class 'good' object description: {'blue plastic storage bin': ['-  Type - rectangular, open-top container with reinforced edges and integrated handles or latches on the sides\n    -  Color - solid dark blue with a slightly glossy finish; some surface reflections and minor scuffs are visible\n    -  Size - rectangular shape with approximate length greater than width; exact dimensions not measurable from image, but appears to be medium-sized for storage purposes\n    -  Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic suitable for industrial or commercial storage\n    -  Composition - single-piece molded construction with raised rim, internal base, and side walls; features include small holes or slots along the rim for stacking or attachment\n    -  Quantity - one (1)\n    -  Relative Location - positioned centrally within the frame, angled diagonally, occupying most of the visual space\n    -  Orientation - tilted slightly, with one corner closer to the bottom-left of the frame and the opposite corner closer to the top-right, suggesting a diagonal perspective\n    -  Connection or Attachments - no visible lids, locks, or external attachments; the rim has pre-molded slots and holes, possibly for stacking or securing with other bins or fixtures', '-  Type - rectangular, open-top, stackable plastic container with reinforced corners and integrated handles on the sides\n    -  Color - deep blue with a matte finish; interior shows some white residue or staining\n    -  Size - approximately 18 inches in length, 12 inches in width, and 6 inches in height (estimated based on proportions relative to other bins and visible structure)\n    -  Material - molded high-density polyethylene (HDPE) plastic, typical for industrial or warehouse storage bins\n    -  Composition - single-piece molded construction with integrated structural reinforcements at corners and edges; no visible seams or separate components\n    -  Quantity - one primary bin in focus, with at least two other similar bins partially visible in the background\n    -  Relative Location - positioned centrally in the foreground on a flat surface, with other bins stacked or placed behind it\n    -  Orientation - viewed from a top-down perspective with a slight angle, showing the interior and side profiles\n    -  Connection or Attachments - no visible latches, lids, or attachments; designed for standalone or stackable use; side handles are molded into the bin’s structure for grip and transport', '-  Type - rectangular, open-top container with reinforced rim and integrated latches on corners\n    -  Color - solid blue with a slightly translucent quality, showing some surface wear and light reflections\n    -  Size - approximately 18 inches long, 12 inches wide, and 4 inches deep (estimated from visual proportions)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE), exhibiting smooth yet slightly textured surface\n    -  Composition - single-piece construction with raised rim, internal grid pattern on base, and corner latches for closure\n    -  Quantity - one\n    -  Relative Location - centered within the frame, occupying the majority of the visual space\n    -  Orientation - viewed from directly above, with the open top facing the camera\n    -  Connection or Attachments - features four corner latches designed for interlocking with another bin or lid, and multiple small holes along the rim for stacking or securing']}
+2026-08-14 17:31:08 | INFO     | models | [LLM] Inference completed in 6.844s (max_new_tokens=3000)
+2026-08-14 17:31:08 | INFO     | descriptor | [blue plastic storage bin] Object summarisation completed in 6.844s
+2026-08-14 17:31:08 | DEBUG    | descriptor | Summarised description for 'blue plastic storage bin': 
+
+{
+  "blue plastic storage bin": {
+    "Type": "rectangular, open-top container with reinforced edges, integrated handles or latches on sides, and stackable design",
+    "Color": "solid dark blue with a slightly glossy finish, showing some surface reflections, minor scuffs, and light translucency",
+    "Size": "18x12x6 inches / 45x30x15 cm (estimated from visual proportions)",
+    "Material": "molded high-density polyethylene (HDPE) plastic, exhibiting a smooth yet slightly textured surface",
+    "Composition": "single-piece molded construction with raised rim, internal base, side walls, and structural reinforcements at corners and edges; features include internal grid pattern on base, small holes or slots along the rim for stacking or attachment, and corner latches for closure",
+    "Quantity": "one",
+    "Relative Location": "positioned centrally within the frame, occupying the majority of the visual space, with other bins partially visible in the background",
+    "Orientation": "viewed from a top-down perspective with a slight angle, showing the interior and side profiles, or directly above with the open top facing the camera",
+    "Connection or Attachments": "features four corner latches designed for interlocking with another bin or lid, and multiple small holes along the rim for stacking or securing; no visible lids, locks, or external attachments"
+  }
+}
+2026-08-14 17:31:08 | DEBUG    | descriptor | Master description: {'blue plastic storage bin': {'Type': 'rectangular, open-top container with reinforced edges, integrated handles or latches on sides, and stackable design', 'Color': 'solid dark blue with a slightly glossy finish, showing some surface reflections, minor scuffs, and light translucency', 'Size': '18x12x6 inches / 45x30x15 cm (estimated from visual proportions)', 'Material': 'molded high-density polyethylene (HDPE) plastic, exhibiting a smooth yet slightly textured surface', 'Composition': 'single-piece molded construction with raised rim, internal base, side walls, and structural reinforcements at corners and edges; features include internal grid pattern on base, small holes or slots along the rim for stacking or attachment, and corner latches for closure', 'Quantity': 'one', 'Relative Location': 'positioned centrally within the frame, occupying the majority of the visual space, with other bins partially visible in the background', 'Orientation': 'viewed from a top-down perspective with a slight angle, showing the interior and side profiles, or directly above with the open top facing the camera', 'Connection or Attachments': 'features four corner latches designed for interlocking with another bin or lid, and multiple small holes along the rim for stacking or securing; no visible lids, locks, or external attachments'}}
+2026-08-14 17:31:08 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-14 17:31:08 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/zivid_darkblue_box.txt
+2026-08-14 17:31:08 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=3)
+2026-08-14 17:31:08 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-14 17:31:08 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:31:10 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:31:10 | DEBUG    | planner | Class directories for dataset 'zivid_darkblue_box': ['good']
+2026-08-14 17:31:10 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/zivid_darkblue_box/good
+2026-08-14 17:31:10 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:31:10 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:31:10 | DEBUG    | planner | Generating planner steps from: good_2026-08-14 17:31:08_master_description.json
+2026-08-14 17:31:13 | INFO     | models | [VLM] Inference completed in 2.206s (max_new_tokens=2040)
+2026-08-14 17:31:13 | INFO     | planner | Planner steps generated in 2.206s (attempt=1, steps=3, approved_rules=3)
+2026-08-14 17:31:13 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_darkblue_box/good/good_2026-08-14 17:31:13_planner.txt
+2026-08-14 17:31:13 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any dirt, grime, or residue stains visible on the interior surface of the blue plastic storage bin?  
+Step 2: Is there any discoloration, oil stains, or liquid residue marks present on the interior surface of the blue plastic storage bin?  
+Step 3: Is there any visible item or part inside the interior of the blue plastic storage bin?
+2026-08-14 17:31:13 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_darkblue_box/performance/performance_20260814_173113.json
+2026-08-14 17:31:13 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_darkblue_box
+2026-08-14 17:31:13 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/zivid_darkblue_box_173036_log.txt

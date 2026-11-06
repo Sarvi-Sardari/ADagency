@@ -1,0 +1,133 @@
+2026-08-11 12:48:08 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:48:08 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:48:08 | INFO     | __main__ | Dataset  : transistor
+2026-08-11 12:48:08 | INFO     | __main__ | Classes  : single
+2026-08-11 12:48:08 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:48:08 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/transistor_124808_log.txt
+2026-08-11 12:48:08 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:48:10 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:48:10 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:48:11 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:48:11 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:48:11 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/transistor/train/good/139.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/transistor/train/good/018.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/transistor/train/good/164.png']
+2026-08-11 12:48:11 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:48:11 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:48:11 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:48:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:48:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:48:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:48:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1295456 44
+2026-08-11 12:48:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1295512 1304
+2026-08-11 12:48:12 | INFO     | models | [VLM] Inference completed in 0.499s (max_new_tokens=2040)
+2026-08-11 12:48:12 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/transistor/train/good/100.png in 0.499s
+2026-08-11 12:48:15 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['transistor']
+2026-08-11 12:48:15 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/transistor_object_labels.txt
+2026-08-11 12:48:15 | INFO     | __main__ | Object names: ['transistor']
+2026-08-11 12:48:15 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:48:15 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/transistor/good
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1282903 44
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1282959 1304
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1277789 44
+2026-08-11 12:48:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1277845 1304
+2026-08-11 12:48:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:48:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:48:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:48:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1293549 44
+2026-08-11 12:48:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1293605 1304
+2026-08-11 12:48:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:48:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:48:20 | INFO     | models | [VLM] Inference completed in 4.855s (max_new_tokens=2040)
+2026-08-11 12:48:20 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/transistor/good/processed_good_139_2026-08-11 12:48:20.json (inference_time=4.855s)
+2026-08-11 12:48:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:48:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:48:27 | INFO     | models | [VLM] Inference completed in 6.051s (max_new_tokens=2040)
+2026-08-11 12:48:27 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/transistor/good/processed_good_018_2026-08-11 12:48:27.json (inference_time=6.051s)
+2026-08-11 12:48:27 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:48:27 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:48:33 | INFO     | models | [VLM] Inference completed in 6.003s (max_new_tokens=2040)
+2026-08-11 12:48:33 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/transistor/good/processed_good_164_2026-08-11 12:48:33.json (inference_time=6.003s)
+2026-08-11 12:48:33 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:48:33 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:48:34 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:48:34 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/transistor/good
+2026-08-11 12:48:34 | DEBUG    | descriptor | Processing image description: processed_good_164_2026-08-11 12:48:33.json
+2026-08-11 12:48:34 | DEBUG    | descriptor | Raw description data: - Object 1 transistor
+    - Attribute 1 <Type> -detailed description - A three-terminal semiconductor device with a rectangular black casing, featuring a central circular indentation marked with a symbol.
+    - Attribute 2 <Color> - detailed description - The casing is uniformly black, with a matte finish and slight surface wear or residue visible.
+    - Attribute 3 <Size> - detailed description - The casing is rectangular, with approximate dimensions of 10mm in width and 15mm in height, and the leads extend downward from its base.
+    - Attribute 4 <Material> - detailed description - The casing is made of a rigid, opaque plastic, likely epoxy or phenolic resin, with metallic leads made of silver-colored metal.
+    - Attribute 5 <Composition> - detailed description - The casing is composed of a polymer matrix with embedded conductive traces or metal layers, while the leads are made of a metallic alloy, possibly tin-lead or soldered copper.
+    - Attribute 6 <Quantity> - detailed description - One transistor.
+    - Attribute 7 <Relative Location> - detailed description - Positioned centrally within the frame, with no other objects adjacent to it in the description scope.
+    - Attribute 8 <Orientation> - detailed description - The transistor is oriented vertically, with its top surface facing the viewer and leads extending downward.
+    - Attribute 9 <Connection or Attachments> - detailed description - Three metallic leads extend from the bottom of the casing, each bent slightly outward and downward, designed to connect to external circuitry.
+2026-08-11 12:48:34 | DEBUG    | descriptor | Processing image description: processed_good_018_2026-08-11 12:48:27.json
+2026-08-11 12:48:34 | DEBUG    | descriptor | Raw description data: - Object 1 transistor
+    - Attribute 1 <Type> -detailed description - A three-terminal semiconductor device with a rectangular black plastic casing, featuring three metallic leads extending downward from its base.
+    - Attribute 2 <Color> - detailed description - The casing is uniformly black with a matte finish, and the metallic leads are silver-colored with some tarnish or oxidation visible.
+    - Attribute 3 <Size> - detailed description - The casing is approximately 1.5 cm in height and 0.8 cm in width, with the leads extending about 1 cm downward from the base.
+    - Attribute 4 <Material> - detailed description - The casing is made of black plastic, likely a thermoplastic such as epoxy or phenolic resin, while the leads are made of metal, likely a tin-lead or soldered alloy.
+    - Attribute 5 <Composition> - detailed description - The casing is a molded plastic housing containing internal semiconductor material, and the leads are metallic conductors connected to the internal terminals.
+    - Attribute 6 <Quantity> - detailed description - One transistor.
+    - Attribute 7 <Relative Location> - detailed description - Positioned centrally in the frame, with the casing aligned vertically and the leads extending downward.
+    - Attribute 8 <Orientation> - detailed description - The transistor is oriented upright, with the casing facing upward and the leads pointing downward.
+    - Attribute 9 <Connection or Attachments> - detailed description - The leads are soldered to a surface, likely a circuit board, with visible solder joints connecting each lead to a corresponding point.
+2026-08-11 12:48:34 | DEBUG    | descriptor | Processing image description: processed_good_139_2026-08-11 12:48:20.json
+2026-08-11 12:48:34 | DEBUG    | descriptor | Raw description data: - Object 1 transistor
+    - Attribute 1 <Type> -detailed description - rectangular, three-legged electronic component with a black plastic casing
+    - Attribute 2 <Color> - detailed description - black, matte finish with a circular indentation containing a faintly visible logo or marking
+    - Attribute 3 <Size> - detailed description - approximately 1.5 cm in length and 1 cm in width, with legs extending downward from the base
+    - Attribute 4 <Material> - detailed description - black plastic body with metallic leads, likely made of epoxy resin and metal alloy for the leads
+    - Attribute 5 <Composition> - detailed description - composite of plastic encapsulation and metal conductive leads, with internal semiconductor structure
+    - Attribute 6 <Quantity> - detailed description - one unit
+    - Attribute 7 <Relative Location> - detailed description - centrally positioned within the frame, mounted on a surface with circular holes and parallel lines
+    - Attribute 8 <Orientation> - detailed description - upright, with the top surface facing the viewer and legs extending downward
+    - Attribute 9 <Connection or Attachments> - detailed description - three metallic leads soldered to a surface, with bent ends inserted into corresponding holes for electrical connection
+2026-08-11 12:48:34 | DEBUG    | descriptor | Unique object keys found: {'transistor'}
+2026-08-11 12:48:34 | DEBUG    | descriptor | Class 'good' object description: {'transistor': ['-  <Type> -detailed description - A three-terminal semiconductor device with a rectangular black casing, featuring a central circular indentation marked with a symbol.\n    -  <Color> - detailed description - The casing is uniformly black, with a matte finish and slight surface wear or residue visible.\n    -  <Size> - detailed description - The casing is rectangular, with approximate dimensions of 10mm in width and 15mm in height, and the leads extend downward from its base.\n    -  <Material> - detailed description - The casing is made of a rigid, opaque plastic, likely epoxy or phenolic resin, with metallic leads made of silver-colored metal.\n    -  <Composition> - detailed description - The casing is composed of a polymer matrix with embedded conductive traces or metal layers, while the leads are made of a metallic alloy, possibly tin-lead or soldered copper.\n    -  <Quantity> - detailed description - One transistor.\n    -  <Relative Location> - detailed description - Positioned centrally within the frame, with no other objects adjacent to it in the description scope.\n    -  <Orientation> - detailed description - The transistor is oriented vertically, with its top surface facing the viewer and leads extending downward.\n    -  <Connection or Attachments> - detailed description - Three metallic leads extend from the bottom of the casing, each bent slightly outward and downward, designed to connect to external circuitry.', '-  <Type> -detailed description - A three-terminal semiconductor device with a rectangular black plastic casing, featuring three metallic leads extending downward from its base.\n    -  <Color> - detailed description - The casing is uniformly black with a matte finish, and the metallic leads are silver-colored with some tarnish or oxidation visible.\n    -  <Size> - detailed description - The casing is approximately 1.5 cm in height and 0.8 cm in width, with the leads extending about 1 cm downward from the base.\n    -  <Material> - detailed description - The casing is made of black plastic, likely a thermoplastic such as epoxy or phenolic resin, while the leads are made of metal, likely a tin-lead or soldered alloy.\n    -  <Composition> - detailed description - The casing is a molded plastic housing containing internal semiconductor material, and the leads are metallic conductors connected to the internal terminals.\n    -  <Quantity> - detailed description - One transistor.\n    -  <Relative Location> - detailed description - Positioned centrally in the frame, with the casing aligned vertically and the leads extending downward.\n    -  <Orientation> - detailed description - The transistor is oriented upright, with the casing facing upward and the leads pointing downward.\n    -  <Connection or Attachments> - detailed description - The leads are soldered to a surface, likely a circuit board, with visible solder joints connecting each lead to a corresponding point.', '-  <Type> -detailed description - rectangular, three-legged electronic component with a black plastic casing\n    -  <Color> - detailed description - black, matte finish with a circular indentation containing a faintly visible logo or marking\n    -  <Size> - detailed description - approximately 1.5 cm in length and 1 cm in width, with legs extending downward from the base\n    -  <Material> - detailed description - black plastic body with metallic leads, likely made of epoxy resin and metal alloy for the leads\n    -  <Composition> - detailed description - composite of plastic encapsulation and metal conductive leads, with internal semiconductor structure\n    -  <Quantity> - detailed description - one unit\n    -  <Relative Location> - detailed description - centrally positioned within the frame, mounted on a surface with circular holes and parallel lines\n    -  <Orientation> - detailed description - upright, with the top surface facing the viewer and legs extending downward\n    -  <Connection or Attachments> - detailed description - three metallic leads soldered to a surface, with bent ends inserted into corresponding holes for electrical connection']}
+2026-08-11 12:48:39 | INFO     | models | [LLM] Inference completed in 5.475s (max_new_tokens=3000)
+2026-08-11 12:48:39 | INFO     | descriptor | [transistor] Object summarisation completed in 5.475s
+2026-08-11 12:48:39 | DEBUG    | descriptor | Summarised description for 'transistor': {
+  "transistor": {
+    "Type": "A three-terminal semiconductor device with a rectangular black plastic casing and three metallic leads extending downward from its base",
+    "Color": "The casing is uniformly black with a matte finish and slight surface wear or residue visible; the metallic leads are silver-colored with some tarnish or oxidation visible",
+    "Size": "1.5 cm in height and 0.8 cm in width, with leads extending about 1 cm downward; alternatively, 10mm in width and 15mm in height, with leads extending downward",
+    "Material": "The casing is made of a rigid, opaque black plastic, likely epoxy or phenolic resin, with metallic leads composed of a metal alloy such as tin-lead or soldered copper",
+    "Composition": "The casing is a molded polymer matrix with embedded conductive traces or metal layers, containing an internal semiconductor structure, while the leads are metallic conductors connected to the internal terminals",
+    "Quantity": "One transistor",
+    "Relative Location": "Positioned centrally within the frame, mounted on a surface with circular holes and parallel lines, with no other objects adjacent to it in the description scope",
+    "Orientation": "Oriented vertically with the top surface facing the viewer and leads extending downward",
+    "Connection or Attachments": "Three metallic leads extend from the bottom of the casing, each bent slightly outward and downward, soldered to a surface and inserted into corresponding holes for electrical connection"
+  }
+}
+2026-08-11 12:48:39 | DEBUG    | descriptor | Master description: {'transistor': {'Type': 'A three-terminal semiconductor device with a rectangular black plastic casing and three metallic leads extending downward from its base', 'Color': 'The casing is uniformly black with a matte finish and slight surface wear or residue visible; the metallic leads are silver-colored with some tarnish or oxidation visible', 'Size': '1.5 cm in height and 0.8 cm in width, with leads extending about 1 cm downward; alternatively, 10mm in width and 15mm in height, with leads extending downward', 'Material': 'The casing is made of a rigid, opaque black plastic, likely epoxy or phenolic resin, with metallic leads composed of a metal alloy such as tin-lead or soldered copper', 'Composition': 'The casing is a molded polymer matrix with embedded conductive traces or metal layers, containing an internal semiconductor structure, while the leads are metallic conductors connected to the internal terminals', 'Quantity': 'One transistor', 'Relative Location': 'Positioned centrally within the frame, mounted on a surface with circular holes and parallel lines, with no other objects adjacent to it in the description scope', 'Orientation': 'Oriented vertically with the top surface facing the viewer and leads extending downward', 'Connection or Attachments': 'Three metallic leads extend from the bottom of the casing, each bent slightly outward and downward, soldered to a surface and inserted into corresponding holes for electrical connection'}}
+2026-08-11 12:48:39 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:48:39 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['transistor'] directly (no generation, no compiled file).
+2026-08-11 12:48:39 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:48:39 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:48:40 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:48:41 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:48:41 | DEBUG    | planner | Class directories for dataset 'transistor': ['good']
+2026-08-11 12:48:41 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/transistor/good
+2026-08-11 12:48:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:48:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:48:41 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:48:39_master_description.json
+2026-08-11 12:48:44 | INFO     | models | [VLM] Inference completed in 2.832s (max_new_tokens=2040)
+2026-08-11 12:48:44 | INFO     | planner | Planner steps generated in 2.832s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-11 12:48:44 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/transistor/good/good_2026-08-11 12:48:44_planner.txt
+2026-08-11 12:48:44 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the black plastic casing or metallic leads?
+Step 2: Are any of the three metallic leads bent, warped, crushed, punctured, torn, or snapped?
+Step 3: Is there any missing component compared to the reference image?
+Step 4: Is there any extra debris, foreign object, or liquid present in the image?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the casing or leads?
+Step 6: Is there any significant misalignment or incorrect assembly orientation of the transistor relative to the reference image?
+2026-08-11 12:48:44 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/transistor/performance/performance_20260811_124844.json
+2026-08-11 12:48:44 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/transistor
+2026-08-11 12:48:44 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/transistor_124808_log.txt

@@ -1,0 +1,46 @@
+{
+    "Central Aperture": {
+        "Type": "dark, circular void at the center of the bottle neck opening",
+        "Color": "deep black, absorbing light, with no visible internal details",
+        "Size": "1.5-2 cm in diameter / 5x5mm / approximately 2.5 cm (approximate based on visual proportions)",
+        "Material": "glass, with a non-reflective, dark interior surface",
+        "Composition": "hollow space within the bottle neck, bounded by the inner bottle wall, possibly with a slight residue or texture",
+        "Quantity": "one central aperture",
+        "Relative Location": "located at the center of the bottle neck opening, enclosed by the inner bottle wall and glass rim",
+        "Orientation": "circular, centered, and perpendicular to the bottle’s axis",
+        "Connection or Attachments": "directly connected to the inner bottle wall, forming the innermost boundary of the bottle neck opening and the functional central passage of the bottle neck"
+    },
+    "Inner Bottle Wall": {
+        "Type": "smooth, curved inner surface of a bottle, forming the inner boundary of the neck opening",
+        "Color": "dark, deep brown to black with subtle amber, brownish-orange, or coppery reflections along the rim and inner edge, appearing almost black in shadowed areas",
+        "Size": "circular, with inner diameter approximately 2.5 cm and outer diameter approximately 5 cm; visible portion is approximately 2-3 cm in diameter at the rim, tapering inward",
+        "Material": "glass",
+        "Composition": "transparent glass with slight surface texture or residue, possibly with a dark tint, and a glossy, reflective finish",
+        "Quantity": "one continuous inner wall surface",
+        "Relative Location": "forms the inner boundary of the bottle neck opening, surrounding the central aperture and occupying the central interior space of the bottle neck",
+        "Orientation": "curved inward concentrically, perpendicular to the bottle’s axis of symmetry, concentrically aligned with the central aperture, facing inward toward the center",
+        "Connection or Attachments": "seamlessly connected to the outer glass rim and central aperture, forming a continuous inner structure and directly connected to the glass rim"
+    },
+    "Glass Rim": {
+        "Type": "The outermost circular edge of the bottle neck, defining the boundary of the opening.",
+        "Color": "Dark brown with reflective amber highlights along the curved edge, dark brownish-black with golden-orange reflective highlights due to light refraction, and a glossy sheen reflecting light in warm amber or copper tones along its upper edge",
+        "Size": "Approximately 0.5 cm in height, with a circular outer diameter matching the bottle's opening / Approximately 2-3 cm in diameter, with a slight thickness and beveled edge",
+        "Material": "Glass",
+        "Composition": "Solid glass with a smooth, slightly beveled edge, slight surface irregularities and reflective properties, made of dark-tinted glass, possibly borosilicate or soda-lime glass, with a uniform thickness and slight curvature",
+        "Quantity": "One continuous rim encircling the bottle neck",
+        "Relative Location": "Located at the outermost edge of the bottle neck, surrounding the inner bottle wall and encircling the central aperture and inner wall",
+        "Orientation": "Horizontal, circular, and concentric with the central aperture / concentric circular orientation, viewed from directly above / horizontally oriented, forming a complete circular boundary",
+        "Connection or Attachments": "Directly attached to the inner bottle wall and forms the outer boundary of the bottle neck opening, connected to the inner bottle wall and central aperture, forming the outer boundary of the bottle’s opening"
+    },
+    "Bottle Neck Opening": {
+        "Type": "circular aperture formed by the inner bottle wall and glass rim, serving as the entry/exit point of the bottle",
+        "Color": "dark, deep brown with a blackish center, reflecting ambient light in warm amber tones along the rim, with amber highlights on the glass rim and brownish-orange highlights along the inner rim",
+        "Size": "approximately 2-5 cm in diameter, with a slightly tapered inner diameter toward the center, depth approximately 1.5 cm",
+        "Material": "glass, with a smooth, reflective surface",
+        "Composition": "transparent glass forming a hollow cylindrical opening, composed of the inner bottle wall and glass rim, forming a continuous circular opening",
+        "Quantity": "one opening",
+        "Relative Location": "centered in the image, surrounded by the inner bottle wall and glass rim",
+        "Orientation": "circular and centered, with concentric curvature, concentric circular orientation, viewed from directly above, facing upward",
+        "Connection or Attachments": "connected to the inner bottle wall and glass rim, forming the functional opening of the bottle, forming the topmost visible structure"
+    }
+}

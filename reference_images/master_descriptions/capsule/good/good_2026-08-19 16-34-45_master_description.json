@@ -1,0 +1,24 @@
+{
+    "Capsule": {
+        "Type": "A two-part, elongated, oval-shaped pharmaceutical capsule with rounded ends, composed of a black half and an orange half",
+        "Color": "One half is solid black, the other half is translucent orange-brown",
+        "Size": "Approximately 2.5 cm in length and 0.7 cm in diameter / 2.5 cm in length and 0.7 cm in width",
+        "Material": "Hard gelatin material with a smooth, glossy surface",
+        "Composition": "Composed of two halves that fit together; the orange half contains an internal substance, while the black half is a protective shell",
+        "Quantity": "One capsule",
+        "Relative Location": "Positioned horizontally and centered in the frame",
+        "Orientation": "Lying flat, aligned parallel to the bottom edge of the image",
+        "Connection or Attachments": "The two halves are fused together, forming a single, sealed unit; no external attachments or connections visible"
+    },
+    "Printed Marking": {
+        "Type": "Text and logo printed on the capsule surface, including a brand name and numerical value",
+        "Color": "Light gray or silver, white or light-colored, light pink or off-white, contrasting with black, orange, or orange-brown backgrounds",
+        "Size": "0.5 cm in height and 0.8 cm in width for the text 'actavis' and '500', 3 mm in height and 4 mm in width for digits, 0.5 cm in height for digits spaced evenly",
+        "Material": "Ink or laser-etched marking applied to the capsule surface",
+        "Composition": "Composed of printed characters and a stylized logo, likely representing the manufacturer or product identifier, consisting of the digits '500' printed in a sans-serif font, or the digits '5', '0', and '0' arranged sequentially",
+        "Quantity": "Two printed markings: one on the black half (brand name) and one on the orange half (numeric value), or one set of printed digits",
+        "Relative Location": "The 'actavis' logo and text are printed on the black half, while '500' is printed on the orange half, both centrally located on their respective halves, or located on the orange-brown half of the capsule, centered along its length",
+        "Orientation": "Horizontally aligned with the capsule’s longitudinal axis",
+        "Connection or Attachments": "Directly integrated into the capsule’s surface, with no separate attachments or connectors, and not physically connected to any other object"
+    }
+}

@@ -1,0 +1,196 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Copper Conductor Strand (Green Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "outer insulation surface",
+      "anomaly_name": "scratched Copper Conductor Strand (Green Insulated)",
+      "visual_description": "visible scratch or gouge on the green insulation surface, exposing underlying material."
+    },
+    {
+      "id": "A002",
+      "object_name": "Copper Conductor Strand (Green Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "outer insulation surface",
+      "anomaly_name": "cracked Copper Conductor Strand (Green Insulated)",
+      "visual_description": "visible crack or split running through the green insulation, possibly revealing internal copper strands."
+    },
+    {
+      "id": "A003",
+      "object_name": "Copper Conductor Strand (Green Insulated)",
+      "category": "structural_deformation",
+      "part_or_region": "overall shape",
+      "anomaly_name": "deformed Copper Conductor Strand (Green Insulated)",
+      "visual_description": "visible bulge or irregular curvature on the insulation surface, deviating from a uniform cylindrical shape."
+    },
+    {
+      "id": "A004",
+      "object_name": "Copper Conductor Strand (Green Insulated)",
+      "category": "structural_deformation",
+      "part_or_region": "overall shape",
+      "anomaly_name": "torn Copper Conductor Strand (Green Insulated)",
+      "visual_description": "visible tear or separation in the insulation, exposing internal copper strands."
+    },
+    {
+      "id": "A005",
+      "object_name": "Copper Conductor Strand (Green Insulated)",
+      "category": "structural_deformation",
+      "part_or_region": "overall shape",
+      "anomaly_name": "punctured Copper Conductor Strand (Green Insulated)",
+      "visual_description": "visible puncture or hole in the insulation, possibly with copper strands exposed."
+    },
+    {
+      "id": "A006",
+      "object_name": "Copper Conductor Strand (Green Insulated)",
+      "category": "structural_deformation",
+      "part_or_region": "copper strands",
+      "anomaly_name": "Copper Conductor Strand (Green Insulated) copper strand bend",
+      "visual_description": "one or more copper strands visibly bent or kinked, not lying straight within the insulation."
+    },
+    {
+      "id": "A007",
+      "object_name": "Copper Conductor Strand (Brown Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "insulation surface",
+      "anomaly_name": "scratched Copper Conductor Strand (Brown Insulated)",
+      "visual_description": "visible scratch or groove on the brown insulation surface"
+    },
+    {
+      "id": "A008",
+      "object_name": "Copper Conductor Strand (Brown Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "insulation surface",
+      "anomaly_name": "punctured Copper Conductor Strand (Brown Insulated)",
+      "visual_description": "small hole or puncture mark visible on the brown insulation surface"
+    },
+    {
+      "id": "A009",
+      "object_name": "Copper Conductor Strand (Brown Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "insulation surface",
+      "anomaly_name": "cracked Copper Conductor Strand (Brown Insulated)",
+      "visual_description": "visible crack or split line running through the brown insulation"
+    },
+    {
+      "id": "A010",
+      "object_name": "Copper Conductor Strand (Brown Insulated)",
+      "category": "structural_deformation",
+      "part_or_region": "copper strands",
+      "anomaly_name": "Copper Conductor Strand (Brown Insulated) copper strand bend",
+      "visual_description": "one or more copper strands visibly bent or kinked, not lying straight within the insulation."
+    },
+    {
+      "id": "A011",
+      "object_name": "Copper Conductor Strand (Brown Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "insulation surface",
+      "anomaly_name": "torn Copper Conductor Strand (Brown Insulated)",
+      "visual_description": "visible separation or rip in the brown insulation material"
+    },
+    {
+      "id": "A012",
+      "object_name": "Copper Conductor Strand (Brown Insulated)",
+      "category": "structural_deformation",
+      "part_or_region": "insulation surface",
+      "anomaly_name": "deformed Copper Conductor Strand (Brown Insulated)",
+      "visual_description": "visible bulge, sag, or irregular shape on the brown insulation surface"
+    },
+    {
+      "id": "A013",
+      "object_name": "Copper Conductor Strand (Blue Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "blue insulated conductor strand",
+      "anomaly_name": "scratched Copper Conductor Strand (Blue Insulated)",
+      "visual_description": "visible scratch or groove on the surface of the blue insulation, exposing underlying copper strands."
+    },
+    {
+      "id": "A014",
+      "object_name": "Copper Conductor Strand (Blue Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "blue insulated conductor strand",
+      "anomaly_name": "punctured Copper Conductor Strand (Blue Insulated)",
+      "visual_description": "a small hole or puncture through the blue insulation, revealing the copper strands inside."
+    },
+    {
+      "id": "A015",
+      "object_name": "Copper Conductor Strand (Blue Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "blue insulated conductor strand",
+      "anomaly_name": "torn Copper Conductor Strand (Blue Insulated)",
+      "visual_description": "a visible tear or split in the blue insulation, exposing copper strands at the edge."
+    },
+    {
+      "id": "A016",
+      "object_name": "Copper Conductor Strand (Blue Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "blue insulated conductor strand",
+      "anomaly_name": "cracked Copper Conductor Strand (Blue Insulated)",
+      "visual_description": "a visible crack or fissure running across the blue insulation, not penetrating through."
+    },
+    {
+      "id": "A017",
+      "object_name": "Copper Conductor Strand (Blue Insulated)",
+      "category": "structural_deformation",
+      "part_or_region": "copper strands",
+      "anomaly_name": "Copper Conductor Strand (Blue Insulated) copper strand bend",
+      "visual_description": "one or more copper strands visibly bent or kinked, not lying straight within the insulation."
+    },
+    {
+      "id": "A018",
+      "object_name": "Copper Conductor Strand (White/Off-white Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "white/off-white insulation layer",
+      "anomaly_name": "cracked insulation on copper conductor strand",
+      "visual_description": "a visible crack or split running through the white/off-white insulation layer, exposing the copper strands underneath."
+    },
+    {
+      "id": "A019",
+      "object_name": "Copper Conductor Strand (White/Off-white Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "white/off-white insulation layer",
+      "anomaly_name": "punctured insulation on copper conductor strand",
+      "visual_description": "a small hole or puncture in the white/off-white insulation layer, revealing the copper strands inside."
+    },
+    {
+      "id": "A020",
+      "object_name": "Copper Conductor Strand (White/Off-white Insulated)",
+      "category": "surface_integrity",
+      "part_or_region": "white/off-white insulation layer",
+      "anomaly_name": "torn insulation on copper conductor strand",
+      "visual_description": "a visible tear or separation in the white/off-white insulation layer, with the material pulled apart."
+    },
+    {
+      "id": "A021",
+      "object_name": "copper insulation strands",
+      "category": "missing_component",
+      "part_or_region": "blue, green, and brown insulated copper strands",
+      "anomaly_name": "missing blue copper insulation strand",
+      "visual_description": "The blue insulated copper strand appears incomplete or absent, leaving a visible gap where the strand should be."
+    },
+    {
+      "id": "A022",
+      "object_name": "copper insulation strands",
+      "category": "missing_component",
+      "part_or_region": "blue, green, and brown insulated copper strands",
+      "anomaly_name": "missing green copper insulation strand",
+      "visual_description": "The green insulated copper strand is visibly broken or missing, exposing underlying structure or adjacent strands."
+    },
+    {
+      "id": "A023",
+      "object_name": "copper insulation strands",
+      "category": "missing_component",
+      "part_or_region": "blue, green, and brown insulated copper strands",
+      "anomaly_name": "missing brown copper insulation strand",
+      "visual_description": "The brown insulated copper strand is partially or fully absent, creating an irregularity in the cable's cross-section."
+    },
+    {
+      "id": "A024",
+      "object_name": "coloured insulated wires",
+      "category": "missing_component",
+      "part_or_region": "inside each coloured insulation",
+      "anomaly_name": "missing wire inside coloured insulation",
+      "visual_description": "One or more of the coloured insulated wires (blue, green, brown) appears to have a visible gap or hollow core where copper strands are missing, leaving an empty space within the insulation layer."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+2026-08-19 16:38:11 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:38:11 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:38:11 | INFO     | __main__ | Dataset  : hazelnut
+2026-08-19 16:38:11 | INFO     | __main__ | Classes  : single
+2026-08-19 16:38:11 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:38:11 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/hazelnut_163811_log.txt
+2026-08-19 16:38:11 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:38:13 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:38:13 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:38:15 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:38:15 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:38:15 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/hazelnut/train/good/255.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/hazelnut/train/good/034.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/hazelnut/train/good/301.png']
+2026-08-19 16:38:15 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:38:15 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/hazelnut_object_labels.txt
+2026-08-19 16:38:15 | INFO     | __main__ | Object names: ['Hazelnut']
+2026-08-19 16:38:15 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:38:15 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/hazelnut/good
+2026-08-19 16:38:15 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1241741 44
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1241797 1304
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1212194 44
+2026-08-19 16:38:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1212250 1304
+2026-08-19 16:38:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:38:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:38:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:38:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1242914 44
+2026-08-19 16:38:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1242970 1304
+2026-08-19 16:38:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:38:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:38:23 | INFO     | models | [VLM] Inference completed in 6.986s (max_new_tokens=2040)
+2026-08-19 16:38:23 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/hazelnut/good/processed_good_255_2026-08-19 16:38:23.json (inference_time=6.986s)
+2026-08-19 16:38:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:38:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:38:31 | INFO     | models | [VLM] Inference completed in 7.388s (max_new_tokens=2040)
+2026-08-19 16:38:31 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/hazelnut/good/processed_good_034_2026-08-19 16:38:31.json (inference_time=7.388s)
+2026-08-19 16:38:31 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:38:31 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:38:38 | INFO     | models | [VLM] Inference completed in 7.251s (max_new_tokens=2040)
+2026-08-19 16:38:38 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/hazelnut/good/processed_good_301_2026-08-19 16:38:38.json (inference_time=7.251s)
+2026-08-19 16:38:38 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:38:38 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:38:40 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:38:40 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/hazelnut/good
+2026-08-19 16:38:40 | DEBUG    | descriptor | Processing image description: processed_good_301_2026-08-19 16:38:38.json
+2026-08-19 16:38:40 | DEBUG    | descriptor | Raw description data: - Object 1 Hazelnut
+    - Attribute 1 Type - A single, whole hazelnut with a smooth, rounded shell and a distinct, textured crown at one end.
+    - Attribute 2 Color - The shell displays a gradient of warm brown tones, transitioning from a darker, rough-textured crown to a lighter, glossy brown on the curved body.
+    - Attribute 3 Size - The hazelnut is roughly spherical, with a length and width of approximately 2 to 2.5 centimeters, typical for a mature hazelnut.
+    - Attribute 4 Material - The material is a hard, woody shell, naturally occurring and unprocessed, with a slightly matte finish on the crown and a subtle sheen on the body.
+    - Attribute 5 Composition - The hazelnut shell is composed of a dense, fibrous outer layer (crown) and a smooth, tightly sealed inner shell, both formed from lignified plant tissue.
+    - Attribute 6 Quantity - One hazelnut is present.
+    - Attribute 7 Relative Location - The hazelnut is centered in the frame, occupying the middle of the visual field.
+    - Attribute 8 Orientation - The hazelnut is positioned with its crown facing upward and slightly tilted, revealing the textured top and the smooth, curved side.
+    - Attribute 9 Connection or Attachments - The hazelnut is a standalone object with no visible attachments, connections, or appendages; it is intact and unaltered.
+2026-08-19 16:38:40 | DEBUG    | descriptor | Processing image description: processed_good_034_2026-08-19 16:38:31.json
+2026-08-19 16:38:40 | DEBUG    | descriptor | Raw description data: - Object 1 Hazelnut
+    - Attribute 1 Type - A single, whole hazelnut with an intact, smooth outer shell and a visible, roughened base where the stem was attached.
+    - Attribute 2 Color - The main body is a rich, warm reddish-brown with subtle variations in tone and faint lighter striations. The base is a darker, rougher brown with a fibrous texture.
+    - Attribute 3 Size - Approximately 2.5 to 3 centimeters in length and 1.5 to 2 centimeters in width, typical of a mature hazelnut.
+    - Attribute 4 Material - Hard, woody shell with a slightly glossy surface on the main body and a matte, fibrous texture at the base.
+    - Attribute 5 Composition - Composed of a protective, lignified shell enclosing the edible seed inside; the shell is segmented and ridged, with a distinct basal scar.
+    - Attribute 6 Quantity - One hazelnut.
+    - Attribute 7 Relative Location - Positioned centrally in the frame, occupying the majority of the visual space.
+    - Attribute 8 Orientation - The hazelnut is oriented with its pointed tip angled slightly upward and to the right, and its rounded base angled downward and to the left, viewed from a top-down perspective.
+    - Attribute 9 Connection or Attachments - The base of the hazelnut shows a circular, roughened scar where the stem was once attached, indicating its botanical origin. No other attachments are present.
+2026-08-19 16:38:40 | DEBUG    | descriptor | Processing image description: processed_good_255_2026-08-19 16:38:23.json
+2026-08-19 16:38:40 | DEBUG    | descriptor | Raw description data: - Object 1 Hazelnut
+    - Attribute 1 Type - A single, whole hazelnut with a smooth, rounded, and slightly tapered shape, featuring a distinct cap at the top.
+    - Attribute 2 Color - Rich, warm brown with variations in tone; the main body is a medium to deep brown, while the cap is a darker, textured brown with lighter, fibrous patterns.
+    - Attribute 3 Size - Approximately 2 to 3 centimeters in length and 1.5 to 2.5 centimeters in width, with a generally ovoid form.
+    - Attribute 4 Material - Hard, woody shell with a smooth, slightly glossy surface on the body and a rough, fibrous texture on the cap.
+    - Attribute 5 Composition - Composed of a single, intact nut shell encasing the edible kernel, with a fibrous, leaf-like cap at the apex.
+    - Attribute 6 Quantity - One.
+    - Attribute 7 Relative Location - Positioned centrally in the frame, occupying the majority of the visual space.
+    - Attribute 8 Orientation - The hazelnut is oriented with its cap facing upward and slightly angled toward the viewer, showing the top and side profile.
+    - Attribute 9 Connection or Attachments - The cap is attached to the main body at the top, forming a natural, seamless junction with no visible seams or external attachments.
+2026-08-19 16:38:40 | DEBUG    | descriptor | Unique object keys found: {'Hazelnut'}
+2026-08-19 16:38:40 | DEBUG    | descriptor | Class 'good' object description: {'Hazelnut': ['-  Type - A single, whole hazelnut with a smooth, rounded shell and a distinct, textured crown at one end.\n    -  Color - The shell displays a gradient of warm brown tones, transitioning from a darker, rough-textured crown to a lighter, glossy brown on the curved body.\n    -  Size - The hazelnut is roughly spherical, with a length and width of approximately 2 to 2.5 centimeters, typical for a mature hazelnut.\n    -  Material - The material is a hard, woody shell, naturally occurring and unprocessed, with a slightly matte finish on the crown and a subtle sheen on the body.\n    -  Composition - The hazelnut shell is composed of a dense, fibrous outer layer (crown) and a smooth, tightly sealed inner shell, both formed from lignified plant tissue.\n    -  Quantity - One hazelnut is present.\n    -  Relative Location - The hazelnut is centered in the frame, occupying the middle of the visual field.\n    -  Orientation - The hazelnut is positioned with its crown facing upward and slightly tilted, revealing the textured top and the smooth, curved side.\n    -  Connection or Attachments - The hazelnut is a standalone object with no visible attachments, connections, or appendages; it is intact and unaltered.', '-  Type - A single, whole hazelnut with an intact, smooth outer shell and a visible, roughened base where the stem was attached.\n    -  Color - The main body is a rich, warm reddish-brown with subtle variations in tone and faint lighter striations. The base is a darker, rougher brown with a fibrous texture.\n    -  Size - Approximately 2.5 to 3 centimeters in length and 1.5 to 2 centimeters in width, typical of a mature hazelnut.\n    -  Material - Hard, woody shell with a slightly glossy surface on the main body and a matte, fibrous texture at the base.\n    -  Composition - Composed of a protective, lignified shell enclosing the edible seed inside; the shell is segmented and ridged, with a distinct basal scar.\n    -  Quantity - One hazelnut.\n    -  Relative Location - Positioned centrally in the frame, occupying the majority of the visual space.\n    -  Orientation - The hazelnut is oriented with its pointed tip angled slightly upward and to the right, and its rounded base angled downward and to the left, viewed from a top-down perspective.\n    -  Connection or Attachments - The base of the hazelnut shows a circular, roughened scar where the stem was once attached, indicating its botanical origin. No other attachments are present.', '-  Type - A single, whole hazelnut with a smooth, rounded, and slightly tapered shape, featuring a distinct cap at the top.\n    -  Color - Rich, warm brown with variations in tone; the main body is a medium to deep brown, while the cap is a darker, textured brown with lighter, fibrous patterns.\n    -  Size - Approximately 2 to 3 centimeters in length and 1.5 to 2.5 centimeters in width, with a generally ovoid form.\n    -  Material - Hard, woody shell with a smooth, slightly glossy surface on the body and a rough, fibrous texture on the cap.\n    -  Composition - Composed of a single, intact nut shell encasing the edible kernel, with a fibrous, leaf-like cap at the apex.\n    -  Quantity - One.\n    -  Relative Location - Positioned centrally in the frame, occupying the majority of the visual space.\n    -  Orientation - The hazelnut is oriented with its cap facing upward and slightly angled toward the viewer, showing the top and side profile.\n    -  Connection or Attachments - The cap is attached to the main body at the top, forming a natural, seamless junction with no visible seams or external attachments.']}
+2026-08-19 16:38:50 | INFO     | models | [LLM] Inference completed in 9.712s (max_new_tokens=3000)
+2026-08-19 16:38:50 | INFO     | descriptor | [Hazelnut] Object summarisation completed in 9.712s
+2026-08-19 16:38:50 | DEBUG    | descriptor | Summarised description for 'Hazelnut': 
+
+{
+  "Hazelnut": {
+    "Type": "A single, whole hazelnut with a smooth, rounded shell, a distinct textured crown at one end, and a visible, roughened base where the stem was attached.",
+    "Color": "The shell displays a gradient of warm brown tones, transitioning from a darker, rough-textured crown to a lighter, glossy brown on the curved body, with a rich, warm reddish-brown main body and subtle variations in tone, and a darker, rougher brown base with a fibrous texture.",
+    "Size": "Approximately 2 to 3 centimeters in length and 1.5 to 2.5 centimeters in width, with a generally ovoid form, typical for a mature hazelnut.",
+    "Material": "Hard, woody shell with a slightly glossy surface on the main body and a matte, fibrous texture at the base, and a smooth, slightly glossy surface on the body with a rough, fibrous texture on the cap.",
+    "Composition": "Composed of a protective, lignified shell enclosing the edible seed inside; the shell is segmented and ridged, with a distinct basal scar and a fibrous, leaf-like cap at the apex, formed from lignified plant tissue.",
+    "Quantity": "One hazelnut is present.",
+    "Relative Location": "Positioned centrally in the frame, occupying the majority of the visual space.",
+    "Orientation": "The hazelnut is positioned with its crown facing upward and slightly tilted, revealing the textured top and the smooth, curved side, and is oriented with its pointed tip angled slightly upward and to the right, and its rounded base angled downward and to the left, viewed from a top-down perspective.",
+    "Connection or Attachments": "The base of the hazelnut shows a circular, roughened scar where the stem was once attached, indicating its botanical origin, and the cap is attached to the main body at the top, forming a natural, seamless junction with no visible seams or external attachments."
+  }
+}
+2026-08-19 16:38:50 | DEBUG    | descriptor | Master description: {'Hazelnut': {'Type': 'A single, whole hazelnut with a smooth, rounded shell, a distinct textured crown at one end, and a visible, roughened base where the stem was attached.', 'Color': 'The shell displays a gradient of warm brown tones, transitioning from a darker, rough-textured crown to a lighter, glossy brown on the curved body, with a rich, warm reddish-brown main body and subtle variations in tone, and a darker, rougher brown base with a fibrous texture.', 'Size': 'Approximately 2 to 3 centimeters in length and 1.5 to 2.5 centimeters in width, with a generally ovoid form, typical for a mature hazelnut.', 'Material': 'Hard, woody shell with a slightly glossy surface on the main body and a matte, fibrous texture at the base, and a smooth, slightly glossy surface on the body with a rough, fibrous texture on the cap.', 'Composition': 'Composed of a protective, lignified shell enclosing the edible seed inside; the shell is segmented and ridged, with a distinct basal scar and a fibrous, leaf-like cap at the apex, formed from lignified plant tissue.', 'Quantity': 'One hazelnut is present.', 'Relative Location': 'Positioned centrally in the frame, occupying the majority of the visual space.', 'Orientation': 'The hazelnut is positioned with its crown facing upward and slightly tilted, revealing the textured top and the smooth, curved side, and is oriented with its pointed tip angled slightly upward and to the right, and its rounded base angled downward and to the left, viewed from a top-down perspective.', 'Connection or Attachments': 'The base of the hazelnut shows a circular, roughened scar where the stem was once attached, indicating its botanical origin, and the cap is attached to the main body at the top, forming a natural, seamless junction with no visible seams or external attachments.'}}
+2026-08-19 16:38:50 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:38:50 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/hazelnut.txt
+2026-08-19 16:38:50 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=8)
+2026-08-19 16:38:50 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:38:50 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:38:52 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:38:52 | DEBUG    | planner | Class directories for dataset 'hazelnut': ['good']
+2026-08-19 16:38:52 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/hazelnut/good
+2026-08-19 16:38:52 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:38:52 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:38:52 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:38:50_master_description.json
+2026-08-19 16:38:57 | INFO     | models | [VLM] Inference completed in 4.966s (max_new_tokens=2040)
+2026-08-19 16:38:57 | INFO     | planner | Planner steps generated in 4.966s (attempt=1, steps=8, approved_rules=8)
+2026-08-19 16:38:57 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/hazelnut/good/good_2026-08-19 16:38:57_planner.txt
+2026-08-19 16:38:57 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack running through the dark brown top cap area of the hazelnut?  
+Step 2: Is there any chip or fragment missing from the edge of the top cap of the hazelnut?  
+Step 3: Is there any shallow scratch or groove visible on the smooth outer shell surface of the hazelnut?  
+Step 4: Is there any slight inward dent or depression present on the curved outer shell of the hazelnut?  
+Step 5: Is there any tear or split in the shell surface of the hazelnut revealing inner texture?  
+Step 6: Is there any small hole or puncture mark on the shell surface of the hazelnut?  
+Step 7: Is there any patch of uneven or darker coloration on the shell surface of the hazelnut?  
+Step 8: Is there any small speck or foreign object stuck to the shell surface of the hazelnut?
+2026-08-19 16:38:57 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/hazelnut/performance/performance_20260819_163857.json
+2026-08-19 16:38:57 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/hazelnut
+2026-08-19 16:38:57 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/hazelnut_163811_log.txt

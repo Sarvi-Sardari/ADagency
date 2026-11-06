@@ -1,0 +1,59 @@
+{
+  "dataset": "breakfast_box",
+  "timestamp": "2026-09-10 10:59:48",
+  "model": {
+    "vlm": {
+      "modelname": "Qwen3-VL-8B-Instruct",
+      "source": "local",
+      "local_path": "/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct",
+      "huggingface_name": "Qwen/Qwen3-VL-8B-Instruct",
+      "device": 0,
+      "generation": {
+        "max_new_tokens": 2040,
+        "temperature": 0.2,
+        "do_sample": false
+      },
+      "image_processing": {
+        "target_w": [
+          1216,
+          1216
+        ],
+        "target_h": [
+          1056,
+          1056
+        ],
+        "resample": "bicubic"
+      },
+      "base_url": null,
+      "server_launch": null,
+      "served_model_name": null
+    },
+    "llm": {
+      "modelname": "Qwen3-8B",
+      "source": "local",
+      "local_path": "/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B",
+      "huggingface_name": "Qwen/Qwen3-8B",
+      "device": 0,
+      "generation": {
+        "max_new_tokens": 3000,
+        "temperature": 0.2,
+        "do_sample": true
+      },
+      "image_processing": null,
+      "base_url": null,
+      "server_launch": null,
+      "served_model_name": null
+    }
+  },
+  "total_wall_time_sec": 72.3469,
+  "stage_durations_sec": {
+    "Initialising CLIP encoder": 1.384,
+    "Loading VLM": 2.6775,
+    "Selecting reference images": 0.0004,
+    "Resolving object names": 0.0001,
+    "Generating image descriptions (VLM)": 26.3605,
+    "Synthesising master descriptions (LLM)": 25.8375,
+    "Resolving anomaly rules": 0.0009,
+    "Generating planner steps (VLM)": 15.6799
+  }
+}

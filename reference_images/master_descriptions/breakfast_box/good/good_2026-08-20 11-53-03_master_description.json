@@ -1,0 +1,68 @@
+{
+    "Banana Chips": {
+        "Type": "Thin, dried slices of banana",
+        "Color": "Pale yellow to light brown, with some darker brown spots and edges",
+        "Size": "1-5 cm in width and length, irregularly shaped slices, approximately 2-4 cm in length",
+        "Material": "Dried banana flesh, brittle and slightly curled at edges",
+        "Composition": "Dehydrated banana slices with visible brown spots, slight curling edges, and possible sugar caramelization",
+        "Quantity": "Multiple pieces scattered throughout the granola section",
+        "Relative Location": "Located within the right compartment, mixed in with granola and almonds, positioned at the bottom of the right compartment beneath the granola",
+        "Orientation": "Randomly oriented, some overlapping, some lying flat, some slightly curled or folded",
+        "Connection/Attachments": "Embedded within the granola mixture, mixed with almonds and granola, forming a layered composition"
+    },
+    "Granola": {
+        "Type": "A mixture of toasted oats, nuts, and dried fruit pieces",
+        "Color": "Golden brown with variations from light tan to darker caramelized tones",
+        "Size": "No uniform size; pieces range from small flakes to larger clusters, collectively filling the upper portion of the right compartment / 2-5 mm in size / Covers the entire right compartment of the container, forming a dense layer",
+        "Material": "Dry, crunchy, baked cereal mixture",
+        "Composition": "Composed of oats, nuts, and dried fruit pieces mixed together, with visible toasted texture",
+        "Quantity": "One large portion filling the right compartment",
+        "Relative Location": "Occupies the upper right section of the container, directly above the banana chips and almonds / Occupies the entire right half of the container, adjacent to the fruit compartment / Occupies the entire right compartment of the container",
+        "Orientation": "Spread flat and evenly across the compartment, with no specific orientation / Layered flatly across the compartment, with some pieces standing upright",
+        "Connection/Attachments": "Mixed with banana chips and almonds below, forming a layered composition / Mixed with banana chips and almonds at the bottom right / Not connected to any other object; forms a cohesive mass within the container"
+    },
+    "Almonds": {
+        "Type": "Whole, shelled almonds with a smooth, slightly curved shape",
+        "Color": "Light to medium brown with darker brown spots and toasted tones",
+        "Size": "Approximately 1.5-2 cm in length, oval shape",
+        "Material": "Hard, nutty shell with a slightly glossy surface",
+        "Composition": "Whole, unroasted or lightly roasted almonds with visible ridges and natural color variation, composed of a single almond kernel enclosed in a hard shell",
+        "Quantity": "Multiple individual almonds scattered throughout the lower right portion and granola section",
+        "Relative Location": "Positioned at the bottom of the right compartment, mixed with banana chips and granola, located within the right compartment, mixed in with granola and banana chips",
+        "Orientation": "Randomly oriented, some standing upright, others lying flat, some partially overlapping",
+        "Connection/Attachments": "Mixed with banana chips and granola, forming a layered composition, embedded within the granola mixture, not separately attached"
+    },
+    "Container": {
+        "Type": "White, rectangular, compartmentalized food container with two compartments",
+        "Color": "Solid white with a matte finish and slight texture",
+        "Size": "20 cm long, 15 cm wide, 3 cm deep / 8 inches long, 6 inches wide, 1.2 inches deep",
+        "Material": "Foam or plastic, lightweight and disposable",
+        "Composition": "Divided into two sections with a central divider, rounded edges, and a small handle indentation at the bottom",
+        "Quantity": "One instance",
+        "Relative Location": "Occupies the entire frame of the image, with the left compartment holding fruit and the right compartment holding granola and dried fruit",
+        "Orientation": "Positioned horizontally with the open side facing upward",
+        "Connection/Attachments": "Contains granola, banana chips, almonds, peach, and oranges; compartments are connected internally but separated externally"
+    },
+    "Peach": {
+        "Type": "A single round, slightly flattened stone fruit with fuzzy skin",
+        "Color": "Gradient of deep red to yellow-orange with mottled appearance, including reddish-orange with mottled blush and darker spots, and reddish-orange with yellowish-green patches near the stem",
+        "Size": "Approximately 7-8 cm in diameter, medium-sized, slightly larger than the oranges",
+        "Material": "Fuzzy, velvety skin texture, soft to the touch",
+        "Composition": "Whole fruit, unpeeled, with natural surface imperfections, composed of juicy flesh with a central pit, outer skin with visible fuzz, no visible flesh or pit",
+        "Quantity": "One instance",
+        "Relative Location": "Positioned in the left compartment of the container, between the two oranges, located at the bottom of the left compartment, below the oranges",
+        "Orientation": "Upright with the stem pointing upward, positioned upright, resting on its base",
+        "Connection/Attachments": "Not connected to any other object; placed independently within the container, placed separately within the container"
+    },
+    "Orange": {
+        "Type": "Two round citrus fruits with textured, dimpled skin",
+        "Color": "Vibrant orange with slight yellowish undertones and minor brown spots, or slight greenish stem remnants",
+        "Size": "Approximately 6-7 cm in diameter, medium-sized",
+        "Material": "Natural fruit peel, slightly rough to the touch, slightly dimpled, and appears dry",
+        "Composition": "Outer peel with visible oil glands, whole fruit, unpeeled, with visible stem indentations, composed of segmented pulp enclosed in a tough rind",
+        "Quantity": "Two instances",
+        "Relative Location": "Positioned vertically stacked in the left compartment of the container, one above the other",
+        "Orientation": "Both oriented upright with stems facing upward",
+        "Connection/Attachments": "Not connected to any other object; each is separate within the container"
+    }
+}

@@ -1,0 +1,9 @@
+2026-08-11 10:47:08 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 10:47:08 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 10:47:08 | INFO     | __main__ | Dataset  : bottle
+2026-08-11 10:47:08 | INFO     | __main__ | Classes  : single
+2026-08-11 10:47:08 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 10:47:08 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/bottle_104708_log.txt
+2026-08-11 10:47:08 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 10:47:10 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 10:47:10 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0

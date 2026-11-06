@@ -1,0 +1,394 @@
+2026-08-20 11:51:10 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-20 11:51:10 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-20 11:51:10 | INFO     | __main__ | Dataset  : breakfast_box
+2026-08-20 11:51:10 | INFO     | __main__ | Classes  : single
+2026-08-20 11:51:10 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-20 11:51:10 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-20/breakfast_box_115110_log.txt
+2026-08-20 11:51:10 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-20 11:51:11 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-20 11:51:11 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-20 11:51:13 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-20 11:51:13 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-20 11:51:13 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/breakfast_box/train/good/229.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/breakfast_box/train/good/031.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/breakfast_box/train/good/270.png']
+2026-08-20 11:51:13 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-20 11:51:13 | INFO     | object_namer | [Object Namer] Loaded 6 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/breakfast_box_object_labels.txt
+2026-08-20 11:51:13 | INFO     | __main__ | Object names: ['Orange', 'Peach', 'Granola', 'Banana Chips', 'Almonds', 'Container']
+2026-08-20 11:51:13 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-20 11:51:13 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/breakfast_box/good
+2026-08-20 11:51:13 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 11:51:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 11:51:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 11:51:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 11:51:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 11:51:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 11:51:14 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 11:51:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 11:51:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 11:51:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 11:51:41 | INFO     | models | [VLM] Inference completed in 26.462s (max_new_tokens=2040)
+2026-08-20 11:51:41 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/breakfast_box/good/processed_good_229_2026-08-20 11:51:41.json (inference_time=26.462s)
+2026-08-20 11:51:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 11:51:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 11:52:05 | INFO     | models | [VLM] Inference completed in 24.067s (max_new_tokens=2040)
+2026-08-20 11:52:05 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/breakfast_box/good/processed_good_031_2026-08-20 11:52:05.json (inference_time=24.067s)
+2026-08-20 11:52:05 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 11:52:05 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 11:52:30 | INFO     | models | [VLM] Inference completed in 24.729s (max_new_tokens=2040)
+2026-08-20 11:52:30 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/breakfast_box/good/processed_good_270_2026-08-20 11:52:30.json (inference_time=24.729s)
+2026-08-20 11:52:30 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-20 11:52:30 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-20 11:52:32 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-20 11:52:32 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/breakfast_box/good
+2026-08-20 11:52:32 | DEBUG    | descriptor | Processing image description: processed_good_270_2026-08-20 11:52:30.json
+2026-08-20 11:52:32 | DEBUG    | descriptor | Raw description data: - Orange
+    - Attribute 1 Type - Two round citrus fruits with textured, dimpled skin
+    - Attribute 2 Color - Vibrant orange with slight yellowish undertones and minor brown spots
+    - Attribute 3 Size - Each approximately 6-7 cm in diameter, roughly the size of a small apple
+    - Attribute 4 Material - Natural fruit peel, slightly rough to the touch
+    - Attribute 5 Composition - Outer peel with visible oil glands, no visible seeds or pulp
+    - Attribute 6 Quantity - Two instances
+    - Attribute 7 Relative Location - Positioned vertically stacked in the left compartment of the container, one above the other
+    - Attribute 8 Orientation - Both oriented upright with stems facing upward
+    - Attribute 9 Connection or Attachments - Not connected to any other object; placed independently within the container
+
+- Peach
+    - Attribute 1 Type - A single round fruit with smooth, fuzzy skin
+    - Attribute 2 Color - Gradient of deep red to yellow-orange, with a mottled appearance
+    - Attribute 3 Size - Approximately 7-8 cm in diameter, slightly larger than the oranges
+    - Attribute 4 Material - Fuzzy skin texture, typical of peach skin
+    - Attribute 5 Composition - Outer skin with visible fuzz, no visible flesh or pit
+    - Attribute 6 Quantity - One instance
+    - Attribute 7 Relative Location - Positioned at the bottom of the left compartment, below the oranges
+    - Attribute 8 Orientation - Oriented upright with the stem end facing upward
+    - Attribute 9 Connection or Attachments - Not connected to any other object; placed independently within the container
+
+- Granola
+    - Attribute 1 Type - A cluster of toasted cereal pieces and oats
+    - Attribute 2 Color - Golden brown with variations of light and dark brown
+    - Attribute 3 Size - No uniform size; pieces range from small flakes to larger clusters, collectively filling the upper portion of the right compartment
+    - Attribute 4 Material - Crispy, baked oat and grain mixture
+    - Attribute 5 Composition - Composed of oats, nuts, and possibly seeds, with visible toasted texture
+    - Attribute 6 Quantity - One large mass occupying the top half of the right compartment
+    - Attribute 7 Relative Location - Occupies the upper right section of the container, directly above the banana chips and almonds
+    - Attribute 8 Orientation - Spread flat and evenly across the compartment
+    - Attribute 9 Connection or Attachments - Mixed with banana chips and almonds below, forming a layered composition
+
+- Banana Chips
+    - Attribute 1 Type - Thin, dried slices of banana
+    - Attribute 2 Color - Pale yellow to light brown, with some darker brown spots from drying
+    - Attribute 3 Size - Sliced into irregular rounds, each approximately 2-3 cm in diameter
+    - Attribute 4 Material - Dehydrated banana, brittle texture
+    - Attribute 5 Composition - Thinly sliced banana with visible brown spots and slight curling edges
+    - Attribute 6 Quantity - Multiple slices scattered throughout the lower right portion
+    - Attribute 7 Relative Location - Positioned at the bottom of the right compartment, beneath the granola
+    - Attribute 8 Orientation - Mostly flat, some slightly curled or overlapping
+    - Attribute 9 Connection or Attachments - Mixed with almonds and granola, forming a layered composition
+
+- Almonds
+    - Attribute 1 Type - Whole, shelled almonds
+    - Attribute 2 Color - Light to medium brown, with a slightly darker brown shell
+    - Attribute 3 Size - Approximately 1.5-2 cm in length, oval shape
+    - Attribute 4 Material - Hard, textured shell
+    - Attribute 5 Composition - Whole almonds with visible ridges and natural color variation
+    - Attribute 6 Quantity - Multiple individual almonds scattered throughout the lower right portion
+    - Attribute 7 Relative Location - Positioned at the bottom of the right compartment, mixed with banana chips and granola
+    - Attribute 8 Orientation - Mostly upright or lying flat, some partially overlapping
+    - Attribute 9 Connection or Attachments - Mixed with banana chips and granola, forming a layered composition
+
+- Container
+    - Attribute 1 Type - A white, divided food container with two compartments
+    - Attribute 2 Color - Pure white with slight texture and creases
+    - Attribute 3 Size - Approximately 20 cm long and 15 cm wide, with a rectangular shape and rounded corners
+    - Attribute 4 Material - Foam or plastic, with a slightly textured surface
+    - Attribute 5 Composition - Two compartments separated by a central divider, with rounded edges and a small handle indentation at the bottom
+    - Attribute 6 Quantity - One instance
+    - Attribute 7 Relative Location - Occupies the entire frame, with the left compartment holding fruit and the right compartment holding granola and dried fruit
+    - Attribute 8 Orientation - Positioned upright with the top open, facing the viewer
+    - Attribute 9 Connection or Attachments - Contains the fruit and granola mixture, with no visible external attachments or lids
+2026-08-20 11:52:32 | DEBUG    | descriptor | Processing image description: processed_good_031_2026-08-20 11:52:05.json
+2026-08-20 11:52:32 | DEBUG    | descriptor | Raw description data: - Orange
+    - Attribute 1 Type - Two round citrus fruits with textured, dimpled rinds
+    - Attribute 2 Color - Vibrant orange with slight greenish stem remnants
+    - Attribute 3 Size - Each approximately 6-7 cm in diameter, medium-sized
+    - Attribute 4 Material - Natural fruit peel, slightly rough and porous
+    - Attribute 5 Composition - Whole fruit, unpeeled, with visible stem indentations
+    - Attribute 6 Quantity - Two instances
+    - Attribute 7 Relative Location - Positioned vertically stacked in the left compartment of the container
+    - Attribute 8 Orientation - Both oriented upright with stems facing upward
+    - Attribute 9 Connection or Attachments - Placed adjacent to each other, with the peach below them
+
+- Peach
+    - Attribute 1 Type - A single round, slightly flattened stone fruit with fuzzy skin
+    - Attribute 2 Color - Deep reddish-orange with mottled blush and darker spots
+    - Attribute 3 Size - Approximately 7-8 cm in diameter, medium-sized
+    - Attribute 4 Material - Fuzzy, velvety skin texture
+    - Attribute 5 Composition - Whole fruit, unpeeled, with natural surface imperfections
+    - Attribute 6 Quantity - One instance
+    - Attribute 7 Relative Location - Located at the bottom of the left compartment, below the oranges
+    - Attribute 8 Orientation - Positioned upright, resting on its base
+    - Attribute 9 Connection or Attachments - Placed directly below the oranges, touching the container’s bottom
+
+- Granola
+    - Attribute 1 Type - A mixture of toasted oats, nuts, and dried fruit pieces
+    - Attribute 2 Color - Golden brown with varied shades from light tan to darker caramelized tones
+    - Attribute 3 Size - Composed of irregularly shaped clusters and flakes, ranging from 2-5 mm in size
+    - Attribute 4 Material - Dry, crunchy, baked cereal mixture
+    - Attribute 5 Composition - Made of oats, seeds, and possibly dried fruit or honey-coated ingredients
+    - Attribute 6 Quantity - One large portion filling the right compartment
+    - Attribute 7 Relative Location - Occupies the entire right half of the container, adjacent to the fruit compartment
+    - Attribute 8 Orientation - Spread evenly across the compartment, with no specific orientation
+    - Attribute 9 Connection or Attachments - Mixed with banana chips and almonds at the bottom right
+
+- Banana Chips
+    - Attribute 1 Type - Thinly sliced, dried banana pieces
+    - Attribute 2 Color - Light golden brown with darker brown spots and edges
+    - Attribute 3 Size - Approximately 2-4 cm in length, irregularly shaped slices
+    - Attribute 4 Material - Dried, brittle, and slightly curled texture
+    - Attribute 5 Composition - Dehydrated banana slices, possibly with some sugar caramelization
+    - Attribute 6 Quantity - Multiple pieces scattered across the bottom right section
+    - Attribute 7 Relative Location - Located at the bottom right of the granola compartment, mixed with almonds
+    - Attribute 8 Orientation - Randomly oriented, some curled or folded
+    - Attribute 9 Connection or Attachments - Mixed with almonds and granola, partially buried beneath them
+
+- Almonds
+    - Attribute 1 Type - Whole, shelled almonds with a smooth, slightly curved shape
+    - Attribute 2 Color - Light to medium brown with darker, toasted tones
+    - Attribute 3 Size - Approximately 1.5-2 cm in length, medium-sized nuts
+    - Attribute 4 Material - Hard, nutty shell with a slightly glossy surface
+    - Attribute 5 Composition - Whole, unroasted or lightly roasted almonds
+    - Attribute 6 Quantity - Multiple pieces scattered across the bottom right section
+    - Attribute 7 Relative Location - Located at the bottom right of the granola compartment, mixed with banana chips
+    - Attribute 8 Orientation - Randomly oriented, some standing upright, others lying flat
+    - Attribute 9 Connection or Attachments - Mixed with banana chips and granola, partially buried beneath them
+
+- Container
+    - Attribute 1 Type - A white, rectangular, compartmentalized food container
+    - Attribute 2 Color - Solid white with a matte finish
+    - Attribute 3 Size - Approximately 20 cm wide by 15 cm deep, with two equal-sized compartments
+    - Attribute 4 Material - Foam or plastic, lightweight and disposable
+    - Attribute 5 Composition - Divided into two sections, one for fruit and one for granola mix
+    - Attribute 6 Quantity - One instance
+    - Attribute 7 Relative Location - Occupies the entire frame, with the fruit on the left and granola on the right
+    - Attribute 8 Orientation - Positioned horizontally, with the top edge facing the viewer
+    - Attribute 9 Connection or Attachments - Contains all other listed items, with compartments separated by a vertical divider
+2026-08-20 11:52:32 | DEBUG    | descriptor | Processing image description: processed_good_229_2026-08-20 11:51:41.json
+2026-08-20 11:52:32 | DEBUG    | descriptor | Raw description data: - Orange
+    - Attribute 1 <Type> - Round citrus fruit with textured peel
+    - Attribute 2 <Color> - Vibrant orange with slight yellowish undertones and minor blemishes
+    - Attribute 3 <Size> - Approximately 6-7 cm in diameter, medium-sized
+    - Attribute 4 <Material> - Peel is natural, slightly dimpled, and appears dry
+    - Attribute 5 <Composition> - Composed of segmented pulp enclosed in a tough rind
+    - Attribute 6 <Quantity> - Two instances present
+    - Attribute 7 <Relative Location> - Positioned in the left compartment of the container, one above the other
+    - Attribute 8 <Orientation> - Both are upright with stems pointing upward
+    - Attribute 9 <Connection or Attachments> - Not connected to any other object; each is separate within the container
+
+- Peach
+    - Attribute 1 <Type> - Round, fuzzy-skinned fruit with a smooth, slightly flattened top
+    - Attribute 2 <Color> - Reddish-orange with yellowish-green patches near the stem
+    - Attribute 3 <Size> - Approximately 7-8 cm in diameter, medium-sized
+    - Attribute 4 <Material> - Skin is fuzzy and soft to the touch
+    - Attribute 5 <Composition> - Composed of juicy flesh with a central pit
+    - Attribute 6 <Quantity> - One instance present
+    - Attribute 7 <Relative Location> - Positioned in the left compartment of the container, between the two oranges
+    - Attribute 8 <Orientation> - Upright with the stem pointing upward
+    - Attribute 9 <Connection or Attachments> - Not connected to any other object; placed separately within the container
+
+- Granola
+    - Attribute 1 <Type> - Crunchy, baked cereal mixture
+    - Attribute 2 <Color> - Golden brown with variations from light tan to darker brown
+    - Attribute 3 <Size> - Covers the entire right compartment of the container, forming a dense layer
+    - Attribute 4 <Material> - Made from toasted oats and other grains, baked into clusters
+    - Attribute 5 <Composition> - Composed of oats, nuts, and dried fruit pieces mixed together
+    - Attribute 6 <Quantity> - One large portion filling the right compartment
+    - Attribute 7 <Relative Location> - Occupies the entire right compartment of the container
+    - Attribute 8 <Orientation> - Layered flatly across the compartment, with some pieces standing upright
+    - Attribute 9 <Connection or Attachments> - Not connected to any other object; forms a cohesive mass within the container
+
+- Banana Chips
+    - Attribute 1 <Type> - Thin, dried slices of banana
+    - Attribute 2 <Color> - Pale yellow to golden brown with some darker brown edges
+    - Attribute 3 <Size> - Each chip is approximately 1-2 cm wide and 3-5 cm long
+    - Attribute 4 <Material> - Dried banana flesh, brittle and slightly curled at edges
+    - Attribute 5 <Composition> - Composed of banana pulp, with some natural brown spots
+    - Attribute 6 <Quantity> - Multiple pieces scattered throughout the granola section
+    - Attribute 7 <Relative Location> - Located within the right compartment, mixed in with granola and almonds
+    - Attribute 8 <Orientation> - Randomly oriented, some overlapping, some lying flat
+    - Attribute 9 <Connection or Attachments> - Embedded within the granola mixture, not separately attached
+
+- Almonds
+    - Attribute 1 <Type> - Whole, shelled nuts with a smooth, slightly curved surface
+    - Attribute 2 <Color> - Light to medium brown with some darker brown spots
+    - Attribute 3 <Size> - Approximately 1.5-2 cm in length
+    - Attribute 4 <Material> - Hard, edible nut shell with a smooth surface
+    - Attribute 5 <Composition> - Composed of a single almond kernel enclosed in a hard shell
+    - Attribute 6 <Quantity> - Multiple pieces scattered throughout the granola section
+    - Attribute 7 <Relative Location> - Located within the right compartment, mixed in with granola and banana chips
+    - Attribute 8 <Orientation> - Randomly oriented, some standing upright, some lying flat
+    - Attribute 9 <Connection or Attachments> - Embedded within the granola mixture, not separately attached
+
+- Container
+    - Attribute 1 <Type> - Rectangular, compartmentalized food container
+    - Attribute 2 <Color> - White with a slightly textured surface
+    - Attribute 3 <Size> - Approximately 20 cm long, 15 cm wide, and 3 cm deep
+    - Attribute 4 <Material> - Made of styrofoam or similar lightweight plastic
+    - Attribute 5 <Composition> - Composed of two compartments separated by a central divider
+    - Attribute 6 <Quantity> - One instance present
+    - Attribute 7 <Relative Location> - Occupies the entire frame of the image
+    - Attribute 8 <Orientation> - Positioned horizontally with the open side facing upward
+    - Attribute 9 <Connection or Attachments> - Contains the granola, banana chips, almonds, peach, and oranges; compartments are connected internally but separated externally
+2026-08-20 11:52:32 | DEBUG    | descriptor | Unique object keys found: {'Banana Chips', 'Granola', 'Almonds', 'Container', 'Peach', 'Orange'}
+2026-08-20 11:52:32 | DEBUG    | descriptor | Class 'good' object description: {'Banana Chips': ['-  Type - Thin, dried slices of banana\n    -  Color - Pale yellow to light brown, with some darker brown spots from drying\n    -  Size - Sliced into irregular rounds, each approximately 2-3 cm in diameter\n    -  Material - Dehydrated banana, brittle texture\n    -  Composition - Thinly sliced banana with visible brown spots and slight curling edges\n    -  Quantity - Multiple slices scattered throughout the lower right portion\n    -  Relative Location - Positioned at the bottom of the right compartment, beneath the granola\n    -  Orientation - Mostly flat, some slightly curled or overlapping\n    -  Connection or Attachments - Mixed with almonds and granola, forming a layered composition', '-  Type - Thinly sliced, dried banana pieces\n    -  Color - Light golden brown with darker brown spots and edges\n    -  Size - Approximately 2-4 cm in length, irregularly shaped slices\n    -  Material - Dried, brittle, and slightly curled texture\n    -  Composition - Dehydrated banana slices, possibly with some sugar caramelization\n    -  Quantity - Multiple pieces scattered across the bottom right section\n    -  Relative Location - Located at the bottom right of the granola compartment, mixed with almonds\n    -  Orientation - Randomly oriented, some curled or folded\n    -  Connection or Attachments - Mixed with almonds and granola, partially buried beneath them', '-  <Type> - Thin, dried slices of banana\n    -  <Color> - Pale yellow to golden brown with some darker brown edges\n    -  <Size> - Each chip is approximately 1-2 cm wide and 3-5 cm long\n    -  <Material> - Dried banana flesh, brittle and slightly curled at edges\n    -  <Composition> - Composed of banana pulp, with some natural brown spots\n    -  <Quantity> - Multiple pieces scattered throughout the granola section\n    -  <Relative Location> - Located within the right compartment, mixed in with granola and almonds\n    -  <Orientation> - Randomly oriented, some overlapping, some lying flat\n    -  <Connection or Attachments> - Embedded within the granola mixture, not separately attached'], 'Granola': ['-  Type - A cluster of toasted cereal pieces and oats\n    -  Color - Golden brown with variations of light and dark brown\n    -  Size - No uniform size; pieces range from small flakes to larger clusters, collectively filling the upper portion of the right compartment\n    -  Material - Crispy, baked oat and grain mixture\n    -  Composition - Composed of oats, nuts, and possibly seeds, with visible toasted texture\n    -  Quantity - One large mass occupying the top half of the right compartment\n    -  Relative Location - Occupies the upper right section of the container, directly above the banana chips and almonds\n    -  Orientation - Spread flat and evenly across the compartment\n    -  Connection or Attachments - Mixed with banana chips and almonds below, forming a layered composition', '-  Type - A mixture of toasted oats, nuts, and dried fruit pieces\n    -  Color - Golden brown with varied shades from light tan to darker caramelized tones\n    -  Size - Composed of irregularly shaped clusters and flakes, ranging from 2-5 mm in size\n    -  Material - Dry, crunchy, baked cereal mixture\n    -  Composition - Made of oats, seeds, and possibly dried fruit or honey-coated ingredients\n    -  Quantity - One large portion filling the right compartment\n    -  Relative Location - Occupies the entire right half of the container, adjacent to the fruit compartment\n    -  Orientation - Spread evenly across the compartment, with no specific orientation\n    -  Connection or Attachments - Mixed with banana chips and almonds at the bottom right', '-  <Type> - Crunchy, baked cereal mixture\n    -  <Color> - Golden brown with variations from light tan to darker brown\n    -  <Size> - Covers the entire right compartment of the container, forming a dense layer\n    -  <Material> - Made from toasted oats and other grains, baked into clusters\n    -  <Composition> - Composed of oats, nuts, and dried fruit pieces mixed together\n    -  <Quantity> - One large portion filling the right compartment\n    -  <Relative Location> - Occupies the entire right compartment of the container\n    -  <Orientation> - Layered flatly across the compartment, with some pieces standing upright\n    -  <Connection or Attachments> - Not connected to any other object; forms a cohesive mass within the container'], 'Almonds': ['-  Type - Whole, shelled almonds\n    -  Color - Light to medium brown, with a slightly darker brown shell\n    -  Size - Approximately 1.5-2 cm in length, oval shape\n    -  Material - Hard, textured shell\n    -  Composition - Whole almonds with visible ridges and natural color variation\n    -  Quantity - Multiple individual almonds scattered throughout the lower right portion\n    -  Relative Location - Positioned at the bottom of the right compartment, mixed with banana chips and granola\n    -  Orientation - Mostly upright or lying flat, some partially overlapping\n    -  Connection or Attachments - Mixed with banana chips and granola, forming a layered composition', '-  Type - Whole, shelled almonds with a smooth, slightly curved shape\n    -  Color - Light to medium brown with darker, toasted tones\n    -  Size - Approximately 1.5-2 cm in length, medium-sized nuts\n    -  Material - Hard, nutty shell with a slightly glossy surface\n    -  Composition - Whole, unroasted or lightly roasted almonds\n    -  Quantity - Multiple pieces scattered across the bottom right section\n    -  Relative Location - Located at the bottom right of the granola compartment, mixed with banana chips\n    -  Orientation - Randomly oriented, some standing upright, others lying flat\n    -  Connection or Attachments - Mixed with banana chips and granola, partially buried beneath them', '-  <Type> - Whole, shelled nuts with a smooth, slightly curved surface\n    -  <Color> - Light to medium brown with some darker brown spots\n    -  <Size> - Approximately 1.5-2 cm in length\n    -  <Material> - Hard, edible nut shell with a smooth surface\n    -  <Composition> - Composed of a single almond kernel enclosed in a hard shell\n    -  <Quantity> - Multiple pieces scattered throughout the granola section\n    -  <Relative Location> - Located within the right compartment, mixed in with granola and banana chips\n    -  <Orientation> - Randomly oriented, some standing upright, some lying flat\n    -  <Connection or Attachments> - Embedded within the granola mixture, not separately attached'], 'Container': ['-  Type - A white, divided food container with two compartments\n    -  Color - Pure white with slight texture and creases\n    -  Size - Approximately 20 cm long and 15 cm wide, with a rectangular shape and rounded corners\n    -  Material - Foam or plastic, with a slightly textured surface\n    -  Composition - Two compartments separated by a central divider, with rounded edges and a small handle indentation at the bottom\n    -  Quantity - One instance\n    -  Relative Location - Occupies the entire frame, with the left compartment holding fruit and the right compartment holding granola and dried fruit\n    -  Orientation - Positioned upright with the top open, facing the viewer\n    -  Connection or Attachments - Contains the fruit and granola mixture, with no visible external attachments or lids', '-  Type - A white, rectangular, compartmentalized food container\n    -  Color - Solid white with a matte finish\n    -  Size - Approximately 20 cm wide by 15 cm deep, with two equal-sized compartments\n    -  Material - Foam or plastic, lightweight and disposable\n    -  Composition - Divided into two sections, one for fruit and one for granola mix\n    -  Quantity - One instance\n    -  Relative Location - Occupies the entire frame, with the fruit on the left and granola on the right\n    -  Orientation - Positioned horizontally, with the top edge facing the viewer\n    -  Connection or Attachments - Contains all other listed items, with compartments separated by a vertical divider', '-  <Type> - Rectangular, compartmentalized food container\n    -  <Color> - White with a slightly textured surface\n    -  <Size> - Approximately 20 cm long, 15 cm wide, and 3 cm deep\n    -  <Material> - Made of styrofoam or similar lightweight plastic\n    -  <Composition> - Composed of two compartments separated by a central divider\n    -  <Quantity> - One instance present\n    -  <Relative Location> - Occupies the entire frame of the image\n    -  <Orientation> - Positioned horizontally with the open side facing upward\n    -  <Connection or Attachments> - Contains the granola, banana chips, almonds, peach, and oranges; compartments are connected internally but separated externally'], 'Peach': ['-  Type - A single round fruit with smooth, fuzzy skin\n    -  Color - Gradient of deep red to yellow-orange, with a mottled appearance\n    -  Size - Approximately 7-8 cm in diameter, slightly larger than the oranges\n    -  Material - Fuzzy skin texture, typical of peach skin\n    -  Composition - Outer skin with visible fuzz, no visible flesh or pit\n    -  Quantity - One instance\n    -  Relative Location - Positioned at the bottom of the left compartment, below the oranges\n    -  Orientation - Oriented upright with the stem end facing upward\n    -  Connection or Attachments - Not connected to any other object; placed independently within the container', '-  Type - A single round, slightly flattened stone fruit with fuzzy skin\n    -  Color - Deep reddish-orange with mottled blush and darker spots\n    -  Size - Approximately 7-8 cm in diameter, medium-sized\n    -  Material - Fuzzy, velvety skin texture\n    -  Composition - Whole fruit, unpeeled, with natural surface imperfections\n    -  Quantity - One instance\n    -  Relative Location - Located at the bottom of the left compartment, below the oranges\n    -  Orientation - Positioned upright, resting on its base\n    -  Connection or Attachments - Placed directly below the oranges, touching the container’s bottom', '-  <Type> - Round, fuzzy-skinned fruit with a smooth, slightly flattened top\n    -  <Color> - Reddish-orange with yellowish-green patches near the stem\n    -  <Size> - Approximately 7-8 cm in diameter, medium-sized\n    -  <Material> - Skin is fuzzy and soft to the touch\n    -  <Composition> - Composed of juicy flesh with a central pit\n    -  <Quantity> - One instance present\n    -  <Relative Location> - Positioned in the left compartment of the container, between the two oranges\n    -  <Orientation> - Upright with the stem pointing upward\n    -  <Connection or Attachments> - Not connected to any other object; placed separately within the container'], 'Orange': ['-  Type - Two round citrus fruits with textured, dimpled skin\n    -  Color - Vibrant orange with slight yellowish undertones and minor brown spots\n    -  Size - Each approximately 6-7 cm in diameter, roughly the size of a small apple\n    -  Material - Natural fruit peel, slightly rough to the touch\n    -  Composition - Outer peel with visible oil glands, no visible seeds or pulp\n    -  Quantity - Two instances\n    -  Relative Location - Positioned vertically stacked in the left compartment of the container, one above the other\n    -  Orientation - Both oriented upright with stems facing upward\n    -  Connection or Attachments - Not connected to any other object; placed independently within the container', '-  Type - Two round citrus fruits with textured, dimpled rinds\n    -  Color - Vibrant orange with slight greenish stem remnants\n    -  Size - Each approximately 6-7 cm in diameter, medium-sized\n    -  Material - Natural fruit peel, slightly rough and porous\n    -  Composition - Whole fruit, unpeeled, with visible stem indentations\n    -  Quantity - Two instances\n    -  Relative Location - Positioned vertically stacked in the left compartment of the container\n    -  Orientation - Both oriented upright with stems facing upward\n    -  Connection or Attachments - Placed adjacent to each other, with the peach below them', '-  <Type> - Round citrus fruit with textured peel\n    -  <Color> - Vibrant orange with slight yellowish undertones and minor blemishes\n    -  <Size> - Approximately 6-7 cm in diameter, medium-sized\n    -  <Material> - Peel is natural, slightly dimpled, and appears dry\n    -  <Composition> - Composed of segmented pulp enclosed in a tough rind\n    -  <Quantity> - Two instances present\n    -  <Relative Location> - Positioned in the left compartment of the container, one above the other\n    -  <Orientation> - Both are upright with stems pointing upward\n    -  <Connection or Attachments> - Not connected to any other object; each is separate within the container']}
+2026-08-20 11:52:36 | INFO     | models | [LLM] Inference completed in 4.792s (max_new_tokens=3000)
+2026-08-20 11:52:36 | INFO     | descriptor | [Banana Chips] Object summarisation completed in 4.792s
+2026-08-20 11:52:36 | DEBUG    | descriptor | Summarised description for 'Banana Chips': 
+
+{
+  "Banana Chips": {
+    "Type": "Thin, dried slices of banana",
+    "Color": "Pale yellow to light brown, with some darker brown spots and edges",
+    "Size": "1-5 cm in width and length, irregularly shaped slices, approximately 2-4 cm in length",
+    "Material": "Dried banana flesh, brittle and slightly curled at edges",
+    "Composition": "Dehydrated banana slices with visible brown spots, slight curling edges, and possible sugar caramelization",
+    "Quantity": "Multiple pieces scattered throughout the granola section",
+    "Relative Location": "Located within the right compartment, mixed in with granola and almonds, positioned at the bottom of the right compartment beneath the granola",
+    "Orientation": "Randomly oriented, some overlapping, some lying flat, some slightly curled or folded",
+    "Connection/Attachments": "Embedded within the granola mixture, mixed with almonds and granola, forming a layered composition"
+  }
+}
+2026-08-20 11:52:43 | INFO     | models | [LLM] Inference completed in 6.263s (max_new_tokens=3000)
+2026-08-20 11:52:43 | INFO     | descriptor | [Granola] Object summarisation completed in 6.263s
+2026-08-20 11:52:43 | DEBUG    | descriptor | Summarised description for 'Granola': 
+
+{
+  "Granola": {
+    "Type": "A mixture of toasted oats, nuts, and dried fruit pieces",
+    "Color": "Golden brown with variations from light tan to darker caramelized tones",
+    "Size": "No uniform size; pieces range from small flakes to larger clusters, collectively filling the upper portion of the right compartment / 2-5 mm in size / Covers the entire right compartment of the container, forming a dense layer",
+    "Material": "Dry, crunchy, baked cereal mixture",
+    "Composition": "Composed of oats, nuts, and dried fruit pieces mixed together, with visible toasted texture",
+    "Quantity": "One large portion filling the right compartment",
+    "Relative Location": "Occupies the upper right section of the container, directly above the banana chips and almonds / Occupies the entire right half of the container, adjacent to the fruit compartment / Occupies the entire right compartment of the container",
+    "Orientation": "Spread flat and evenly across the compartment, with no specific orientation / Layered flatly across the compartment, with some pieces standing upright",
+    "Connection/Attachments": "Mixed with banana chips and almonds below, forming a layered composition / Mixed with banana chips and almonds at the bottom right / Not connected to any other object; forms a cohesive mass within the container"
+  }
+}
+2026-08-20 11:52:48 | INFO     | models | [LLM] Inference completed in 5.183s (max_new_tokens=3000)
+2026-08-20 11:52:48 | INFO     | descriptor | [Almonds] Object summarisation completed in 5.183s
+2026-08-20 11:52:48 | DEBUG    | descriptor | Summarised description for 'Almonds': 
+
+{
+  "Almonds": {
+    "Type": "Whole, shelled almonds with a smooth, slightly curved shape",
+    "Color": "Light to medium brown with darker brown spots and toasted tones",
+    "Size": "Approximately 1.5-2 cm in length, oval shape",
+    "Material": "Hard, nutty shell with a slightly glossy surface",
+    "Composition": "Whole, unroasted or lightly roasted almonds with visible ridges and natural color variation, composed of a single almond kernel enclosed in a hard shell",
+    "Quantity": "Multiple individual almonds scattered throughout the lower right portion and granola section",
+    "Relative Location": "Positioned at the bottom of the right compartment, mixed with banana chips and granola, located within the right compartment, mixed in with granola and banana chips",
+    "Orientation": "Randomly oriented, some standing upright, others lying flat, some partially overlapping",
+    "Connection/Attachments": "Mixed with banana chips and granola, forming a layered composition, embedded within the granola mixture, not separately attached"
+  }
+}
+2026-08-20 11:52:53 | INFO     | models | [LLM] Inference completed in 4.725s (max_new_tokens=3000)
+2026-08-20 11:52:53 | INFO     | descriptor | [Container] Object summarisation completed in 4.725s
+2026-08-20 11:52:53 | DEBUG    | descriptor | Summarised description for 'Container': 
+
+{
+  "Container": {
+    "Type": "White, rectangular, compartmentalized food container with two compartments",
+    "Color": "Solid white with a matte finish and slight texture",
+    "Size": "20 cm long, 15 cm wide, 3 cm deep / 8 inches long, 6 inches wide, 1.2 inches deep",
+    "Material": "Foam or plastic, lightweight and disposable",
+    "Composition": "Divided into two sections with a central divider, rounded edges, and a small handle indentation at the bottom",
+    "Quantity": "One instance",
+    "Relative Location": "Occupies the entire frame of the image, with the left compartment holding fruit and the right compartment holding granola and dried fruit",
+    "Orientation": "Positioned horizontally with the open side facing upward",
+    "Connection/Attachments": "Contains granola, banana chips, almonds, peach, and oranges; compartments are connected internally but separated externally"
+  }
+}
+2026-08-20 11:52:58 | INFO     | models | [LLM] Inference completed in 5.574s (max_new_tokens=3000)
+2026-08-20 11:52:58 | INFO     | descriptor | [Peach] Object summarisation completed in 5.574s
+2026-08-20 11:52:58 | DEBUG    | descriptor | Summarised description for 'Peach': 
+
+{
+  "Peach": {
+    "Type": "A single round, slightly flattened stone fruit with fuzzy skin",
+    "Color": "Gradient of deep red to yellow-orange with mottled appearance, including reddish-orange with mottled blush and darker spots, and reddish-orange with yellowish-green patches near the stem",
+    "Size": "Approximately 7-8 cm in diameter, medium-sized, slightly larger than the oranges",
+    "Material": "Fuzzy, velvety skin texture, soft to the touch",
+    "Composition": "Whole fruit, unpeeled, with natural surface imperfections, composed of juicy flesh with a central pit, outer skin with visible fuzz, no visible flesh or pit",
+    "Quantity": "One instance",
+    "Relative Location": "Positioned in the left compartment of the container, between the two oranges, located at the bottom of the left compartment, below the oranges",
+    "Orientation": "Upright with the stem pointing upward, positioned upright, resting on its base",
+    "Connection/Attachments": "Not connected to any other object; placed independently within the container, placed separately within the container"
+  }
+}
+2026-08-20 11:53:03 | INFO     | models | [LLM] Inference completed in 4.476s (max_new_tokens=3000)
+2026-08-20 11:53:03 | INFO     | descriptor | [Orange] Object summarisation completed in 4.476s
+2026-08-20 11:53:03 | DEBUG    | descriptor | Summarised description for 'Orange': 
+
+{
+  "Orange": {
+    "Type": "Two round citrus fruits with textured, dimpled skin",
+    "Color": "Vibrant orange with slight yellowish undertones and minor brown spots, or slight greenish stem remnants",
+    "Size": "Approximately 6-7 cm in diameter, medium-sized",
+    "Material": "Natural fruit peel, slightly rough to the touch, slightly dimpled, and appears dry",
+    "Composition": "Outer peel with visible oil glands, whole fruit, unpeeled, with visible stem indentations, composed of segmented pulp enclosed in a tough rind",
+    "Quantity": "Two instances",
+    "Relative Location": "Positioned vertically stacked in the left compartment of the container, one above the other",
+    "Orientation": "Both oriented upright with stems facing upward",
+    "Connection/Attachments": "Not connected to any other object; each is separate within the container"
+  }
+}
+2026-08-20 11:53:03 | DEBUG    | descriptor | Master description: {'Banana Chips': {'Type': 'Thin, dried slices of banana', 'Color': 'Pale yellow to light brown, with some darker brown spots and edges', 'Size': '1-5 cm in width and length, irregularly shaped slices, approximately 2-4 cm in length', 'Material': 'Dried banana flesh, brittle and slightly curled at edges', 'Composition': 'Dehydrated banana slices with visible brown spots, slight curling edges, and possible sugar caramelization', 'Quantity': 'Multiple pieces scattered throughout the granola section', 'Relative Location': 'Located within the right compartment, mixed in with granola and almonds, positioned at the bottom of the right compartment beneath the granola', 'Orientation': 'Randomly oriented, some overlapping, some lying flat, some slightly curled or folded', 'Connection/Attachments': 'Embedded within the granola mixture, mixed with almonds and granola, forming a layered composition'}, 'Granola': {'Type': 'A mixture of toasted oats, nuts, and dried fruit pieces', 'Color': 'Golden brown with variations from light tan to darker caramelized tones', 'Size': 'No uniform size; pieces range from small flakes to larger clusters, collectively filling the upper portion of the right compartment / 2-5 mm in size / Covers the entire right compartment of the container, forming a dense layer', 'Material': 'Dry, crunchy, baked cereal mixture', 'Composition': 'Composed of oats, nuts, and dried fruit pieces mixed together, with visible toasted texture', 'Quantity': 'One large portion filling the right compartment', 'Relative Location': 'Occupies the upper right section of the container, directly above the banana chips and almonds / Occupies the entire right half of the container, adjacent to the fruit compartment / Occupies the entire right compartment of the container', 'Orientation': 'Spread flat and evenly across the compartment, with no specific orientation / Layered flatly across the compartment, with some pieces standing upright', 'Connection/Attachments': 'Mixed with banana chips and almonds below, forming a layered composition / Mixed with banana chips and almonds at the bottom right / Not connected to any other object; forms a cohesive mass within the container'}, 'Almonds': {'Type': 'Whole, shelled almonds with a smooth, slightly curved shape', 'Color': 'Light to medium brown with darker brown spots and toasted tones', 'Size': 'Approximately 1.5-2 cm in length, oval shape', 'Material': 'Hard, nutty shell with a slightly glossy surface', 'Composition': 'Whole, unroasted or lightly roasted almonds with visible ridges and natural color variation, composed of a single almond kernel enclosed in a hard shell', 'Quantity': 'Multiple individual almonds scattered throughout the lower right portion and granola section', 'Relative Location': 'Positioned at the bottom of the right compartment, mixed with banana chips and granola, located within the right compartment, mixed in with granola and banana chips', 'Orientation': 'Randomly oriented, some standing upright, others lying flat, some partially overlapping', 'Connection/Attachments': 'Mixed with banana chips and granola, forming a layered composition, embedded within the granola mixture, not separately attached'}, 'Container': {'Type': 'White, rectangular, compartmentalized food container with two compartments', 'Color': 'Solid white with a matte finish and slight texture', 'Size': '20 cm long, 15 cm wide, 3 cm deep / 8 inches long, 6 inches wide, 1.2 inches deep', 'Material': 'Foam or plastic, lightweight and disposable', 'Composition': 'Divided into two sections with a central divider, rounded edges, and a small handle indentation at the bottom', 'Quantity': 'One instance', 'Relative Location': 'Occupies the entire frame of the image, with the left compartment holding fruit and the right compartment holding granola and dried fruit', 'Orientation': 'Positioned horizontally with the open side facing upward', 'Connection/Attachments': 'Contains granola, banana chips, almonds, peach, and oranges; compartments are connected internally but separated externally'}, 'Peach': {'Type': 'A single round, slightly flattened stone fruit with fuzzy skin', 'Color': 'Gradient of deep red to yellow-orange with mottled appearance, including reddish-orange with mottled blush and darker spots, and reddish-orange with yellowish-green patches near the stem', 'Size': 'Approximately 7-8 cm in diameter, medium-sized, slightly larger than the oranges', 'Material': 'Fuzzy, velvety skin texture, soft to the touch', 'Composition': 'Whole fruit, unpeeled, with natural surface imperfections, composed of juicy flesh with a central pit, outer skin with visible fuzz, no visible flesh or pit', 'Quantity': 'One instance', 'Relative Location': 'Positioned in the left compartment of the container, between the two oranges, located at the bottom of the left compartment, below the oranges', 'Orientation': 'Upright with the stem pointing upward, positioned upright, resting on its base', 'Connection/Attachments': 'Not connected to any other object; placed independently within the container, placed separately within the container'}, 'Orange': {'Type': 'Two round citrus fruits with textured, dimpled skin', 'Color': 'Vibrant orange with slight yellowish undertones and minor brown spots, or slight greenish stem remnants', 'Size': 'Approximately 6-7 cm in diameter, medium-sized', 'Material': 'Natural fruit peel, slightly rough to the touch, slightly dimpled, and appears dry', 'Composition': 'Outer peel with visible oil glands, whole fruit, unpeeled, with visible stem indentations, composed of segmented pulp enclosed in a tough rind', 'Quantity': 'Two instances', 'Relative Location': 'Positioned vertically stacked in the left compartment of the container, one above the other', 'Orientation': 'Both oriented upright with stems facing upward', 'Connection/Attachments': 'Not connected to any other object; each is separate within the container'}}
+2026-08-20 11:53:03 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-20 11:53:03 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/breakfast_box.txt
+2026-08-20 11:53:03 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=21)
+2026-08-20 11:53:03 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-20 11:53:03 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-20 11:53:05 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-20 11:53:05 | DEBUG    | planner | Class directories for dataset 'breakfast_box': ['good']
+2026-08-20 11:53:05 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/breakfast_box/good
+2026-08-20 11:53:05 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 11:53:05 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 11:53:05 | DEBUG    | planner | Generating planner steps from: good_2026-08-20 11:53:03_master_description.json
+2026-08-20 11:53:18 | INFO     | models | [VLM] Inference completed in 13.014s (max_new_tokens=2040)
+2026-08-20 11:53:18 | INFO     | planner | Planner steps generated in 13.014s (attempt=1, steps=21, approved_rules=21)
+2026-08-20 11:53:18 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/breakfast_box/good/good_2026-08-20 11:53:18_planner.txt
+2026-08-20 11:53:18 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any small, dark spot or bruise visible on the fuzzy skin of the peach?
+Step 2: Is there any patch of uneven coloration or darkening on the peach skin?
+Step 3: Is there any shallow, circular dent on the side of the peach?
+Step 4: Is there any small, torn section on the fuzzy skin of the peach?
+Step 5: Is there any small, pinhole-like puncture visible on the peach skin?
+Step 6: Is there any visible split or crack running through the peel of an orange, exposing the inner pulp?
+Step 7: Is there any ragged edge or tear in the peel of an orange, appearing as if it was ripped open?
+Step 8: Is there any visible indentation or dimple pressed into the peel of an orange, not part of the natural dimpled texture?
+Step 9: Is there any small hole or tear in the peel of an orange, appearing as a dark spot or broken texture?
+Step 10: Is there any compartment in the food container that is empty or missing its expected food content?
+Step 11: Is there any unexpected food item or any item not matching the usual contents in the container?
+Step 12: Is there any visible foreign material or debris inside a compartment not part of the food?
+Step 13: Is there any discoloration or staining on the white surface of the container?
+Step 14: Is there any banana chip that appears flattened, broken, or pulverized rather than remaining as thin, intact slices?
+Step 15: Is there any almond that is shattered or ground into smaller fragments instead of retaining its whole, oval shape?
+Step 16: Is there any puncture, dent, or distorted edge on the container surface, deviating from its smooth, undamaged appearance?
+Step 17: Is there any orange or peach present in the right compartment, alongside granola and banana slices?
+Step 18: Is there any almond or banana chip present in the top right compartment or left compartment instead of only the bottom right compartment?
+Step 19: Is there an additional orange present in the left compartment, making a total of three oranges instead of the expected two?
+Step 20: Is the peach absent from the left compartment, leaving only two oranges?
+Step 21: Is the granola visible in the bottom right section of the compartment, not restricted to the top of the left compartment?
+2026-08-20 11:53:18 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/breakfast_box/performance/performance_20260820_115318.json
+2026-08-20 11:53:18 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/breakfast_box
+2026-08-20 11:53:18 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-20/breakfast_box_115110_log.txt

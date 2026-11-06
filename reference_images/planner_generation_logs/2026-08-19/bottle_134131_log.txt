@@ -1,0 +1,43 @@
+2026-08-19 13:41:31 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 13:41:31 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 13:41:31 | INFO     | __main__ | Dataset  : bottle
+2026-08-19 13:41:31 | INFO     | __main__ | Classes  : single
+2026-08-19 13:41:31 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 13:41:31 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/bottle_134131_log.txt
+2026-08-19 13:41:31 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 13:41:33 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 13:41:33 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 13:41:35 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 13:41:35 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 13:41:35 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/136.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/018.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/160.png']
+2026-08-19 13:41:35 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 13:41:35 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-19 13:41:35 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 13:41:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:41:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 13:41:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 13:41:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 528625 44
+2026-08-19 13:41:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 528681 1304
+2026-08-19 13:41:35 | INFO     | models | [VLM] Inference completed in 0.468s (max_new_tokens=2040)
+2026-08-19 13:41:35 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/100.png in 0.468s
+2026-08-19 13:44:58 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/bottle_object_labels.txt
+2026-08-19 13:44:58 | INFO     | __main__ | Object names: ['bottle']
+2026-08-19 13:44:58 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 13:44:58 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/bottle/good
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 530686 44
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 530742 1304
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 530994 44
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 531050 1304
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 536416 44
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 536472 1304
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:44:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536

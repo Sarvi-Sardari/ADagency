@@ -1,0 +1,12 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "white plastic organizer tray",
+      "category": "residual_content",
+      "part_or_region": "visible compartment interiors and rim of the white plastic organizer tray",
+      "anomaly_name": "foreign object inside or resting on the tray",
+      "visual_description": "A visible component or foreign object in the compartments of the white organizer tray. A partially visbile item also counts. Only focus on the white organizer tray. Ignore the blue bin, objects in the blue bin, robot arm and the background."
+    }
+  ]
+}

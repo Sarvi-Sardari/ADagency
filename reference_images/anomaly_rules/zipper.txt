@@ -1,0 +1,116 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Zipper",
+      "category": "surface_integrity",
+      "part_or_region": "zipper teeth",
+      "anomaly_name": "broken tooth",
+      "visual_description": "a single zipper tooth missing or snapped off, visible as a gap or irregularity in the tooth line."
+    },
+    {
+      "id": "A002",
+      "object_name": "Zipper",
+      "category": "surface_integrity",
+      "part_or_region": "zipper teeth",
+      "anomaly_name": "cracked tooth",
+      "visual_description": "a visible crack running along a zipper tooth, appearing as a fine line or split."
+    },
+    {
+      "id": "A003",
+      "object_name": "Zipper",
+      "category": "surface_integrity",
+      "part_or_region": "zipper teeth",
+      "anomaly_name": "scratched tooth",
+      "visual_description": "a shallow groove or scratch on a zipper tooth surface, visible as a linear mark."
+    },
+    {
+      "id": "A004",
+      "object_name": "Zipper",
+      "category": "surface_integrity",
+      "part_or_region": "zipper slider",
+      "anomaly_name": "dented slider",
+      "visual_description": "a visible indentation or dent on the zipper slider surface."
+    },
+    {
+      "id": "A005",
+      "object_name": "Fabric",
+      "category": "surface_integrity",
+      "part_or_region": "fabric",
+      "anomaly_name": "punctured fabric",
+      "visual_description": "a small hole or puncture in the fabric, visible as a circular or irregular missing area."
+    },
+    {
+      "id": "A006",
+      "object_name": "Fabric",
+      "category": "surface_integrity",
+      "part_or_region": "fabric",
+      "anomaly_name": "torn fabric",
+      "visual_description": "a visible tear or rip in the fabric, appearing as a jagged or uneven edge."
+    },
+    {
+      "id": "A007",
+      "object_name": "Fabric",
+      "category": "surface_integrity",
+      "part_or_region": "fabric",
+      "anomaly_name": "stained fabric",
+      "visual_description": "a visible discoloration or stain on the fabric, appearing as a darker or lighter patch."
+    },
+    {
+      "id": "A008",
+      "object_name": "Zipper",
+      "category": "geometry_alignment",
+      "part_or_region": "zipper teeth",
+      "anomaly_name": "misaligned teeth",
+      "visual_description": "zipper teeth not aligned straight, showing a visible bend or skew in the tooth line."
+    },
+    {
+      "id": "A009",
+      "object_name": "Zipper",
+      "category": "geometry_alignment",
+      "part_or_region": "zipper slider",
+      "anomaly_name": "rotated slider",
+      "visual_description": "the zipper slider rotated, appearing at an angle rather than aligned with the zipper teeth."
+    },
+    {
+      "id": "A010",
+      "object_name": "Zipper",
+      "category": "missing_component",
+      "part_or_region": "zipper teeth",
+      "anomaly_name": "missing teeth",
+      "visual_description": "a section of zipper teeth missing, visible as a gap where teeth should be."
+    },
+    {
+      "id": "A011",
+      "object_name": "Fabric",
+      "category": "extra_object",
+      "part_or_region": "fabric surface",
+      "anomaly_name": "foreign object embedded",
+      "visual_description": "a small, visible foreign object (e.g., fiber, lint, debris) stuck in the fabric or zipper area."
+    },
+    {
+      "id": "A012",
+      "object_name": "Zipper",
+      "category": "finish_color",
+      "part_or_region": "zipper teeth",
+      "anomaly_name": "discolored teeth",
+      "visual_description": "a section of zipper teeth showing a different color or shade compared to surrounding teeth."
+    },
+    {
+      "id": "A013",
+      "object_name": "Fabric",
+      "category": "finish_color",
+      "part_or_region": "fabric",
+      "anomaly_name": "discolored fabric",
+      "visual_description": "a section of fabric showing a different color or shade compared to surrounding fabric."
+    },
+    {
+      "id": "A014",
+      "object_name": "Fabric",
+      "category": "contamination",
+      "part_or_region": "fabric surface",
+      "anomaly_name": "lint accumulation",
+      "visual_description": "visible lint or fiber buildup on the fabric surface, appearing as small white or gray specks."
+    }
+  ]
+}

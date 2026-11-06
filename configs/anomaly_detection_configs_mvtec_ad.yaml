@@ -1,0 +1,147 @@
+# configs/anomaly_detection_configs.yaml
+#
+# BEHAVIOR CHANGE (2026-08): when merge_anomalies is true, persisted
+# preprocessed artifacts keep their real source test folder beneath the merged
+# group (for example cand_anomalies/broken_large/processed_000.png). This
+# prevents same-named images from different defect folders from overwriting
+# one another. Normal --resume-dir behavior never changes a dataset that has
+# already written all_data_summary.jsonl. Older completed runs with collisions
+# must therefore be regenerated as a new run.
+#
+# Why this is a SEPARATE file from dataset_configs.yaml (used by the offline
+# planner-generation pipeline in planner_generation/ + run_planner_generation.py),
+# instead of reusing that schema:
+#
+#   1. Cardinality — dataset_configs.yaml describes ONE dataset per run, and
+#      run_planner_generation.py is built around that assumption. The online
+#      anomaly-detection pipeline needs to sweep MULTIPLE datasets in a single
+#      invocation (see the `datasets:` list below); bolting a list onto the
+#      single-dataset schema would break the planner pipeline's contract.
+#   2. Different fields — this pipeline needs `merge_anomalies` to control
+#      output grouping and `classes`/`class_examples` to select the proper
+#      planner for a candidate's nearest reference image. These are separate
+#      concerns: semantic class names never become output folders.
+#   3. Dead weight the other way — dataset_configs.yaml's `reference_selection`,
+#      `anomaly_rules` and `object_labels` sections only matter while
+#      generating planners. During online inference, planners are READ, not
+#      generated, so none of those fields apply here.
+#   4. `metrics.enabled` (see below) has no equivalent in planner generation.
+#
+# configs/model_configs.yaml IS reused as-is (see --model-config default) —
+# both pipelines load the exact same VLM, so there is no reason to duplicate
+# that schema.
+
+# datasets: (Format)
+#   - name: Name of the dataset
+#     root_dir: directory of the dataset (Usually kept in datasets/ directory)
+#     merge_anomalies: True (all directories in the dataset except test/good will be considered as anomalies)
+#     classes: Either "single" or "multi" class dataset
+#     class_examples: (Required if classes is "multi")
+#       <class label 1>: example image 1 from train/good
+#       <class label 2>: example image 2 from train/good ...
+
+datasets:
+  - name: "bottle"
+    root_dir: "datasets/mvtec_ad/bottle"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "cable"
+    root_dir: "datasets/mvtec_ad/cable"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "capsule"
+    root_dir: "datasets/mvtec_ad/capsule"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "carpet"
+    root_dir: "datasets/mvtec_ad/carpet"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "grid"
+    root_dir: "datasets/mvtec_ad/grid"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "hazelnut"
+    root_dir: "datasets/mvtec_ad/hazelnut"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "leather"
+    root_dir: "datasets/mvtec_ad/leather"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "metal_nut"
+    root_dir: "datasets/mvtec_ad/metal_nut"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "pill"
+    root_dir: "datasets/mvtec_ad/pill"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "screw"
+    root_dir: "datasets/mvtec_ad/screw"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "tile"
+    root_dir: "datasets/mvtec_ad/tile"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "transistor"
+    root_dir: "datasets/mvtec_ad/transistor"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "toothbrush"
+    root_dir: "datasets/mvtec_ad/toothbrush"
+    merge_anomalies: True
+    classes: "multi"
+    class_examples:
+     Blue_Toothbrush: "000.png"
+     Red_Toothbrush: "020.png"
+     Yellow_Toothbrush: "040.png"
+
+  - name: "wood"
+    root_dir: "datasets/mvtec_ad/wood"
+    merge_anomalies: True
+    classes: "single"
+
+  - name: "zipper"
+    root_dir: "datasets/mvtec_ad/zipper"
+    merge_anomalies: True
+    classes: "single"
+
+planners_dir: "reference_images/planners/mvtec_ad_8B_planners"  #Directory with the generated planners
+
+prompts_dir: "prompts/anomaly_detection_pipeline" # Directory with the anomaly-detection pipeline's Jinja prompt templates.
+
+# "model" keeps the VLM's final label unchanged; "steps" enables the legacy
+# any-YES/anomaly and all-NO/good parser override.
+decision:
+  label_policy: "model"
+
+# Multi-class label cache behavior:
+# - Cache file path: prompts/class_labels/<dataset_name>_data_labels.txt
+# - If cache exists, it is loaded and used.
+# - If cache is missing, labels are generated from class_examples and the user
+#   must accept/regenerate/quit. The accepted descriptions are then cached.
+
+output:
+  root_dir: "outputs"
+  # <root_dir>/<runs_dir>/<dataset_name>/{preproc,texts,all_data_summary.jsonl,*.png}
+  runs_dir: "runs_mvtec_ad_v2"
+
+# Metrics and low-confidence reruns are separate stages that run AFTER this
+# pipeline, directly against the run folders written above:
+#   python run_metrics.py
+#   python -m anomaly_detection.rerun <outdir> <dataset_name>   # finds the threshold AND reruns low-confidence "good" predictions via the VLM
+#   (rerun writes <outdir>/<dataset_name>/rerun_results/rerun_result.jsonl)

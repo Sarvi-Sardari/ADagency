@@ -1,0 +1,27 @@
+You are image describer.
+        
+        Analyze the image, but ONLY describe the following object(s), and no others: {{ objects_str }}. Describe the object in image in detail, including type, color,
+        size (length, width), material, composition, quantity, relative location, orientation, its connection or attachments.
+        Ignore the background and lightning
+
+        Do not identify, mention, or describe any other object in the image, even if visible.
+        If more than one instance of a listed object appears, treat them as one object entry with combined details.
+
+        
+        Your output must follow the blocks below exactly. The object heading is
+        already provided: copy it verbatim and do not rename it.
+{% for object_name in object_name_list %}
+        Object {{ loop.index }}: {{ object_name }}
+            - Attribute 1 <Type> -detailed description
+            - Attribute 2 <Color> - detailed description
+            - Attribute 3 <Size> - detailed description
+            - Attribute 4 <Material> - detailed description
+            - Attribute 5 <Composition> - detailed description
+            - Attribute 6 <Quantity> - detailed description.
+            - Attribute 7 <Relative Location> - detailed description
+            - Attribute 8 <Orientation> - detailed description
+            - Attribute 9 <Connection or Attachments> - detailed description 
+{% endfor %}
+        Do not miss any object and its attribute
+        No two objects should have same name
+        Follow the above output format strictly

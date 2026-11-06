@@ -1,0 +1,97 @@
+# Standalone post-inference mask generation.
+#
+# BEHAVIOR CHANGE (2026-08): merged anomaly classes now keep
+# source_label_folder in mask/cache paths. For example, two distinct inputs
+# broken_large/000.png and contamination/000.png are written beneath
+# masks/<method>/anomalies/broken_large/000.png and
+# masks/<method>/anomalies/contamination/000.png instead of overwriting the
+# same masks/<method>/anomalies/000.png. Non-merged paths are unchanged.
+# Runs created before the matching inference preprocessing fix are rejected;
+# --overwrite cannot recover already-overwritten inputs. Create a fresh
+# anomaly-detection run with the corrected layout, then generate its masks.
+#
+# Run all configured datasets:
+#   python run_mask_generation.py
+#
+# One-off override examples:
+#   python run_mask_generation.py --dataset pushpins --methods bounding_box
+#   python run_mask_generation.py --run-dir outputs/runs/my_run --dataset pushpins --methods segmentation
+#   python run_mask_generation.py --dataset pushpins --include-rerun --overwrite
+#
+# Output is fixed (intentionally not configurable):
+#   <run_dir>/<dataset>/masks/<method_folder>/<label_folder>/[<source_label_folder>/]<image_stem>.png
+#
+# <method_folder> depends on the technique, not on this file:
+#   - "bounding_box"                                for methods: bounding_box
+#   - "<segmentation_model.model_name>"             for methods: segmentation
+#   - "bounding_box_<segmentation_model.model_name>" for methods: bounding_box_segmentation
+# `segmentation_model.model_name` is read from configs/model_configs.yaml
+# (see that file's `models.segmentation_model` section) -- swapping the
+# segmentation backend (e.g. sam3 -> something else in the future) only
+# requires editing that section; the `methods:` list below never changes.
+#
+# Bounding-box coordinate JSON files (one VLM localization call per image,
+# shared/cached across "bounding_box" and "bounding_box_segmentation") are
+# written next to their masks, under
+# masks/<method_folder>/coordinates_files/<label>/[<source_label_folder>/]<image_stem>.json.
+
+run_dir: "outputs/runs/2026-08-13 20:36:33_"
+
+# Images come from each run entry's preprocess_cand_img_path, falling back to
+# <run_dir>/<dataset>/preproc/cand_<label>/[<source_label>/]processed_<image>.png.
+
+
+    # Any of: "bounding_box", "segmentation", "bounding_box_segmentation".
+    # (Legacy aliases "sam3" / "bounding_box_sam3" are still accepted and
+    # mapped onto "segmentation" / "bounding_box_segmentation" automatically,
+    # for configs/scripts written before the generic naming.)
+
+datasets:
+  - name: "breakfast_box"
+    methods: ["bounding_box", "segmentation", "bounding_box_segmentation"]
+    include_rerun: true
+  - name: "juice_bottle"
+    methods: ["bounding_box", "segmentation", "bounding_box_segmentation"]
+    include_rerun: true
+  - name: "pushpins"
+    methods: ["bounding_box", "segmentation", "bounding_box_segmentation"]
+    include_rerun: true
+  - name: "screw_bag"
+    methods: ["bounding_box", "segmentation", "bounding_box_segmentation"]
+    include_rerun: true
+  - name: "splicing_connectors"
+    methods: ["bounding_box", "segmentation", "bounding_box_segmentation"]
+    include_rerun: true
+
+# Used only by methods that need VLM localization (bounding_box and
+# bounding_box_segmentation). Relative paths are resolved from pipeline_project/.
+# NOTE: there is no `model_config:` field here anymore -- configs/model_configs.yaml
+# (the same file used by every other stage) is always used, including for the
+# segmentation backend (models.segmentation_model).
+prompts_dir: "prompts/anomaly_detection_pipeline"
+
+# Resumability / cache-invalidation behavior -- read this before re-running:
+#
+# overwrite: false (default) -- SAFE TO RE-RUN OR RESUME AT ANY TIME:
+#   - Per (dataset, method, image): if <method_folder>/<label>/<stem>.png
+#     already exists on disk, that image+method pair is skipped entirely
+#     (already done). This is exactly what makes an interrupted run
+#     resumable -- just run the same command again and only the missing
+#     files get generated.
+#   - The bounding-box VLM localization result is ALSO cached (as the
+#     coordinates_files/*.json described above) and reused across runs
+#     instead of re-querying the VLM, even for images whose final .png mask
+#     hasn't been written yet (e.g. a later SAM3 step failed).
+#   - Each dataset+method's settings (backend model, confidence threshold,
+#     generator version, ...) are fingerprinted the first time it's
+#     generated, into <run_dir>/<dataset>/mask_generation/methods/<method_folder>.json.
+#     If you change a setting (e.g. swap segmentation_model.model_name, or
+#     bump confidence_threshold) and re-run WITHOUT --overwrite, generation
+#     stops with an error instead of silently mixing masks made under
+#     different settings.
+#
+# overwrite: true -- ignores all of the above: every requested image+method
+#   is regenerated from scratch (existing masks and the coordinate cache are
+#   both bypassed), and the fingerprint file is refreshed to match the
+#   current settings.
+overwrite: false

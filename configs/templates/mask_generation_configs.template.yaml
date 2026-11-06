@@ -1,0 +1,121 @@
+# =============================================================================
+# TEMPLATE: mask_generation_configs.yaml  (post-inference PIXEL MASKS)
+# =============================================================================
+#
+# Used by:   run_mask_generation.py --config <this file>
+#                                   [--model-config <model config>]
+#            run_anomaly_detection_ablation.py (configs.mask_generation)
+# Parsed by: anomaly_detection/config.py :: load_mask_generation_config()
+#
+# What this stage does:
+#   For an EXISTING anomaly-detection run, it turns each predicted anomaly into
+#   a pixel mask so pixel AUROC / AUPRO can be measured. Images predicted
+#   "good" get an empty mask. Nothing in the detection results is changed.
+#
+# Model settings come from the MODEL config, not from this file:
+#   --model-config (default configs/model_configs.yaml; the ablation passes
+#   its configs.model). models.vlm draws the boxes; models.segmentation_model
+#   (e.g. SAM3) is REQUIRED for the two segmentation methods.
+#
+# Output layout (fixed, not configurable):
+#   <run_dir>/<dataset>/masks/<method_folder>/<label_folder>/[<source_folder>/]<image>.png
+#   <method_folder> =
+#     bounding_box                          for method bounding_box
+#     <segmentation_model.model_name>       for method segmentation (e.g. sam3)
+#     bounding_box_<segmentation model>     for method bounding_box_segmentation
+#   Box coordinates (one VLM call per image, shared by bounding_box and
+#   bounding_box_segmentation) are cached as JSON under
+#   masks/<method_folder>/coordinates_files/...
+#
+# Useful CLI overrides:
+#   --run-dir PATH            replace run_dir
+#   --dataset NAME            only this dataset (repeatable)
+#   --methods M [M ...]       replace `methods` for the selected datasets
+#   --include-rerun / --base-results   force the prediction source for all
+#   --overwrite               same as overwrite: true for this call
+# Relative paths are resolved from the project root.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# run_dir  REQUIRED (unless --run-dir is given). Existing directory.
+# The timestamped detection run folder, i.e.
+#   <output.root_dir>/<output.runs_dir>/<YYYY-MM-DD HH-MM-SS>_
+# from the anomaly-detection config. It must contain one sub-folder per
+# dataset listed below. The ablation orchestrator replaces it automatically.
+# -----------------------------------------------------------------------------
+run_dir: "outputs/runs_my_experiment/2026-01-01 00-00-00_"   # <-- CHANGE
+
+# -----------------------------------------------------------------------------
+# datasets  REQUIRED. Non-empty list; names must be unique.
+# In an ablation the set of names must EXACTLY equal the anomaly-detection
+# config's dataset names (no missing, no extra).
+# -----------------------------------------------------------------------------
+datasets:
+  - # name  REQUIRED. A dataset `name` from the anomaly-detection config;
+    # <run_dir>/<name>/ must exist.
+    name: "bottle"                                 # <-- CHANGE
+
+    # methods  REQUIRED. Non-empty list of BINARY mask methods (duplicates are
+    # removed):
+    #   bounding_box              VLM predicts boxes; the mask is the filled
+    #                             boxes. Needs models.vlm only.
+    #   segmentation              the segmentation model is TEXT-prompted with
+    #                             the VLM's saved anomaly reasoning (no boxes,
+    #                             no new VLM call). Needs models.segmentation_model.
+    #   bounding_box_segmentation VLM boxes are used as prompts for the
+    #                             segmentation model (box-guided masks).
+    #                             Needs models.vlm AND models.segmentation_model.
+    # Legacy spellings are accepted and converted: sam3 -> segmentation,
+    # bounding_box_sam3 / bbox_sam3 -> bounding_box_segmentation.
+    methods: ["bounding_box", "segmentation", "bounding_box_segmentation"]
+
+    # include_rerun  OPTIONAL (false). Boolean.
+    #   false : use the first-pass predictions (all_data_summary.jsonl).
+    #   true  : use rerun predictions where they exist
+    #           (<run_dir>/<name>/rerun_results/rerun_result.jsonl), so the
+    #           rerun stage must have completed first.
+    # Use the SAME choice here and in the metrics config, otherwise masks and
+    # metrics describe different predictions.
+    include_rerun: false
+
+    # generate_secondary_masks  OPTIONAL (false). Boolean.
+    # Also write one mask per predicted SECONDARY class (see
+    # secondary_classification in the anomaly-detection config). REQUIRES that
+    # the detection run was made with secondary classification enabled (its
+    # saved profile is read from the run folder).
+    # Output: <run_dir>/<name>/secondary_masks/<method>/<class>/<label>/.../<image>.png
+    # Only the predicted class that has localization_steps gets a file; a
+    # class with no localization steps (e.g. empty_clean) writes nothing.
+    # If exactly one secondary class maps to binary "anomaly", methods present
+    # in both lists reuse the binary mask for that class.
+    generate_secondary_masks: false
+
+    # secondary_methods  REQUIRED and non-empty IF generate_secondary_masks is
+    # true; OPTIONAL ([]) otherwise. Same allowed values as `methods`.
+    secondary_methods: []
+
+  # Example: secondary masks for a dataset run with secondary classification
+  # - name: "rs_darkblue_box"
+  #   methods: ["bounding_box_segmentation"]
+  #   include_rerun: true
+  #   generate_secondary_masks: true
+  #   secondary_methods: ["bounding_box_segmentation"]
+
+# -----------------------------------------------------------------------------
+# prompts_dir  OPTIONAL ("prompts/anomaly_detection_pipeline"). Existing
+# directory containing the localization prompt (bounding_box_localizer.j2).
+# -----------------------------------------------------------------------------
+prompts_dir: "prompts/anomaly_detection_pipeline"
+
+# -----------------------------------------------------------------------------
+# overwrite  OPTIONAL (false). Boolean.
+#   false : SAFE TO RESUME. An image+method whose mask PNG already exists is
+#           skipped; cached box JSONs are reused. Each dataset+method's
+#           settings (backend, confidence threshold, generator version, ...)
+#           are fingerprinted in <run_dir>/<name>/mask_generation/methods/.
+#           If those settings changed since the masks were made, the stage
+#           STOPS instead of mixing masks made with different settings.
+#   true  : regenerate every requested mask and box from scratch and refresh
+#           the fingerprint. Costly; only use it deliberately.
+# -----------------------------------------------------------------------------
+overwrite: false

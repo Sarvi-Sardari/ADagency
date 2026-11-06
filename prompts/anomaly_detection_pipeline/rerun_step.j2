@@ -1,0 +1,15 @@
+The first image is the reference image. The second image is the candidate image.
+Answer this question about the SECOND (candidate) image:
+{{ question }}
+
+Use the first image only as a normal reference for comparison.
+Base the decision only on what is visible in the second image.
+If the condition appears only in the first/reference image, the decision MUST be "No".
+In reason and details, describe only evidence from the second/candidate image.
+
+### OUTPUT (STRICT JSON - NO EXCEPTIONS)
+{
+  "decision": "Yes" | "No",
+  "reason": "<1-2 sentence justification based on the candidate image>",
+  "details": "<specific visible evidence in the candidate image>"
+}

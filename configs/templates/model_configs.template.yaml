@@ -1,0 +1,188 @@
+# =============================================================================
+# TEMPLATE: model_configs.yaml  (shared MODEL + DEPLOYMENT settings)
+# =============================================================================
+#
+# Used by (via --model-config, default configs/model_configs.yaml):
+#   run_planner_generation.py   -> models.vlm (names, descriptions, planner)
+#                                  AND models.llm (master descriptions)
+#   run_anomaly_detection.py    -> models.vlm only (llm is ignored, not validated)
+#   anomaly_detection.rerun     -> models.vlm
+#   run_mask_generation.py      -> models.vlm (box localization) and
+#                                  models.segmentation_model (pixel masks)
+#   run_metrics.py              -> only `deployment` (telemetry), no model load
+#   run_anomaly_detection_ablation.py -> passes configs.model to every stage
+# Parsed by: planner_generation/config.py and anomaly_detection/config.py
+#            (load_models_config) + cluster_deployment/config.py.
+#
+# Conventions:
+#   REQUIRED / OPTIONAL (default) / REQUIRED IF ...  as described below.
+#   Relative model paths are resolved from the project root.
+#
+# Reproducibility: this file is part of an ablation's fingerprint. Changing the
+# model, image size, generation settings or chat-template options changes the
+# experiment -> use a NEW experiment/runs directory instead of resuming.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# deployment  OPTIONAL section (default: mode local).
+# The single switch between "run the models on this machine" and "use the
+# multi-PC Ray/vLLM cluster".
+# -----------------------------------------------------------------------------
+deployment:
+  # mode  OPTIONAL ("local"). Allowed: "local" | "cluster".
+  #   local   : models are loaded in-process with Hugging Face Transformers on
+  #             `device`. The cluster file below is NOT opened or validated,
+  #             and any base_url / server_launch keys are ignored.
+  #   cluster : `cluster_config` is loaded and its `models.*` entries are merged
+  #             OVER the entries in this file (key by key). base_url then
+  #             becomes mandatory for every model the stage uses
+  #             (vlm always; llm too for planner generation).
+  mode: local
+
+  # cluster_config  REQUIRED IF mode == "cluster" (non-empty path string);
+  # ignored in local mode. Path to the cluster-only YAML
+  # (see model_cluster_configs.template.yaml).
+  # NOTE: a relative path is resolved from the folder that contains THIS file
+  # (e.g. configs/), not from the project root.
+  # Legacy: if cluster_config is omitted in cluster mode, the old all-in-one
+  # format is assumed (cluster/remote_monitoring keys inline under deployment).
+  cluster_config: "model_cluster_configs.yaml"
+
+models:
+  # ===========================================================================
+  # models.vlm  REQUIRED.  The vision-language model.
+  # Used for reference descriptions/object names (planner generation), the
+  # anomaly decision, reruns, object cropping, and bounding-box localization.
+  # ===========================================================================
+  vlm:
+    # model_name  REQUIRED, non-empty string.
+    # A human-readable identifier. It is written into run artifacts and, in
+    # cluster mode, is the API model name unless served_model_name is set.
+    # It does NOT select the checkpoint; local_path / huggingface_name do.
+    model_name: "Qwen3-VL-8B-Instruct"            # <-- CHANGE
+
+    # source  REQUIRED. Allowed: "local" | "huggingface".
+    #   local       : load from local_path (must be an existing DIRECTORY).
+    #   huggingface : load the repository named by huggingface_name
+    #                 (downloaded/cached by Hugging Face).
+    source: local
+
+    # local_path  REQUIRED IF source == "local" (existing directory that holds
+    # config.json, weights, processor files). Ignored for source huggingface.
+    local_path: "models/Qwen3-VL-8B-Instruct"     # <-- CHANGE
+
+    # huggingface_name  REQUIRED IF source == "huggingface" (e.g. "org/repo").
+    # OPTIONAL/informational for source local. null or "" means "not set".
+    huggingface_name: "Qwen/Qwen3-VL-8B-Instruct"
+
+    # device  OPTIONAL (0). Integer GPU index (0, 1, ...), -1 for CPU, or a
+    # string such as "cuda", "cuda:0", "cpu", "auto". Booleans are rejected.
+    # The ablation orchestrator also reads it to know which GPU to sample.
+    device: 0
+
+    # chat_template_kwargs  OPTIONAL ({}). String-keyed mapping.
+    # Extra variables passed to THIS checkpoint's own chat template. Leave {}
+    # unless the model's template documents an option. Example: thinking
+    # models such as Qwen3 / Qwen3.5 use {enable_thinking: false} to stop
+    # emitting reasoning blocks that would break the expected output format.
+    # Prefer this over model-specific Python code.
+    chat_template_kwargs: {}
+    # chat_template_kwargs:
+    #   enable_thinking: false
+
+    # image_processing  REQUIRED for vlm (and FORBIDDEN under llm).
+    # Every image is letterboxed (aspect ratio preserved, black padding)
+    # before it reaches the model's own AutoProcessor.
+    image_processing:
+      # target_w / target_h  REQUIRED. [min, max] positive integers, min <= max.
+      #   min == max (for BOTH w and h): fixed canvas; the image is scaled to
+      #     fit inside it and padded to exactly max_w x max_h.
+      #   min < max : images already inside the range are kept at their size;
+      #     larger images are shrunk to fit max; smaller ones enlarged to min.
+      # Bigger images -> more visual tokens -> more VRAM and slower inference.
+      target_w: [1216, 1216]
+      target_h: [1056, 1056]
+      # resample  REQUIRED. "nearest" | "bilinear" | "bicubic" | "lanczos".
+      resample: "bicubic"
+
+    # generation  OPTIONAL section (all keys optional).
+    generation:
+      # max_new_tokens  OPTIONAL (2048). Integer > 0. Upper limit on output
+      # length. Too low truncates multi-step answers (which are then retried).
+      max_new_tokens: 2040
+      # temperature  OPTIONAL (0.2). Number >= 0. Only effective when
+      # do_sample is true (a warning is logged otherwise).
+      temperature: 0.2
+      # do_sample  OPTIONAL (true). Boolean. false = greedy/deterministic
+      # decoding, recommended for the anomaly decision.
+      do_sample: false
+
+    # ---- Cluster-only keys (normally placed in the cluster file instead) ----
+    # They are accepted here too, but are DROPPED when deployment.mode is local.
+    # base_url            OpenAI-compatible endpoint, e.g. "http://HOST:8000/v1".
+    #                     REQUIRED in cluster mode.
+    # served_model_name   OPTIONAL (model_name). Model id sent to the API.
+    # server_launch       OPTIONAL. REQUIRES base_url. How the pipeline starts
+    #                     its own `vllm serve`. See model_cluster_configs.template.yaml.
+    #
+    # Legacy (still parsed): `local_profile:` / `cluster_profile:` mappings
+    # inside a model entry override that entry's keys for the matching mode.
+
+  # ===========================================================================
+  # models.llm  REQUIRED for planner generation; ignored (not validated) by the
+  # anomaly-detection, rerun, mask and metrics stages.
+  # The text model that merges the per-image reference descriptions into one
+  # master description per class (the VLM writes the planner itself). It may
+  # be the same checkpoint as the VLM (a VLM can answer text-only prompts).
+  # Same keys and rules as models.vlm EXCEPT:
+  #   - image_processing is NOT allowed here (the loader raises an error).
+  # ===========================================================================
+  llm:
+    model_name: "Qwen3-VL-8B-Instruct"            # <-- CHANGE
+    source: local
+    local_path: "models/Qwen3-VL-8B-Instruct"     # <-- CHANGE
+    huggingface_name: "Qwen/Qwen3-VL-8B-Instruct"
+    device: 0
+    chat_template_kwargs: {}
+    generation:
+      max_new_tokens: 3000
+      temperature: 0.2
+      # Sampling gives some diversity to generated planners.
+      do_sample: true
+
+  # ===========================================================================
+  # models.segmentation_model  OPTIONAL section.
+  # REQUIRED IF a mask-generation dataset uses the methods "segmentation" or
+  # "bounding_box_segmentation".
+  # Omit it entirely if you only produce bounding-box masks.
+  # ===========================================================================
+  segmentation_model:
+    # model_name  REQUIRED, non-empty. Two jobs:
+    #   1. selects the backend loader (registered names: "sam3");
+    #   2. names the mask output folders: masks/<model_name> and
+    #      masks/bounding_box_<model_name>.
+    model_name: "sam3"
+
+    # source  REQUIRED. "local" | "huggingface".
+    source: local
+
+    # local_path  REQUIRED IF source == "local".
+    # Must be the checkpoint FILE (e.g. .../sam3.pt), NOT the folder holding
+    # it; a directory is rejected at load time.
+    local_path: "models/sam3_model/sam3.pt"       # <-- CHANGE
+
+    # huggingface_name  OPTIONAL. For source huggingface, null lets the backend
+    # use its own default checkpoint.
+    huggingface_name: null
+
+    # device  OPTIONAL ("cuda"). Same forms as vlm.device.
+    device: "cuda"
+
+    # repo_dir  OPTIONAL (null). Existing directory of a local source checkout
+    # of the segmentation package; it is put on sys.path before importing.
+    repo_dir: "models/sam3"
+
+    # confidence_threshold  OPTIONAL (0.5). Number in [0, 1]. Minimum
+    # per-mask/detection confidence kept by the backend. Changing it changes
+    # the mask-generation fingerprint (requires --overwrite or a new run).
+    confidence_threshold: 0.5

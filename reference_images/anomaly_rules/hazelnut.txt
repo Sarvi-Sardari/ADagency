@@ -1,0 +1,69 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Hazelnut",
+      "category": "surface_integrity",
+      "part_or_region": "top cap area",
+      "anomaly_name": "cracked top cap",
+      "visual_description": "a visible crack running through the dark brown top cap, exposing underlying layers"
+    },
+    {
+      "id": "A002",
+      "object_name": "Hazelnut",
+      "category": "surface_integrity",
+      "part_or_region": "top cap area",
+      "anomaly_name": "chipped top cap",
+      "visual_description": "a small chip or fragment missing from the edge of the top cap"
+    },
+    {
+      "id": "A003",
+      "object_name": "Hazelnut",
+      "category": "surface_integrity",
+      "part_or_region": "outer shell",
+      "anomaly_name": "scratched shell",
+      "visual_description": "a shallow scratch or groove visible on the smooth outer shell surface"
+    },
+    {
+      "id": "A004",
+      "object_name": "Hazelnut",
+      "category": "surface_integrity",
+      "part_or_region": "outer shell",
+      "anomaly_name": "dented shell",
+      "visual_description": "a slight inward dent or depression on the curved outer shell"
+    },
+    {
+      "id": "A005",
+      "object_name": "Hazelnut",
+      "category": "surface_integrity",
+      "part_or_region": "outer shell",
+      "anomaly_name": "torn shell",
+      "visual_description": "a tear or split in the shell surface, revealing inner texture"
+    },
+    {
+      "id": "A006",
+      "object_name": "Hazelnut",
+      "category": "surface_integrity",
+      "part_or_region": "outer shell",
+      "anomaly_name": "punctured shell",
+      "visual_description": "a small hole or puncture mark on the shell surface"
+    },
+    {
+      "id": "A007",
+      "object_name": "Hazelnut",
+      "category": "finish_color",
+      "part_or_region": "outer shell",
+      "anomaly_name": "discolored shell",
+      "visual_description": "a patch of uneven or darker coloration on the shell surface"
+    },
+
+    {
+      "id": "A008",
+      "object_name": "Hazelnut",
+      "category": "contamination",
+      "part_or_region": "outer shell",
+      "anomaly_name": "foreign particle",
+      "visual_description": "a small speck or foreign object stuck to the shell surface"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+2026-08-14 17:32:48 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-14 17:32:48 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-14 17:32:48 | INFO     | __main__ | Dataset  : zivid_lightblue_box
+2026-08-14 17:32:48 | INFO     | __main__ | Classes  : single
+2026-08-14 17:32:48 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-14 17:32:48 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/zivid_lightblue_box_173248_log.txt
+2026-08-14 17:32:48 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-14 17:32:50 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-14 17:32:50 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:32:52 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:32:52 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-14 17:32:52 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_lightblue_box/train/good/zivid_rgb_00263.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_lightblue_box/train/good/zivid_rgb_00145.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_lightblue_box/train/good/zivid_rgb_00283.png']
+2026-08-14 17:32:52 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-14 17:32:52 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/zivid_lightblue_box_object_labels.txt
+2026-08-14 17:32:52 | INFO     | __main__ | Object names: ['blue plastic crate']
+2026-08-14 17:32:52 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-14 17:32:52 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/zivid_lightblue_box/good
+2026-08-14 17:32:52 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-14 17:32:52 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:32:52 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:32:52 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:32:52 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:32:53 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:32:53 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:32:53 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:32:53 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:32:58 | INFO     | models | [VLM] Inference completed in 5.306s (max_new_tokens=2040)
+2026-08-14 17:32:58 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_lightblue_box/good/processed_good_zivid_rgb_00263_2026-08-14 17:32:58.json (inference_time=5.306s)
+2026-08-14 17:32:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:32:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:33:04 | INFO     | models | [VLM] Inference completed in 5.588s (max_new_tokens=2040)
+2026-08-14 17:33:04 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_lightblue_box/good/processed_good_zivid_rgb_00145_2026-08-14 17:33:04.json (inference_time=5.588s)
+2026-08-14 17:33:04 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:33:04 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:33:10 | INFO     | models | [VLM] Inference completed in 5.725s (max_new_tokens=2040)
+2026-08-14 17:33:10 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_lightblue_box/good/processed_good_zivid_rgb_00283_2026-08-14 17:33:10.json (inference_time=5.725s)
+2026-08-14 17:33:10 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-14 17:33:10 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-14 17:33:12 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-14 17:33:12 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_lightblue_box/good
+2026-08-14 17:33:12 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00283_2026-08-14 17:33:10.json
+2026-08-14 17:33:12 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic crate
+    - Attribute 1 Type - rectangular, open-top container with reinforced corners and integrated handles or latching mechanisms on the sides
+    - Attribute 2 Color - solid light blue with minor surface scuffs and wear visible
+    - Attribute 3 Size - approximately 12 inches in length, 8 inches in width, and 4 inches in height (estimated based on proportions and typical industrial crate sizes)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic suitable for industrial or storage use
+    - Attribute 5 Composition - single-piece molded construction with integrated structural reinforcements, including corner brackets and side tabs for stacking or securing
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - centered within the frame of the image, positioned on a flat surface
+    - Attribute 8 Orientation - viewed from a slightly elevated angle, showing the interior and side profiles of the crate
+    - Attribute 9 Connection or Attachments - no visible external attachments; internal features include small circular indentations or holes near the top and bottom edges, likely for stacking or securing purposes
+2026-08-14 17:33:12 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00145_2026-08-14 17:33:04.json
+2026-08-14 17:33:12 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic crate
+    - Attribute 1 Type - rectangular, open-top container with reinforced corners and integrated handles or latching mechanisms on the sides
+    - Attribute 2 Color - solid light blue with some surface reflections and minor scuff marks
+    - Attribute 3 Size - approximately 18 inches in length, 12 inches in width, and 6 inches in height (estimated based on proportions relative to surrounding context)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE), with a smooth finish
+    - Attribute 5 Composition - single-piece construction with a flat base, vertical walls, and a rimmed top edge; internal structure appears to be a single molded unit without visible seams
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - centered on a flat surface, positioned in the middle of the frame
+    - Attribute 8 Orientation - viewed from directly above, with the open top facing upward
+    - Attribute 9 Connection or Attachments - no visible attachments or connections to other objects; the crate appears standalone with no fasteners or connectors visible
+2026-08-14 17:33:12 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00263_2026-08-14 17:32:58.json
+2026-08-14 17:33:12 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic crate
+    - Attribute 1 Type - rectangular, open-top container with reinforced edges and integrated handles on the sides
+    - Attribute 2 Color - solid light blue with some minor surface scuffs and scratches
+    - Attribute 3 Size - approximately 12 inches in length, 8 inches in width, and 4 inches in height (estimated based on visual proportions)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic
+    - Attribute 5 Composition - single-piece molded construction with reinforced corners and side walls, featuring small circular indentations near the top rim for stacking or securing
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - centrally positioned within the frame of the image
+    - Attribute 8 Orientation - viewed from directly above, showing the interior and top rim of the crate
+    - Attribute 9 Connection or Attachments - no visible attachments or connections to other objects; the crate is standalone and self-contained
+2026-08-14 17:33:12 | DEBUG    | descriptor | Unique object keys found: {'blue plastic crate'}
+2026-08-14 17:33:12 | DEBUG    | descriptor | Class 'good' object description: {'blue plastic crate': ['-  Type - rectangular, open-top container with reinforced corners and integrated handles or latching mechanisms on the sides\n    -  Color - solid light blue with minor surface scuffs and wear visible\n    -  Size - approximately 12 inches in length, 8 inches in width, and 4 inches in height (estimated based on proportions and typical industrial crate sizes)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic suitable for industrial or storage use\n    -  Composition - single-piece molded construction with integrated structural reinforcements, including corner brackets and side tabs for stacking or securing\n    -  Quantity - one\n    -  Relative Location - centered within the frame of the image, positioned on a flat surface\n    -  Orientation - viewed from a slightly elevated angle, showing the interior and side profiles of the crate\n    -  Connection or Attachments - no visible external attachments; internal features include small circular indentations or holes near the top and bottom edges, likely for stacking or securing purposes', '-  Type - rectangular, open-top container with reinforced corners and integrated handles or latching mechanisms on the sides\n    -  Color - solid light blue with some surface reflections and minor scuff marks\n    -  Size - approximately 18 inches in length, 12 inches in width, and 6 inches in height (estimated based on proportions relative to surrounding context)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE), with a smooth finish\n    -  Composition - single-piece construction with a flat base, vertical walls, and a rimmed top edge; internal structure appears to be a single molded unit without visible seams\n    -  Quantity - one\n    -  Relative Location - centered on a flat surface, positioned in the middle of the frame\n    -  Orientation - viewed from directly above, with the open top facing upward\n    -  Connection or Attachments - no visible attachments or connections to other objects; the crate appears standalone with no fasteners or connectors visible', '-  Type - rectangular, open-top container with reinforced edges and integrated handles on the sides\n    -  Color - solid light blue with some minor surface scuffs and scratches\n    -  Size - approximately 12 inches in length, 8 inches in width, and 4 inches in height (estimated based on visual proportions)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic\n    -  Composition - single-piece molded construction with reinforced corners and side walls, featuring small circular indentations near the top rim for stacking or securing\n    -  Quantity - one\n    -  Relative Location - centrally positioned within the frame of the image\n    -  Orientation - viewed from directly above, showing the interior and top rim of the crate\n    -  Connection or Attachments - no visible attachments or connections to other objects; the crate is standalone and self-contained']}
+2026-08-14 17:33:18 | INFO     | models | [LLM] Inference completed in 6.334s (max_new_tokens=3000)
+2026-08-14 17:33:18 | INFO     | descriptor | [blue plastic crate] Object summarisation completed in 6.334s
+2026-08-14 17:33:18 | DEBUG    | descriptor | Summarised description for 'blue plastic crate': 
+
+{
+  "blue plastic crate": {
+    "Type": "rectangular, open-top container with reinforced corners and integrated handles or latching mechanisms on the sides",
+    "Color": "solid light blue with minor surface scuffs, scratches, and some surface reflections",
+    "Size": "12x8x4 inches / 30x20x10 cm (estimated based on visual proportions) and 18x12x6 inches / 45x30x15 cm (estimated based on proportions relative to surrounding context)",
+    "Material": "molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic with a smooth finish",
+    "Composition": "single-piece molded construction with reinforced corners, side walls, and structural reinforcements including corner brackets, side tabs, and internal features such as small circular indentations near the top rim for stacking or securing",
+    "Quantity": "one",
+    "Relative Location": "centrally positioned within the frame of the image, centered on a flat surface",
+    "Orientation": "viewed from a slightly elevated angle and directly above, showing the interior, side profiles, and top rim of the crate",
+    "Connection or Attachments": "no visible attachments or connections to other objects; the crate appears standalone and self-contained"
+  }
+}
+2026-08-14 17:33:18 | DEBUG    | descriptor | Master description: {'blue plastic crate': {'Type': 'rectangular, open-top container with reinforced corners and integrated handles or latching mechanisms on the sides', 'Color': 'solid light blue with minor surface scuffs, scratches, and some surface reflections', 'Size': '12x8x4 inches / 30x20x10 cm (estimated based on visual proportions) and 18x12x6 inches / 45x30x15 cm (estimated based on proportions relative to surrounding context)', 'Material': 'molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic with a smooth finish', 'Composition': 'single-piece molded construction with reinforced corners, side walls, and structural reinforcements including corner brackets, side tabs, and internal features such as small circular indentations near the top rim for stacking or securing', 'Quantity': 'one', 'Relative Location': 'centrally positioned within the frame of the image, centered on a flat surface', 'Orientation': 'viewed from a slightly elevated angle and directly above, showing the interior, side profiles, and top rim of the crate', 'Connection or Attachments': 'no visible attachments or connections to other objects; the crate appears standalone and self-contained'}}
+2026-08-14 17:33:18 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-14 17:33:18 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/zivid_lightblue_box.txt
+2026-08-14 17:33:18 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=3)
+2026-08-14 17:33:18 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-14 17:33:18 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:33:20 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:33:20 | DEBUG    | planner | Class directories for dataset 'zivid_lightblue_box': ['good']
+2026-08-14 17:33:20 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/zivid_lightblue_box/good
+2026-08-14 17:33:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:33:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:33:20 | DEBUG    | planner | Generating planner steps from: good_2026-08-14 17:33:18_master_description.json
+2026-08-14 17:33:23 | INFO     | models | [VLM] Inference completed in 2.156s (max_new_tokens=2040)
+2026-08-14 17:33:23 | INFO     | planner | Planner steps generated in 2.156s (attempt=1, steps=3, approved_rules=3)
+2026-08-14 17:33:23 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_lightblue_box/good/good_2026-08-14 17:33:23_planner.txt
+2026-08-14 17:33:23 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any dirt, grime, or residue stains visible on the interior surface of the blue plastic crate?  
+Step 2: Is there any discoloration or wet-looking patches indicative of oil or liquid contamination on the interior surface of the blue plastic crate?  
+Step 3: Is there any item or part present inside the interior of the blue plastic crate?
+2026-08-14 17:33:23 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_lightblue_box/performance/performance_20260814_173323.json
+2026-08-14 17:33:23 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_lightblue_box
+2026-08-14 17:33:23 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/zivid_lightblue_box_173248_log.txt

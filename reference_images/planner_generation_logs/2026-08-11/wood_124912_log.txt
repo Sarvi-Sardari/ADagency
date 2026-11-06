@@ -1,0 +1,132 @@
+2026-08-11 12:49:12 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:49:12 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:49:12 | INFO     | __main__ | Dataset  : wood
+2026-08-11 12:49:12 | INFO     | __main__ | Classes  : single
+2026-08-11 12:49:12 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:49:12 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/wood_124912_log.txt
+2026-08-11 12:49:12 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:49:13 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:49:13 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:49:14 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:49:14 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:49:14 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/wood/train/good/161.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/wood/train/good/021.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/wood/train/good/190.png']
+2026-08-11 12:49:14 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:49:14 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:49:14 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:49:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:49:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:49:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:49:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1562033 44
+2026-08-11 12:49:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1562089 1304
+2026-08-11 12:49:15 | INFO     | models | [VLM] Inference completed in 0.514s (max_new_tokens=2040)
+2026-08-11 12:49:15 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/wood/train/good/100.png in 0.514s
+2026-08-11 12:49:17 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['wood surface']
+2026-08-11 12:49:17 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/wood_object_labels.txt
+2026-08-11 12:49:17 | INFO     | __main__ | Object names: ['wood surface']
+2026-08-11 12:49:17 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:49:17 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/wood/good
+2026-08-11 12:49:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:49:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:49:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:49:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1531637 44
+2026-08-11 12:49:17 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1531693 1304
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1561633 44
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1561689 1304
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1478564 44
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1478620 1304
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:49:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:49:20 | INFO     | models | [VLM] Inference completed in 2.347s (max_new_tokens=2040)
+2026-08-11 12:49:20 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/wood/good/processed_good_161_2026-08-11 12:49:20.json (inference_time=2.347s)
+2026-08-11 12:49:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:49:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:49:26 | INFO     | models | [VLM] Inference completed in 5.542s (max_new_tokens=2040)
+2026-08-11 12:49:26 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/wood/good/processed_good_021_2026-08-11 12:49:26.json (inference_time=5.542s)
+2026-08-11 12:49:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:49:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:49:28 | INFO     | models | [VLM] Inference completed in 2.334s (max_new_tokens=2040)
+2026-08-11 12:49:28 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/wood/good/processed_good_190_2026-08-11 12:49:28.json (inference_time=2.334s)
+2026-08-11 12:49:28 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:49:28 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:49:29 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:49:29 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/wood/good
+2026-08-11 12:49:29 | DEBUG    | descriptor | Processing image description: processed_good_190_2026-08-11 12:49:28.json
+2026-08-11 12:49:29 | DEBUG    | descriptor | Raw description data: - Object 1 wood surface
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:49:29 | DEBUG    | descriptor | Processing image description: processed_good_021_2026-08-11 12:49:26.json
+2026-08-11 12:49:29 | DEBUG    | descriptor | Raw description data: - Object 1 wood surface
+    - Attribute 1 Type -detailed description - A flat, planar surface with a natural wood grain pattern running predominantly vertically across the frame
+    - Attribute 2 Color - detailed description - Rich, warm brown tones with variations ranging from light tan to deep mahogany, featuring subtle darker streaks and lighter interlacing lines
+    - Attribute 3 Size - detailed description - Appears as a square or near-square panel, with dimensions not explicitly measurable but occupying the entire visual field of the image
+    - Attribute 4 Material - detailed description - Composed of natural wood, exhibiting a fine-grained texture with slight irregularities and minor imperfections consistent with organic material
+    - Attribute 5 Composition - detailed description - Made of lignified plant tissue, with visible fibers and cellular structures aligned along the grain direction, showing natural variation in density and coloration
+    - Attribute 6 Quantity - detailed description - Single, singular surface; no other wood surfaces are present
+    - Attribute 7 Relative Location - detailed description - Centered within the image frame, occupying the full extent of the visible area, with no other objects or surfaces adjacent to it
+    - Attribute 8 Orientation - detailed description - Horizontally oriented with the grain running vertically, parallel to the image’s vertical axis
+    - Attribute 9 Connection or Attachments - detailed description - No visible attachments or connections to other objects; appears as an isolated, self-contained surface
+2026-08-11 12:49:29 | DEBUG    | descriptor | Processing image description: processed_good_161_2026-08-11 12:49:20.json
+2026-08-11 12:49:29 | DEBUG    | descriptor | Raw description data: - Object 1 wood surface
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:49:29 | DEBUG    | descriptor | Unique object keys found: {'wood surface'}
+2026-08-11 12:49:29 | DEBUG    | descriptor | Class 'good' object description: {'wood surface': ['-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  Type -detailed description - A flat, planar surface with a natural wood grain pattern running predominantly vertically across the frame\n    -  Color - detailed description - Rich, warm brown tones with variations ranging from light tan to deep mahogany, featuring subtle darker streaks and lighter interlacing lines\n    -  Size - detailed description - Appears as a square or near-square panel, with dimensions not explicitly measurable but occupying the entire visual field of the image\n    -  Material - detailed description - Composed of natural wood, exhibiting a fine-grained texture with slight irregularities and minor imperfections consistent with organic material\n    -  Composition - detailed description - Made of lignified plant tissue, with visible fibers and cellular structures aligned along the grain direction, showing natural variation in density and coloration\n    -  Quantity - detailed description - Single, singular surface; no other wood surfaces are present\n    -  Relative Location - detailed description - Centered within the image frame, occupying the full extent of the visible area, with no other objects or surfaces adjacent to it\n    -  Orientation - detailed description - Horizontally oriented with the grain running vertically, parallel to the image’s vertical axis\n    -  Connection or Attachments - detailed description - No visible attachments or connections to other objects; appears as an isolated, self-contained surface', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description']}
+2026-08-11 12:49:34 | INFO     | models | [LLM] Inference completed in 4.181s (max_new_tokens=3000)
+2026-08-11 12:49:34 | INFO     | descriptor | [wood surface] Object summarisation completed in 4.181s
+2026-08-11 12:49:34 | DEBUG    | descriptor | Summarised description for 'wood surface': {
+  "wood surface": {
+    "Type": "A flat, planar surface with a natural wood grain pattern running predominantly vertically across the frame",
+    "Color": "Rich, warm brown tones with variations ranging from light tan to deep mahogany, featuring subtle darker streaks and lighter interlacing lines",
+    "Size": "Square or near-square panel, occupying the entire visual field of the image",
+    "Material": "Composed of natural wood, exhibiting a fine-grained texture with slight irregularities and minor imperfections consistent with organic material",
+    "Composition": "Made of lignified plant tissue, with visible fibers and cellular structures aligned along the grain direction, showing natural variation in density and coloration",
+    "Quantity": "Single, singular surface; no other wood surfaces are present",
+    "Relative Location": "Centered within the image frame, occupying the full extent of the visible area, with no other objects or surfaces adjacent to it",
+    "Orientation": "Horizontally oriented with the grain running vertically, parallel to the image’s vertical axis",
+    "Connection or Attachments": "No visible attachments or connections to other objects; appears as an isolated, self-contained surface"
+  }
+}
+2026-08-11 12:49:34 | DEBUG    | descriptor | Master description: {'wood surface': {'Type': 'A flat, planar surface with a natural wood grain pattern running predominantly vertically across the frame', 'Color': 'Rich, warm brown tones with variations ranging from light tan to deep mahogany, featuring subtle darker streaks and lighter interlacing lines', 'Size': 'Square or near-square panel, occupying the entire visual field of the image', 'Material': 'Composed of natural wood, exhibiting a fine-grained texture with slight irregularities and minor imperfections consistent with organic material', 'Composition': 'Made of lignified plant tissue, with visible fibers and cellular structures aligned along the grain direction, showing natural variation in density and coloration', 'Quantity': 'Single, singular surface; no other wood surfaces are present', 'Relative Location': 'Centered within the image frame, occupying the full extent of the visible area, with no other objects or surfaces adjacent to it', 'Orientation': 'Horizontally oriented with the grain running vertically, parallel to the image’s vertical axis', 'Connection or Attachments': 'No visible attachments or connections to other objects; appears as an isolated, self-contained surface'}}
+2026-08-11 12:49:34 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:49:34 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['wood'] directly (no generation, no compiled file).
+2026-08-11 12:49:34 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:49:34 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:49:34 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:49:35 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:49:35 | DEBUG    | planner | Class directories for dataset 'wood': ['good']
+2026-08-11 12:49:35 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/wood/good
+2026-08-11 12:49:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:49:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:49:35 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:49:34_master_description.json
+2026-08-11 12:49:37 | INFO     | models | [VLM] Inference completed in 2.309s (max_new_tokens=2040)
+2026-08-11 12:49:37 | INFO     | planner | Planner steps generated in 2.309s (attempt=1, steps=5, approved_rules=legacy-untracked)
+2026-08-11 12:49:37 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/wood/good/good_2026-08-11 12:49:37_planner.txt
+2026-08-11 12:49:37 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the wood surface?
+Step 2: Is there any warping, bending, crushing, puncturing, tearing, or snapping of the wood surface?
+Step 3: Is there any missing component compared to the reference image?
+Step 4: Is there any extra debris, foreign object, or loose part on the wood surface?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the wood surface?
+2026-08-11 12:49:37 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/wood/performance/performance_20260811_124937.json
+2026-08-11 12:49:37 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/wood
+2026-08-11 12:49:37 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/wood_124912_log.txt

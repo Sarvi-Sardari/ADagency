@@ -1,0 +1,92 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "crack in grain",
+      "visual_description": "a visible split or fracture running along the grain lines"
+    },
+    {
+      "id": "A002",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "deep scratch",
+      "visual_description": "a narrow, linear groove cutting across the wood surface"
+    },
+    {
+      "id": "A003",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "puncture hole",
+      "visual_description": "a small, circular indentation or hole in the wood surface"
+    },
+    {
+      "id": "A004",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "stain spot",
+      "visual_description": "a localized discoloration contrasting with surrounding wood tone"
+    },
+    {
+      "id": "A005",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "raised knot",
+      "visual_description": "a bulge or bump protruding from the wood surface"
+    },
+    {
+      "id": "A006",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "dented area",
+      "visual_description": "a shallow depression or dent in the wood surface"
+    },
+    {
+      "id": "A007",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "torn edge",
+      "visual_description": "a frayed or broken edge where the wood fibers are separated"
+    },
+    {
+      "id": "A008",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "mold growth",
+      "visual_description": "fuzzy or discolored patches indicating microbial growth"
+    },
+    {
+      "id": "A009",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "peeling finish",
+      "visual_description": "flaking or lifting of surface coating exposing underlying wood"
+    },
+    {
+      "id": "A010",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "warped grain",
+      "visual_description": "a section of grain that appears bent or curved out of alignment"
+    },
+    {
+      "id": "A011",
+      "object_name": "Wood Grain Pattern",
+      "category": "surface_integrity",
+      "part_or_region": "wood grain pattern",
+      "anomaly_name": "embedded foreign particle",
+      "visual_description": "a small, contrasting dark or light speck visibly protruding or embedded within the wood surface."
+    }
+  ]
+}

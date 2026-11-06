@@ -1,0 +1,20 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "white plastic storage bins",
+      "category": "residual_content",
+      "part_or_region": "visible interiors and rims of the upper-left and upper-right white plastic storage bins",
+      "anomaly_name": "foreign object in an upper-shelf organizer",
+      "visual_description": "A separate object or fragment is visibly inside or physically resting on either upper-shelf organizer. A partially visible item counts only when its visible shape or boundary supports that it is separate from the molded organizer. Ignore shelf structures, adjacent scenery, molded organizer features, and normal shadows or reflections alone."
+    },
+    {
+      "id": "A002",
+      "object_name": "white plastic storage bins",
+      "category": "residual_content",
+      "part_or_region": "visible interiors and rims of the lower-left and lower-right white plastic storage bins",
+      "anomaly_name": "foreign object in a lower-shelf organizer",
+      "visual_description": "A separate object or fragment is visibly inside or physically resting on either lower-shelf organizer. A partially visible item counts only when its visible shape or boundary supports that it is separate from the molded organizer. Ignore shelf structures, adjacent scenery, molded organizer features, and normal shadows or reflections alone."
+    }
+  ]
+}

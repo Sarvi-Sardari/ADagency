@@ -1,0 +1,107 @@
+2026-08-19 16:41:51 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:41:51 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:41:51 | INFO     | __main__ | Dataset  : pill
+2026-08-19 16:41:51 | INFO     | __main__ | Classes  : single
+2026-08-19 16:41:51 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:41:51 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/pill_164151_log.txt
+2026-08-19 16:41:51 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:41:52 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:41:52 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:41:54 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:41:54 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:41:54 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/pill/train/good/174.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/pill/train/good/023.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/pill/train/good/205.png']
+2026-08-19 16:41:54 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:41:54 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/pill_object_labels.txt
+2026-08-19 16:41:54 | INFO     | __main__ | Object names: ['Pill']
+2026-08-19 16:41:54 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:41:54 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/pill/good
+2026-08-19 16:41:54 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:41:54 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:41:54 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:41:54 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-19 16:41:54 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-19 16:41:54 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-19 16:41:54 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:41:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:41:59 | INFO     | models | [VLM] Inference completed in 3.758s (max_new_tokens=2040)
+2026-08-19 16:41:59 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pill/good/processed_good_174_2026-08-19 16:41:59.json (inference_time=3.758s)
+2026-08-19 16:41:59 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:41:59 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:42:03 | INFO     | models | [VLM] Inference completed in 4.093s (max_new_tokens=2040)
+2026-08-19 16:42:03 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pill/good/processed_good_023_2026-08-19 16:42:03.json (inference_time=4.093s)
+2026-08-19 16:42:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:42:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:42:07 | INFO     | models | [VLM] Inference completed in 3.891s (max_new_tokens=2040)
+2026-08-19 16:42:07 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pill/good/processed_good_205_2026-08-19 16:42:07.json (inference_time=3.891s)
+2026-08-19 16:42:07 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:42:08 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:42:09 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:42:09 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pill/good
+2026-08-19 16:42:09 | DEBUG    | descriptor | Processing image description: processed_good_205_2026-08-19 16:42:07.json
+2026-08-19 16:42:09 | DEBUG    | descriptor | Raw description data: - Pill
+    - Attribute 1 Type - oval-shaped tablet
+    - Attribute 2 Color - predominantly white with scattered reddish-brown speckles
+    - Attribute 3 Size - approximately 1.5 cm in length and 1.2 cm in width
+    - Attribute 4 Material - compressed solid material, likely pharmaceutical-grade excipients
+    - Attribute 5 Composition - contains active pharmaceutical ingredient and fillers, with visible speckles indicating possible colorants or inactive components
+    - Attribute 6 Quantity - one pill
+    - Attribute 7 Relative Location - centrally positioned in the frame
+    - Attribute 8 Orientation - facing upward with embossed letters visible
+    - Attribute 9 Connection or Attachments - no visible connections or attachments; standalone object
+2026-08-19 16:42:09 | DEBUG    | descriptor | Processing image description: processed_good_023_2026-08-19 16:42:03.json
+2026-08-19 16:42:09 | DEBUG    | descriptor | Raw description data: - Pill
+    - Attribute 1 Type - Oval-shaped pharmaceutical tablet
+    - Attribute 2 Color - White with scattered reddish-brown specks
+    - Attribute 3 Size - Approximately 1.5 cm in length and 1.2 cm in width
+    - Attribute 4 Material - Compressed solid material, likely a blend of active and inactive ingredients
+    - Attribute 5 Composition - Contains embedded reddish-brown particles, possibly for identification or color coding; surface features embossed letters
+    - Attribute 6 Quantity - One pill
+    - Attribute 7 Relative Location - Centrally positioned in the frame
+    - Attribute 8 Orientation - Flat, lying horizontally with the embossed letters facing upward
+    - Attribute 9 Connection or Attachments - No visible connections or attachments; standalone tablet
+2026-08-19 16:42:09 | DEBUG    | descriptor | Processing image description: processed_good_174_2026-08-19 16:41:59.json
+2026-08-19 16:42:09 | DEBUG    | descriptor | Raw description data: - Pill
+    - Type - Oval-shaped pharmaceutical tablet
+    - Color - White with speckled reddish-brown flecks distributed across its surface
+    - Size - Approximately 1.5 cm in length and 1.2 cm in width (estimated based on visual proportion)
+    - Material - Solid compressed material, likely a compressed powder mixture
+    - Composition - Contains active pharmaceutical ingredients and excipients, with visible colorant particles embedded in the matrix
+    - Quantity - One pill present
+    - Relative Location - Centrally positioned within the frame
+    - Orientation - Positioned horizontally with the engraved letters facing upward
+    - Connection or Attachments - No visible connections or attachments; standalone tablet
+2026-08-19 16:42:09 | DEBUG    | descriptor | Unique object keys found: {'Pill'}
+2026-08-19 16:42:09 | DEBUG    | descriptor | Class 'good' object description: {'Pill': ['-  Type - oval-shaped tablet\n    -  Color - predominantly white with scattered reddish-brown speckles\n    -  Size - approximately 1.5 cm in length and 1.2 cm in width\n    -  Material - compressed solid material, likely pharmaceutical-grade excipients\n    -  Composition - contains active pharmaceutical ingredient and fillers, with visible speckles indicating possible colorants or inactive components\n    -  Quantity - one pill\n    -  Relative Location - centrally positioned in the frame\n    -  Orientation - facing upward with embossed letters visible\n    -  Connection or Attachments - no visible connections or attachments; standalone object', '-  Type - Oval-shaped pharmaceutical tablet\n    -  Color - White with scattered reddish-brown specks\n    -  Size - Approximately 1.5 cm in length and 1.2 cm in width\n    -  Material - Compressed solid material, likely a blend of active and inactive ingredients\n    -  Composition - Contains embedded reddish-brown particles, possibly for identification or color coding; surface features embossed letters\n    -  Quantity - One pill\n    -  Relative Location - Centrally positioned in the frame\n    -  Orientation - Flat, lying horizontally with the embossed letters facing upward\n    -  Connection or Attachments - No visible connections or attachments; standalone tablet', '- Type - Oval-shaped pharmaceutical tablet\n    - Color - White with speckled reddish-brown flecks distributed across its surface\n    - Size - Approximately 1.5 cm in length and 1.2 cm in width (estimated based on visual proportion)\n    - Material - Solid compressed material, likely a compressed powder mixture\n    - Composition - Contains active pharmaceutical ingredients and excipients, with visible colorant particles embedded in the matrix\n    - Quantity - One pill present\n    - Relative Location - Centrally positioned within the frame\n    - Orientation - Positioned horizontally with the engraved letters facing upward\n    - Connection or Attachments - No visible connections or attachments; standalone tablet']}
+2026-08-19 16:42:13 | INFO     | models | [LLM] Inference completed in 4.015s (max_new_tokens=3000)
+2026-08-19 16:42:13 | INFO     | descriptor | [Pill] Object summarisation completed in 4.015s
+2026-08-19 16:42:13 | DEBUG    | descriptor | Summarised description for 'Pill': 
+
+{
+  "Pill": {
+    "Type": "Oval-shaped pharmaceutical tablet",
+    "Color": "Predominantly white with scattered reddish-brown speckles",
+    "Size": "1.5 cm in length and 1.2 cm in width",
+    "Material": "Compressed solid material, likely a blend of active and inactive ingredients",
+    "Composition": "Contains active pharmaceutical ingredients and excipients, with visible colorant particles embedded in the matrix and embedded reddish-brown particles, possibly for identification or color coding",
+    "Quantity": "One pill",
+    "Relative Location": "Centrally positioned in the frame",
+    "Orientation": "Flat, lying horizontally with the embossed letters facing upward",
+    "Connection or Attachments": "No visible connections or attachments; standalone tablet"
+  }
+}
+2026-08-19 16:42:13 | DEBUG    | descriptor | Master description: {'Pill': {'Type': 'Oval-shaped pharmaceutical tablet', 'Color': 'Predominantly white with scattered reddish-brown speckles', 'Size': '1.5 cm in length and 1.2 cm in width', 'Material': 'Compressed solid material, likely a blend of active and inactive ingredients', 'Composition': 'Contains active pharmaceutical ingredients and excipients, with visible colorant particles embedded in the matrix and embedded reddish-brown particles, possibly for identification or color coding', 'Quantity': 'One pill', 'Relative Location': 'Centrally positioned in the frame', 'Orientation': 'Flat, lying horizontally with the embossed letters facing upward', 'Connection or Attachments': 'No visible connections or attachments; standalone tablet'}}
+2026-08-19 16:42:13 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:42:13 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/pill.txt

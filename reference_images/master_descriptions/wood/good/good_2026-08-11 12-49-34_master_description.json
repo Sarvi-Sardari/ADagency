@@ -1,0 +1,13 @@
+{
+    "wood surface": {
+        "Type": "A flat, planar surface with a natural wood grain pattern running predominantly vertically across the frame",
+        "Color": "Rich, warm brown tones with variations ranging from light tan to deep mahogany, featuring subtle darker streaks and lighter interlacing lines",
+        "Size": "Square or near-square panel, occupying the entire visual field of the image",
+        "Material": "Composed of natural wood, exhibiting a fine-grained texture with slight irregularities and minor imperfections consistent with organic material",
+        "Composition": "Made of lignified plant tissue, with visible fibers and cellular structures aligned along the grain direction, showing natural variation in density and coloration",
+        "Quantity": "Single, singular surface; no other wood surfaces are present",
+        "Relative Location": "Centered within the image frame, occupying the full extent of the visible area, with no other objects or surfaces adjacent to it",
+        "Orientation": "Horizontally oriented with the grain running vertically, parallel to the image’s vertical axis",
+        "Connection or Attachments": "No visible attachments or connections to other objects; appears as an isolated, self-contained surface"
+    }
+}

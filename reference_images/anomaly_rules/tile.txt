@@ -1,0 +1,92 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Background Matrix",
+      "category": "finish_color",
+      "part_or_region": "background Matrix",
+      "anomaly_name": "discoloration",
+      "visual_description": "patches of the background Matrix appear darker or lighter than surrounding areas."
+    },
+    {
+      "id": "A002",
+      "object_name": "Speckles",
+      "category": "surface_integrity",
+      "part_or_region": "Speckles",
+      "anomaly_name": "missing Speckles",
+      "visual_description": "some Speckles are absent, leaving blank spots in the pattern."
+    },
+    {
+      "id": "A003",
+      "object_name": "Speckles",
+      "category": "surface_integrity",
+      "part_or_region": "Speckles",
+      "anomaly_name": "extra Speckles",
+      "visual_description": "additional Speckles appear where none were expected, forming isolated clusters."
+    },
+    {
+      "id": "A004",
+      "object_name": "Speckles",
+      "category": "geometry_alignment",
+      "part_or_region": "Speckles",
+      "anomaly_name": "misaligned Speckles",
+      "visual_description": "Speckles are not evenly distributed, showing clusters or gaps in regular spacing."
+    },
+    {
+      "id": "A005",
+      "object_name": "Speckles",
+      "category": "finish_color",
+      "part_or_region": "Speckles",
+      "anomaly_name": "stained Speckles",
+      "visual_description": "some Speckles show a different tone or hue, indicating surface staining."
+    },
+    {
+      "id": "A006",
+      "object_name": "Background Matrix",
+      "category": "surface_integrity",
+      "part_or_region": "background Matrix",
+      "anomaly_name": "punctured background Matrix",
+      "visual_description": "small holes or depressions appear in the background Matrix, breaking its continuity."
+    },
+    {
+      "id": "A007",
+      "object_name": "Speckles",
+      "category": "surface_integrity",
+      "part_or_region": "Speckles",
+      "anomaly_name": "cracked Speckles",
+      "visual_description": "some Speckles show visible fractures or splits, appearing fragmented."
+    },
+    {
+      "id": "A008",
+      "object_name": "Speckles",
+      "category": "surface_integrity",
+      "part_or_region": "Speckles",
+      "anomaly_name": "dented Speckles",
+      "visual_description": "some Speckles appear indented or flattened, deviating from their typical shape."
+    },
+    {
+      "id": "A009",
+      "object_name": "Background Matrix",
+      "category": "surface_integrity",
+      "part_or_region": "background Matrix",
+      "anomaly_name": "scratched background Matrix",
+      "visual_description": "fine linear marks or grooves appear on the background Matrix surface."
+    },
+    {
+      "id": "A010",
+      "object_name": "Speckles",
+      "category": "surface_integrity",
+      "part_or_region": "Speckles",
+      "anomaly_name": "torn Speckles",
+      "visual_description": "some Speckles appear partially detached or broken along their edges."
+    },
+    {
+      "id": "A011",
+      "object_name": "Background Matrix",
+      "category": "contamination",
+      "part_or_region": "background Matrix",
+      "anomaly_name": "foreign particle",
+      "visual_description": "a small, distinct spot with different color or shape appears on the background matrix"
+    }
+  ]
+}

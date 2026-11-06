@@ -1,0 +1,192 @@
+# =============================================================================
+# TEMPLATE: dataset_configs.yaml  (offline PLANNER GENERATION)
+# =============================================================================
+#
+# Used by:   run_planner_generation.py --dataset-config <this file>
+#            (default: configs/dataset_configs.yaml)
+# Parsed by: planner_generation/config.py :: load_dataset_config()
+# Paired with: a model config (see model_configs.template.yaml). Planner
+#            generation uses BOTH models.vlm and models.llm from that file.
+#
+# What this stage does:
+#   For ONE dataset, it selects normal reference images from train/good,
+#   names the object parts and describes each reference with the VLM, merges
+#   the descriptions with the LLM, obtains anomaly rules, and asks the VLM to
+#   write a step-by-step inspection "planner". The planner is later READ by
+#   the online anomaly-detection pipeline.
+#
+# How to use this template:
+#   1. Copy it to configs/<your_name>.yaml.
+#   2. Replace every value marked  <-- CHANGE.
+#   3. Run:  run_planner_generation.py --dataset-config configs/<your_name>.yaml
+#
+# Conventions used in this file:
+#   REQUIRED            the loader fails if the key is missing/empty.
+#   OPTIONAL (default)  may be omitted; the default in brackets is used.
+#   REQUIRED IF ...     needed only when another option has a given value.
+#   All relative paths are resolved from the project root (the folder that
+#   contains run_planner_generation.py), NOT from the current terminal folder,
+#   unless a comment says otherwise. "~" is expanded; absolute paths are kept.
+#
+# Expected dataset layout (MVTec-style):
+#   <root_dir>/train/good/*.png    normal images (references come from here)
+#   <root_dir>/test/good/*.png     must exist (validated), evaluation split
+#   <root_dir>/test/<defect>/...   anomaly folders (not used by this stage)
+#
+# Only ONE dataset per file. To generate planners for several datasets, make
+# one copy of this file per dataset (the online pipeline config, in contrast,
+# lists many datasets; see anomaly_detection_configs.template.yaml).
+# =============================================================================
+
+dataset:
+  # ---------------------------------------------------------------------------
+  # name  REQUIRED, non-empty string.
+  # Dataset identifier. It names every generated folder/file, e.g.
+  #   <planners_dir>/<name>/<class>/..., reference_images/anomaly_rules/<name>.txt,
+  #   prompts/object_labels/<name>_object_labels.txt.
+  # It MUST equal the `name` used later in anomaly_detection_configs.yaml,
+  # otherwise the online pipeline cannot find this dataset's planner.
+  # ---------------------------------------------------------------------------
+  name: "bottle"                                   # <-- CHANGE
+
+  # ---------------------------------------------------------------------------
+  # root_dir  REQUIRED, existing directory.
+  # Dataset root. <root_dir>/train/good and <root_dir>/test/good must exist.
+  # ---------------------------------------------------------------------------
+  root_dir: "datasets/mvtec_ad/bottle"             # <-- CHANGE
+
+  # ---------------------------------------------------------------------------
+  # classes  OPTIONAL ("single"). Allowed: "single" | "multi".
+  #   single : all normal images show one kind of object. One planner is
+  #            written under <planners_dir>/<name>/good/.
+  #   multi  : train/good contains several visually different normal variants
+  #            (e.g. red / blue / yellow toothbrush). One planner is written
+  #            PER CLASS under <planners_dir>/<name>/<class_label>/, and the
+  #            online pipeline picks the planner of the closest reference.
+  # ---------------------------------------------------------------------------
+  classes: "single"
+
+  # ---------------------------------------------------------------------------
+  # class_examples
+  #   REQUIRED IF classes == "multi"  (mapping, at least one entry).
+  #   FORBIDDEN IF classes == "single" (must be absent, null or {}; a non-empty
+  #   mapping is an error).
+  # Format:  <class_label>: "<filename inside <root_dir>/train/good>"
+  # Each filename must exist in train/good (NOT test/good). The image is the
+  # "anchor" for that class: train/good images are partitioned by similarity
+  # to these anchors, and references are then chosen per class.
+  # The class labels become planner sub-folder names, so use filesystem-safe
+  # names (letters, digits, underscore) and reuse the SAME labels in the
+  # anomaly-detection config's class_examples.
+  # ---------------------------------------------------------------------------
+  # class_examples:
+  #   Blue_Toothbrush: "000.png"
+  #   Red_Toothbrush: "020.png"
+  #   Yellow_Toothbrush: "040.png"
+
+  # ---------------------------------------------------------------------------
+  # reference_selection  REQUIRED section (mapping; its keys are optional).
+  # ---------------------------------------------------------------------------
+  reference_selection:
+    # number_of_images  OPTIONAL (3). Positive integer.
+    # How many normal reference images are selected (per class when
+    # classes == "multi"). Must not exceed the number of images in
+    # train/good unless explicit_images is used.
+    number_of_images: 3
+
+    # random_seed  OPTIONAL (42). Integer.
+    # Seed for the random reference choice (single-class) and for planner
+    # image sampling. Keep it fixed for reproducible planners. (Older config
+    # comments say "not used anywhere"; that is no longer true.)
+    random_seed: 42
+
+    # explicit_images  OPTIONAL ([]). List of image paths.
+    # Single-class only: when NON-EMPTY, these exact images are used and
+    # number_of_images / random selection are ignored. Relative entries are
+    # resolved from <root_dir> (NOT from the project root), e.g.
+    #   explicit_images: ["train/good/000.png", "train/good/017.png"]
+    # Every file must exist. Ignored when classes == "multi".
+    explicit_images: []
+
+  # ---------------------------------------------------------------------------
+  # anomaly_rules  REQUIRED section.
+  # The list of defects that the planner must cover. Two ways to get it:
+  #   method "manual"    -> take the text stored at anomaly_rules.file[key].
+  #                         No model calls, no interactive review. Recommended
+  #                         when you already have curated rules.
+  #   method "automatic" -> interactively compile rules (from the master
+  #                         description, object names and your own input) into
+  #                         <output.reference_images_dir>/anomaly_rules/<name>.txt
+  #                         See planner_generation/README.md.
+  # ---------------------------------------------------------------------------
+  anomaly_rules:
+    # file  REQUIRED, existing JSON file (always validated, in both methods).
+    # A JSON object of {"<key>": <rules text or JSON value>, ...}.
+    #   manual    : the source of truth.
+    #   automatic : only a fallback source for the user-input generator.
+    file: "prompts/anomaly_definition.json"
+
+    # key  REQUIRED IF method == "manual" (non-empty string that exists in
+    # `file`). OPTIONAL otherwise (fallback key). If given, it must be a
+    # non-empty string. Usually the dataset name.
+    key: "bottle"                                  # <-- CHANGE
+
+    # method  OPTIONAL ("automatic"). Allowed: "manual" | "automatic".
+    method: "manual"
+
+    # overwrite  OPTIONAL (false). Boolean. Only read when method == "automatic".
+    #   false : reuse reference_images/anomaly_rules/<name>.txt if it exists.
+    #   true  : always regenerate (interactive) and replace that file.
+    overwrite: false
+
+  # ---------------------------------------------------------------------------
+  # object_labels  REQUIRED section.
+  # Names of the object's visible parts (e.g. "cap: the screw cap on top").
+  # Cached at prompts/object_labels/<name>_object_labels.txt, one
+  # "label: description" per line. The same file is reused by the online
+  # pipeline's optional object_crop step.
+  # ---------------------------------------------------------------------------
+  object_labels:
+    # label_example  REQUIRED, filename inside <root_dir>/train/good.
+    # The image shown to the VLM when generating object labels, and also used
+    # as the reference image for automatic anomaly-rule generation.
+    label_example: "000.png"                       # <-- CHANGE
+
+    # use_previous_labels  OPTIONAL (true). Boolean.
+    #   true  : if the cache file exists, read it and skip VLM generation.
+    #           (If it does not exist, labels are generated anyway.)
+    #   false : interactively generate label batches; approved labels are
+    #           appended after each batch; type q / quit to stop.
+    use_previous_labels: true
+
+  # ---------------------------------------------------------------------------
+  # prompts_dir  REQUIRED, existing directory.
+  # Jinja templates for planner generation. It must contain:
+  #   anomaly_rules_from_description.j2, anomaly_rules_from_objects.j2,
+  #   anomaly_rules_from_user_input.j2, normal_descriptor.j2, object_namer.j2,
+  #   object_summarizer.j2, planner.j2
+  # NOTE: this is a DIFFERENT folder from the anomaly-detection prompts.
+  # ---------------------------------------------------------------------------
+  prompts_dir: "prompts/planner_pipeline"
+
+  # ---------------------------------------------------------------------------
+  # output  REQUIRED section. ALL five paths are REQUIRED (non-empty strings).
+  # Folders are created when needed. Results are written beneath
+  # <dir>/<name>/... so several datasets can share the same folders.
+  # ---------------------------------------------------------------------------
+  output:
+    # Holds anomaly_rules/<name>.txt (automatic rules) and
+    # planner_generation_logs/.
+    reference_images_dir: "reference_images"
+    # The selected references, letterboxed/resized as sent to the VLM.
+    preprocessed_reference_dir: "reference_images/preprocessed"
+    # Per-image normal descriptions written by the VLM.
+    descriptions_dir: "reference_images/descriptions"
+    # One consolidated ("master") description per class.
+    master_descriptions_dir: "reference_images/master_descriptions"
+    # Final planners: <planners_dir>/<name>/<good|class_label>/...
+    # The anomaly-detection config's `planners_dir` must point to this SAME
+    # folder. Tip: include the model in the folder name
+    # (e.g. reference_images/planners/qwen3_vl_8b) so planners written by
+    # different models never overwrite each other.
+    planners_dir: "reference_images/planners/my_model_planners"   # <-- CHANGE

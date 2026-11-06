@@ -1,0 +1,24 @@
+{
+    "Background Matrix": {
+        "Type": "uniform, granular, light-toned substrate with a fine, slightly textured surface",
+        "Color": "pale gray to off-white, with a consistent, muted tone across the entire field",
+        "Size": "covers the entire visible area, with no defined boundaries or dimensions, appearing as a continuous field",
+        "Material": "solid, non-reflective, possibly mineral or synthetic composite material",
+        "Composition": "composed of a fine, homogenous base material with embedded particulates",
+        "Quantity": "single continuous layer, filling the entire visual field without gaps or interruptions",
+        "Relative Location": "occupies the entire frame, serving as the foundational substrate for all other features",
+        "Orientation": "flat and horizontally oriented, with no discernible tilt or curvature",
+        "Connection or Attachments": "directly supports and underlies the Speckles, forming the base upon which they are distributed"
+    },
+    "Speckles": {
+        "Type": "discrete, irregularly shaped particulate clusters and individual dots distributed across the matrix",
+        "Color": "dark gray to black, with varying intensity and saturation across individual speckles, some appearing slightly mottled or shaded",
+        "Size": "0.1 mm to 2 mm in diameter for individual speckles; clusters can span up to 5 mm or more",
+        "Material": "dense, opaque particulate material, possibly mineral or synthetic in origin",
+        "Composition": "composed of dense, dark-colored mineral or pigment particles, likely embedded within or resting on the matrix surface, with no visible internal structure",
+        "Quantity": "numerous, densely distributed across the entire matrix; estimated in the hundreds to thousands",
+        "Relative Location": "scattered throughout the background matrix, with no preferred region or clustering pattern",
+        "Orientation": "randomly oriented, with no consistent alignment or directional preference",
+        "Connection or Attachments": "embedded within or adhered to the surface of the background matrix, with no visible connections to each other or to external structures"
+    }
+}

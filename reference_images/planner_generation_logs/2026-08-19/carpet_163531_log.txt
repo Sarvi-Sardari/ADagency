@@ -1,0 +1,141 @@
+2026-08-19 16:35:31 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:35:31 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:35:31 | INFO     | __main__ | Dataset  : carpet
+2026-08-19 16:35:31 | INFO     | __main__ | Classes  : single
+2026-08-19 16:35:31 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:35:31 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/carpet_163531_log.txt
+2026-08-19 16:35:31 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:35:33 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:35:33 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:35:35 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:35:35 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:35:35 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/carpet/train/good/183.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/carpet/train/good/024.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/carpet/train/good/215.png']
+2026-08-19 16:35:35 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:35:35 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/carpet_object_labels.txt
+2026-08-19 16:35:35 | INFO     | __main__ | Object names: ['Woven Fabric Texture']
+2026-08-19 16:35:35 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:35:35 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/carpet/good
+2026-08-19 16:35:35 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1850119 44
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1850175 1304
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1868459 44
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1868515 1304
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1895738 44
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1895794 1304
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:35:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:35:43 | INFO     | models | [VLM] Inference completed in 7.722s (max_new_tokens=2040)
+2026-08-19 16:35:43 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/carpet/good/processed_good_183_2026-08-19 16:35:43.json (inference_time=7.722s)
+2026-08-19 16:35:43 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:35:43 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:35:50 | INFO     | models | [VLM] Inference completed in 7.413s (max_new_tokens=2040)
+2026-08-19 16:35:50 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/carpet/good/processed_good_024_2026-08-19 16:35:50.json (inference_time=7.413s)
+2026-08-19 16:35:50 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:35:50 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:35:57 | INFO     | models | [VLM] Inference completed in 6.220s (max_new_tokens=2040)
+2026-08-19 16:35:57 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/carpet/good/processed_good_215_2026-08-19 16:35:57.json (inference_time=6.220s)
+2026-08-19 16:35:57 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:35:57 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:35:59 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:35:59 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/carpet/good
+2026-08-19 16:35:59 | DEBUG    | descriptor | Processing image description: processed_good_215_2026-08-19 16:35:57.json
+2026-08-19 16:35:59 | DEBUG    | descriptor | Raw description data: - Object 1 Woven Fabric Texture
+    - Attribute 1 Type - A tightly interlaced textile with a consistent, uniform weave pattern, forming a grid-like structure with visible interlacing threads.
+    - Attribute 2 Color - A muted, neutral grayish tone with subtle variations in shade, creating a textured appearance due to natural fiber tonalities.
+    - Attribute 3 Size - The visible area spans the entire frame, with no defined length or width measurements provided; it appears as a continuous, full-field texture.
+    - Attribute 4 Material - Composed of fibrous threads, likely natural or synthetic, with a slightly rough and tactile surface appearance.
+    - Attribute 5 Composition - Made of interwoven threads arranged in a regular, repeating pattern, suggesting a plain weave construction.
+    - Attribute 6 Quantity - One continuous instance of the woven texture fills the entire visual field.
+    - Attribute 7 Relative Location - Occupies the entire central area of the image, with no surrounding elements or boundaries visible.
+    - Attribute 8 Orientation - The weave pattern is aligned horizontally and vertically, forming a consistent grid orientation across the entire surface.
+    - Attribute 9 Connection or Attachments - No visible connections or attachments; the texture appears self-contained and seamless within the frame.
+2026-08-19 16:35:59 | DEBUG    | descriptor | Processing image description: processed_good_024_2026-08-19 16:35:50.json
+2026-08-19 16:35:59 | DEBUG    | descriptor | Raw description data: - Object 1 Woven Fabric Texture
+    - Attribute 1 Type - A tightly interlaced textile pattern featuring a consistent, uniform weave with intersecting horizontal and vertical threads forming a grid-like structure.
+    - Attribute 2 Color - Predominantly a muted grayish-brown tone, with subtle variations in shade across the threads, giving it a slightly heathered or multi-tonal appearance.
+    - Attribute 3 Size - The visible area is a square or rectangular field, but specific length and width measurements are not discernible due to the absence of scale references; it appears to be a continuous, full-frame texture.
+    - Attribute 4 Material - Composed of fibrous threads, likely synthetic or natural fibers such as cotton, polyester, or linen, exhibiting a slightly coarse and textured surface.
+    - Attribute 5 Composition - Constructed from a plain weave pattern, where each warp thread alternates over and under each weft thread, creating a durable, tightly packed structure.
+    - Attribute 6 Quantity - One continuous instance of the woven fabric texture fills the entire visual field.
+    - Attribute 7 Relative Location - Occupies the entire central area of the image, with no visible edges or boundaries within the frame.
+    - Attribute 8 Orientation - The weave is oriented with horizontal and vertical threads intersecting perpendicularly, forming a consistent grid pattern across the entire surface.
+    - Attribute 9 Connection or Attachments - No visible connections, attachments, or fasteners are present; the fabric appears as a self-contained, seamless surface.
+2026-08-19 16:35:59 | DEBUG    | descriptor | Processing image description: processed_good_183_2026-08-19 16:35:43.json
+2026-08-19 16:35:59 | DEBUG    | descriptor | Raw description data: - Object 1 Woven Fabric Texture
+    - Attribute 1 Type - A tightly interlaced textile pattern composed of intersecting horizontal and vertical threads forming a consistent, uniform grid.
+    - Attribute 2 Color - A muted, neutral grayish-brown tone with subtle variations in shade across the threads, giving it a slightly heathered or textured appearance.
+    - Attribute 3 Size - The visible area is a square or rectangular section of fabric, with no specific length or width dimensions provided due to the cropped nature of the image.
+    - Attribute 4 Material - Appears to be made from a sturdy, possibly natural fiber such as cotton, linen, or hemp, with a slightly coarse and fibrous texture.
+    - Attribute 5 Composition - Composed of two sets of threads: warp (vertical) and weft (horizontal), interlaced in a plain weave structure where each thread passes over and under one another in a regular, repeating pattern.
+    - Attribute 6 Quantity - One continuous, single piece of woven fabric texture is shown, with no discernible seams or separate components.
+    - Attribute 7 Relative Location - Occupies the entire central area of the image frame, filling the visual field from edge to edge.
+    - Attribute 8 Orientation - The fabric is oriented horizontally and vertically, with the warp threads running vertically and the weft threads running horizontally, creating a perpendicular grid.
+    - Attribute 9 Connection or Attachments - No visible connections, attachments, or fastenings are present; the fabric appears as a standalone, self-contained textile surface.
+2026-08-19 16:35:59 | DEBUG    | descriptor | Unique object keys found: {'Woven Fabric Texture'}
+2026-08-19 16:35:59 | DEBUG    | descriptor | Class 'good' object description: {'Woven Fabric Texture': ['-  Type - A tightly interlaced textile with a consistent, uniform weave pattern, forming a grid-like structure with visible interlacing threads.\n    -  Color - A muted, neutral grayish tone with subtle variations in shade, creating a textured appearance due to natural fiber tonalities.\n    -  Size - The visible area spans the entire frame, with no defined length or width measurements provided; it appears as a continuous, full-field texture.\n    -  Material - Composed of fibrous threads, likely natural or synthetic, with a slightly rough and tactile surface appearance.\n    -  Composition - Made of interwoven threads arranged in a regular, repeating pattern, suggesting a plain weave construction.\n    -  Quantity - One continuous instance of the woven texture fills the entire visual field.\n    -  Relative Location - Occupies the entire central area of the image, with no surrounding elements or boundaries visible.\n    -  Orientation - The weave pattern is aligned horizontally and vertically, forming a consistent grid orientation across the entire surface.\n    -  Connection or Attachments - No visible connections or attachments; the texture appears self-contained and seamless within the frame.', '-  Type - A tightly interlaced textile pattern featuring a consistent, uniform weave with intersecting horizontal and vertical threads forming a grid-like structure.\n    -  Color - Predominantly a muted grayish-brown tone, with subtle variations in shade across the threads, giving it a slightly heathered or multi-tonal appearance.\n    -  Size - The visible area is a square or rectangular field, but specific length and width measurements are not discernible due to the absence of scale references; it appears to be a continuous, full-frame texture.\n    -  Material - Composed of fibrous threads, likely synthetic or natural fibers such as cotton, polyester, or linen, exhibiting a slightly coarse and textured surface.\n    -  Composition - Constructed from a plain weave pattern, where each warp thread alternates over and under each weft thread, creating a durable, tightly packed structure.\n    -  Quantity - One continuous instance of the woven fabric texture fills the entire visual field.\n    -  Relative Location - Occupies the entire central area of the image, with no visible edges or boundaries within the frame.\n    -  Orientation - The weave is oriented with horizontal and vertical threads intersecting perpendicularly, forming a consistent grid pattern across the entire surface.\n    -  Connection or Attachments - No visible connections, attachments, or fasteners are present; the fabric appears as a self-contained, seamless surface.', '-  Type - A tightly interlaced textile pattern composed of intersecting horizontal and vertical threads forming a consistent, uniform grid.\n    -  Color - A muted, neutral grayish-brown tone with subtle variations in shade across the threads, giving it a slightly heathered or textured appearance.\n    -  Size - The visible area is a square or rectangular section of fabric, with no specific length or width dimensions provided due to the cropped nature of the image.\n    -  Material - Appears to be made from a sturdy, possibly natural fiber such as cotton, linen, or hemp, with a slightly coarse and fibrous texture.\n    -  Composition - Composed of two sets of threads: warp (vertical) and weft (horizontal), interlaced in a plain weave structure where each thread passes over and under one another in a regular, repeating pattern.\n    -  Quantity - One continuous, single piece of woven fabric texture is shown, with no discernible seams or separate components.\n    -  Relative Location - Occupies the entire central area of the image frame, filling the visual field from edge to edge.\n    -  Orientation - The fabric is oriented horizontally and vertically, with the warp threads running vertically and the weft threads running horizontally, creating a perpendicular grid.\n    -  Connection or Attachments - No visible connections, attachments, or fastenings are present; the fabric appears as a standalone, self-contained textile surface.']}
+2026-08-19 16:36:06 | INFO     | models | [LLM] Inference completed in 7.692s (max_new_tokens=3000)
+2026-08-19 16:36:06 | INFO     | descriptor | [Woven Fabric Texture] Object summarisation completed in 7.692s
+2026-08-19 16:36:06 | DEBUG    | descriptor | Summarised description for 'Woven Fabric Texture': 
+
+{
+  "Woven Fabric Texture": {
+    "Type": "A tightly interlaced textile pattern composed of intersecting horizontal and vertical threads forming a consistent, uniform grid with a regular, repeating plain weave construction.",
+    "Color": "A muted, neutral grayish-brown tone with subtle variations in shade across the threads, giving it a slightly heathered or textured appearance.",
+    "Size": "A square or rectangular field with no specific length or width dimensions provided due to the cropped nature of the image; spans the entire frame, appearing as a continuous, full-field texture.",
+    "Material": "Composed of fibrous threads, likely natural or synthetic fibers such as cotton, polyester, or linen, exhibiting a slightly coarse and textured surface.",
+    "Composition": "Constructed from a plain weave pattern where each warp thread alternates over and under each weft thread, creating a durable, tightly packed structure with two sets of threads: warp (vertical) and weft (horizontal).",
+    "Quantity": "One continuous, single piece of woven fabric texture is shown, with no discernible seams or separate components.",
+    "Relative Location": "Occupies the entire central area of the image frame, filling the visual field from edge to edge with no surrounding elements or boundaries visible.",
+    "Orientation": "The fabric is oriented horizontally and vertically, with the warp threads running vertically and the weft threads running horizontally, forming a perpendicular grid across the entire surface.",
+    "Connection or Attachments": "No visible connections, attachments, or fastenings are present; the fabric appears as a standalone, self-contained textile surface."
+  }
+}
+2026-08-19 16:36:06 | DEBUG    | descriptor | Master description: {'Woven Fabric Texture': {'Type': 'A tightly interlaced textile pattern composed of intersecting horizontal and vertical threads forming a consistent, uniform grid with a regular, repeating plain weave construction.', 'Color': 'A muted, neutral grayish-brown tone with subtle variations in shade across the threads, giving it a slightly heathered or textured appearance.', 'Size': 'A square or rectangular field with no specific length or width dimensions provided due to the cropped nature of the image; spans the entire frame, appearing as a continuous, full-field texture.', 'Material': 'Composed of fibrous threads, likely natural or synthetic fibers such as cotton, polyester, or linen, exhibiting a slightly coarse and textured surface.', 'Composition': 'Constructed from a plain weave pattern where each warp thread alternates over and under each weft thread, creating a durable, tightly packed structure with two sets of threads: warp (vertical) and weft (horizontal).', 'Quantity': 'One continuous, single piece of woven fabric texture is shown, with no discernible seams or separate components.', 'Relative Location': 'Occupies the entire central area of the image frame, filling the visual field from edge to edge with no surrounding elements or boundaries visible.', 'Orientation': 'The fabric is oriented horizontally and vertically, with the warp threads running vertically and the weft threads running horizontally, forming a perpendicular grid across the entire surface.', 'Connection or Attachments': 'No visible connections, attachments, or fastenings are present; the fabric appears as a standalone, self-contained textile surface.'}}
+2026-08-19 16:36:06 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:36:06 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/carpet.txt
+2026-08-19 16:36:06 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=11)
+2026-08-19 16:36:06 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:36:07 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:36:09 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:36:09 | DEBUG    | planner | Class directories for dataset 'carpet': ['good']
+2026-08-19 16:36:09 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/carpet/good
+2026-08-19 16:36:09 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:36:09 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:36:09 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:36:06_master_description.json
+2026-08-19 16:36:17 | INFO     | models | [VLM] Inference completed in 8.709s (max_new_tokens=2040)
+2026-08-19 16:36:17 | INFO     | planner | Planner steps generated in 8.709s (attempt=1, steps=11, approved_rules=11)
+2026-08-19 16:36:17 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/carpet/good/good_2026-08-19 16:36:17_planner.txt
+2026-08-19 16:36:17 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any discolored thread visible in the woven fabric texture, where a thread appears darker or lighter than surrounding threads, creating a noticeable color mismatch?
+
+Step 2: Is there any broken thread visible in the woven fabric texture, where a thread is visibly snapped or cut, leaving a gap in the weave pattern?
+
+Step 3: Is there any loose thread visible in the woven fabric texture, where a thread is visibly frayed or protruding from the weave, not tightly interlaced?
+
+Step 4: Is there any misaligned weave visible in the woven fabric texture, where a row or column of threads is visibly offset from the regular grid pattern?
+
+Step 5: Is there any punctured weave visible in the woven fabric texture, where threads are missing or compressed, creating a small hole or indentation?
+
+Step 6: Is there any stained thread visible in the woven fabric texture, where a thread or small area shows a visible stain or discoloration from an external substance?
+
+Step 7: Is there any torn weave visible in the woven fabric texture, where threads are pulled apart, creating an irregular opening?
+
+Step 8: Is there any rotated weave section visible in the woven fabric texture, where a small section of weave appears rotated relative to the surrounding pattern?
+
+Step 9: Is there any cracked thread visible in the woven fabric texture, where a thread shows visible splitting or fissuring along its length?
+
+Step 10: Is there any faded thread visible in the woven fabric texture, where a thread appears significantly lighter or washed out compared to surrounding threads?
+
+Step 11: Is there any embedded foreign particle visible within the woven fabric texture, where a small, visible foreign object is present in the weave section?
+2026-08-19 16:36:17 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/carpet/performance/performance_20260819_163617.json
+2026-08-19 16:36:17 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/carpet
+2026-08-19 16:36:17 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/carpet_163531_log.txt

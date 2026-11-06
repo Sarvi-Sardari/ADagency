@@ -1,0 +1,3 @@
+Orange: Juice bottle with orange icon
+Cherry: Juice bottle with cherry icon
+Banana: Juice bottle with banana icon

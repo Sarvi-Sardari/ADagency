@@ -1,0 +1,5 @@
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the screw's surface?
+Step 2: Is there any bending, warping, crushing, puncturing, wearing, tearing, or snapping of the screw's components?
+Step 3: Is there any missing component visible in the reference image but absent in the candidate image?
+Step 4: Is there any extra debris, foreign object, or loose part present in the candidate image that is not in the reference image?
+Step 5: Is there any rust, corrosion, fluid stain, leak, or peeling coating on the screw's surface?

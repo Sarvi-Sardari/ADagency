@@ -1,0 +1,6 @@
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the hazelnut's surface?
+Step 2: Is there any bending, warping, crushing, puncturing, tearing, or breaking of the hazelnut's structure?
+Step 3: Is there any missing component that should be present according to the reference image?
+Step 4: Is there any extra debris, foreign object, or loose part attached to or surrounding the hazelnut?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the hazelnut?
+Step 6: Is there any significant misalignment or incorrect orientation of the hazelnut compared to the reference image?

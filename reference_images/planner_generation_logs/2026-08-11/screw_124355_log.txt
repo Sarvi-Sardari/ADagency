@@ -1,0 +1,132 @@
+2026-08-11 12:43:55 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:43:55 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:43:55 | INFO     | __main__ | Dataset  : screw
+2026-08-11 12:43:55 | INFO     | __main__ | Classes  : single
+2026-08-11 12:43:55 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:43:55 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/screw_124355_log.txt
+2026-08-11 12:43:55 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:43:56 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:43:56 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:43:57 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:43:57 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:43:57 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/screw/train/good/209.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/screw/train/good/028.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/screw/train/good/246.png']
+2026-08-11 12:43:57 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:43:57 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:43:57 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:43:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:43:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:43:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 403698 44
+2026-08-11 12:43:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 403754 1304
+2026-08-11 12:43:58 | INFO     | models | [VLM] Inference completed in 0.495s (max_new_tokens=2040)
+2026-08-11 12:43:58 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/screw/train/good/100.png in 0.495s
+2026-08-11 12:44:00 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['screw']
+2026-08-11 12:44:00 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/screw_object_labels.txt
+2026-08-11 12:44:00 | INFO     | __main__ | Object names: ['screw']
+2026-08-11 12:44:00 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:44:00 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/screw/good
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 404006 44
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 404062 1304
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 405505 44
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 405561 1304
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 396553 44
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 396609 1304
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:44:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:44:03 | INFO     | models | [VLM] Inference completed in 2.334s (max_new_tokens=2040)
+2026-08-11 12:44:03 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw/good/processed_good_209_2026-08-11 12:44:03.json (inference_time=2.334s)
+2026-08-11 12:44:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:44:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:44:07 | INFO     | models | [VLM] Inference completed in 4.219s (max_new_tokens=2040)
+2026-08-11 12:44:07 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw/good/processed_good_028_2026-08-11 12:44:07.json (inference_time=4.219s)
+2026-08-11 12:44:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:44:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:44:09 | INFO     | models | [VLM] Inference completed in 2.321s (max_new_tokens=2040)
+2026-08-11 12:44:09 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw/good/processed_good_246_2026-08-11 12:44:09.json (inference_time=2.321s)
+2026-08-11 12:44:09 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:44:09 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:44:11 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:44:11 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw/good
+2026-08-11 12:44:11 | DEBUG    | descriptor | Processing image description: processed_good_246_2026-08-11 12:44:09.json
+2026-08-11 12:44:11 | DEBUG    | descriptor | Raw description data: - Object 1 screw
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:44:11 | DEBUG    | descriptor | Processing image description: processed_good_028_2026-08-11 12:44:07.json
+2026-08-11 12:44:11 | DEBUG    | descriptor | Raw description data: - Object 1 screw
+    - Attribute 1 Type - A metal screw with a slotted head and a tapered, threaded shaft ending in a pointed tip
+    - Attribute 2 Color - Metallic gray with slight variations in tone due to surface texture and lighting
+    - Attribute 3 Size - Approximately 3 to 4 inches in length, with a head diameter of about 0.5 inches
+    - Attribute 4 Material - Metal, likely steel or stainless steel, exhibiting a matte finish
+    - Attribute 5 Composition - Solid metal construction with a helical thread pattern along the shaft and a flat, circular head with a slot for a screwdriver
+    - Attribute 6 Quantity - One single screw
+    - Attribute 7 Relative Location - Positioned centrally in the frame, isolated with no other objects nearby
+    - Attribute 8 Orientation - Diagonally oriented from lower left to upper right, angled at approximately 45 degrees
+    - Attribute 9 Connection or Attachments - No attachments; the screw is standalone and not connected to any other object or surface
+2026-08-11 12:44:11 | DEBUG    | descriptor | Processing image description: processed_good_209_2026-08-11 12:44:03.json
+2026-08-11 12:44:11 | DEBUG    | descriptor | Raw description data: - Object 1 screw
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:44:11 | DEBUG    | descriptor | Unique object keys found: {'screw'}
+2026-08-11 12:44:11 | DEBUG    | descriptor | Class 'good' object description: {'screw': ['-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  Type - A metal screw with a slotted head and a tapered, threaded shaft ending in a pointed tip\n    -  Color - Metallic gray with slight variations in tone due to surface texture and lighting\n    -  Size - Approximately 3 to 4 inches in length, with a head diameter of about 0.5 inches\n    -  Material - Metal, likely steel or stainless steel, exhibiting a matte finish\n    -  Composition - Solid metal construction with a helical thread pattern along the shaft and a flat, circular head with a slot for a screwdriver\n    -  Quantity - One single screw\n    -  Relative Location - Positioned centrally in the frame, isolated with no other objects nearby\n    -  Orientation - Diagonally oriented from lower left to upper right, angled at approximately 45 degrees\n    -  Connection or Attachments - No attachments; the screw is standalone and not connected to any other object or surface', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description']}
+2026-08-11 12:44:14 | INFO     | models | [LLM] Inference completed in 3.530s (max_new_tokens=3000)
+2026-08-11 12:44:14 | INFO     | descriptor | [screw] Object summarisation completed in 3.530s
+2026-08-11 12:44:14 | DEBUG    | descriptor | Summarised description for 'screw': {
+  "screw": {
+    "Type": "A metal screw with a slotted head and a tapered, threaded shaft ending in a pointed tip",
+    "Color": "Metallic gray with slight variations in tone due to surface texture and lighting",
+    "Size": "Approximately 3 to 4 inches in length, with a head diameter of about 0.5 inches",
+    "Material": "Metal, likely steel or stainless steel, exhibiting a matte finish",
+    "Composition": "Solid metal construction with a helical thread pattern along the shaft and a flat, circular head with a slot for a screwdriver",
+    "Quantity": "One single screw",
+    "Relative Location": "Positioned centrally in the frame, isolated with no other objects nearby",
+    "Orientation": "Diagonally oriented from lower left to upper right, angled at approximately 45 degrees",
+    "Connection or Attachments": "No attachments; the screw is standalone and not connected to any other object or surface"
+  }
+}
+2026-08-11 12:44:14 | DEBUG    | descriptor | Master description: {'screw': {'Type': 'A metal screw with a slotted head and a tapered, threaded shaft ending in a pointed tip', 'Color': 'Metallic gray with slight variations in tone due to surface texture and lighting', 'Size': 'Approximately 3 to 4 inches in length, with a head diameter of about 0.5 inches', 'Material': 'Metal, likely steel or stainless steel, exhibiting a matte finish', 'Composition': 'Solid metal construction with a helical thread pattern along the shaft and a flat, circular head with a slot for a screwdriver', 'Quantity': 'One single screw', 'Relative Location': 'Positioned centrally in the frame, isolated with no other objects nearby', 'Orientation': 'Diagonally oriented from lower left to upper right, angled at approximately 45 degrees', 'Connection or Attachments': 'No attachments; the screw is standalone and not connected to any other object or surface'}}
+2026-08-11 12:44:14 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:44:14 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['screw'] directly (no generation, no compiled file).
+2026-08-11 12:44:14 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:44:14 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:44:14 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:44:15 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:44:15 | DEBUG    | planner | Class directories for dataset 'screw': ['good']
+2026-08-11 12:44:15 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/screw/good
+2026-08-11 12:44:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:44:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:44:15 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:44:14_master_description.json
+2026-08-11 12:44:18 | INFO     | models | [VLM] Inference completed in 2.631s (max_new_tokens=2040)
+2026-08-11 12:44:18 | INFO     | planner | Planner steps generated in 2.631s (attempt=1, steps=5, approved_rules=legacy-untracked)
+2026-08-11 12:44:18 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw/good/good_2026-08-11 12:44:18_planner.txt
+2026-08-11 12:44:18 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the screw's surface?
+Step 2: Is there any bending, warping, crushing, puncturing, wearing, tearing, or snapping of the screw's components?
+Step 3: Is there any missing component visible in the reference image but absent in the candidate image?
+Step 4: Is there any extra debris, foreign object, or loose part present in the candidate image that is not in the reference image?
+Step 5: Is there any rust, corrosion, fluid stain, leak, or peeling coating on the screw's surface?
+2026-08-11 12:44:18 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw/performance/performance_20260811_124418.json
+2026-08-11 12:44:18 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw
+2026-08-11 12:44:18 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/screw_124355_log.txt

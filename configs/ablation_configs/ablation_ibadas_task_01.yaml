@@ -1,0 +1,39 @@
+experiment:
+  name: "ibadas_task_01"
+  num_runs: 1
+  runs_dir: "outputs/runs_ibadas_task_01"
+  #command_prefix: ["taskset", "-c", "0-7,10-31"]
+  cooldown_seconds: 0
+  #decision_prompt_sequence: 
+  #  - "decision_maker_v2_original_compact.j2"
+
+configs:
+  anomaly_detection: "configs/anomaly_detection_configs_ibadas_task_01.yaml"
+  model: "configs/model_configs.yaml"
+  mask_generation: "configs/mask_generation_configs_ibadas_task_01.yaml"
+  metrics: "configs/metrics_configs_ibadas_task_01.yaml"
+
+stages:
+  detection: true
+  rerun: true
+  masks: true
+  metrics: true
+
+rerun:
+  num_steps: 3
+
+masks:
+  include_rerun: true
+
+metrics:
+  include_rerun: true
+  combine: true
+  omit: ["aupro"] #aupro is omited from the metrics
+
+telemetry:
+  interval_seconds: 1.0
+  process_specific: true
+  generation_profile: true
+
+aggregation:
+  std_ddof: 1

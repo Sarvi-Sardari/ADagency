@@ -1,0 +1,10 @@
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the zipper’s surface?
+Step 2: Is there any bent, warped, crushed, punctured, worn, torn, or broken/snapped component on the zipper?
+Step 3: Is there any missing component such as a zipper pull or slider that should be present according to the reference?
+Step 4: Is there any extra debris, foreign object, or loose part on the zipper?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, leak, or peeling coating on the zipper?
+Step 6: Is there any deviation from the expected black color as defined in the reference?
+Step 7: Is there any inconsistency in the interlocking teeth structure compared to the reference?
+Step 8: Is there any missing or extra component related to the slider mechanism?
+Step 9: Is there any damage to the fabric surrounding the zipper teeth?
+Step 10: Is there any visible deviation in the zipper’s alignment with the fabric seam?

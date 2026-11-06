@@ -1,0 +1,128 @@
+2026-08-19 16:40:37 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:40:37 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:40:37 | INFO     | __main__ | Dataset  : metal_nut
+2026-08-19 16:40:37 | INFO     | __main__ | Classes  : single
+2026-08-19 16:40:37 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:40:37 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/metal_nut_164037_log.txt
+2026-08-19 16:40:37 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:40:38 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:40:38 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:40:40 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:40:40 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:40:40 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/metal_nut/train/good/144.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/metal_nut/train/good/019.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/metal_nut/train/good/169.png']
+2026-08-19 16:40:40 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:40:40 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/metal_nut_object_labels.txt
+2026-08-19 16:40:40 | INFO     | __main__ | Object names: ['Nut']
+2026-08-19 16:40:40 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:40:40 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/metal_nut/good
+2026-08-19 16:40:40 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 497578 44
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 497634 1304
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 497671 44
+2026-08-19 16:40:40 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 497727 1304
+2026-08-19 16:40:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:40:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:40:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:40:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 500926 44
+2026-08-19 16:40:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 500982 1304
+2026-08-19 16:40:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:40:41 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:40:48 | INFO     | models | [VLM] Inference completed in 7.185s (max_new_tokens=2040)
+2026-08-19 16:40:48 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/metal_nut/good/processed_good_144_2026-08-19 16:40:48.json (inference_time=7.185s)
+2026-08-19 16:40:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:40:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:40:55 | INFO     | models | [VLM] Inference completed in 6.554s (max_new_tokens=2040)
+2026-08-19 16:40:55 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/metal_nut/good/processed_good_019_2026-08-19 16:40:55.json (inference_time=6.554s)
+2026-08-19 16:40:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:40:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:41:02 | INFO     | models | [VLM] Inference completed in 7.354s (max_new_tokens=2040)
+2026-08-19 16:41:02 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/metal_nut/good/processed_good_169_2026-08-19 16:41:02.json (inference_time=7.354s)
+2026-08-19 16:41:02 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:41:02 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:41:04 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:41:04 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/metal_nut/good
+2026-08-19 16:41:04 | DEBUG    | descriptor | Processing image description: processed_good_169_2026-08-19 16:41:02.json
+2026-08-19 16:41:04 | DEBUG    | descriptor | Raw description data: - Object 1 Nut
+    - Attribute 1 Type - A hexagonal nut with a central hole and a textured, ridged surface, appearing to be a flanged or specialized type with a star-like or multi-faceted profile.
+    - Attribute 2 Color - A metallic grayish-green hue, likely due to a zinc or similar metal plating, with darker speckled or mottled areas indicating surface texture or wear.
+    - Attribute 3 Size - The nut has a circular central bore and an outer diameter that appears to be approximately 1.5 to 2 inches in width, though exact dimensions are not measurable from the image.
+    - Attribute 4 Material - Metallic, likely steel or alloy, with a surface finish that suggests it is engineered for mechanical use and possibly corrosion resistance.
+    - Attribute 5 Composition - Composed of a single solid piece of metal, with concentric ridges and grooves around the central bore, indicating it is designed for gripping or torque transmission.
+    - Attribute 6 Quantity - One nut is present.
+    - Attribute 7 Relative Location - The nut is centrally positioned in the frame, occupying the majority of the visual field.
+    - Attribute 8 Orientation - The nut is viewed from directly above, with its central hole facing upward and its six or more lobed facets radiating outward symmetrically.
+    - Attribute 9 Connection or Attachments - No visible attachments or fasteners are present; the nut appears standalone, designed to be screwed onto a bolt or threaded rod.
+2026-08-19 16:41:04 | DEBUG    | descriptor | Processing image description: processed_good_019_2026-08-19 16:40:55.json
+2026-08-19 16:41:04 | DEBUG    | descriptor | Raw description data: - Object 1 Nut
+    - Attribute 1 Type - A hexagonal flanged nut with a central hole and multiple raised flanges radiating outward, designed for mechanical fastening.
+    - Attribute 2 Color - Metallic gray-green with a slightly mottled or textured surface, exhibiting subtle iridescence under light.
+    - Attribute 3 Size - Approximately 1.5 to 2 inches in overall diameter, with the central hole being roughly 0.5 inches in diameter; exact dimensions not measurable from image.
+    - Attribute 4 Material - Appears to be made of metal, likely steel or aluminum alloy, with a surface finish suggesting zinc plating or similar corrosion-resistant coating.
+    - Attribute 5 Composition - Composed of a solid, machined metal body with concentric ridges and flanges, designed to distribute load and prevent loosening.
+    - Attribute 6 Quantity - One nut is present.
+    - Attribute 7 Relative Location - Centrally located within the frame of the image, occupying the majority of the visual space.
+    - Attribute 8 Orientation - Viewed from directly above, with the hexagonal flanges symmetrically arranged around the central hole.
+    - Attribute 9 Connection or Attachments - No visible threads or external attachments; the central hole is designed to accept a bolt or screw for connection to another component.
+2026-08-19 16:41:04 | DEBUG    | descriptor | Processing image description: processed_good_144_2026-08-19 16:40:48.json
+2026-08-19 16:41:04 | DEBUG    | descriptor | Raw description data: - Object 1 Nut
+    - Attribute 1 Type - A hexagonal flanged nut with a central hole and a flared outer edge, designed for use with a bolt or screw.
+    - Attribute 2 Color - Metallic gray with a slightly greenish tint, likely due to a zinc or similar metal plating, showing a matte finish with some surface texture.
+    - Attribute 3 Size - Approximately 1.5 to 2 inches in diameter, with a central hole diameter around 0.25 to 0.3 inches; exact dimensions cannot be precisely determined without scale reference.
+    - Attribute 4 Material - Likely made of steel or a similar alloy metal, with a surface treatment such as zinc plating for corrosion resistance.
+    - Attribute 5 Composition - Composed of a solid metal body with a central threaded bore and a flanged outer rim, featuring a hexagonal shape with rounded corners and concentric ridges or grooves on the flange.
+    - Attribute 6 Quantity - One nut is present.
+    - Attribute 7 Relative Location - Centered within the image frame, occupying the majority of the visual space.
+    - Attribute 8 Orientation - Positioned upright with its central hole facing directly toward the viewer, and the flanged outer edges extending radially outward in a symmetrical hexagonal pattern.
+    - Attribute 9 Connection or Attachments - No visible attachments or connections to other objects; appears as a standalone component.
+2026-08-19 16:41:04 | DEBUG    | descriptor | Unique object keys found: {'Nut'}
+2026-08-19 16:41:04 | DEBUG    | descriptor | Class 'good' object description: {'Nut': ['-  Type - A hexagonal nut with a central hole and a textured, ridged surface, appearing to be a flanged or specialized type with a star-like or multi-faceted profile.\n    -  Color - A metallic grayish-green hue, likely due to a zinc or similar metal plating, with darker speckled or mottled areas indicating surface texture or wear.\n    -  Size - The nut has a circular central bore and an outer diameter that appears to be approximately 1.5 to 2 inches in width, though exact dimensions are not measurable from the image.\n    -  Material - Metallic, likely steel or alloy, with a surface finish that suggests it is engineered for mechanical use and possibly corrosion resistance.\n    -  Composition - Composed of a single solid piece of metal, with concentric ridges and grooves around the central bore, indicating it is designed for gripping or torque transmission.\n    -  Quantity - One nut is present.\n    -  Relative Location - The nut is centrally positioned in the frame, occupying the majority of the visual field.\n    -  Orientation - The nut is viewed from directly above, with its central hole facing upward and its six or more lobed facets radiating outward symmetrically.\n    -  Connection or Attachments - No visible attachments or fasteners are present; the nut appears standalone, designed to be screwed onto a bolt or threaded rod.', '-  Type - A hexagonal flanged nut with a central hole and multiple raised flanges radiating outward, designed for mechanical fastening.\n    -  Color - Metallic gray-green with a slightly mottled or textured surface, exhibiting subtle iridescence under light.\n    -  Size - Approximately 1.5 to 2 inches in overall diameter, with the central hole being roughly 0.5 inches in diameter; exact dimensions not measurable from image.\n    -  Material - Appears to be made of metal, likely steel or aluminum alloy, with a surface finish suggesting zinc plating or similar corrosion-resistant coating.\n    -  Composition - Composed of a solid, machined metal body with concentric ridges and flanges, designed to distribute load and prevent loosening.\n    -  Quantity - One nut is present.\n    -  Relative Location - Centrally located within the frame of the image, occupying the majority of the visual space.\n    -  Orientation - Viewed from directly above, with the hexagonal flanges symmetrically arranged around the central hole.\n    -  Connection or Attachments - No visible threads or external attachments; the central hole is designed to accept a bolt or screw for connection to another component.', '-  Type - A hexagonal flanged nut with a central hole and a flared outer edge, designed for use with a bolt or screw.\n    -  Color - Metallic gray with a slightly greenish tint, likely due to a zinc or similar metal plating, showing a matte finish with some surface texture.\n    -  Size - Approximately 1.5 to 2 inches in diameter, with a central hole diameter around 0.25 to 0.3 inches; exact dimensions cannot be precisely determined without scale reference.\n    -  Material - Likely made of steel or a similar alloy metal, with a surface treatment such as zinc plating for corrosion resistance.\n    -  Composition - Composed of a solid metal body with a central threaded bore and a flanged outer rim, featuring a hexagonal shape with rounded corners and concentric ridges or grooves on the flange.\n    -  Quantity - One nut is present.\n    -  Relative Location - Centered within the image frame, occupying the majority of the visual space.\n    -  Orientation - Positioned upright with its central hole facing directly toward the viewer, and the flanged outer edges extending radially outward in a symmetrical hexagonal pattern.\n    -  Connection or Attachments - No visible attachments or connections to other objects; appears as a standalone component.']}
+2026-08-19 16:41:10 | INFO     | models | [LLM] Inference completed in 6.334s (max_new_tokens=3000)
+2026-08-19 16:41:10 | INFO     | descriptor | [Nut] Object summarisation completed in 6.334s
+2026-08-19 16:41:10 | DEBUG    | descriptor | Summarised description for 'Nut': 
+
+{
+  "Nut": {
+    "Type": "Hexagonal flanged nut with a central hole and multiple raised flanges, featuring a star-like or multi-faceted profile, designed for mechanical fastening and torque transmission",
+    "Color": "Metallic gray-green with a slightly mottled or textured surface, exhibiting subtle iridescence under light, and a matte finish with some surface texture",
+    "Size": "1.5 to 2 inches in diameter, with a central hole diameter of approximately 0.25 to 0.3 inches",
+    "Material": "Steel or aluminum alloy, with a surface treatment such as zinc plating for corrosion resistance",
+    "Composition": "A solid, machined metal body with concentric ridges, flanges, and a central threaded bore, designed to distribute load and prevent loosening",
+    "Quantity": "One nut is present",
+    "Relative Location": "Centrally located within the frame of the image, occupying the majority of the visual space",
+    "Orientation": "Positioned upright with its central hole facing directly toward the viewer, and the flanged outer edges extending radially outward in a symmetrical hexagonal pattern",
+    "Connection or Attachments": "No visible attachments or connections to other objects; appears as a standalone component"
+  }
+}
+2026-08-19 16:41:10 | DEBUG    | descriptor | Master description: {'Nut': {'Type': 'Hexagonal flanged nut with a central hole and multiple raised flanges, featuring a star-like or multi-faceted profile, designed for mechanical fastening and torque transmission', 'Color': 'Metallic gray-green with a slightly mottled or textured surface, exhibiting subtle iridescence under light, and a matte finish with some surface texture', 'Size': '1.5 to 2 inches in diameter, with a central hole diameter of approximately 0.25 to 0.3 inches', 'Material': 'Steel or aluminum alloy, with a surface treatment such as zinc plating for corrosion resistance', 'Composition': 'A solid, machined metal body with concentric ridges, flanges, and a central threaded bore, designed to distribute load and prevent loosening', 'Quantity': 'One nut is present', 'Relative Location': 'Centrally located within the frame of the image, occupying the majority of the visual space', 'Orientation': 'Positioned upright with its central hole facing directly toward the viewer, and the flanged outer edges extending radially outward in a symmetrical hexagonal pattern', 'Connection or Attachments': 'No visible attachments or connections to other objects; appears as a standalone component'}}
+2026-08-19 16:41:10 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:41:10 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/metal_nut.txt
+2026-08-19 16:41:10 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=8)
+2026-08-19 16:41:10 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:41:11 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:41:13 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:41:13 | DEBUG    | planner | Class directories for dataset 'metal_nut': ['good']
+2026-08-19 16:41:13 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/metal_nut/good
+2026-08-19 16:41:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:41:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:41:13 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:41:10_master_description.json
+2026-08-19 16:41:17 | INFO     | models | [VLM] Inference completed in 4.172s (max_new_tokens=2040)
+2026-08-19 16:41:17 | INFO     | planner | Planner steps generated in 4.172s (attempt=1, steps=8, approved_rules=8)
+2026-08-19 16:41:17 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/metal_nut/good/good_2026-08-19 16:41:17_planner.txt
+2026-08-19 16:41:17 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any surface pitting visible on the outer surface of the nut?  
+Step 2: Is there any surface scratching visible on the outer surface of the nut?  
+Step 3: Is there any surface staining visible on the outer surface of the nut?  
+Step 4: Is there any lobe deformation visible on the hexagonal lobes of the nut?  
+Step 5: Is there any hole misalignment visible in the central hole of the nut?  
+Step 6: Is there any surface discoloration visible on the outer surface of the nut?  
+Step 7: Is there any surface roughness visible on the outer surface of the nut?  
+Step 8: Is there any blur or out-of-focus condition visible on the entire surface of the nut?
+2026-08-19 16:41:17 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/metal_nut/performance/performance_20260819_164117.json
+2026-08-19 16:41:17 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/metal_nut
+2026-08-19 16:41:17 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/metal_nut_164037_log.txt

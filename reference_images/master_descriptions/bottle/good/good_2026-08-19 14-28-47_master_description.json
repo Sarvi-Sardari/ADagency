@@ -1,0 +1,46 @@
+{
+    "Central Aperture": {
+        "Type": "circular void at the center of the bottle neck opening",
+        "Color": "deep black with subtle reflective highlights, appearing void-like due to lack of light reflection, with no visible internal structure or reflection",
+        "Size": "circular, with diameter approximately 2.5 cm, smaller than the inner bottle wall and glass rim, appearing narrow and consistent, surrounded by concentric ridges",
+        "Material": "glass",
+        "Composition": "empty space bounded by the inner bottle wall, transparent glass with slight surface texture and reflective properties, surrounded by glass",
+        "Quantity": "one aperture",
+        "Relative Location": "centered within the bottle neck opening, located at the center of the bottle neck, enclosed by the inner bottle wall and glass rim",
+        "Orientation": "concentric with the bottle neck opening, facing upward, vertically aligned, facing outward from the bottle's interior",
+        "Connection or Attachments": "enclosed by the inner bottle wall, forming the innermost boundary of the bottle neck opening, connected to the inner bottle wall and glass rim, forming a continuous cylindrical structure"
+    },
+    "Glass Rim": {
+        "Type": "thick, rounded, slightly beveled edge of the bottle neck",
+        "Color": "dark brown with amber-orange or golden-orange reflective highlights from reflected light",
+        "Size": "circular, with an outer diameter approximately 5.5 cm, thickness approximately 0.5 cm, and width approximately 1-2 cm",
+        "Material": "glass",
+        "Composition": "smooth glass with slight gloss, minor surface variations, slight texture, and reflective properties showing light refraction",
+        "Quantity": "one continuous rim",
+        "Relative Location": "forms the outermost boundary of the bottle neck, encircling the inner bottle wall and surrounding the inner bottle wall at the outer perimeter of the bottle neck opening",
+        "Orientation": "horizontal, concentric with the central aperture, facing outward from the bottle’s interior",
+        "Connection or Attachments": "fused with the inner bottle wall, attached to the inner bottle wall and the bottle neck opening, forming a seamless transition and enclosing the central aperture"
+    },
+    "Bottle Neck Opening": {
+        "Type": "circular aperture formed by the convergence of the inner bottle wall and glass rim",
+        "Color": "dark brown to black with amber highlights along the rim, featuring golden-orange reflective highlights and subtle amber or coppery reflections",
+        "Size": "circular, with diameter approximately 2.5 cm, matching the inner bottle wall and glass rim, surrounded by concentric ridges",
+        "Material": "glass",
+        "Composition": "transparent glass with slight surface texture, minor imperfections, slight tint, and reflective properties showing reflections and refractions",
+        "Quantity": "one opening",
+        "Relative Location": "located at the topmost point of the bottle neck, at the center of the bottle neck, enclosed by the glass rim and inner bottle wall",
+        "Orientation": "vertically aligned, concentric with the central aperture, facing upward and outward from the bottle's interior",
+        "Connection or Attachments": "connected to the inner bottle wall and glass rim, forming the boundary of the central aperture and a continuous cylindrical structure"
+    },
+    "Inner Bottle Wall": {
+        "Type": "smooth, curved inner surface of a bottle neck",
+        "Color": "dark brown to black with subtle amber or coppery reflections along the rim",
+        "Size": "circular, with inner diameter approximately 2.5 cm, outer diameter approximately 5.5 cm, and an inner diameter that appears narrow and consistent, surrounded by concentric ridges",
+        "Material": "glass",
+        "Composition": "transparent glass with slight surface texture, minor imperfections, slight tint, and reflective properties",
+        "Quantity": "one continuous inner wall",
+        "Relative Location": "forms the inner boundary of the bottle neck opening, surrounding the central aperture",
+        "Orientation": "concentrically aligned with the central aperture, facing inward toward the center",
+        "Connection or Attachments": "seamlessly connected to the glass rim and encloses the central aperture, forming a continuous cylindrical interior"
+    }
+}

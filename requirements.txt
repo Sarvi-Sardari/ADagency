@@ -1,0 +1,94 @@
+# Python runtime for the ad_agency branch on Linux and Python 3.12.
+# Covers planner generation, anomaly detection/rerun, mask generation, XAI,
+# metrics, hardware monitoring, and local or Ray/vLLM cluster execution.
+#
+# Fresh Conda environment (run from the pipeline_project directory):
+#   conda create -n xai python=3.12 pip -y
+#   conda activate xai
+#   python -m pip install --upgrade pip
+#
+# Install the CUDA 13.0 development toolkit needed to compile FlashAttention:
+#   conda install -c nvidia cuda-toolkit=13.0 -y
+# Verify the NVIDIA driver and compiler before installing Python packages:
+#   nvidia-smi
+#   nvcc --version
+#
+# FlashAttention is compiled against PyTorch, so install the pinned PyTorch
+# build first and then install this complete file without build isolation:
+#   python -m pip install torch==2.13.0 torchvision==0.28.0
+#   python -m pip install --no-build-isolation -r requirements.txt
+#
+# Windows support:
+#   - Run the complete pipeline inside WSL2; native Windows is not supported by
+#     FlashAttention, vLLM, or this pipeline's Linux /proc telemetry collector.
+#   - From an elevated Windows PowerShell, install WSL once with:
+#       wsl --install -d Ubuntu-24.04
+#   - Then run the Conda/CUDA/Python commands above inside the WSL terminal.
+#
+# TensorRT-LLM is not supported: it pins torch/transformers versions that
+# conflict with this file, was not faster than vLLM in a benchmark, and does
+# not expose the per-token log-probabilities used for step confidence.
+#
+# Other system prerequisites that pip cannot install:
+#   - Install a current NVIDIA driver on the host before the CUDA command above.
+#   - SSH keys/connectivity are needed only when deployment.mode is "cluster".
+#
+# Model assets that pip cannot place in this project:
+#   - Download the VLM/LLM checkpoints selected in configs/model_configs.yaml.
+#   - SAM3 source expected by the default configs:
+#       git clone https://github.com/facebookresearch/sam3.git models/sam3
+#       git -C models/sam3 checkout 11dec2936de97f2857c1f76b66d982d5a001155d
+#   - SAM3 is gated on Hugging Face. After access is approved:
+#       hf auth login
+#       hf download facebook/sam3 sam3.pt --local-dir models/sam3_model
+
+# Model inference
+torch==2.13.0
+torchvision==0.28.0
+transformers==5.16.1
+# Required by FP8 checkpoints such as Ministral-3-8B-Instruct-2512.
+# Transformers currently requires the 0.16 release line for fine-grained FP8.
+kernels>=0.16.0,<0.17.0
+accelerate==1.14.0
+safetensors==0.8.0
+sentencepiece==0.2.1
+flash-attn==2.8.3.post1
+packaging==26.2
+ninja==1.13.0
+setuptools==80.10.2
+wheel==0.47.0
+
+# CLIP and vision backends
+clip @ git+https://github.com/openai/CLIP.git@d05afc436d78f1c48dc0dbf8e5980a9d471f35f6
+timm==1.0.27
+einops==0.8.2
+ftfy==6.3.1
+iopath==0.1.10
+regex==2026.5.9
+huggingface-hub==1.28.0
+
+# Images, arrays, metrics, and XAI
+numpy==2.3.5
+pillow==12.2.0
+opencv-python-headless==5.0.0.93
+scipy==1.17.1
+scikit-image==0.26.0
+scikit-learn==1.9.0
+pandas==3.0.3
+matplotlib==3.11.0
+nltk==3.10.0
+yake==0.7.3
+
+# Configuration, artifacts, CLI, and monitoring
+Jinja2==3.1.6
+PyYAML==6.0.3
+json-repair==0.62.0
+requests==2.34.2
+rich==15.0.0
+tqdm==4.68.3
+psutil==7.2.2
+nvidia-ml-py==13.610.43
+
+# Cluster execution (deployment.mode: cluster only)
+ray==2.58.0
+vllm==0.28.0

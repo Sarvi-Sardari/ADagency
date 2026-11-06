@@ -1,0 +1,269 @@
+# =============================================================================
+# TEMPLATE: mask_ablation_configs.yaml  (XAI attribution-mask STUDY)
+# =============================================================================
+#
+# Used by:   run_mask_ablation.py --config <this file>
+# Parsed by: mask_ablation/config.py :: load_mask_ablation_config()
+#            method args: mask_ablation/xai_engine.py (class Args) and
+#            mask_ablation/pipeline.py. Details: mask_ablation/README.md.
+#
+# What it does:
+#   For an EXISTING anomaly-detection run, it explains the VLM's anomaly
+#   evidence with iGOS+ style attribution on a differentiable VLM and writes
+#   one mask folder per (model, method) "arm":
+#     <run_dir>/<dataset>/masks/<folder>/...                 (binary/continuous
+#                                                             masks for metrics)
+#     <run_dir>/<dataset>/<diagnostics_subdir>/<folder>/...  (heatmaps, logs)
+#   <folder> = method.output_name, or xai_<model name>_<method name>.
+#   It never changes detection, rerun, normal mask generation or metrics.
+#   It needs a lot of GPU memory (gradients through the full VLM): check that
+#   no other job is using the GPU first.
+#
+# Typical workflow:
+#   1. python run_mask_ablation.py            -> PILOT: default_datasets x
+#      default_methods, limited by pilot_images / max_attribution_images...
+#   2. inspect heatmaps/overlays.
+#   3. python run_mask_ablation.py --full     -> every dataset x every method,
+#      all images, then metrics (if evaluate_after_generation).
+#   Resume: run the same command again; valid masks are skipped. If a
+#   method's settings changed, that arm stops (fingerprint) until you pass
+#   --overwrite or give it a new name/output_name.
+#
+# CLI overrides: --run-dir, --dataset NAME (repeatable), --model NAME,
+#   --method NAME, --include-rerun / --base-results, --overwrite, --full,
+#   --no-evaluate, --pixel-only (skip AUPRO), --presentation[-image|-dir].
+#
+# Names used for datasets, models, methods, output_name and diagnostics_subdir
+# must match  ^[A-Za-z0-9][A-Za-z0-9_.-]*$  (they become folder names).
+# Relative paths are resolved from the project root. Unknown top-level keys
+# are ignored, which is why YAML-anchor holders like `dense_defaults`
+# below can sit at the top level.
+# =============================================================================
+
+# run_dir  REQUIRED (unless --run-dir). Existing timestamped detection run
+# folder; <run_dir>/<dataset>/all_data_summary.jsonl must exist for every
+# selected dataset.
+run_dir: "outputs/runs_my_experiment/2026-01-01 00-00-00_"   # <-- CHANGE
+
+# datasets  REQUIRED. Non-empty list of unique names. Each item is either
+#   - a plain name:  bottle
+#   - a mapping:     {name: bottle, include_rerun: false}   (per-dataset override)
+datasets:
+  - bottle                                         # <-- CHANGE
+  # - name: rs_darkblue_box
+  #   include_rerun: false
+
+# include_rerun  OPTIONAL (false). Boolean. Default for datasets that do not
+# set their own. When true, rerun_result.jsonl is overlaid by image identity:
+# a flipped image is explained with the rerun step that flipped it. The rerun
+# stage must have run. (--include-rerun / --base-results override all.)
+# Must NOT be put inside a method's args.
+include_rerun: false
+
+# ---- Pilot selection (ignored with --full) ---------------------------------
+# default_datasets  OPTIONAL (null = all configured datasets). Non-empty list
+# of configured dataset names used when no --dataset is given.
+default_datasets: [bottle]
+
+# default_methods  OPTIONAL (null = all configured methods). Non-empty list of
+# configured method names used when no --method is given. If you write the
+# key, it must contain at least one name (a key with only commented entries
+# is null, i.e. "all methods").
+default_methods: [steps_dense_keywords]
+
+# pilot_images  OPTIONAL (null). Mapping dataset name -> non-empty list of
+# image basenames or source/basename identities (no duplicates), e.g.
+# processed_000.png or structural_anomalies/018.png. A merged label/source/name
+# identity is also accepted. No absolute paths or traversal. Every method uses
+# exactly these images, so the
+# comparison is fair. Datasets must be configured above.
+pilot_images:
+  # bottle: [processed_000.png]
+
+# max_attribution_images_per_dataset  OPTIONAL (null = all images).
+# Positive integer limit for the pilot. Good/zero-mask images are not
+# counted. While a pilot limit or pilot_images is active, the final metrics
+# evaluation is skipped automatically (partial folders are never ranked).
+max_attribution_images_per_dataset: 1
+
+# -----------------------------------------------------------------------------
+# models  REQUIRED. Non-empty list; unique names.
+# A differentiable VLM plus the adapter that knows its inputs. The bundled
+# adapter is "qwen3_vl" (any Qwen3-VL size); other families need a new adapter
+# registered in mask_ablation/xai_engine.py.
+# -----------------------------------------------------------------------------
+models:
+  - name: qwen3_vl_8b          # REQUIRED. Used in folder names.
+    adapter: qwen3_vl          # OPTIONAL ("qwen3_vl").
+    source: local              # OPTIONAL ("local"). "local" | "huggingface".
+    # local_path: REQUIRED IF source local; existing model DIRECTORY.
+    local_path: "models/Qwen3-VL-8B-Instruct"      # <-- CHANGE
+    # huggingface_name: REQUIRED IF source huggingface.
+    huggingface_name: "Qwen/Qwen3-VL-8B-Instruct"
+
+# -----------------------------------------------------------------------------
+# Shared method settings via YAML anchors (optional convenience).
+# `&name` defines a block; `{<<: *name, key: value}` copies it and overrides
+# keys. These blocks are not read by the loader themselves.
+# -----------------------------------------------------------------------------
+dense_defaults: &dense_defaults
+  mask_generation_mode: yes_steps
+  segmentation_method: none
+  mask_content_mode: keyword_only
+  baseline_mode: blur
+  blur_kernel_mode: strong
+  reference_mode: none
+  iterations: 8
+  ig_iter: 2
+  ig_schedule: fixed
+  metric_num_steps: 4
+  final_map_selection: balanced_auc
+  step_map_filter: none
+  mask_smoothing: none
+  save_intermediate_outputs: false
+  save_diagnostics: false
+  save_joint_heatmap: false
+  save_per_keyword_heatmaps: false
+  published_mask_mode: heatmap_hot_regions
+  published_mask_threshold: 0.60
+
+# -----------------------------------------------------------------------------
+# methods  REQUIRED. Non-empty list; unique names. Each item:
+#   name         REQUIRED. Method name (CLI --method, folder name).
+#   args         OPTIONAL ({}). Mapping of engine settings (alias: `params`).
+#                Any key that is not an engine setting is an ERROR (typo
+#                protection). Omitted keys use the engine defaults listed in
+#                the reference below.
+#   output_name  OPTIONAL. Explicit mask folder name instead of
+#                xai_<model>_<method>. REQUIRED IF two model/method
+#                combinations would otherwise produce the same folder.
+# -----------------------------------------------------------------------------
+methods:
+  - name: steps_dense_keywords
+    args: {<<: *dense_defaults}
+  - name: final_dense_keywords
+    args: {<<: *dense_defaults, mask_generation_mode: final_reason_details, iterations: 12, ig_iter: 3}
+  # - name: steps_sam3_keywords
+  #   args: {<<: *dense_defaults, segmentation_method: sam3,
+  #          sam3_model_id: "models/sam3_model", sam3_repo_dir: "models/sam3"}
+  #   output_name: xai_sam3_steps
+
+# =============================================================================
+# REFERENCE: method `args` (engine default in brackets)
+# -----------------------------------------------------------------------------
+# Always set mask_generation_mode explicitly: the evidence loader defaults to
+# yes_steps while the engine's own default is final_reason_details.
+#
+# Evidence / what is explained
+#   mask_generation_mode  yes_steps | final_reason_details | decision_output
+#                         [final_reason_details]
+#       yes_steps            one attribution per YES planner step
+#       final_reason_details one attribution per image from the final
+#                            reason + details text
+#       decision_output      the whole decision output (paper profile)
+#   mask_content_mode     keyword_only | phrase_only | both_combined [both_combined]
+#       which text targets are attributed: important tokens, noun phrases, or
+#       both fused in score space
+#   keyword_percentile    number or null [50]  keep keywords above this
+#                         importance percentile; null disables
+#   keyword_threshold     number [0.5]  minimum keyword importance
+#   max_keywords_per_sample  int or null [null]
+#   max_phrases_per_sample   int [8]
+#   token_weighting       paper_sum | llr_sqrt [llr_sqrt]
+#   exclude_first_token   bool [false]  paper Eq. 6 excludes the first answer token
+#
+# Regions / mask parameterization
+#   segmentation_method   none | slic | sam3 | hybrid [hybrid]
+#       none   dense patch-grid mask       slic   SLIC superpixels
+#       sam3   SAM3 regions only           hybrid SAM3 regions split by SLIC
+#   num_superpixels       list of ints [[120]]   (slic/hybrid)
+#   sp_compactness        number [5.0]           (slic/hybrid)
+#   sp_keep_fraction      number [1.0]  fraction of superpixels kept active
+#   sp_size_bias          number [1.0]  >1 fewer/bigger, <1 more/smaller
+#   mass_ratio_keep       number [0.35]
+#   sam3_model_id         path ["models/sam3_model"]  REQUIRED to contain sam3.pt
+#                         IF segmentation_method is sam3 or hybrid
+#   sam3_repo_dir         path [../sam3 relative to the project root]
+#                         IF sam3/hybrid: must contain sam3/model_builder.py.
+#                         Set it explicitly (e.g. "models/sam3").
+#   sam3_text_prompts     non-empty list of strings [["object","part","component"]]
+#   sam3_confidence_threshold  number [0.5]
+#   sam3_min_mask_area    int pixels [50]
+#
+# Optimization (iGOS+)
+#   implementation_profile  ablation | paper_original [ablation]
+#       paper_original is LOCKED: it requires exact values (method iGOS+,
+#       segmentation none, keyword_only, decision_output, blur/paper_repo,
+#       reference none, paper_sum, exclude_first_token true,
+#       keyword_percentile null, keyword_threshold 1.0, size 32,
+#       input_size 336, L1 1.0, L2 0.1, L3 10.0, gamma 0.2, NAG, momentum 3,
+#       iterations 5, ig_iter 5, lr 10.0, ig_schedule fixed, ig_noise_std 0.2,
+#       ig_noise_samples 1, ensemble_seeds [0], mask_smoothing none);
+#       any mismatch is an error.
+#   method                "iGOS+" | other value -> iGOS++ ["iGOS+"]
+#   L1, L2, L3            loss weights [1.0, 0.05, 15.0]: L1 = mask area
+#                         (L1 sparsity), L2 = squared mask area, L3 =
+#                         bilateral total variation (smoothness)
+#   gamma                 number [0.08]
+#   opt                   optimizer ["NAG"]
+#   momentum              int [3]
+#   lr                    learning rate [0.025]
+#   iterations            optimization iterations [20]
+#   ig_iter               integrated-gradient samples per iteration [4]
+#   ig_schedule           fixed | redistribute [redistribute]
+#   ig_noise_std          number >= 0 [0.05]
+#   ig_noise_samples      int >= 1 [2]
+#   iter_schedule_base_n_seg, iter_schedule_min/max_iterations,
+#   iter_schedule_min/max_ig_iter
+#                         scale iterations/ig_iter with the number of
+#                         superpixels [40, 15, 70, 3, 6]
+#   phrase_joint_iterations   int [15]
+#   phrase_union_weight       number [0.85]
+#   phrase_min_deletion_score number [0.0]
+#   per_keyword_iterations    int [25]
+#   ensemble_seeds        list of ints [[20]]  several seeds are averaged
+#   input_size, size      model input / mask resolution [448, 448]
+#   diverse_k, init_posi, init_val, sigma   low-level engine knobs [1, 0, 0.0, 4]
+#   dense_l2_reduction    sum | mean [mean]   (dense path only)
+#   mask_clamp_range      [low, high] [[0.02, 0.98]]
+#   grad_clip_norm        number or null [5.0]
+#   dense_l2_floor_fraction number [0.01]
+#
+# Baseline (what replaces "deleted" pixels)
+#   baseline_mode         blur | reference [blur]  reference falls back to blur
+#                         when no reference image exists
+#   blur_kernel_mode      paper_repo | strong [strong]
+#   reference_mode        none | context [none]  context keeps the reference
+#                         image fixed beside the perturbed candidate
+#
+# Selection / output
+#   step_map_filter       none | positive_deletion [positive_deletion]
+#   final_map_selection   balanced_auc | pixelwise_max [pixelwise_max]
+#   metric_num_steps      int [50]  insertion/deletion curve points (4 is fast)
+#   mask_smoothing        gaussian | none [gaussian]
+#   published_mask_mode   continuous | heatmap_hot_regions [continuous]
+#       continuous           the raw [0,1] map is published
+#       heatmap_hot_regions  binary mask of the hot (yellow/red) regions
+#   published_mask_threshold  number in [0, 1] [0.60] (heatmap_hot_regions)
+#   save_intermediate_outputs, save_diagnostics, save_joint_heatmap,
+#   save_per_keyword_heatmaps   bools [true]  extra files; false saves disk
+#   presentation_enabled, presentation_output_dir   set by --presentation
+# =============================================================================
+
+# diagnostics_subdir  OPTIONAL ("xai_mask_ablation"). Folder name inside each
+# <run_dir>/<dataset>/ for heatmaps, logs and timing.
+diagnostics_subdir: xai_mask_ablation
+
+# evaluate_after_generation  OPTIONAL (true). Boolean. After all masks are
+# complete, run the normal metrics stage on the new mask folders and print the
+# best XAI Pixel-AUROC/AUPRO. Forced off while a pilot limit is active.
+evaluate_after_generation: true
+
+# overwrite  OPTIONAL (false). Boolean. true regenerates every selected mask
+# (same as --overwrite). Needed after changing a method's settings.
+overwrite: false
+
+# continue_on_error  OPTIONAL (true). Boolean. true: a failing
+# dataset/model/method arm is recorded and the study continues; false: stop
+# at the first failure.
+continue_on_error: true

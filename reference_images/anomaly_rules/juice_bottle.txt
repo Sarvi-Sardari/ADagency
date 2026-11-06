@@ -1,0 +1,220 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "top label",
+      "category": "surface_integrity",
+      "part_or_region": "top label",
+      "anomaly_name": "torn label",
+      "visual_description": "a visible tear or hole in the golden label, exposing the glass bottle underneath."
+    },
+    {
+      "id": "A002",
+      "object_name": "top label",
+      "category": "surface_integrity",
+      "part_or_region": "top label",
+      "anomaly_name": "stained label",
+      "visual_description": "a visible stain or discoloration on the golden label, not matching the uniform color."
+    },
+    {
+      "id": "A003",
+      "object_name": "top label",
+      "category": "surface_integrity",
+      "part_or_region": "top label",
+      "anomaly_name": "cracked label",
+      "visual_description": "a visible crack or fracture line across the golden label surface."
+    },
+    {
+      "id": "A004",
+      "object_name": "top label",
+      "category": "surface_integrity",
+      "part_or_region": "top label",
+      "anomaly_name": "scratched label",
+      "visual_description": "visible scratches or scuff marks on the golden label surface."
+    },
+    {
+      "id": "A005",
+      "object_name": "top label",
+      "category": "surface_integrity",
+      "part_or_region": "top label",
+      "anomaly_name": "detached label",
+      "visual_description": "the golden label partially or fully peeled away from the bottle surface."
+    },
+    {
+      "id": "A006",
+      "object_name": "top label",
+      "category": "geometry_alignment",
+      "part_or_region": "top label",
+      "anomaly_name": "misaligned label",
+      "visual_description": "the golden label is visibly rotated or skewed, not aligned with the bottle's vertical axis."
+    },
+    {
+      "id": "A007",
+      "object_name": "top label",
+      "category": "finish_color",
+      "part_or_region": "top label",
+      "anomaly_name": "discolored label",
+      "visual_description": "the golden label shows uneven or faded coloration, not uniform across its surface."
+    },
+    {
+      "id": "A008",
+      "object_name": "top label",
+      "category": "surface_integrity",
+      "part_or_region": "top label",
+      "anomaly_name": "punctured label",
+      "visual_description": "a visible puncture or hole in the golden label, possibly from a pin or sharp object."
+    },
+    {
+      "id": "A009",
+      "object_name": "bottom label",
+      "category": "surface_integrity",
+      "part_or_region": "bottom label",
+      "anomaly_name": "stained bottom label",
+      "visual_description": "a visible stain or discoloration on the surface of the bottom label"
+    },
+    {
+      "id": "A010",
+      "object_name": "bottom label",
+      "category": "surface_integrity",
+      "part_or_region": "bottom label",
+      "anomaly_name": "cracked bottom label",
+      "visual_description": "a visible crack or split in the material of the bottom label"
+    },
+    {
+      "id": "A011",
+      "object_name": "bottom label",
+      "category": "surface_integrity",
+      "part_or_region": "bottom label",
+      "anomaly_name": "torn bottom label",
+      "visual_description": "a visible tear or hole in the bottom label"
+    },
+    {
+      "id": "A012",
+      "object_name": "bottom label",
+      "category": "geometry_alignment",
+      "part_or_region": "bottom label",
+      "anomaly_name": "misaligned bottom label",
+      "visual_description": "the bottom label is visibly shifted or not centered on the bottle"
+    },
+    {
+      "id": "A013",
+      "object_name": "bottom label",
+      "category": "finish_color",
+      "part_or_region": "bottom label",
+      "anomaly_name": "discolored bottom label",
+      "visual_description": "the bottom label has a visible color change or uneven tone compared to its original appearance"
+    },
+    {
+      "id": "A014",
+      "object_name": "bottom label",
+      "category": "surface_integrity",
+      "part_or_region": "bottom label",
+      "anomaly_name": "scratched bottom label",
+      "visual_description": "visible scratches or scuff marks on the surface of the bottom label"
+    },
+    {
+      "id": "A015",
+      "object_name": "bottom label",
+      "category": "geometry_alignment",
+      "part_or_region": "bottom label",
+      "anomaly_name": "rotated bottom label",
+      "visual_description": "the bottom label is visibly turned at an angle, not aligned with the bottle's vertical axis"
+    },
+    {
+      "id": "A016",
+      "object_name": "label",
+      "category": "surface_integrity",
+      "part_or_region": "bottom label",
+      "anomaly_name": "detached label",
+      "visual_description": "the bottom golden label partially or fully peeled away from the bottle surface."
+    },
+    {
+      "id": "A017",
+      "object_name": "bottle",
+      "category": "contamination",
+      "part_or_region": "liquid inside the bottle",
+      "anomaly_name": "contaminated banana juice",
+      "visual_description": "Visible sediment, cloudiness, or foreign particles suspended within the liquid, inconsistent with the described homogeneous, pure juice."
+    },
+    {
+      "id": "A018",
+      "object_name": "label",
+      "category": "geometry_alignment",
+      "part_or_region": "top label",
+      "anomaly_name": "top label not square shaped",
+      "visual_description": "The top label appears rectangular or irregularly shaped instead of being a perfect square, deviating from the user's requirement."
+    },
+    {
+      "id": "A019",
+      "object_name": "label",
+      "category": "geometry_alignment",
+      "part_or_region": "top label",
+      "anomaly_name": "top label not centered horizontally",
+      "visual_description": "The top label is visibly offset to the left or right, not aligned centrally on the front of the bottle as required."
+    },
+    {
+      "id": "A020",
+      "object_name": "bottom label",
+      "category": "geometry_alignment",
+      "part_or_region": "shape of the bottom label",
+      "anomaly_name": "bottom label not rectangular",
+      "visual_description": "The bottom label appears rounded or irregularly shaped instead of being a clean rectangle, deviating from the user's requirement."
+    },
+    {
+      "id": "A021",
+      "object_name": "bottom label",
+      "category": "text_content",
+      "part_or_region": "the text area of the bottom label",
+      "anomaly_name": "incorrect text on bottom label",
+      "visual_description": "The text on the bottom label reads something other than '100% Juice', such as '100% Sugar' or '100% Water'."
+    },
+    {
+      "id": "A022",
+      "object_name": "bottom label",
+      "category": "missing_component",
+      "part_or_region": "the label area at the bottom of the bottle",
+      "anomaly_name": "missing bottom label",
+      "visual_description": "The bottom label containing '100% Juice' is absent, leaving the glass surface bare in that region."
+    },
+    {
+      "id": "A023",
+      "object_name": "bottle",
+      "category": "fill_level",
+      "part_or_region": "liquid level inside the bottle",
+      "anomaly_name": "bottle filled beyond 85% height",
+      "visual_description": "The liquid level in the bottle appears higher than 85% of its total height, exceeding the stated user input range."
+    },
+    {
+      "id": "A024",
+      "object_name": "bottle",
+      "category": "fill_level",
+      "part_or_region": "liquid level inside the bottle",
+      "anomaly_name": "bottle filled below 80% height",
+      "visual_description": "The liquid level in the bottle appears lower than 80% of its total height, falling below the stated user input range."
+    },
+    {
+      "id": "A025",
+      "object_name": "label on the bottle",
+      "category": "missing_component",
+      "part_or_region": "top label",
+      "anomaly_name": "missing banana illustration on banana juice label",
+      "visual_description": "The top label shows no banana illustration, even though the bottle contains banana juice, violating the user's usecase logic."
+    },
+    {
+      "id": "A026",
+      "object_name": "label on the bottle",
+      "category": "missing_component",
+      "part_or_region": "top label",
+      "anomaly_name": "missing orange illustration on orange juice label",
+      "visual_description": "The top label does not contain an orange illustration with a green leaf, even if the bottle were orange juice, violating the user's usecase logic."
+    },
+    {
+      "id": "A027",
+      "object_name": "label on the bottle",
+      "category": "missing_component",
+      "part_or_region": "top label",
+      "anomaly_name": "missing cherry illustration on cherry juice label",
+      "visual_description": "The top label does not contain two cherries, even if the bottle were cherry juice, violating the user's usecase logic."
+    }
+  ]
+}

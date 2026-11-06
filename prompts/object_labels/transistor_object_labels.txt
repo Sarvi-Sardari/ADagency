@@ -1,0 +1,5 @@
+Copper Trace
+Transistor
+Solder Joint
+Hole
+Perforated Board

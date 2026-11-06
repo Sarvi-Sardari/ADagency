@@ -1,0 +1,7 @@
+Step 1: Is there any empty cell among the 15 separately inspected compartments, each of which must contain exactly one complete yellow pushpin?
+Step 2: Is there any separately inspected cell containing two or more complete pushpins, including when another cell is empty and 15 pushpins remain visible overall?
+Step 3: Is there any absent or broken-away transparent internal divider segment creating an open passage between adjacent cells of the 3-by-5 grid, independent of whole-organizer rotation?
+Step 4: Is there any metal needle shaft visibly curved or kinked along its length rather than merely straight and pointing horizontally, vertically, or diagonally?
+Step 5: Is there any pushpin with a broken or missing plastic-head section or a snapped, shortened, blunt, missing, or detached needle, rather than an intact pushpin whose needle is only bent?
+Step 6: Is there any distinct red, orange, or other non-yellow material-colored region on the plastic head, distinct from the silver needle and from natural yellow shading, highlights, or shadows?
+Step 7: Is there any small, partly hidden, or pushpin-like separate foreign object or material inside a cell or on the organizer, distinct from an additional normal yellow pushpin, a divider, a reflection, or a shadow?

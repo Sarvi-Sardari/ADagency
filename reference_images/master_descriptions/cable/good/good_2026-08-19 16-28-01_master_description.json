@@ -1,0 +1,46 @@
+{
+    "Cable Insulation Layer (White/Off-white)": {
+        "Type": "A thick, circular, cylindrical insulation layer surrounding the three copper conductor strands, forming the outermost layer of the cable cross-section.",
+        "Color": "White or off-white with slight discoloration, speckles, and a slightly textured surface, possibly due to aging or environmental exposure.",
+        "Size": "Outer diameter of approximately 20-30 mm, forming a complete circular boundary around the three conductor strands with consistent thickness throughout the visible section.",
+        "Material": "A flexible polymer material, likely PVC or similar thermoplastic, designed for electrical insulation.",
+        "Composition": "A continuous, uniform layer of insulating material that encapsulates the three conductor strands, with minor surface imperfections or contaminants.",
+        "Quantity": "One continuous layer.",
+        "Relative Location": "Envelops all three copper conductor strands, forming the outermost layer of the cable cross-section and encapsulating them within its circular boundary.",
+        "Orientation": "Circular, concentrically surrounding the conductors with its circular face facing the viewer, viewed from the top as a circular ring.",
+        "Connection or Attachments": "The insulation layer is directly connected to and encapsulates the three copper conductor strands, forming a cohesive unit and a unified cable structure."
+    },
+    "Copper Conductor Strand (Green Insulated)": {
+        "Type": "A stranded copper conductor encased in a green insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.",
+        "Color": "The insulation is primarily green with a yellowish-green or yellowish tint, and the exposed copper strands have a metallic brownish-gold color, with some sources noting a slightly weathered or aged appearance.",
+        "Size": "The cross-sectional diameter is approximately 10-12 mm, fitting within the circular arrangement, with the exact length not discernible.",
+        "Material": "The conductor is solid copper, and the insulation is a flexible polymer material, likely PVC or similar thermoplastic.",
+        "Composition": "Composed of multiple fine copper strands bundled together, encased in a green insulating sheath.",
+        "Quantity": "One instance.",
+        "Relative Location": "Positioned at the top of the image, slightly to the upper right or at the top center of the cross-section, above the blue and brown insulated strands, nestled within the white insulation layer.",
+        "Orientation": "Oriented horizontally, with the circular cross-section facing the viewer, and the conductor strands radiating outward from the center.",
+        "Connection or Attachments": "The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly, though no external connections are visibly present in this cross-section view."
+    },
+    "Copper Conductor Strand (Brown Insulated)": {
+        "Type": "A stranded copper conductor encased in a brown insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.",
+        "Color": "The insulation is a uniform brownish-tan or matte brown color, with the exposed copper strands having a metallic brownish-gold appearance.",
+        "Size": "The diameter of the insulated conductor is approximately 10-12 mm, based on visual proportion relative to the surrounding insulation, with a cross-sectional diameter fitting within the circular arrangement.",
+        "Material": "The conductor is solid copper, and the insulation is a flexible polymer material, likely PVC or similar thermoplastic.",
+        "Composition": "Composed of multiple fine copper strands bundled together, encased in a brown insulating sheath.",
+        "Quantity": "One instance.",
+        "Relative Location": "Positioned at the bottom right of the cross-section, adjacent to the blue insulated conductor and nestled within the white insulation layer.",
+        "Orientation": "The conductor is oriented horizontally, with its circular face facing the viewer, and is slightly diagonally oriented in some views.",
+        "Connection or Attachments": "The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly, though not visibly connected to any external components in the cross-section view."
+    },
+    "Copper Conductor Strand (Blue Insulated)": {
+        "Type": "A stranded copper conductor encased in a blue insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.",
+        "Color": "The insulation is a solid blue color, with the exposed copper strands having a metallic brownish-gold color.",
+        "Size": "The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.",
+        "Material": "The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.",
+        "Composition": "Composed of multiple fine copper strands bundled together, encased in a blue insulating sheath.",
+        "Quantity": "One instance.",
+        "Relative Location": "Positioned at the bottom left of the cross-section, adjacent to the brown insulated conductor.",
+        "Orientation": "The conductor is oriented horizontally, with its circular face facing the viewer.",
+        "Connection or Attachments": "The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly."
+    }
+}

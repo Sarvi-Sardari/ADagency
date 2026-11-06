@@ -1,0 +1,57 @@
+{
+    "Bottom Label": {
+        "Type": "Rectangular label with rounded corners, featuring text",
+        "Color": "Golden-yellow background with gradient effect, dark outline, and dark text",
+        "Size": "Approximately 1.5 inches wide by 0.75 inches tall / 2.5 cm in width and 1.5 cm in height / 2.5 cm in width and 2 cm in height",
+        "Material": "Paper or thin cardboard with a glossy finish",
+        "Composition": "Printed text reading '100% Juice' in black, sans-serif font on a flat surface",
+        "Quantity": "One",
+        "Relative Location": "Positioned centrally on the lower portion of the bottle’s front surface, below the top label",
+        "Orientation": "Horizontally aligned, facing forward, parallel to the bottle’s front",
+        "Connection/Attachments": "Adhered directly to the bottle surface with adhesive"
+    },
+    "Bottle": {
+        "Type": "Small, rectangular glass bottle with a slightly tapered neck and a narrow neck",
+        "Color": "Clear glass, allowing the liquid inside to be visible",
+        "Size": "Approximately 10 cm in height and 3-4 cm in width at the base, with a narrower neck",
+        "Material": "Glass",
+        "Composition": "Glass body with a threaded neck designed for a screw-on cap, transparent glass with a smooth, slightly reflective surface",
+        "Quantity": "One",
+        "Relative Location": "Positioned upright in the center of the frame",
+        "Orientation": "Upright, standing vertically",
+        "Connection/Attachments": "The cap is screwed onto the neck, and the labels are affixed to the front surface. The bottle is sealed with a cap on top and contains liquid inside"
+    },
+    "Cap": {
+        "Type": "Screw-on cap with threaded neck and ribbed texture for grip",
+        "Color": "Clear or transparent plastic",
+        "Size": "Approximately 2 cm in diameter and 1.5 cm in height, 2.5 cm in height and 2 cm in diameter at the widest point",
+        "Material": "Plastic",
+        "Composition": "Molded plastic with a threaded inner surface for screwing onto the bottle neck, clear plastic with internal threading for screwing onto the bottle neck, and solid, cylindrical structure with ridges for grip",
+        "Quantity": "One",
+        "Relative Location": "Positioned on top of the bottle’s neck, sealing the opening, directly above the bottle’s opening",
+        "Orientation": "Upright, facing upward, vertically aligned, oriented upright",
+        "Connection/Attachments": "Screwed onto the bottle’s neck, forming a secure seal, creating a sealed connection"
+    },
+    "Liquid": {
+        "Type": "cherry juice",
+        "Color": "deep reddish-brown, with slight translucency",
+        "Size": "fills approximately 70% to 75% of the bottle’s volume",
+        "Material": "liquid",
+        "Composition": "pure juice, as indicated by the label",
+        "Quantity": "one",
+        "Relative Location": "contained within the bottle, occupying the interior space from the bottom to just below the cap",
+        "Orientation": "level, with a slight meniscus visible at the top",
+        "Connection/Attachments": "contained within the bottle, sealed by the cap"
+    },
+    "Top Label": {
+        "Type": "Rectangular label with rounded corners, featuring a graphic of two cherries with stems",
+        "Color": "Golden-yellow background with dark outline, and dark red cherries with green stems, featuring a gradient effect and textured appearance",
+        "Size": "2 inches wide by 2 inches tall / 2.5 cm in width and 3 cm in height / approximately 2.5 cm in height and 2.5 cm in width",
+        "Material": "Paper or thin cardboard with a glossy finish",
+        "Composition": "Printed graphic of two red cherries with green stems on a golden-yellow background, including text on a flat surface",
+        "Quantity": "One",
+        "Relative Location": "Centered on the upper portion of the bottle’s front surface",
+        "Orientation": "Horizontally aligned, facing forward, parallel to the bottle’s front",
+        "Connection/Attachments": "Adhered directly to the bottle surface with adhesive"
+    }
+}

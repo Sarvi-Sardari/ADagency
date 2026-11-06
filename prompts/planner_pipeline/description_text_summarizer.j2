@@ -1,0 +1,33 @@
+{% block system %}
+You are a precise technical data synthesizer. Your task is to create a "Master Description" for each object by merging three source descriptions. 
+
+Rules:
+1. You are a helpful assistant. Provide the requested information in strictly valid JSON format. You must output no thinking, no explanations, or other extraneous tokens. Start your response directly with the JSON object.
+2. Every object MUST include exactly these 9 attributes: Type, Color, Size, Material, Composition, Quantity, Relative Location, Orientation, and Connection/Attachments. 
+3. Do not summarize; consolidate.Use a "Superset" approach ie If one source says "4 inches" and another says "10-15 cm", the output must say "4-6 inches (10-15 cm)".
+4. If an attribute is missing in one source but present in another, use the available information. If missing in all, write "Not specified."
+{% endblock %}
+
+{% block user %}
+I have {{ number_of_classes }} technical descriptions of the same image. 
+
+Task: 
+For each object identified across the datasets, synthesize a single, high-fidelity description. 
+For every attribute, combine the specific details from all three sources into a comprehensive "Superset" description. 
+Ensure no specific measurement, material type, or positional detail is discarded.
+
+Output Format:
+- Object [ID] <Name>
+    - <Type>: [Consolidated Detail]
+    - <Color>: [Consolidated Detail]
+    - <Size>: [Include all measurements provided across sources]
+    - <Material>: [Consolidated Detail]
+    - <Composition>: [Consolidated Detail]
+    - <Quantity>: [Consolidated Detail]
+    - <Relative Location>: [Consolidated Detail]
+    - <Orientation>: [Consolidated Detail]
+    - <Connection or Attachments>: [Consolidated Detail]
+
+Input Data:
+{{ description_text }}
+{% endblock %}

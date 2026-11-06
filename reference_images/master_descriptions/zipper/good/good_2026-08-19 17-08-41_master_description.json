@@ -1,0 +1,24 @@
+{
+    "Zipper": {
+        "Type": "standard coil or toothed zipper with interlocking teeth and a central pull tab",
+        "Color": "black, matching the fabric, with a slightly glossy finish on the teeth",
+        "Size": "length appears to be the full height of the fabric strip; width is narrow, consistent with typical zipper construction",
+        "Material": "metal or hard plastic teeth with a smooth, slightly glossy finish",
+        "Composition": "interlocking teeth forming a continuous zipper track connected by a central slider mechanism",
+        "Quantity": "one zipper",
+        "Relative Location": "centered vertically, running down the middle of the fabric",
+        "Orientation": "vertical, aligned with the fabric’s vertical axis",
+        "Connection/Attachments": "directly integrated into the fabric, with teeth interlocked and embedded within the textile on both sides"
+    },
+    "Fabric": {
+        "Type": "textured woven fabric with a tight, uniform pattern resembling a crinkled or puckered surface",
+        "Color": "solid black, with consistent tone throughout",
+        "Size": "width approximately 10-12 inches, length not fully visible but extends vertically / length and width not fully determinable due to cropped view, but appears as a vertical strip",
+        "Material": "synthetic or blended textile, likely polyester or nylon, based on texture and sheen",
+        "Composition": "interlaced threads forming a dense, crinkled weave; no visible fibers or backing",
+        "Quantity": "one continuous piece of fabric",
+        "Relative Location": "occupies the entire vertical frame, flanking the zipper on both sides",
+        "Orientation": "vertical, aligned with the zipper’s central axis",
+        "Connection/Attachments": "directly attached to and encasing the zipper teeth along its length, forming a seam or closure edge"
+    }
+}

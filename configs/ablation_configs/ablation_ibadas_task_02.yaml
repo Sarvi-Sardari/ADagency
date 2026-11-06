@@ -1,0 +1,43 @@
+experiment:
+  name: "ibadas_02"
+  num_runs: 1
+  runs_dir: "outputs/runs_ibadas_task_02"
+  #command_prefix: ["taskset", "-c", "0-7,10-31"]
+  cooldown_seconds: 0
+  #decision_prompt_sequence: 
+  #  - "decision_maker_v2_original_compact.j2"
+
+configs:
+  anomaly_detection: "configs/anomaly_detection_configs_ibadas_task_02.yaml"
+  model: "configs/model_configs.yaml"
+  mask_generation: "configs/mask_generation_configs_ibadas_task_02.yaml"
+  metrics: "configs/metrics_configs_ibadas_task_02.yaml"
+
+stages:
+  detection: true
+  rerun: true
+  masks: true
+  metrics: true
+
+rerun:
+  num_steps: 3
+  # Calibrate rerun need from secondary-class errors, then rerun the globally
+  # lowest-confidence configured steps. Binary-changing results are confirmed
+  # against the independently calibrated binary threshold.
+  policy: "global-secondary"
+
+masks:
+  include_rerun: true
+
+metrics:
+  include_rerun: true
+  combine: true
+  omit: ["aupro"] #aupro is omited from the metrics
+
+telemetry:
+  interval_seconds: 1.0
+  process_specific: true
+  generation_profile: true
+
+aggregation:
+  std_ddof: 1

@@ -1,0 +1,6 @@
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the black plastic casing or metallic leads?
+Step 2: Are any of the three metallic leads bent, warped, crushed, punctured, torn, or snapped?
+Step 3: Is there any missing component compared to the reference image?
+Step 4: Is there any extra debris, foreign object, or liquid present in the image?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the casing or leads?
+Step 6: Is there any significant misalignment or incorrect assembly orientation of the transistor relative to the reference image?

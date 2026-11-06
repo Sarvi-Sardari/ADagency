@@ -1,0 +1,84 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Mesh Grid",
+      "category": "surface_integrity",
+      "part_or_region": "any individual mesh cell",
+      "anomaly_name": "punctured cell",
+      "visual_description": "a small hole or tear visible within one mesh cell, breaking the continuous surface."
+    },
+    {
+      "id": "A002",
+      "object_name": "Mesh Grid",
+      "category": "surface_integrity",
+      "part_or_region": "any individual mesh cell",
+      "anomaly_name": "cracked cell",
+      "visual_description": "a visible crack or split running across one mesh cell, disrupting the grid pattern."
+    },
+    {
+      "id": "A003",
+      "object_name": "Mesh Grid",
+      "category": "surface_integrity",
+      "part_or_region": "any individual mesh cell",
+      "anomaly_name": "scratched cell",
+      "visual_description": "a linear scratch mark visible on the surface of one mesh cell."
+    },
+    {
+      "id": "A004",
+      "object_name": "Mesh Grid",
+      "category": "structural_deformation",
+      "part_or_region": "any individual mesh cell",
+      "anomaly_name": "bent cell",
+      "visual_description": "a mesh cell visibly warped or bent out of its flat plane, creating a 3D distortion."
+    },
+    {
+      "id": "A005",
+      "object_name": "Mesh Grid",
+      "category": "structural_deformation",
+      "part_or_region": "any individual mesh cell",
+      "anomaly_name": "dented cell",
+      "visual_description": "a localized inward depression visible on the surface of one mesh cell."
+    },
+    {
+      "id": "A006",
+      "object_name": "Mesh Grid",
+      "category": "geometry_alignment",
+      "part_or_region": "any row or column of cells",
+      "anomaly_name": "misaligned row",
+      "visual_description": "a row of cells visibly offset or skewed relative to adjacent rows."
+    },
+    {
+      "id": "A007",
+      "object_name": "Mesh Grid",
+      "category": "geometry_alignment",
+      "part_or_region": "any row or column of cells",
+      "anomaly_name": "rotated cell group",
+      "visual_description": "a group of adjacent cells visibly rotated relative to the surrounding grid."
+    },
+    {
+      "id": "A008",
+      "object_name": "Mesh Grid",
+      "category": "missing_component",
+      "part_or_region": "any individual mesh cell",
+      "anomaly_name": "missing cell",
+      "visual_description": "a complete absence of a mesh cell, leaving a blank space where one should be."
+    },
+    {
+      "id": "A009",
+      "object_name": "Mesh Grid",
+      "category": "extra_object",
+      "part_or_region": "any individual mesh cell",
+      "anomaly_name": "extra protrusion",
+      "visual_description": "any object or lump visible on the surface of one mesh cell."
+    },
+    {
+      "id": "A010",
+      "object_name": "Mesh Grid",
+      "category": "finish_color",
+      "part_or_region": "any individual mesh cell",
+      "anomaly_name": "discolored cell",
+      "visual_description": "a mesh cell with a noticeably different shade or tone compared to surrounding cells."
+    }
+  ]
+}

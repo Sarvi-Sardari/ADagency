@@ -1,0 +1,57 @@
+{
+    "Bottom Label": {
+        "Type": "rectangular label with rounded corners, containing text",
+        "Color": "golden-yellow with black printed text and a textured, shimmering surface",
+        "Size": "2 cm by 1.5 cm / 2.5 cm in width and 1.5 cm in height",
+        "Material": "paper or thin cardstock with a metallic or foil finish",
+        "Composition": "features the text '100% Juice' printed in black, centered on the label, in a simple, sans-serif font on a colored background",
+        "Quantity": "one",
+        "Relative Location": "positioned on the lower front surface of the bottle, centered horizontally, around the lower midsection of the bottle, just above the base, and affixed to the lower portion of the bottle's body",
+        "Orientation": "facing forward, parallel to the bottle’s front surface",
+        "Connection/Attachments": "adhered directly to the glass bottle surface with adhesive"
+    },
+    "Bottle": {
+        "Type": "small, rectangular glass bottle with slightly rounded edges and a narrow neck",
+        "Color": "clear glass, allowing visibility of the liquid inside",
+        "Size": "10 cm in height and 3 cm in width at the base / 10 cm in height and 4 cm in width at the widest point",
+        "Material": "glass, likely borosilicate or soda-lime glass",
+        "Composition": "consists of a cylindrical body, a slightly tapered neck, and a flat base, made of clear, transparent glass with a smooth surface",
+        "Quantity": "one",
+        "Relative Location": "positioned centrally in the frame, upright and centered",
+        "Orientation": "upright, with the base flat on a surface",
+        "Connection/Attachments": "sealed with a cap at the top, has two labels attached to its sides, and contains liquid"
+    },
+    "Cap": {
+        "Type": "screw-on cap with threaded neck",
+        "Color": "transparent or clear plastic or glass",
+        "Size": "1.5x1.5cm / 2x2.5cm",
+        "Material": "plastic (likely PET or similar polymer) or glass",
+        "Composition": "solid, cylindrical shape with internal threading for screwing onto the bottle neck, slightly tapered top",
+        "Quantity": "one",
+        "Relative Location": "located at the top opening of the bottle, sealing the neck",
+        "Orientation": "upright, aligned with the bottle’s vertical axis, with the threaded side facing inward toward the bottle neck",
+        "Connection/Attachments": "screwed onto the bottle’s neck, forming a secure seal"
+    },
+    "Liquid": {
+        "Type": "opaque, creamy beverage",
+        "Color": "pale yellow or off-white",
+        "Size": "fills approximately 70-80% of the bottle's volume",
+        "Material": "liquid state, contained within the glass bottle",
+        "Composition": "appears to be a smooth, non-particulate liquid, consistent with banana juice",
+        "Quantity": "one volume unit contained within the bottle",
+        "Relative Location": "situated inside the bottle, occupying the central cavity",
+        "Orientation": "level, with the surface parallel to the bottle's base",
+        "Connection/Attachments": "contained within the bottle, sealed by the cap"
+    },
+    "Top Label": {
+        "Type": "rectangular label with rounded corners, featuring a simple illustration of a banana cluster",
+        "Color": "golden-yellow with a slightly textured or gradient appearance, transitioning from a lighter yellow at the top to a slightly darker yellow at the bottom",
+        "Size": "2.5 cm in width and 3 cm in height / 1 inch in width and 1.18 inches in height",
+        "Material": "paper or thin cardstock with a metallic or foil finish",
+        "Composition": "printed design with black outline around the banana illustration and a colored background",
+        "Quantity": "one",
+        "Relative Location": "positioned on the upper front surface of the bottle, centered horizontally, directly below the neck",
+        "Orientation": "facing forward, parallel to the bottle’s front surface",
+        "Connection/Attachments": "adhered directly to the glass bottle surface with adhesive"
+    }
+}

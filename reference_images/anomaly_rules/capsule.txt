@@ -1,0 +1,180 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "scratched capsule",
+      "visual_description": "visible fine scratches or scuff marks on the surface of the orange half."
+    },
+    {
+      "id": "A002",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "black half of the capsule",
+      "anomaly_name": "scratched capsule",
+      "visual_description": "visible fine scratches or scuff marks on the surface of the black half."
+    },
+    {
+      "id": "A003",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "junction between black and orange halves",
+      "anomaly_name": "cracked capsule junction",
+      "visual_description": "a visible crack or separation line running along the seam where the black and orange halves meet."
+    },
+     {
+      "id": "A004",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "punctured capsule",
+      "visual_description": "a small, visible puncture or indentation on the orange surface."
+    },
+    {
+      "id": "A005",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "black half of the capsule",
+      "anomaly_name": "punctured capsule",
+      "visual_description": "a small, visible puncture or indentation on the black surface."
+    },
+    {
+      "id": "A006",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "dented capsule",
+      "visual_description": "a visible dent or depression on the orange surface."
+    },
+    {
+      "id": "A007",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "black half of the capsule",
+      "anomaly_name": "dented capsule",
+      "visual_description": "a visible dent or depression on the black surface."
+    },
+    {
+      "id": "A008",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "torn capsule",
+      "visual_description": "a visible tear or split on the orange surface."
+    },
+    {
+      "id": "A009",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "black half of the capsule",
+      "anomaly_name": "torn capsule",
+      "visual_description": "a visible tear or split on the black surface."
+    },
+    {
+      "id": "A010",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "junction between black and orange halves",
+      "anomaly_name": "broken capsule junction",
+      "visual_description": "a visible break or fracture along the seam where the black and orange halves meet."
+    },
+    {
+      "id": "A011",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "leaking capsule",
+      "visual_description": "visible residue or substance leaking out from the orange half, staining the surface."
+    },
+    {
+      "id": "A012",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "black half of the capsule",
+      "anomaly_name": "leaking capsule",
+      "visual_description": "visible residue or substance leaking out from the black half, staining the surface."
+    },
+    {
+      "id": "A013",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "cracked capsule",
+      "visual_description": "a visible crack or fracture line running through the orange half."
+    },
+    {
+      "id": "A014",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "black half of the capsule",
+      "anomaly_name": "cracked capsule",
+      "visual_description": "a visible crack or fracture line running through the black half."
+    },
+    {
+      "id": "A015",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "deformed capsule",
+      "visual_description": "the orange half shows visible bulging or irregular shape, not smooth and cylindrical."
+    },
+    {
+      "id": "A016",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "black half of the capsule",
+      "anomaly_name": "deformed capsule",
+      "visual_description": "the black half shows visible bulging or irregular shape, not smooth and cylindrical."
+    },
+    {
+      "id": "A017",
+      "object_name": "capsule",
+      "category": "surface_integrity",
+      "part_or_region": "junction between black and orange halves",
+      "anomaly_name": "deformed capsule junction",
+      "visual_description": "the junction between black and orange halves shows visible bulging or irregular shape."
+    },
+     {
+      "id": "A018",
+      "object_name": "capsule",
+      "category": "print_marking",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "blurred printed marking on capsule",
+      "visual_description": "the printed '500' appears smeared or out of focus, not sharp"
+    },
+    {
+      "id": "A019",
+      "object_name": "capsule",
+      "category": "print_marking",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "incomplete printed marking on capsule",
+      "visual_description": "one or more digits of the '500' are missing or cut off"
+    },
+    {
+      "id": "A020",
+      "object_name": "capsule",
+      "category": "print_marking",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "extra printed marking on capsule",
+      "visual_description": "an additional mark or digit is visible next to or overlapping the '500'"
+    },
+    {
+      "id": "A021",
+      "object_name": "capsule",
+      "category": "print_marking",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "faded printed marking on capsule",
+      "visual_description": "the printed '500' appears lighter or less distinct than the surrounding surface"
+    },
+    {
+      "id": "A022",
+      "object_name": "capsule",
+      "category": "print_marking",
+      "part_or_region": "orange half of the capsule",
+      "anomaly_name": "distorted printed marking on capsule",
+      "visual_description": "the printed '500' appears stretched, warped, or deformed"
+    }
+  ]
+}

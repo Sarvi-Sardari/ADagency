@@ -1,0 +1,116 @@
+2026-08-14 17:24:56 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-14 17:24:56 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-14 17:24:56 | INFO     | __main__ | Dataset  : rs_set_box
+2026-08-14 17:24:56 | INFO     | __main__ | Classes  : single
+2026-08-14 17:24:56 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-14 17:24:56 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/rs_set_box_172456_log.txt
+2026-08-14 17:24:56 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-14 17:24:58 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-14 17:24:58 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:25:00 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:25:00 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-14 17:25:00 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/rs_set_box/train/good/rgb_00497.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/rs_set_box/train/good/rgb_00390.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/rs_set_box/train/good/rgb_00517.png']
+2026-08-14 17:25:00 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-14 17:25:00 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/rs_set_box_object_labels.txt
+2026-08-14 17:25:00 | INFO     | __main__ | Object names: ['drawer organizer']
+2026-08-14 17:25:00 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-14 17:25:00 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/rs_set_box/good
+2026-08-14 17:25:00 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-14 17:25:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:25:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:25:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:25:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:25:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:25:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:25:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:25:00 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:25:06 | INFO     | models | [VLM] Inference completed in 5.465s (max_new_tokens=2040)
+2026-08-14 17:25:06 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/rs_set_box/good/processed_good_rgb_00497_2026-08-14 17:25:06.json (inference_time=5.465s)
+2026-08-14 17:25:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:25:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:25:11 | INFO     | models | [VLM] Inference completed in 4.957s (max_new_tokens=2040)
+2026-08-14 17:25:11 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/rs_set_box/good/processed_good_rgb_00390_2026-08-14 17:25:11.json (inference_time=4.957s)
+2026-08-14 17:25:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:25:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:25:15 | INFO     | models | [VLM] Inference completed in 4.645s (max_new_tokens=2040)
+2026-08-14 17:25:15 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/rs_set_box/good/processed_good_rgb_00517_2026-08-14 17:25:15.json (inference_time=4.645s)
+2026-08-14 17:25:15 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-14 17:25:16 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-14 17:25:18 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-14 17:25:18 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/rs_set_box/good
+2026-08-14 17:25:18 | DEBUG    | descriptor | Processing image description: processed_good_rgb_00517_2026-08-14 17:25:15.json
+2026-08-14 17:25:18 | DEBUG    | descriptor | Raw description data: - Object 1 drawer organizer
+    - Attribute 1 Type - rectangular, multi-compartment organizer with adjustable dividers and shelves
+    - Attribute 2 Color - white exterior with gray interior compartments
+    - Attribute 3 Size - approximately 12 inches in width, 8 inches in depth, and 6 inches in height (estimated based on visual proportions)
+    - Attribute 4 Material - plastic
+    - Attribute 5 Composition - consists of a main frame with internal vertical and horizontal dividers forming multiple compartments of varying sizes
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - positioned centrally in the image, partially open with its lid tilted upward
+    - Attribute 8 Orientation - upright, with the lid open and angled backward
+    - Attribute 9 Connection or Attachments - attached to the inside of a blue plastic drawer or case, with a black handle visible on the right side of the lid
+2026-08-14 17:25:18 | DEBUG    | descriptor | Processing image description: processed_good_rgb_00390_2026-08-14 17:25:11.json
+2026-08-14 17:25:18 | DEBUG    | descriptor | Raw description data: - Object 1 drawer organizer
+    - Attribute 1 Type - rectangular, multi-compartment organizer with vertical dividers and horizontal shelves
+    - Attribute 2 Color - light gray exterior with dark gray or black interior
+    - Attribute 3 Size - approximately 12 inches in width, 8 inches in depth, and 10 inches in height (estimated based on proportions)
+    - Attribute 4 Material - appears to be made of plastic or molded composite material with a textured surface
+    - Attribute 5 Composition - consists of a main frame with vertical dividers forming compartments, horizontal shelves, and a top handle
+    - Attribute 6 Quantity - one unit
+    - Attribute 7 Relative Location - positioned centrally within the image, occupying the majority of the frame
+    - Attribute 8 Orientation - upright, facing forward, with the front panel visible
+    - Attribute 9 Connection or Attachments - includes a black handle at the top for carrying and a black base plate at the bottom for stability
+2026-08-14 17:25:18 | DEBUG    | descriptor | Processing image description: processed_good_rgb_00497_2026-08-14 17:25:06.json
+2026-08-14 17:25:18 | DEBUG    | descriptor | Raw description data: - Object 1 drawer organizer
+    - Attribute 1 Type - rectangular, multi-compartment organizer with adjustable dividers and shelves
+    - Attribute 2 Color - light gray exterior with dark gray or black interior compartments
+    - Attribute 3 Size - approximately 12 inches in width, 8 inches in height, and 6 inches in depth (estimated based on visual proportions)
+    - Attribute 4 Material - plastic or molded polymer, smooth surface finish
+    - Attribute 5 Composition - consists of a main frame with internal dividers, horizontal shelves, and vertical partitions creating multiple compartments
+    - Attribute 6 Quantity - one unit
+    - Attribute 7 Relative Location - centered within the visible frame, mounted or placed inside a larger white surface or cabinet
+    - Attribute 8 Orientation - viewed from a top-down perspective, slightly angled, with the front-facing side open
+    - Attribute 9 Connection or Attachments - has black plastic handles on the left and right sides for pulling out, attached to the frame; internal dividers are fixed within the frame structure
+2026-08-14 17:25:18 | DEBUG    | descriptor | Unique object keys found: {'drawer organizer'}
+2026-08-14 17:25:18 | DEBUG    | descriptor | Class 'good' object description: {'drawer organizer': ['-  Type - rectangular, multi-compartment organizer with adjustable dividers and shelves\n    -  Color - white exterior with gray interior compartments\n    -  Size - approximately 12 inches in width, 8 inches in depth, and 6 inches in height (estimated based on visual proportions)\n    -  Material - plastic\n    -  Composition - consists of a main frame with internal vertical and horizontal dividers forming multiple compartments of varying sizes\n    -  Quantity - one\n    -  Relative Location - positioned centrally in the image, partially open with its lid tilted upward\n    -  Orientation - upright, with the lid open and angled backward\n    -  Connection or Attachments - attached to the inside of a blue plastic drawer or case, with a black handle visible on the right side of the lid', '-  Type - rectangular, multi-compartment organizer with vertical dividers and horizontal shelves\n    -  Color - light gray exterior with dark gray or black interior\n    -  Size - approximately 12 inches in width, 8 inches in depth, and 10 inches in height (estimated based on proportions)\n    -  Material - appears to be made of plastic or molded composite material with a textured surface\n    -  Composition - consists of a main frame with vertical dividers forming compartments, horizontal shelves, and a top handle\n    -  Quantity - one unit\n    -  Relative Location - positioned centrally within the image, occupying the majority of the frame\n    -  Orientation - upright, facing forward, with the front panel visible\n    -  Connection or Attachments - includes a black handle at the top for carrying and a black base plate at the bottom for stability', '-  Type - rectangular, multi-compartment organizer with adjustable dividers and shelves\n    -  Color - light gray exterior with dark gray or black interior compartments\n    -  Size - approximately 12 inches in width, 8 inches in height, and 6 inches in depth (estimated based on visual proportions)\n    -  Material - plastic or molded polymer, smooth surface finish\n    -  Composition - consists of a main frame with internal dividers, horizontal shelves, and vertical partitions creating multiple compartments\n    -  Quantity - one unit\n    -  Relative Location - centered within the visible frame, mounted or placed inside a larger white surface or cabinet\n    -  Orientation - viewed from a top-down perspective, slightly angled, with the front-facing side open\n    -  Connection or Attachments - has black plastic handles on the left and right sides for pulling out, attached to the frame; internal dividers are fixed within the frame structure']}
+2026-08-14 17:25:25 | INFO     | models | [LLM] Inference completed in 7.105s (max_new_tokens=3000)
+2026-08-14 17:25:25 | INFO     | descriptor | [drawer organizer] Object summarisation completed in 7.105s
+2026-08-14 17:25:25 | DEBUG    | descriptor | Summarised description for 'drawer organizer': 
+
+{
+  "drawer organizer": {
+    "Type": "rectangular, multi-compartment organizer with adjustable dividers and shelves",
+    "Color": "white exterior with gray interior compartments or light gray exterior with dark gray or black interior",
+    "Size": "12x8x6 inches / 12x8x6 cm (width x depth x height) or 12x8x10 inches / 12x8x10 cm (width x depth x height)",
+    "Material": "plastic or molded polymer with a textured surface",
+    "Composition": "consists of a main frame with internal vertical and horizontal dividers forming multiple compartments of varying sizes, horizontal shelves, and a top handle",
+    "Quantity": "one unit",
+    "Relative Location": "positioned centrally in the image, partially open with its lid tilted upward or centered within the visible frame, mounted or placed inside a larger white surface or cabinet",
+    "Orientation": "upright, with the lid open and angled backward or upright, facing forward, with the front panel visible or viewed from a top-down perspective, slightly angled, with the front-facing side open",
+    "Connection or Attachments": "attached to the inside of a blue plastic drawer or case, with a black handle visible on the right side of the lid; has black plastic handles on the left and right sides for pulling out, attached to the frame; internal dividers are fixed within the frame structure"
+  }
+}
+2026-08-14 17:25:25 | DEBUG    | descriptor | Master description: {'drawer organizer': {'Type': 'rectangular, multi-compartment organizer with adjustable dividers and shelves', 'Color': 'white exterior with gray interior compartments or light gray exterior with dark gray or black interior', 'Size': '12x8x6 inches / 12x8x6 cm (width x depth x height) or 12x8x10 inches / 12x8x10 cm (width x depth x height)', 'Material': 'plastic or molded polymer with a textured surface', 'Composition': 'consists of a main frame with internal vertical and horizontal dividers forming multiple compartments of varying sizes, horizontal shelves, and a top handle', 'Quantity': 'one unit', 'Relative Location': 'positioned centrally in the image, partially open with its lid tilted upward or centered within the visible frame, mounted or placed inside a larger white surface or cabinet', 'Orientation': 'upright, with the lid open and angled backward or upright, facing forward, with the front panel visible or viewed from a top-down perspective, slightly angled, with the front-facing side open', 'Connection or Attachments': 'attached to the inside of a blue plastic drawer or case, with a black handle visible on the right side of the lid; has black plastic handles on the left and right sides for pulling out, attached to the frame; internal dividers are fixed within the frame structure'}}
+2026-08-14 17:25:25 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-14 17:25:25 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/rs_set_box.txt
+2026-08-14 17:25:25 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=3)
+2026-08-14 17:25:25 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-14 17:25:25 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:25:27 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:25:27 | DEBUG    | planner | Class directories for dataset 'rs_set_box': ['good']
+2026-08-14 17:25:27 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/rs_set_box/good
+2026-08-14 17:25:27 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:25:27 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:25:27 | DEBUG    | planner | Generating planner steps from: good_2026-08-14 17:25:25_master_description.json
+2026-08-14 17:25:29 | INFO     | models | [VLM] Inference completed in 2.287s (max_new_tokens=2040)
+2026-08-14 17:25:29 | INFO     | planner | Planner steps generated in 2.287s (attempt=1, steps=3, approved_rules=3)
+2026-08-14 17:25:29 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/rs_set_box/good/good_2026-08-14 17:25:29_planner.txt
+2026-08-14 17:25:29 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any visible stains, discoloration, or residue on the interior surface of the drawer organizer?
+
+Step 2: Is there any glossy or smeared patches indicating oil or lubricant contamination on the interior surface of the drawer organizer?
+
+Step 3: Is there any presence of parts, components, or objects inside the drawer organizer, contradicting the requirement that it should be empty?
+2026-08-14 17:25:29 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/rs_set_box/performance/performance_20260814_172529.json
+2026-08-14 17:25:29 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/rs_set_box
+2026-08-14 17:25:29 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/rs_set_box_172456_log.txt

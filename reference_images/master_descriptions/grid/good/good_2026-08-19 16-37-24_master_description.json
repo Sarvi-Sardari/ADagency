@@ -1,0 +1,13 @@
+{
+    "Mesh Grid": {
+        "Type": "A repeating pattern of interlocking diamond-shaped cells formed by intersecting lines, creating a continuous, uniform grid structure, or a continuous, interwoven pattern of interconnected diamond-shaped openings formed by intersecting strands.",
+        "Color": "Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and dimensionality, with dark strands and lighter interior diamond cells, or due to surface texture and lighting, but no inherent color.",
+        "Size": "The grid extends across the entire visible frame, with no definitive length or width as it is cropped; individual diamond cells are small and uniform in size relative to the overall pattern, or the visible portion spans the entire frame, with no definitive length or width due to lack of scale reference; the pattern repeats uniformly across the image.",
+        "Material": "Appears to be made of a rigid, possibly metallic or plastic material, suggested by the smooth, slightly reflective surfaces and defined edges of the cells, or a flexible, possibly synthetic or metal wire, exhibiting slight surface texture and curvature.",
+        "Composition": "Composed of intersecting linear elements forming a continuous, repetitive diamond lattice, with each cell bounded by four connected segments, or a network of interlaced, rounded strands forming a repeating diamond lattice structure.",
+        "Quantity": "A single continuous mesh grid, with no separate or discrete units; the entire visible area is filled with the pattern, or one continuous, single unit of mesh grid filling the entire visual field.",
+        "Relative Location": "Occupies the entire central region of the image, filling the frame from edge to edge with no visible gaps or interruptions, or occupies the entire central area of the image, extending from the top edge to the bottom edge and from the left edge to the right edge.",
+        "Orientation": "The grid is oriented diagonally, with the diamond cells aligned at a 45-degree angle relative to the horizontal and vertical axes of the image, or the grid is oriented diagonally, with rows of cells slanting from the top-left to the bottom-right, creating a sense of dynamic perspective.",
+        "Connection or Attachments": "The cells are connected seamlessly at their vertices, forming a continuous, unbroken lattice with no visible fasteners, joints, or attachments to external objects, or the strands are interconnected at junction points to form a continuous, self-supporting lattice with no visible external attachments or fasteners."
+    }
+}

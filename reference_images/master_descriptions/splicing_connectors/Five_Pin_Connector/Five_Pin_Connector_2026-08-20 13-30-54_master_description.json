@@ -1,0 +1,35 @@
+{
+    "RJ45 Connector (Left)": {
+        "Type": "A standard 8P8C modular plug designed for Ethernet networking",
+        "Color": "Transparent plastic housing with bright orange internal strain relief, locking mechanism, and latch components",
+        "Size": "Approximately 1.5 inches in length and 0.5 inches in width / 2.5 cm in height and 1.5 cm in width (excluding the cable)",
+        "Material": "Transparent plastic for the main body and orange plastic for the latch, strain relief, and locking mechanisms",
+        "Composition": "Composed of a transparent plastic shell, orange internal strain relief, metal contacts inside the housing, and a locking mechanism",
+        "Quantity": "One instance",
+        "Relative Location": "Located on the left side of the image, positioned to the left of the Ethernet cable and connected to its left end",
+        "Orientation": "Facing right, with the connector’s front oriented toward the right and the latch facing upwards",
+        "Connection/Attachments": "Connected to the left end of the Ethernet cable, with the cable entering the connector from the right side and its internal wires inserted into the socket"
+    },
+    "RJ45 Connector (Right)": {
+        "Type": "A standard 8P8C modular plug designed for Ethernet networking",
+        "Color": "Transparent plastic housing with bright orange internal strain relief, latch components, and locking mechanism",
+        "Size": "Approximately 1.5 inches in length and 0.5 inches in width / 2.5 cm in height and 1.5 cm in width (excluding the cable)",
+        "Material": "Transparent plastic for the main body and orange plastic for the latch, strain relief, and locking mechanisms",
+        "Composition": "Composed of a transparent plastic shell, orange internal strain relief, metal contacts inside the connector housing, and a locking mechanism",
+        "Quantity": "One instance",
+        "Relative Location": "Located on the right side of the image, positioned to the right of the Ethernet cable and connected to its right end",
+        "Orientation": "Facing left, with the connector’s front (where the cable enters) oriented toward the left and the latch facing upwards",
+        "Connection/Attachments": "Connected to the right end of the Ethernet cable, with the cable entering the connector from the left side and its internal wires inserted into the connector’s socket"
+    },
+    "Ethernet Cable": {
+        "Type": "A standard twisted-pair Ethernet cable with an orange outer jacket and two RJ45 connectors at each end.",
+        "Color": "Bright orange, with a consistent and uniform hue along its entire length.",
+        "Size": "Approximately 10-15 centimeters in length between the connectors, with a width of about 2-3 millimeters based on the visible cross-section, or 0.1 to 0.2 inches in width.",
+        "Material": "Flexible plastic (likely PVC or similar) for the outer jacket, with insulated copper wires for the internal conductors.",
+        "Composition": "Composed of an outer plastic sheath, four twisted pairs of copper wires (eight individual copper conductors total), and internal insulation, with printed text indicating wire gauge and type.",
+        "Quantity": "One instance.",
+        "Relative Location": "Positioned horizontally across the center of the image, connecting the two RJ45 connectors and spanning the central area.",
+        "Orientation": "Lying flat and aligned horizontally, extending from the left connector to the right connector and running parallel to the bottom edge of the image frame.",
+        "Connection/Attachments": "Connected to the RJ45 connector on the left at one end and to the RJ45 connector on the right at the other end, with no other attachments visible."
+    }
+}

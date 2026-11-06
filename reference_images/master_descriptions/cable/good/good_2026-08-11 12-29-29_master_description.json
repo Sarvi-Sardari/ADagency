@@ -1,0 +1,13 @@
+{
+    "cable": {
+        "Type": "electrical cable",
+        "Color": "black with yellow stripes",
+        "Size": "5x5cm / 2x2 inches",
+        "Material": "flexible PVC sheath",
+        "Composition": "copper conductor core with insulating PVC layer",
+        "Quantity": "one unit",
+        "Relative Location": "mounted on the wall near the power outlet",
+        "Orientation": "horizontal and slightly angled downward",
+        "Connection or Attachments": "connected to a wall-mounted outlet with a screw terminal"
+    }
+}

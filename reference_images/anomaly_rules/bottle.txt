@@ -1,0 +1,68 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Glass Rim",
+      "category": "surface_integrity",
+      "part_or_region": "Glass Rim",
+      "anomaly_name": "Scratch on Rim",
+      "visual_description": "A visible linear scratch along the outer edge of the Glass Rim."
+    },
+    {
+      "id": "A002",
+      "object_name": "Glass Rim",
+      "category": "surface_integrity",
+      "part_or_region": "Glass Rim",
+      "anomaly_name": "Stain on Rim",
+      "visual_description": "A discolored patch or stain on the outer edge of the Glass Rim."
+    },
+    {
+      "id": "A003",
+      "object_name": "Inner Bottle Wall",
+      "category": "surface_integrity",
+      "part_or_region": "Inner Bottle Wall",
+      "anomaly_name": "Crack on Inner Wall",
+      "visual_description": "A visible crack or fissure running along the inner surface of the Inner Bottle Wall."
+    },
+    {
+      "id": "A004",
+      "object_name": "Central Aperture",
+      "category": "surface_integrity",
+      "part_or_region": "Central Aperture",
+      "anomaly_name": "Foreign Particle in Aperture",
+      "visual_description": "A small, distinct object or speck visible inside the Central Aperture."
+    },
+    {
+      "id": "A005",
+      "object_name": "Bottle Neck Opening",
+      "category": "surface_integrity",
+      "part_or_region": "Bottle Neck Opening",
+      "anomaly_name": "Dent in Neck Opening",
+      "visual_description": "A visible inward indentation or dent on the inner surface of the Bottle Neck Opening."
+    },
+    {
+      "id": "A006",
+      "object_name": "Glass Rim",
+      "category": "geometry_alignment",
+      "part_or_region": "Glass Rim",
+      "anomaly_name": "Rim Misalignment",
+      "visual_description": "The outer edge of the Glass Rim appears uneven or misaligned with the inner wall."
+    },
+    {
+      "id": "A007",
+      "object_name": "Glass Rim",
+      "category": "finish_color",
+      "part_or_region": "Glass Rim",
+      "anomaly_name": "Discoloration on Rim",
+      "visual_description": "A section of the Glass Rim shows a different color or tone compared to the rest."
+    },
+    {
+      "id": "A008",
+      "object_name": "Bottle Neck Opening",
+      "category": "surface_integrity",
+      "part_or_region": "Bottle Neck Opening",
+      "anomaly_name": "Puncture in Neck Opening",
+      "visual_description": "A small hole or puncture visible on the inner surface of the Bottle Neck Opening."
+    }
+  ]
+}

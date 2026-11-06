@@ -1,0 +1,56 @@
+{% block system %}
+You are a precise technical data synthesizer. Your task is to create a "Master Description" for each object by merging source descriptions. 
+
+Rules:
+1. You are a helpful assistant. Provide the requested information in strictly valid JSON format. You must output no thinking, no explanations, or other extraneous tokens. Start your response directly with the JSON object.
+2. Every object MUST include exactly these 9 attributes: Type, Color, Size, Material, Composition, Quantity, Relative Location, Orientation, and Connection/Attachments. 
+3. SYNTHESIS RULE: Treat the input like three different witnesses describing the same crime scene. Your job is to write ONE cohesive report that captures all unique details without repeating the same observation twice.
+4. CONFLICT RESOLUTION: If descriptions vary, prioritize the most specific technical detail. If values are physically different (like different measurements), include both as a range or a list of alternatives.
+5. Return exactly ONE top-level JSON property whose key is exactly the requested object name. The source descriptions are evidence to merge; never return one JSON object per source description.
+6. JSON SAFETY: Escape double quotes occurring inside string values as \" and encode line breaks inside strings as \\n. Do not use trailing commas.
+{% endblock %}
+
+{% block user %}
+Below is a list of object descriptions for: {{ object_name }}
+
+Task:
+- Synthesize the descriptions into a single Master Entry.
+- The only top-level key must be exactly: {{ object_name | tojson }}
+- **De-duplication Rule**: If multiple sources mention the same detail, mention it only once.
+- **Detail Density**: If one source provides a generic term and another provides a specific term ("thin flexible PVC"), use the specific term.
+- **Formatting**: For the "Size" field, include all unique dimensions provided (e.g., "5x5cm / 2x2 inches"). For all other fields, create one cohesive sentence.
+
+Input:
+{{ description_text }}
+
+{% if previous_response and validation_error %}
+CORRECTION REQUIRED:
+Your previous response was rejected for this reason:
+{{ validation_error }}
+
+Rejected response:
+<rejected_response>
+{{ previous_response }}
+</rejected_response>
+
+Regenerate the answer from the original Input above. Return one newly synthesized,
+strictly valid JSON object. Do not repeat separate entries for the source descriptions.
+{% endif %}
+
+Output Format:
+
+{
+  {{ object_name | tojson }}: {
+    "Type": "...",
+    "Color": "...",
+    "Size": "...",
+    "Material": "...",
+    "Composition": "...",
+    "Quantity": "...",
+    "Relative Location": "...",
+    "Orientation": "...",
+    "Connection/Attachments": "..."
+  }
+}
+
+{% endblock %}

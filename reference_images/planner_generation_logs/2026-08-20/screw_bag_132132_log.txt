@@ -1,0 +1,355 @@
+2026-08-20 13:21:32 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-20 13:21:32 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-20 13:21:32 | INFO     | __main__ | Dataset  : screw_bag
+2026-08-20 13:21:32 | INFO     | __main__ | Classes  : single
+2026-08-20 13:21:32 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-20 13:21:32 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-20/screw_bag_132132_log.txt
+2026-08-20 13:21:32 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-20 13:21:34 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-20 13:21:34 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-20 13:21:36 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-20 13:21:36 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-20 13:21:36 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/screw_bag/train/good/235.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/screw_bag/train/good/031.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/screw_bag/train/good/277.png']
+2026-08-20 13:21:36 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-20 13:21:36 | INFO     | object_namer | [Object Namer] Loaded 5 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/screw_bag_object_labels.txt
+2026-08-20 13:21:36 | INFO     | __main__ | Object names: ['plastic bag', 'nut', 'Shorter bolt', 'washer', 'Longer bolt']
+2026-08-20 13:21:36 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-20 13:21:36 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/screw_bag/good
+2026-08-20 13:21:36 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-20 13:21:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-20 13:21:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 13:21:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 13:21:58 | INFO     | models | [VLM] Inference completed in 21.225s (max_new_tokens=2040)
+2026-08-20 13:21:58 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw_bag/good/processed_good_235_2026-08-20 13:21:58.json (inference_time=21.225s)
+2026-08-20 13:21:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 13:21:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 13:22:20 | INFO     | models | [VLM] Inference completed in 21.765s (max_new_tokens=2040)
+2026-08-20 13:22:20 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw_bag/good/processed_good_031_2026-08-20 13:22:20.json (inference_time=21.765s)
+2026-08-20 13:22:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 13:22:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 13:22:41 | INFO     | models | [VLM] Inference completed in 21.512s (max_new_tokens=2040)
+2026-08-20 13:22:41 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw_bag/good/processed_good_277_2026-08-20 13:22:41.json (inference_time=21.512s)
+2026-08-20 13:22:41 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-20 13:22:42 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-20 13:22:43 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-20 13:22:43 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw_bag/good
+2026-08-20 13:22:43 | DEBUG    | descriptor | Processing image description: processed_good_277_2026-08-20 13:22:41.json
+2026-08-20 13:22:43 | DEBUG    | descriptor | Raw description data: - plastic bag
+    - Attribute 1 <Type> - transparent, resealable plastic bag with a zipper closure
+    - Attribute 2 <Color> - clear with white printed recycling symbols and text along the zipper seam
+    - Attribute 3 <Size> - rectangular, approximately 10 cm wide and 15 cm long, with a slightly crumpled surface
+    - Attribute 4 <Material> - thin, flexible plastic, likely polyethylene
+    - Attribute 5 <Composition> - composed of a single layer of plastic film with printed markings
+    - Attribute 6 <Quantity> - one
+    - Attribute 7 <Relative Location> - occupies the central area of the image, containing all other objects
+    - Attribute 8 <Orientation> - lying flat, with the zipper seam oriented vertically along the right edge
+    - Attribute 9 <Connection or Attachments> - contains and holds the hardware components inside; no external attachments
+
+- nut
+    - Attribute 1 <Type> - hexagonal steel nut with internal threading
+    - Attribute 2 <Color> - silver-gray metallic finish
+    - Attribute 3 <Size> - approximately 1 cm in width (diameter) and 0.5 cm in height
+    - Attribute 4 <Material> - steel
+    - Attribute 5 <Composition> - composed of a hexagonal outer shape with a threaded inner bore
+    - Attribute 6 <Quantity> - two
+    - Attribute 7 <Relative Location> - one nut is positioned near the top right, the other is near the bottom center of the bag
+    - Attribute 8 <Orientation> - both are oriented with one flat side facing upward
+    - Attribute 9 <Connection or Attachments> - not connected to any other object; appears loose within the bag
+
+- Shorter bolt
+    - Attribute 1 <Type> - hex head bolt with threaded shank
+    - Attribute 2 <Color> - silver-gray metallic finish
+    - Attribute 3 <Size> - approximately 2.5 cm in length from head to tip, with a hex head of about 0.8 cm
+    - Attribute 4 <Material> - steel
+    - Attribute 5 <Composition> - composed of a hexagonal head and a cylindrical threaded shaft
+    - Attribute 6 <Quantity> - one
+    - Attribute 7 <Relative Location> - located on the left side of the bag, leaning diagonally
+    - Attribute 8 <Orientation> - oriented with the head pointing toward the top left and the threaded end pointing toward the bottom right
+    - Attribute 9 <Connection or Attachments> - not connected to any other object; appears loose within the bag
+
+- washer
+    - Attribute 1 <Type> - flat, circular steel washer with a central hole
+    - Attribute 2 <Color> - silver-gray metallic finish
+    - Attribute 3 <Size> - approximately 1.2 cm in diameter and 0.1 cm in thickness
+    - Attribute 4 <Material> - steel
+    - Attribute 5 <Composition> - composed of a thin circular disc with a central hole for bolt passage
+    - Attribute 6 <Quantity> - two
+    - Attribute 7 <Relative Location> - one washer is near the top center, the other is near the center-left of the bag
+    - Attribute 8 <Orientation> - both are lying flat with the central hole facing upward
+    - Attribute 9 <Connection or Attachments> - not connected to any other object; appears loose within the bag
+
+- Longer bolt
+    - Attribute 1 <Type> - hex head bolt with threaded shank
+    - Attribute 2 <Color> - silver-gray metallic finish
+    - Attribute 3 <Size> - approximately 4 cm in length from head to tip, with a hex head of about 0.8 cm
+    - Attribute 4 <Material> - steel
+    - Attribute 5 <Composition> - composed of a hexagonal head and a cylindrical threaded shaft
+    - Attribute 6 <Quantity> - one
+    - Attribute 7 <Relative Location> - located in the center-left area of the bag, lying horizontally
+    - Attribute 8 <Orientation> - oriented with the head pointing to the left and the threaded end pointing to the right
+    - Attribute 9 <Connection or Attachments> - not connected to any other object; appears loose within the bag
+2026-08-20 13:22:43 | DEBUG    | descriptor | Processing image description: processed_good_031_2026-08-20 13:22:20.json
+2026-08-20 13:22:43 | DEBUG    | descriptor | Raw description data: - plastic bag
+    - Attribute 1 <Type> - transparent, resealable plastic bag with a zipper-like closure mechanism on the right side
+    - Attribute 2 <Color> - clear, allowing visibility of contents inside
+    - Attribute 3 <Size> - rectangular, approximately 10 cm in width and 15 cm in length (estimated from visual proportions)
+    - Attribute 4 <Material> - thin, flexible plastic, likely polyethylene or similar polymer
+    - Attribute 5 <Composition> - composed of a single layer of plastic film with a sealed edge on the right side
+    - Attribute 6 <Quantity> - one plastic bag
+    - Attribute 7 <Relative Location> - occupies the central area of the image, positioned horizontally
+    - Attribute 8 <Orientation> - oriented horizontally, with the sealed edge on the right
+    - Attribute 9 <Connection or Attachments> - contains metal hardware components inside; no external attachments visible
+
+- nut
+    - Attribute 1 <Type> - hexagonal head bolt nut with internal threading
+    - Attribute 2 <Color> - silver-gray, metallic finish
+    - Attribute 3 <Size> - approximately 10 mm in diameter and 6 mm in height (estimated from visual proportions)
+    - Attribute 4 <Material> - metal, likely steel or aluminum alloy
+    - Attribute 5 <Composition> - composed of a hexagonal outer shell with internal threading
+    - Attribute 6 <Quantity> - one nut
+    - Attribute 7 <Relative Location> - located near the center of the plastic bag, positioned above the shorter bolt
+    - Attribute 8 <Orientation> - oriented with one flat side facing upward
+    - Attribute 9 <Connection or Attachments> - not attached to any other component; appears loose within the bag
+
+- Shorter bolt
+    - Attribute 1 <Type> - hexagonal head bolt with threaded shaft
+    - Attribute 2 <Color> - silver-gray, metallic finish
+    - Attribute 3 <Size> - approximately 25 mm in length and 6 mm in diameter (estimated from visual proportions)
+    - Attribute 4 <Material> - metal, likely steel or aluminum alloy
+    - Attribute 5 <Composition> - composed of a hexagonal head and a threaded cylindrical shaft
+    - Attribute 6 <Quantity> - one Shorter bolt
+    - Attribute 7 <Relative Location> - located in the lower-left quadrant of the plastic bag, positioned below the nut
+    - Attribute 8 <Orientation> - oriented with the head pointing upward and the threaded shaft pointing downward
+    - Attribute 9 <Connection or Attachments> - not attached to any other component; appears loose within the bag
+
+- washer
+    - Attribute 1 <Type> - flat, circular metal washer with a central hole
+    - Attribute 2 <Color> - silver-gray, metallic finish
+    - Attribute 3 <Size> - approximately 10 mm in outer diameter and 1 mm in thickness (estimated from visual proportions)
+    - Attribute 4 <Material> - metal, likely steel or aluminum alloy
+    - Attribute 5 <Composition> - composed of a flat, circular disc with a central hole
+    - Attribute 6 <Quantity> - one washer
+    - Attribute 7 <Relative Location> - located near the center of the plastic bag, positioned above the shorter bolt
+    - Attribute 8 <Orientation> - oriented with the flat side facing upward
+    - Attribute 9 <Connection or Attachments> - not attached to any other component; appears loose within the bag
+
+- Longer bolt
+    - Attribute 1 <Type> - hexagonal head bolt with threaded shaft
+    - Attribute 2 <Color> - silver-gray, metallic finish
+    - Attribute 3 <Size> - approximately 35 mm in length and 6 mm in diameter (estimated from visual proportions)
+    - Attribute 4 <Material> - metal, likely steel or aluminum alloy
+    - Attribute 5 <Composition> - composed of a hexagonal head and a threaded cylindrical shaft
+    - Attribute 6 <Quantity> - one Longer bolt
+    - Attribute 7 <Relative Location> - located in the upper-right quadrant of the plastic bag, positioned above the nut
+    - Attribute 8 <Orientation> - oriented with the head pointing upward and the threaded shaft pointing downward
+    - Attribute 9 <Connection or Attachments> - not attached to any other component; appears loose within the bag
+2026-08-20 13:22:43 | DEBUG    | descriptor | Processing image description: processed_good_235_2026-08-20 13:21:58.json
+2026-08-20 13:22:43 | DEBUG    | descriptor | Raw description data: - plastic bag
+    - Attribute 1 <Type> - transparent, resealable plastic bag with a zipper closure
+    - Attribute 2 <Color> - clear, allowing contents to be visible
+    - Attribute 3 <Size> - approximately 10 cm in width and 15 cm in length, based on visible proportions
+    - Attribute 4 <Material> - polyethylene (PE-LD), as indicated by recycling symbols
+    - Attribute 5 <Composition> - composed of thin, flexible plastic film with a sealed seam along one edge
+    - Attribute 6 <Quantity> - one bag
+    - Attribute 7 <Relative Location> - occupies the central area of the image, with contents visible inside
+    - Attribute 8 <Orientation> - oriented horizontally, with the zipper closure on the right side
+    - Attribute 9 <Connection or Attachments> - contains fasteners inside; no external attachments visible
+
+- nut
+    - Attribute 1 <Type> - hexagonal metal nut with internal threading
+    - Attribute 2 <Color> - silver-gray, metallic finish
+    - Attribute 3 <Size> - approximately 1 cm in width and height, based on visible proportions
+    - Attribute 4 <Material> - metal, likely steel or aluminum alloy
+    - Attribute 5 <Composition> - composed of a hexagonal head with internal threads for bolt engagement
+    - Attribute 6 <Quantity> - one nut
+    - Attribute 7 <Relative Location> - located near the center of the bag, positioned above the bolts
+    - Attribute 8 <Orientation> - oriented with one flat side facing upward
+    - Attribute 9 <Connection or Attachments> - designed to be threaded onto the bolt; currently separate from bolts
+
+- Shorter bolt
+    - Attribute 1 <Type> - metal bolt with external threading and a hexagonal head
+    - Attribute 2 <Color> - silver-gray, metallic finish
+    - Attribute 3 <Size> - approximately 3 cm in length, based on visible proportions
+    - Attribute 4 <Material> - metal, likely steel or aluminum alloy
+    - Attribute 5 <Composition> - composed of a threaded shaft and a hexagonal head for tool engagement
+    - Attribute 6 <Quantity> - one bolt
+    - Attribute 7 <Relative Location> - located below the nut, positioned horizontally within the bag
+    - Attribute 8 <Orientation> - oriented horizontally, with the threaded end pointing to the right
+    - Attribute 9 <Connection or Attachments> - designed to be connected with a nut; currently separate from nut
+
+- washer
+    - Attribute 1 <Type> - flat, circular metal washer with a central hole
+    - Attribute 2 <Color> - silver-gray, metallic finish
+    - Attribute 3 <Size> - approximately 1 cm in diameter, based on visible proportions
+    - Attribute 4 <Material> - metal, likely steel or aluminum alloy
+    - Attribute 5 <Composition> - composed of a flat, circular disc with a central hole for bolt passage
+    - Attribute 6 <Quantity> - three washers
+    - Attribute 7 <Relative Location> - located above the nut and bolts, arranged in a triangular pattern
+    - Attribute 8 <Orientation> - oriented with the central hole facing upward
+    - Attribute 9 <Connection or Attachments> - designed to be placed between the bolt and nut to distribute load; currently separate from bolts and nut
+
+- Longer bolt
+    - Attribute 1 <Type> - metal bolt with external threading and a hexagonal head
+    - Attribute 2 <Color> - silver-gray, metallic finish
+    - Attribute 3 <Size> - approximately 4 cm in length, based on visible proportions
+    - Attribute 4 <Material> - metal, likely steel or aluminum alloy
+    - Attribute 5 <Composition> - composed of a threaded shaft and a hexagonal head for tool engagement
+    - Attribute 6 <Quantity> - one bolt
+    - Attribute 7 <Relative Location> - located below the shorter bolt, positioned horizontally within the bag
+    - Attribute 8 <Orientation> - oriented horizontally, with the threaded end pointing to the right
+    - Attribute 9 <Connection or Attachments> - designed to be connected with a nut; currently separate from nut
+2026-08-20 13:22:43 | DEBUG    | descriptor | Unique object keys found: {'nut', 'Longer bolt', 'washer', 'plastic bag', 'Shorter bolt'}
+2026-08-20 13:22:43 | DEBUG    | descriptor | Class 'good' object description: {'nut': ['-  <Type> - hexagonal steel nut with internal threading\n    -  <Color> - silver-gray metallic finish\n    -  <Size> - approximately 1 cm in width (diameter) and 0.5 cm in height\n    -  <Material> - steel\n    -  <Composition> - composed of a hexagonal outer shape with a threaded inner bore\n    -  <Quantity> - two\n    -  <Relative Location> - one nut is positioned near the top right, the other is near the bottom center of the bag\n    -  <Orientation> - both are oriented with one flat side facing upward\n    -  <Connection or Attachments> - not connected to any other object; appears loose within the bag', '-  <Type> - hexagonal head bolt nut with internal threading\n    -  <Color> - silver-gray, metallic finish\n    -  <Size> - approximately 10 mm in diameter and 6 mm in height (estimated from visual proportions)\n    -  <Material> - metal, likely steel or aluminum alloy\n    -  <Composition> - composed of a hexagonal outer shell with internal threading\n    -  <Quantity> - one nut\n    -  <Relative Location> - located near the center of the plastic bag, positioned above the shorter bolt\n    -  <Orientation> - oriented with one flat side facing upward\n    -  <Connection or Attachments> - not attached to any other component; appears loose within the bag', '-  <Type> - hexagonal metal nut with internal threading\n    -  <Color> - silver-gray, metallic finish\n    -  <Size> - approximately 1 cm in width and height, based on visible proportions\n    -  <Material> - metal, likely steel or aluminum alloy\n    -  <Composition> - composed of a hexagonal head with internal threads for bolt engagement\n    -  <Quantity> - one nut\n    -  <Relative Location> - located near the center of the bag, positioned above the bolts\n    -  <Orientation> - oriented with one flat side facing upward\n    -  <Connection or Attachments> - designed to be threaded onto the bolt; currently separate from bolts'], 'Longer bolt': ['-  <Type> - hex head bolt with threaded shank\n    -  <Color> - silver-gray metallic finish\n    -  <Size> - approximately 4 cm in length from head to tip, with a hex head of about 0.8 cm\n    -  <Material> - steel\n    -  <Composition> - composed of a hexagonal head and a cylindrical threaded shaft\n    -  <Quantity> - one\n    -  <Relative Location> - located in the center-left area of the bag, lying horizontally\n    -  <Orientation> - oriented with the head pointing to the left and the threaded end pointing to the right\n    -  <Connection or Attachments> - not connected to any other object; appears loose within the bag', '-  <Type> - hexagonal head bolt with threaded shaft\n    -  <Color> - silver-gray, metallic finish\n    -  <Size> - approximately 35 mm in length and 6 mm in diameter (estimated from visual proportions)\n    -  <Material> - metal, likely steel or aluminum alloy\n    -  <Composition> - composed of a hexagonal head and a threaded cylindrical shaft\n    -  <Quantity> - one Longer bolt\n    -  <Relative Location> - located in the upper-right quadrant of the plastic bag, positioned above the nut\n    -  <Orientation> - oriented with the head pointing upward and the threaded shaft pointing downward\n    -  <Connection or Attachments> - not attached to any other component; appears loose within the bag', '-  <Type> - metal bolt with external threading and a hexagonal head\n    -  <Color> - silver-gray, metallic finish\n    -  <Size> - approximately 4 cm in length, based on visible proportions\n    -  <Material> - metal, likely steel or aluminum alloy\n    -  <Composition> - composed of a threaded shaft and a hexagonal head for tool engagement\n    -  <Quantity> - one bolt\n    -  <Relative Location> - located below the shorter bolt, positioned horizontally within the bag\n    -  <Orientation> - oriented horizontally, with the threaded end pointing to the right\n    -  <Connection or Attachments> - designed to be connected with a nut; currently separate from nut'], 'washer': ['-  <Type> - flat, circular steel washer with a central hole\n    -  <Color> - silver-gray metallic finish\n    -  <Size> - approximately 1.2 cm in diameter and 0.1 cm in thickness\n    -  <Material> - steel\n    -  <Composition> - composed of a thin circular disc with a central hole for bolt passage\n    -  <Quantity> - two\n    -  <Relative Location> - one washer is near the top center, the other is near the center-left of the bag\n    -  <Orientation> - both are lying flat with the central hole facing upward\n    -  <Connection or Attachments> - not connected to any other object; appears loose within the bag', '-  <Type> - flat, circular metal washer with a central hole\n    -  <Color> - silver-gray, metallic finish\n    -  <Size> - approximately 10 mm in outer diameter and 1 mm in thickness (estimated from visual proportions)\n    -  <Material> - metal, likely steel or aluminum alloy\n    -  <Composition> - composed of a flat, circular disc with a central hole\n    -  <Quantity> - one washer\n    -  <Relative Location> - located near the center of the plastic bag, positioned above the shorter bolt\n    -  <Orientation> - oriented with the flat side facing upward\n    -  <Connection or Attachments> - not attached to any other component; appears loose within the bag', '-  <Type> - flat, circular metal washer with a central hole\n    -  <Color> - silver-gray, metallic finish\n    -  <Size> - approximately 1 cm in diameter, based on visible proportions\n    -  <Material> - metal, likely steel or aluminum alloy\n    -  <Composition> - composed of a flat, circular disc with a central hole for bolt passage\n    -  <Quantity> - three washers\n    -  <Relative Location> - located above the nut and bolts, arranged in a triangular pattern\n    -  <Orientation> - oriented with the central hole facing upward\n    -  <Connection or Attachments> - designed to be placed between the bolt and nut to distribute load; currently separate from bolts and nut'], 'plastic bag': ['-  <Type> - transparent, resealable plastic bag with a zipper closure\n    -  <Color> - clear with white printed recycling symbols and text along the zipper seam\n    -  <Size> - rectangular, approximately 10 cm wide and 15 cm long, with a slightly crumpled surface\n    -  <Material> - thin, flexible plastic, likely polyethylene\n    -  <Composition> - composed of a single layer of plastic film with printed markings\n    -  <Quantity> - one\n    -  <Relative Location> - occupies the central area of the image, containing all other objects\n    -  <Orientation> - lying flat, with the zipper seam oriented vertically along the right edge\n    -  <Connection or Attachments> - contains and holds the hardware components inside; no external attachments', '-  <Type> - transparent, resealable plastic bag with a zipper-like closure mechanism on the right side\n    -  <Color> - clear, allowing visibility of contents inside\n    -  <Size> - rectangular, approximately 10 cm in width and 15 cm in length (estimated from visual proportions)\n    -  <Material> - thin, flexible plastic, likely polyethylene or similar polymer\n    -  <Composition> - composed of a single layer of plastic film with a sealed edge on the right side\n    -  <Quantity> - one plastic bag\n    -  <Relative Location> - occupies the central area of the image, positioned horizontally\n    -  <Orientation> - oriented horizontally, with the sealed edge on the right\n    -  <Connection or Attachments> - contains metal hardware components inside; no external attachments visible', '-  <Type> - transparent, resealable plastic bag with a zipper closure\n    -  <Color> - clear, allowing contents to be visible\n    -  <Size> - approximately 10 cm in width and 15 cm in length, based on visible proportions\n    -  <Material> - polyethylene (PE-LD), as indicated by recycling symbols\n    -  <Composition> - composed of thin, flexible plastic film with a sealed seam along one edge\n    -  <Quantity> - one bag\n    -  <Relative Location> - occupies the central area of the image, with contents visible inside\n    -  <Orientation> - oriented horizontally, with the zipper closure on the right side\n    -  <Connection or Attachments> - contains fasteners inside; no external attachments visible'], 'Shorter bolt': ['-  <Type> - hex head bolt with threaded shank\n    -  <Color> - silver-gray metallic finish\n    -  <Size> - approximately 2.5 cm in length from head to tip, with a hex head of about 0.8 cm\n    -  <Material> - steel\n    -  <Composition> - composed of a hexagonal head and a cylindrical threaded shaft\n    -  <Quantity> - one\n    -  <Relative Location> - located on the left side of the bag, leaning diagonally\n    -  <Orientation> - oriented with the head pointing toward the top left and the threaded end pointing toward the bottom right\n    -  <Connection or Attachments> - not connected to any other object; appears loose within the bag', '-  <Type> - hexagonal head bolt with threaded shaft\n    -  <Color> - silver-gray, metallic finish\n    -  <Size> - approximately 25 mm in length and 6 mm in diameter (estimated from visual proportions)\n    -  <Material> - metal, likely steel or aluminum alloy\n    -  <Composition> - composed of a hexagonal head and a threaded cylindrical shaft\n    -  <Quantity> - one Shorter bolt\n    -  <Relative Location> - located in the lower-left quadrant of the plastic bag, positioned below the nut\n    -  <Orientation> - oriented with the head pointing upward and the threaded shaft pointing downward\n    -  <Connection or Attachments> - not attached to any other component; appears loose within the bag', '-  <Type> - metal bolt with external threading and a hexagonal head\n    -  <Color> - silver-gray, metallic finish\n    -  <Size> - approximately 3 cm in length, based on visible proportions\n    -  <Material> - metal, likely steel or aluminum alloy\n    -  <Composition> - composed of a threaded shaft and a hexagonal head for tool engagement\n    -  <Quantity> - one bolt\n    -  <Relative Location> - located below the nut, positioned horizontally within the bag\n    -  <Orientation> - oriented horizontally, with the threaded end pointing to the right\n    -  <Connection or Attachments> - designed to be connected with a nut; currently separate from nut']}
+2026-08-20 13:22:48 | INFO     | models | [LLM] Inference completed in 4.220s (max_new_tokens=3000)
+2026-08-20 13:22:48 | INFO     | descriptor | [nut] Object summarisation completed in 4.220s
+2026-08-20 13:22:48 | DEBUG    | descriptor | Summarised description for 'nut': 
+
+{
+  "nut": {
+    "Type": "hexagonal metal nut with internal threading",
+    "Color": "silver-gray, metallic finish",
+    "Size": "1 cm in width and height / 10 mm in diameter and 6 mm in height",
+    "Material": "metal, likely steel or aluminum alloy",
+    "Composition": "composed of a hexagonal head with internal threads for bolt engagement",
+    "Quantity": "two",
+    "Relative Location": "one nut is positioned near the top right, the other is near the bottom center of the bag; located near the center of the bag, positioned above the bolts",
+    "Orientation": "oriented with one flat side facing upward",
+    "Connection/Attachments": "designed to be threaded onto the bolt; currently separate from bolts; not connected to any other object; appears loose within the bag"
+  }
+}
+2026-08-20 13:22:52 | INFO     | models | [LLM] Inference completed in 4.385s (max_new_tokens=3000)
+2026-08-20 13:22:52 | INFO     | descriptor | [Longer bolt] Object summarisation completed in 4.385s
+2026-08-20 13:22:52 | DEBUG    | descriptor | Summarised description for 'Longer bolt': 
+
+{
+  "Longer bolt": {
+    "Type": "hex head bolt with threaded shank",
+    "Color": "silver-gray metallic finish",
+    "Size": "4 cm in length from head to tip, 35 mm in length and 6 mm in diameter",
+    "Material": "steel",
+    "Composition": "composed of a hexagonal head and a cylindrical threaded shaft",
+    "Quantity": "one",
+    "Relative Location": "located in the center-left area of the bag, lying horizontally, below the shorter bolt, positioned horizontally within the bag",
+    "Orientation": "oriented with the head pointing to the left and the threaded end pointing to the right, oriented horizontally, with the threaded end pointing to the right",
+    "Connection/Attachments": "designed to be connected with a nut; currently separate from nut; not connected to any other object; appears loose within the bag"
+  }
+}
+2026-08-20 13:22:57 | INFO     | models | [LLM] Inference completed in 5.117s (max_new_tokens=3000)
+2026-08-20 13:22:57 | INFO     | descriptor | [washer] Object summarisation completed in 5.117s
+2026-08-20 13:22:57 | DEBUG    | descriptor | Summarised description for 'washer': 
+
+{
+  "washer": {
+    "Type": "flat, circular metal washer with a central hole",
+    "Color": "silver-gray, metallic finish",
+    "Size": "1.2 cm in diameter and 0.1 cm in thickness / 10 mm in outer diameter and 1 mm in thickness / approximately 1 cm in diameter",
+    "Material": "metal, likely steel or aluminum alloy",
+    "Composition": "composed of a flat, circular disc with a central hole for bolt passage",
+    "Quantity": "three",
+    "Relative Location": "one washer is near the top center, the other is near the center-left of the bag, located near the center of the plastic bag, positioned above the shorter bolt, located above the nut and bolts, arranged in a triangular pattern",
+    "Orientation": "oriented with the central hole facing upward",
+    "Connection/Attachments": "designed to be placed between the bolt and nut to distribute load; currently separate from bolts and nut; not connected to any other object; appears loose within the bag"
+  }
+}
+2026-08-20 13:23:01 | INFO     | models | [LLM] Inference completed in 4.174s (max_new_tokens=3000)
+2026-08-20 13:23:01 | INFO     | descriptor | [plastic bag] Object summarisation completed in 4.174s
+2026-08-20 13:23:01 | DEBUG    | descriptor | Summarised description for 'plastic bag': 
+
+{
+  "plastic bag": {
+    "Type": "transparent, resealable plastic bag with a zipper closure",
+    "Color": "clear with white printed recycling symbols and text along the zipper seam",
+    "Size": "10 cm wide and 15 cm long / 4 inches wide and 6 inches long",
+    "Material": "thin, flexible plastic, likely polyethylene (PE-LD)",
+    "Composition": "composed of a single layer of plastic film with printed markings and a sealed seam along one edge",
+    "Quantity": "one",
+    "Relative Location": "occupies the central area of the image, containing all other objects",
+    "Orientation": "lying flat, with the zipper seam oriented vertically along the right edge",
+    "Connection/Attachments": "contains and holds the hardware components inside; no external attachments"
+  }
+}
+2026-08-20 13:23:06 | INFO     | models | [LLM] Inference completed in 4.590s (max_new_tokens=3000)
+2026-08-20 13:23:06 | INFO     | descriptor | [Shorter bolt] Object summarisation completed in 4.590s
+2026-08-20 13:23:06 | DEBUG    | descriptor | Summarised description for 'Shorter bolt': 
+
+{
+  "Shorter bolt": {
+    "Type": "hex head bolt with threaded shank",
+    "Color": "silver-gray metallic finish",
+    "Size": "2.5 cm in length from head to tip, 0.8 cm hex head diameter / 25 mm length and 6 mm diameter",
+    "Material": "steel",
+    "Composition": "composed of a hexagonal head and a cylindrical threaded shaft",
+    "Quantity": "one",
+    "Relative Location": "located on the left side of the bag, leaning diagonally, below the nut, positioned horizontally within the bag",
+    "Orientation": "oriented with the head pointing toward the top left and the threaded end pointing toward the bottom right, or horizontally with the threaded end pointing to the right",
+    "Connection/Attachments": "designed to be connected with a nut; currently separate from nut; not connected to any other object; appears loose within the bag"
+  }
+}
+2026-08-20 13:23:06 | DEBUG    | descriptor | Master description: {'nut': {'Type': 'hexagonal metal nut with internal threading', 'Color': 'silver-gray, metallic finish', 'Size': '1 cm in width and height / 10 mm in diameter and 6 mm in height', 'Material': 'metal, likely steel or aluminum alloy', 'Composition': 'composed of a hexagonal head with internal threads for bolt engagement', 'Quantity': 'two', 'Relative Location': 'one nut is positioned near the top right, the other is near the bottom center of the bag; located near the center of the bag, positioned above the bolts', 'Orientation': 'oriented with one flat side facing upward', 'Connection/Attachments': 'designed to be threaded onto the bolt; currently separate from bolts; not connected to any other object; appears loose within the bag'}, 'Longer bolt': {'Type': 'hex head bolt with threaded shank', 'Color': 'silver-gray metallic finish', 'Size': '4 cm in length from head to tip, 35 mm in length and 6 mm in diameter', 'Material': 'steel', 'Composition': 'composed of a hexagonal head and a cylindrical threaded shaft', 'Quantity': 'one', 'Relative Location': 'located in the center-left area of the bag, lying horizontally, below the shorter bolt, positioned horizontally within the bag', 'Orientation': 'oriented with the head pointing to the left and the threaded end pointing to the right, oriented horizontally, with the threaded end pointing to the right', 'Connection/Attachments': 'designed to be connected with a nut; currently separate from nut; not connected to any other object; appears loose within the bag'}, 'washer': {'Type': 'flat, circular metal washer with a central hole', 'Color': 'silver-gray, metallic finish', 'Size': '1.2 cm in diameter and 0.1 cm in thickness / 10 mm in outer diameter and 1 mm in thickness / approximately 1 cm in diameter', 'Material': 'metal, likely steel or aluminum alloy', 'Composition': 'composed of a flat, circular disc with a central hole for bolt passage', 'Quantity': 'three', 'Relative Location': 'one washer is near the top center, the other is near the center-left of the bag, located near the center of the plastic bag, positioned above the shorter bolt, located above the nut and bolts, arranged in a triangular pattern', 'Orientation': 'oriented with the central hole facing upward', 'Connection/Attachments': 'designed to be placed between the bolt and nut to distribute load; currently separate from bolts and nut; not connected to any other object; appears loose within the bag'}, 'plastic bag': {'Type': 'transparent, resealable plastic bag with a zipper closure', 'Color': 'clear with white printed recycling symbols and text along the zipper seam', 'Size': '10 cm wide and 15 cm long / 4 inches wide and 6 inches long', 'Material': 'thin, flexible plastic, likely polyethylene (PE-LD)', 'Composition': 'composed of a single layer of plastic film with printed markings and a sealed seam along one edge', 'Quantity': 'one', 'Relative Location': 'occupies the central area of the image, containing all other objects', 'Orientation': 'lying flat, with the zipper seam oriented vertically along the right edge', 'Connection/Attachments': 'contains and holds the hardware components inside; no external attachments'}, 'Shorter bolt': {'Type': 'hex head bolt with threaded shank', 'Color': 'silver-gray metallic finish', 'Size': '2.5 cm in length from head to tip, 0.8 cm hex head diameter / 25 mm length and 6 mm diameter', 'Material': 'steel', 'Composition': 'composed of a hexagonal head and a cylindrical threaded shaft', 'Quantity': 'one', 'Relative Location': 'located on the left side of the bag, leaning diagonally, below the nut, positioned horizontally within the bag', 'Orientation': 'oriented with the head pointing toward the top left and the threaded end pointing toward the bottom right, or horizontally with the threaded end pointing to the right', 'Connection/Attachments': 'designed to be connected with a nut; currently separate from nut; not connected to any other object; appears loose within the bag'}}
+2026-08-20 13:23:06 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-20 13:23:06 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/screw_bag.txt
+2026-08-20 13:23:06 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=32)
+2026-08-20 13:23:06 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-20 13:23:06 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-20 13:23:08 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-20 13:23:08 | DEBUG    | planner | Class directories for dataset 'screw_bag': ['good']
+2026-08-20 13:23:08 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/screw_bag/good
+2026-08-20 13:23:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-20 13:23:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-20 13:23:08 | DEBUG    | planner | Generating planner steps from: good_2026-08-20 13:23:06_master_description.json
+2026-08-20 13:23:27 | INFO     | models | [VLM] Inference completed in 18.262s (max_new_tokens=2040)
+2026-08-20 13:23:27 | INFO     | planner | Planner steps generated in 18.262s (attempt=1, steps=32, approved_rules=32)
+2026-08-20 13:23:27 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw_bag/good/good_2026-08-20 13:23:27_planner.txt
+2026-08-20 13:23:27 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any scratch mark visible along the length of the threaded shaft of the Longer Bolt?
+Step 2: Is there any scratch or scuff mark visible on the flat surface of the head of the Longer Bolt?
+Step 3: Is there any coloration visible on the metal surface of the threaded shaft of the Longer Bolt?
+Step 4: Is there any indentation or dent visible on the top surface of the head of the Longer Bolt?
+Step 5: Are the threads on the threaded shaft of the Longer Bolt evenly aligned and not offset from the centerline?
+Step 6: Is there any fracture or crack line visible running through the material of the head of the Longer Bolt?
+Step 7: Is the head of the Longer Bolt present and not missing?
+Step 8: Is the bolt head of the Longer Bolt showing a different color or tone compared to the rest of the bolt?
+Step 9: Is there any tear or split visible in the metal of the threaded shaft of the Longer Bolt?
+Step 10: Is there any hole or puncture visible in the plastic material of the plastic bag?
+Step 11: Is there any tear or ripped section visible in the plastic material of the plastic bag?
+Step 12: Is there any debris, extra item, or foreign particle visible inside the contents of the plastic bag?
+Step 13: Is there any visible coloration or stain on the plastic material of the side edge of the plastic bag?
+Step 14: Is there any inward or outward bulge or indentation visible along the rim of the outer edge of any washer?
+Step 15: Is there any visible coloration or dark spot on the metallic surface of any washer?
+Step 16: Is any washer visibly oval or misshapen instead of perfectly circular?
+Step 17: Is there any visible split or fracture line running through the inner hole of any washer?
+Step 18: Is there any torn or ripped section visible on the surface of any nut?
+Step 19: Is there any small chip or broken piece visible on the rim of any nut?
+Step 20: Is there any visible coloration or staining on the metallic surface of any nut?
+Step 21: Is there any visible area of coloration on the surface of the Shorter Bolt?
+Step 22: Is there any visible crack or split running through the hexagonal head of the Shorter Bolt?
+Step 23: Is there any visible scratch or scoring along the surface of the threaded shaft of the Shorter Bolt?
+Step 24: Is the head of the Shorter Bolt present and not missing?
+Step 25: Is there any additional washer or nut present beyond the two specified in the set?
+Step 26: Is there any washer or nut missing from the set, resulting in only one being present?
+Step 27: Is at least one washer or nut visibly larger or smaller than the other?
+Step 28: Is the longer nut absent from the package, leaving only the smaller nut present?
+Step 29: Is the smaller nut absent from the package, leaving only the longer nut present?
+Step 30: Is the Longer Bolt visually shorter or longer than the specified reference length?
+Step 31: Is the Longer Bolt visually thicker or thinner than the reference size?
+Step 32: Is the shorter nut visibly larger, smaller, misshapen, or of incorrect length compared to the reference specification?
+2026-08-20 13:23:27 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw_bag/performance/performance_20260820_132327.json
+2026-08-20 13:23:27 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw_bag
+2026-08-20 13:23:27 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-20/screw_bag_132132_log.txt

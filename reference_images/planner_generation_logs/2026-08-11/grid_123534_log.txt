@@ -1,0 +1,128 @@
+2026-08-11 12:35:34 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:35:34 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:35:34 | INFO     | __main__ | Dataset  : grid
+2026-08-11 12:35:34 | INFO     | __main__ | Classes  : single
+2026-08-11 12:35:34 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:35:34 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/grid_123534_log.txt
+2026-08-11 12:35:34 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:35:35 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:35:35 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:35:36 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:35:36 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:35:36 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/172.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/023.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/203.png']
+2026-08-11 12:35:36 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:35:36 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/grid_object_labels.txt
+2026-08-11 12:35:36 | INFO     | __main__ | Object names: ['Mesh Grid']
+2026-08-11 12:35:36 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:35:36 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/grid/good
+2026-08-11 12:35:36 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:35:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:35:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:35:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:35:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 462535 44
+2026-08-11 12:35:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 462591 1304
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 484574 44
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 484630 1304
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 438795 44
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 438851 1304
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:35:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:35:42 | INFO     | models | [VLM] Inference completed in 5.668s (max_new_tokens=2040)
+2026-08-11 12:35:42 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/grid/good/processed_good_172_2026-08-11 12:35:42.json (inference_time=5.668s)
+2026-08-11 12:35:42 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:35:42 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:35:45 | INFO     | models | [VLM] Inference completed in 2.319s (max_new_tokens=2040)
+2026-08-11 12:35:45 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/grid/good/processed_good_023_2026-08-11 12:35:45.json (inference_time=2.319s)
+2026-08-11 12:35:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:35:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:35:51 | INFO     | models | [VLM] Inference completed in 6.091s (max_new_tokens=2040)
+2026-08-11 12:35:51 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/grid/good/processed_good_203_2026-08-11 12:35:51.json (inference_time=6.091s)
+2026-08-11 12:35:51 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:35:51 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:35:52 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:35:52 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/grid/good
+2026-08-11 12:35:52 | DEBUG    | descriptor | Processing image description: processed_good_203_2026-08-11 12:35:51.json
+2026-08-11 12:35:52 | DEBUG    | descriptor | Raw description data: - Mesh Grid
+    - Attribute 1 <Type> - A repeating pattern of interconnected, elongated, diamond-shaped cells forming a continuous, interwoven grid structure
+    - Attribute 2 <Color> - Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and texture through tonal contrast
+    - Attribute 3 <Size> - Uniformly scaled across the visible area, with each cell approximately equal in dimensions; the grid extends fully within the frame, suggesting a large, continuous surface
+    - Attribute 4 <Material> - Appears to be a rigid, possibly metallic or synthetic material with a slightly reflective or matte finish, indicated by the subtle highlights and shadows
+    - Attribute 5 <Composition> - Composed of interlocking, curved structural elements that form each cell, with consistent spacing and curvature, suggesting a manufactured, engineered design
+    - Attribute 6 <Quantity> - Indeterminate due to the continuous nature of the grid; however, the visible area contains a high density of cells, suggesting a vast, unbroken surface
+    - Attribute 7 <Relative Location> - Occupies the entire visual field, filling the frame from edge to edge, with no other objects or surfaces visible
+    - Attribute 8 <Orientation> - The grid is oriented diagonally, with the diamond-shaped cells aligned at a 45-degree angle relative to the horizontal axis
+    - Attribute 9 <Connection or Attachments> - The cells are interlocked and connected edge-to-edge, forming a seamless, continuous network with no visible seams or separations
+2026-08-11 12:35:52 | DEBUG    | descriptor | Processing image description: processed_good_023_2026-08-11 12:35:45.json
+2026-08-11 12:35:52 | DEBUG    | descriptor | Raw description data: - Mesh Grid
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:35:52 | DEBUG    | descriptor | Processing image description: processed_good_172_2026-08-11 12:35:42.json
+2026-08-11 12:35:52 | DEBUG    | descriptor | Raw description data: - Object 1 Mesh Grid
+    - Attribute 1 Type - A continuous, repeating pattern of interlocking diamond-shaped cells formed by intersecting lines, creating a woven or meshed structure.
+    - Attribute 2 Color - Monochromatic grayscale, with varying tones from light to dark gray, indicating surface texture and depth through shading.
+    - Attribute 3 Size - The image shows a close-up view, with no absolute dimensions provided; the pattern repeats uniformly across the visible area, suggesting consistent cell dimensions.
+    - Attribute 4 Material - Appears to be metallic or rigid synthetic, with a slightly reflective surface indicated by highlights along the edges of the cells.
+    - Attribute 5 Composition - Composed of intersecting lines forming a lattice of diamond-shaped cells, with each cell defined by two intersecting curved or straight segments.
+    - Attribute 6 Quantity - One continuous, unbroken mesh grid covering the entire visible area of the image.
+    - Attribute 7 Relative Location - Occupies the entire frame of the image, with no other objects or surfaces visible.
+    - Attribute 8 Orientation - The grid is oriented with the diamond cells aligned diagonally, with the pattern repeating in a consistent, uniform direction across the frame.
+    - Attribute 9 Connection or Attachments - The mesh appears to be a single, continuous structure with no visible seams, joints, or attachments; it is presented as a standalone, unconnected surface.
+2026-08-11 12:35:52 | DEBUG    | descriptor | Unique object keys found: {'Mesh Grid'}
+2026-08-11 12:35:52 | DEBUG    | descriptor | Class 'good' object description: {'Mesh Grid': ['-  <Type> - A repeating pattern of interconnected, elongated, diamond-shaped cells forming a continuous, interwoven grid structure\n    -  <Color> - Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and texture through tonal contrast\n    -  <Size> - Uniformly scaled across the visible area, with each cell approximately equal in dimensions; the grid extends fully within the frame, suggesting a large, continuous surface\n    -  <Material> - Appears to be a rigid, possibly metallic or synthetic material with a slightly reflective or matte finish, indicated by the subtle highlights and shadows\n    -  <Composition> - Composed of interlocking, curved structural elements that form each cell, with consistent spacing and curvature, suggesting a manufactured, engineered design\n    -  <Quantity> - Indeterminate due to the continuous nature of the grid; however, the visible area contains a high density of cells, suggesting a vast, unbroken surface\n    -  <Relative Location> - Occupies the entire visual field, filling the frame from edge to edge, with no other objects or surfaces visible\n    -  <Orientation> - The grid is oriented diagonally, with the diamond-shaped cells aligned at a 45-degree angle relative to the horizontal axis\n    -  <Connection or Attachments> - The cells are interlocked and connected edge-to-edge, forming a seamless, continuous network with no visible seams or separations', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  Type - A continuous, repeating pattern of interlocking diamond-shaped cells formed by intersecting lines, creating a woven or meshed structure.\n    -  Color - Monochromatic grayscale, with varying tones from light to dark gray, indicating surface texture and depth through shading.\n    -  Size - The image shows a close-up view, with no absolute dimensions provided; the pattern repeats uniformly across the visible area, suggesting consistent cell dimensions.\n    -  Material - Appears to be metallic or rigid synthetic, with a slightly reflective surface indicated by highlights along the edges of the cells.\n    -  Composition - Composed of intersecting lines forming a lattice of diamond-shaped cells, with each cell defined by two intersecting curved or straight segments.\n    -  Quantity - One continuous, unbroken mesh grid covering the entire visible area of the image.\n    -  Relative Location - Occupies the entire frame of the image, with no other objects or surfaces visible.\n    -  Orientation - The grid is oriented with the diamond cells aligned diagonally, with the pattern repeating in a consistent, uniform direction across the frame.\n    -  Connection or Attachments - The mesh appears to be a single, continuous structure with no visible seams, joints, or attachments; it is presented as a standalone, unconnected surface.']}
+2026-08-11 12:35:58 | INFO     | models | [LLM] Inference completed in 5.483s (max_new_tokens=3000)
+2026-08-11 12:35:58 | INFO     | descriptor | [Mesh Grid] Object summarisation completed in 5.483s
+2026-08-11 12:35:58 | DEBUG    | descriptor | Summarised description for 'Mesh Grid': {
+  "Mesh Grid": {
+    "Type": "A continuous, repeating pattern of interconnected, elongated, diamond-shaped cells forming a seamless, interwoven grid structure",
+    "Color": "Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and texture through tonal contrast",
+    "Size": "Uniformly scaled across the visible area with consistent cell dimensions; no absolute measurements provided, but the pattern repeats uniformly and extends fully within the frame",
+    "Material": "Rigid metallic or synthetic material with a slightly reflective or matte finish, indicated by subtle highlights along the edges of the cells",
+    "Composition": "Composed of interlocking, curved structural elements or intersecting lines that form diamond-shaped cells, with consistent spacing and curvature, suggesting a manufactured, engineered design",
+    "Quantity": "One continuous, unbroken mesh grid covering the entire visible area, with high cell density and no discernible separation or discrete units",
+    "Relative Location": "Occupies the entire visual field, filling the frame from edge to edge with no other objects or surfaces visible",
+    "Orientation": "Diagonally oriented, with diamond-shaped cells aligned at a 45-degree angle relative to the horizontal axis, repeating in a consistent, uniform direction across the frame",
+    "Connection or Attachments": "The cells are interlocked edge-to-edge, forming a seamless, continuous network with no visible seams, joints, or attachments; the mesh appears as a single, standalone, unconnected surface"
+  }
+}
+2026-08-11 12:35:58 | DEBUG    | descriptor | Master description: {'Mesh Grid': {'Type': 'A continuous, repeating pattern of interconnected, elongated, diamond-shaped cells forming a seamless, interwoven grid structure', 'Color': 'Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and texture through tonal contrast', 'Size': 'Uniformly scaled across the visible area with consistent cell dimensions; no absolute measurements provided, but the pattern repeats uniformly and extends fully within the frame', 'Material': 'Rigid metallic or synthetic material with a slightly reflective or matte finish, indicated by subtle highlights along the edges of the cells', 'Composition': 'Composed of interlocking, curved structural elements or intersecting lines that form diamond-shaped cells, with consistent spacing and curvature, suggesting a manufactured, engineered design', 'Quantity': 'One continuous, unbroken mesh grid covering the entire visible area, with high cell density and no discernible separation or discrete units', 'Relative Location': 'Occupies the entire visual field, filling the frame from edge to edge with no other objects or surfaces visible', 'Orientation': 'Diagonally oriented, with diamond-shaped cells aligned at a 45-degree angle relative to the horizontal axis, repeating in a consistent, uniform direction across the frame', 'Connection or Attachments': 'The cells are interlocked edge-to-edge, forming a seamless, continuous network with no visible seams, joints, or attachments; the mesh appears as a single, standalone, unconnected surface'}}
+2026-08-11 12:35:58 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:35:58 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['grid'] directly (no generation, no compiled file).
+2026-08-11 12:35:58 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:35:58 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:35:58 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:35:59 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:35:59 | DEBUG    | planner | Class directories for dataset 'grid': ['good']
+2026-08-11 12:35:59 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/grid/good
+2026-08-11 12:35:59 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:35:59 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:35:59 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:35:58_master_description.json
+2026-08-11 12:36:03 | INFO     | models | [VLM] Inference completed in 4.331s (max_new_tokens=2040)
+2026-08-11 12:36:03 | INFO     | planner | Planner steps generated in 4.331s (attempt=1, steps=10, approved_rules=legacy-untracked)
+2026-08-11 12:36:03 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/grid/good/good_2026-08-11 12:36:03_planner.txt
+2026-08-11 12:36:03 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, dent, or cut on the mesh surface?
+Step 2: Is there any bent, warped, crushed, punctured, torn, or broken component in the mesh?
+Step 3: Are there any missing components visible in the reference image but absent in the candidate image?
+Step 4: Are there any extra debris, foreign objects, or loose parts in the candidate image not present in the reference image?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the mesh?
+Step 6: Is there any significant misalignment or incorrect assembly in the mesh pattern?
+Step 7: Is there any deviation from the uniform cell size or spacing in the mesh?
+Step 8: Is there any inconsistency in the curvature or continuity of the mesh lines?
+Step 9: Is there any visible seam, joint, or attachment point in the mesh structure?
+Step 10: Is there any deviation in the diagonal orientation of the diamond-shaped cells from the 45-degree angle?
+2026-08-11 12:36:03 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/grid/performance/performance_20260811_123603.json
+2026-08-11 12:36:03 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/grid
+2026-08-11 12:36:03 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/grid_123534_log.txt

@@ -1,0 +1,90 @@
+# configs/anomaly_detection_configs.yaml
+#
+# Why this is a SEPARATE file from dataset_configs.yaml (used by the offline
+# planner-generation pipeline in planner_generation/ + run_planner_generation.py),
+# instead of reusing that schema:
+#
+#   1. Cardinality — dataset_configs.yaml describes ONE dataset per run, and
+#      run_planner_generation.py is built around that assumption. The online
+#      anomaly-detection pipeline needs to sweep MULTIPLE datasets in a single
+#      invocation (see the `datasets:` list below); bolting a list onto the
+#      single-dataset schema would break the planner pipeline's contract.
+#   2. Different fields — this pipeline needs `format` (does test/ follow the
+#      mvtec_loco layout with logical/structural_anomalies, or the mvtec_ad
+#      layout with arbitrary anomaly folders?) and text-based `class_labels`
+#      (used to CLIP-text-match a candidate's nearest reference image to a
+#      class). Planner generation has no use for either.
+#   3. Dead weight the other way — dataset_configs.yaml's `reference_selection`,
+#      `anomaly_rules` and `object_labels` sections only matter while
+#      generating planners. During online inference, planners are READ, not
+#      generated, so none of those fields apply here.
+#   4. `metrics.enabled` (see below) has no equivalent in planner generation.
+#
+# configs/model_configs.yaml IS reused as-is (see --model-config default) —
+# both pipelines load the exact same VLM, so there is no reason to duplicate
+# that schema.
+
+# datasets: (Format)
+#   - name: Name of the dataset
+#     root_dir: directory of the dataset (Usually kept in datasets/ directory)
+#     merge_anomalies: True (all directories in the dataset except train/good will be considered as anomalies)
+#     classes: Either "single" or "multi" class dataset
+#     class_examples: (Required if classes is "multi")
+#       <class label 1>: example image 1 from test/good
+#       <class label 2>: example image 2 from test/good ...
+
+datasets:
+  - name: "breakfast_box"
+    root_dir: "datasets/mvtec_loco/breakfast_box"
+    merge_anomalies: False
+    classes: "single"
+  - name: "juice_bottle"
+    root_dir: "datasets/mvtec_loco/juice_bottle"
+    merge_anomalies: False
+    classes: "multi"
+    class_examples:
+      Orange: "000.png"
+      Cherry: "004.png"
+      Banana: "002.png"
+  - name: "pushpins"
+    root_dir: "datasets/mvtec_loco/pushpins"
+    merge_anomalies: False
+    classes: "single"
+  - name: "screw_bag"
+    root_dir: "datasets/mvtec_loco/screw_bag"
+    merge_anomalies: False
+    classes: "single"
+  - name: "splicing_connectors"
+    root_dir: "datasets/mvtec_loco/splicing_connectors"
+    merge_anomalies: False
+    classes: "multi"
+    class_examples:
+      Two_Pin_Connector: "002.png"
+      Three_Pin_Connector: "003.png"
+      Five_Pin_Connector: "001.png"
+
+planners_dir: "reference_images/planners/mvtec_loco_8B_planners_v2"  #Directory with the generated planners
+
+prompts_dir: "prompts/anomaly_detection_pipeline" # Directory with the anomaly-detection pipeline's Jinja prompt templates.
+
+# "model" keeps the VLM's final label unchanged; "steps" enables the legacy
+# any-YES/anomaly and all-NO/good parser override.
+decision:
+  label_policy: "model"
+
+# Multi-class label cache behavior:
+# - Cache file path: prompts/class_labels/<dataset_name>_data_labels.txt
+# - If cache exists, it is loaded and used.
+# - If cache is missing and class_labels exist in this YAML, they are saved to cache and used.
+# - If both cache and class_labels are missing, labels are generated from class_examples and user must accept/regenerate/quit.
+
+output:
+  root_dir: "outputs"
+  # <root_dir>/<runs_dir>/<dataset_name>/{preproc,texts,all_data_summary.jsonl,*.png}
+  runs_dir: "runs"
+
+# Metrics and low-confidence reruns are separate stages that run AFTER this
+# pipeline, directly against the run folders written above:
+#   python run_metrics.py
+#   python -m anomaly_detection.rerun <outdir> <dataset_name>   # finds the threshold AND reruns low-confidence "good" predictions via the VLM
+#   (rerun writes <outdir>/<dataset_name>/rerun_results/rerun_result.jsonl)

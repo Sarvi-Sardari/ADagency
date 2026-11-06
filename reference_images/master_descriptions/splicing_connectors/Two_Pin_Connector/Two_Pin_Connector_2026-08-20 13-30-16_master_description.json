@@ -1,0 +1,35 @@
+{
+    "RJ45 Connector (Left)": {
+        "Type": "A standard Ethernet RJ45 connector designed for network cable termination and plugging into network ports.",
+        "Color": "The connector features a transparent plastic housing with an orange-colored latch mechanism and bright orange locking clips.",
+        "Size": "1.5 cm in width, 1.2 cm in height, and 3 cm in length",
+        "Material": "Made of transparent plastic for the housing and orange-colored plastic for the latch and locking mechanism.",
+        "Composition": "Composed of a transparent plastic shell, orange plastic latch and locking clips, and internal metal contacts for secure connection.",
+        "Quantity": "One unit.",
+        "Relative Location": "Located on the left end of the Ethernet cable, positioned near the left edge of the image and on the left side of the image.",
+        "Orientation": "Facing right, aligned with the cable’s direction, with the locking clips oriented toward the center of the cable.",
+        "Connection/Attachments": "Connected to the left end of the Ethernet cable, securing the internal wires within its housing and designed to connect to a network device."
+    },
+    "RJ45 Connector (Right)": {
+        "Type": "A standard Ethernet RJ45 connector designed for network cable termination and plugging into network ports or devices.",
+        "Color": "The connector features a transparent plastic housing with an orange-colored latch mechanism and bright orange locking clips.",
+        "Size": "1.5 cm in width, with a height ranging from 1.2 cm to 3 cm",
+        "Material": "Made of transparent plastic for the housing and orange-colored plastic for the latch and locking mechanism.",
+        "Composition": "Composed of a transparent plastic shell, internal metal contacts, and an orange latch mechanism with locking clips for secure connection.",
+        "Quantity": "One unit.",
+        "Relative Location": "Located on the right end of the Ethernet cable, positioned near the right edge of the image.",
+        "Orientation": "Facing left, aligned with the cable’s direction, with the locking clips oriented toward the center of the cable.",
+        "Connection/Attachments": "Connected to the right end of the Ethernet cable, securing the internal wires within its housing and designed to connect to a network device."
+    },
+    "Ethernet Cable": {
+        "Type": "A short, flexible Ethernet cable with two RJ45 connectors at each end, designed for network connections.",
+        "Color": "Bright yellow with black printed text along its length.",
+        "Size": "Approximately 10-15 centimeters in length, with each RJ45 connector being roughly 1.5 cm in width.",
+        "Material": "Flexible plastic outer jacket, internal insulated copper wires, and molded plastic RJ45 connectors.",
+        "Composition": "Composed of a yellow insulated jacket, internal twisted-pair copper wires, and molded plastic RJ45 connectors with transparent and orange plastic components.",
+        "Quantity": "One Ethernet cable is present.",
+        "Relative Location": "Positioned horizontally across the center of the image, with the left connector on the left side and the right connector on the right side.",
+        "Orientation": "Oriented horizontally, aligned parallel to the bottom edge of the image.",
+        "Connection/Attachments": "Both ends are terminated with RJ45 connectors, designed to plug into Ethernet ports, and each end is attached to an RJ45 connector, forming a complete cable assembly."
+    }
+}

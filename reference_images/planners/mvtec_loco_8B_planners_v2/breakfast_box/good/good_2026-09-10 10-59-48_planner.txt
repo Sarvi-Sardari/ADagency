@@ -1,0 +1,13 @@
+Step 1: Is there any swapped compartment contents, where fruit appears in the right compartment or cereals and toppings appear in the left?
+Step 2: Is there any incorrect fruit count or fruit-type composition in the left compartment, such as not having exactly two small dimpled orange tangerines or mandarins and one larger smooth red-yellow nectarine or peach-like fruit?
+Step 3: Is there any missing cereals in the upper region of the right compartment, including when the right compartment is empty?
+Step 4: Is there any missing banana chips in the lower topping region of the right compartment, including when all toppings are absent?
+Step 5: Is there any missing almonds in the lower topping region of the right compartment, including when all toppings are absent?
+Step 6: Is there any food overflow into the fruit compartment, where cereals, banana chips, or almonds cross the raised central divider and spill into the left compartment?
+Step 7: Is there any underfilled right compartment, where the combined dry food occupies markedly less of the right compartment than the reference, leaving unusually large exposed white areas or a shortened food pile?
+Step 8: Is there any wrong cereals-to-toppings ratio in the right compartment, where the upper cereal region or lower banana-and-almond region is far too large or too small?
+Step 9: Is there any damaged breakfast tray, such as a crack, split, puncture, missing piece, severe dent, or deformation, including a small low-contrast break along the white divider or rim?
+Step 10: Is there any damaged fruit in the left compartment, such as an open cut, exposed flesh, missing peel, deep crack, puncture, severe deformation, large bruise, blackened area, or artificial mark, ignoring stems, peel pores, small natural spots, and normal nectarine coloring?
+Step 11: Is there any cereals and toppings broadly mixed together in the right compartment, where banana chips and almonds are broadly scattered through the upper cereals instead of remaining predominantly in the lower topping region, ignoring minor mixing at the boundary?
+Step 12: Is there any substantially crushed toppings in the lower topping region of the right compartment, where a substantial portion of banana chips or almonds is pulverized into many small fragments or powder instead of recognizable slices and whole nuts, ignoring a few broken pieces?
+Step 13: Is there any foreign object or contaminating material anywhere inside or directly on the tray, including when small, partly buried, occluded, or food-colored, ignoring normal stems, crumbs, food texture, highlights, and shadows?

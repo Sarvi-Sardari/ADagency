@@ -1,0 +1,22 @@
+2026-08-11 12:33:42 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:33:42 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:33:42 | INFO     | __main__ | Dataset  : grid
+2026-08-11 12:33:42 | INFO     | __main__ | Classes  : single
+2026-08-11 12:33:42 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:33:42 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/grid_123342_log.txt
+2026-08-11 12:33:42 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:33:43 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:33:43 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:33:45 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:33:45 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:33:45 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/172.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/023.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/203.png']
+2026-08-11 12:33:45 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:33:45 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:33:45 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:33:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:33:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:33:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:33:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 433633 44
+2026-08-11 12:33:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 433689 1304
+2026-08-11 12:33:45 | INFO     | models | [VLM] Inference completed in 0.443s (max_new_tokens=2040)
+2026-08-11 12:33:45 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/100.png in 0.443s

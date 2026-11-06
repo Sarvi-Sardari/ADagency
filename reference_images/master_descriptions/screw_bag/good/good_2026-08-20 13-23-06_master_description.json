@@ -1,0 +1,57 @@
+{
+    "nut": {
+        "Type": "hexagonal metal nut with internal threading",
+        "Color": "silver-gray, metallic finish",
+        "Size": "1 cm in width and height / 10 mm in diameter and 6 mm in height",
+        "Material": "metal, likely steel or aluminum alloy",
+        "Composition": "composed of a hexagonal head with internal threads for bolt engagement",
+        "Quantity": "two",
+        "Relative Location": "one nut is positioned near the top right, the other is near the bottom center of the bag; located near the center of the bag, positioned above the bolts",
+        "Orientation": "oriented with one flat side facing upward",
+        "Connection/Attachments": "designed to be threaded onto the bolt; currently separate from bolts; not connected to any other object; appears loose within the bag"
+    },
+    "Longer bolt": {
+        "Type": "hex head bolt with threaded shank",
+        "Color": "silver-gray metallic finish",
+        "Size": "4 cm in length from head to tip, 35 mm in length and 6 mm in diameter",
+        "Material": "steel",
+        "Composition": "composed of a hexagonal head and a cylindrical threaded shaft",
+        "Quantity": "one",
+        "Relative Location": "located in the center-left area of the bag, lying horizontally, below the shorter bolt, positioned horizontally within the bag",
+        "Orientation": "oriented with the head pointing to the left and the threaded end pointing to the right, oriented horizontally, with the threaded end pointing to the right",
+        "Connection/Attachments": "designed to be connected with a nut; currently separate from nut; not connected to any other object; appears loose within the bag"
+    },
+    "washer": {
+        "Type": "flat, circular metal washer with a central hole",
+        "Color": "silver-gray, metallic finish",
+        "Size": "1.2 cm in diameter and 0.1 cm in thickness / 10 mm in outer diameter and 1 mm in thickness / approximately 1 cm in diameter",
+        "Material": "metal, likely steel or aluminum alloy",
+        "Composition": "composed of a flat, circular disc with a central hole for bolt passage",
+        "Quantity": "three",
+        "Relative Location": "one washer is near the top center, the other is near the center-left of the bag, located near the center of the plastic bag, positioned above the shorter bolt, located above the nut and bolts, arranged in a triangular pattern",
+        "Orientation": "oriented with the central hole facing upward",
+        "Connection/Attachments": "designed to be placed between the bolt and nut to distribute load; currently separate from bolts and nut; not connected to any other object; appears loose within the bag"
+    },
+    "plastic bag": {
+        "Type": "transparent, resealable plastic bag with a zipper closure",
+        "Color": "clear with white printed recycling symbols and text along the zipper seam",
+        "Size": "10 cm wide and 15 cm long / 4 inches wide and 6 inches long",
+        "Material": "thin, flexible plastic, likely polyethylene (PE-LD)",
+        "Composition": "composed of a single layer of plastic film with printed markings and a sealed seam along one edge",
+        "Quantity": "one",
+        "Relative Location": "occupies the central area of the image, containing all other objects",
+        "Orientation": "lying flat, with the zipper seam oriented vertically along the right edge",
+        "Connection/Attachments": "contains and holds the hardware components inside; no external attachments"
+    },
+    "Shorter bolt": {
+        "Type": "hex head bolt with threaded shank",
+        "Color": "silver-gray metallic finish",
+        "Size": "2.5 cm in length from head to tip, 0.8 cm hex head diameter / 25 mm length and 6 mm diameter",
+        "Material": "steel",
+        "Composition": "composed of a hexagonal head and a cylindrical threaded shaft",
+        "Quantity": "one",
+        "Relative Location": "located on the left side of the bag, leaning diagonally, below the nut, positioned horizontally within the bag",
+        "Orientation": "oriented with the head pointing toward the top left and the threaded end pointing toward the bottom right, or horizontally with the threaded end pointing to the right",
+        "Connection/Attachments": "designed to be connected with a nut; currently separate from nut; not connected to any other object; appears loose within the bag"
+    }
+}

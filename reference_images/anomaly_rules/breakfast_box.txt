@@ -1,0 +1,108 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "breakfast tray contents",
+      "category": "logical_position",
+      "part_or_region": "left and right compartments",
+      "anomaly_name": "swapped compartment contents",
+      "visual_description": "Fruit appears in the right compartment or cereals and toppings appear in the left, instead of fruit-left and dry-food-right."
+    },
+    {
+      "id": "A002",
+      "object_name": "three whole fruits",
+      "category": "logical_composition",
+      "part_or_region": "left compartment",
+      "anomaly_name": "incorrect fruit count or fruit-type composition",
+      "visual_description": "The left compartment has other than exactly two small dimpled orange tangerines or mandarins and one larger smooth red-yellow nectarine or peach-like fruit. Fruit order and natural nectarine color variation do not matter."
+    },
+    {
+      "id": "A003",
+      "object_name": "cereals or granola",
+      "category": "logical_missing_component",
+      "part_or_region": "upper region of the right compartment",
+      "anomaly_name": "missing cereals",
+      "visual_description": "The golden-brown loose cereals or granola are entirely absent from the upper right region, including when the right compartment is empty."
+    },
+    {
+      "id": "A004",
+      "object_name": "dried banana chips",
+      "category": "logical_missing_component",
+      "part_or_region": "lower topping region of the right compartment",
+      "anomaly_name": "missing banana chips",
+      "visual_description": "No recognizable pale yellow or light-brown round banana slices are present in the lower-right topping mixture, including when all toppings are absent."
+    },
+    {
+      "id": "A005",
+      "object_name": "whole almonds",
+      "category": "logical_missing_component",
+      "part_or_region": "lower topping region of the right compartment",
+      "anomaly_name": "missing almonds",
+      "visual_description": "No recognizable whole brown oval almonds are present in the lower-right topping mixture, including when all toppings are absent."
+    },
+    {
+      "id": "A006",
+      "object_name": "cereals and topping mixture",
+      "category": "logical_quantity",
+      "part_or_region": "right compartment and central divider",
+      "anomaly_name": "food overflow into the fruit compartment",
+      "visual_description": "Cereals, banana chips, or almonds cross the raised central divider and spill into the left fruit compartment."
+    },
+    {
+      "id": "A007",
+      "object_name": "cereals and topping mixture",
+      "category": "logical_quantity",
+      "part_or_region": "combined food footprint in the right compartment",
+      "anomaly_name": "underfilled right compartment",
+      "visual_description": "The combined dry food occupies markedly less of the right compartment than the reference, leaving unusually large exposed white areas or a shortened food pile."
+    },
+    {
+      "id": "A008",
+      "object_name": "cereals and topping mixture",
+      "category": "logical_ratio",
+      "part_or_region": "upper cereal region and lower topping region of the right compartment",
+      "anomaly_name": "wrong cereals-to-toppings ratio",
+      "visual_description": "The cereal-to-topping proportion differs markedly from the reference: the upper cereal region or lower banana-and-almond region is far too large or too small."
+    },
+    {
+      "id": "A009",
+      "object_name": "white two-compartment tray",
+      "category": "structural_integrity",
+      "part_or_region": "tray rim, base, walls, and central divider",
+      "anomaly_name": "damaged breakfast tray",
+      "visual_description": "The tray has a crack, split, puncture, missing piece, severe dent, or deformation, including a small low-contrast break along the white divider or rim."
+    },
+    {
+      "id": "A010",
+      "object_name": "tangerines and nectarine",
+      "category": "structural_integrity",
+      "part_or_region": "surfaces and shapes of all fruits in the left compartment",
+      "anomaly_name": "damaged fruit",
+      "visual_description": "A fruit has an open cut, exposed flesh, missing peel, deep crack, puncture, severe deformation, large bruise, blackened area, or artificial mark. Ignore stems, peel pores, small natural spots, and normal nectarine coloring."
+    },
+    {
+      "id": "A011",
+      "object_name": "cereals and toppings",
+      "category": "structural_arrangement",
+      "part_or_region": "right compartment",
+      "anomaly_name": "cereals and toppings broadly mixed together",
+      "visual_description": "Banana chips and almonds are broadly scattered through the upper cereals instead of remaining predominantly in the lower topping region; ignore minor mixing at the boundary."
+    },
+    {
+      "id": "A012",
+      "object_name": "banana chips and almonds",
+      "category": "structural_integrity",
+      "part_or_region": "lower topping region of the right compartment",
+      "anomaly_name": "substantially crushed toppings",
+      "visual_description": "A substantial portion of banana chips or almonds is pulverized into many small fragments or powder instead of recognizable slices and whole nuts; ignore a few broken pieces."
+    },
+    {
+      "id": "A013",
+      "object_name": "breakfast tray and all food contents",
+      "category": "structural_contamination",
+      "part_or_region": "anywhere inside or directly on the tray",
+      "anomaly_name": "foreign object or contaminating material",
+      "visual_description": "A foreign object or material is anywhere inside or on the tray, including when small, partly buried, occluded, or food-colored. Ignore normal stems, crumbs, food texture, highlights, and shadows."
+    }
+  ]
+}

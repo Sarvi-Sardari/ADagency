@@ -1,0 +1,132 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "pair of lever-operated splicing connector blocks",
+      "category": "logical_configuration",
+      "part_or_region": "left and right connector blocks",
+      "anomaly_name": "mismatched connector sizes",
+      "visual_description": "The left and right connector blocks have different numbers of orange lever positions; one is a 2-port, 3-port, or 5-port block and the other is a different size."
+    },
+    {
+      "id": "A002",
+      "object_name": "pair of lever-operated splicing connector blocks",
+      "category": "logical_missing_component",
+      "part_or_region": "entire assembly",
+      "anomaly_name": "missing connector block",
+      "visual_description": "One or both of the two connector blocks are absent; a normal assembly has exactly one block at each end of the cable."
+    },
+    {
+      "id": "A003",
+      "object_name": "single cable between the connector blocks",
+      "category": "logical_missing_component",
+      "part_or_region": "space between the left and right connector blocks",
+      "anomaly_name": "missing cable",
+      "visual_description": "No cable spans between the two connector blocks, including a scene in which the cable and both connector blocks are all absent."
+    },
+    {
+      "id": "A004",
+      "object_name": "cables joining the connector blocks",
+      "category": "logical_extra_component",
+      "part_or_region": "space between the left and right connector blocks",
+      "anomaly_name": "extra connected cable",
+      "visual_description": "Two or more cables are inserted into and span between the connector blocks; a normal assembly has exactly one connected cable."
+    },
+    {
+      "id": "A005",
+      "object_name": "single cable between the connector blocks",
+      "category": "logical_dimension",
+      "part_or_region": "cable span between the two blocks",
+      "anomaly_name": "cable too short",
+      "visual_description": "The connector blocks are markedly too close together because the cable span is markedly shorter than in the same connector-size reference image."
+    },
+    {
+      "id": "A006",
+      "object_name": "connector blocks and cable",
+      "category": "logical_composition",
+      "part_or_region": "whole cable and both connector blocks",
+      "anomaly_name": "invalid cable-color and connector-size pairing",
+      "visual_description": "The cable color does not match the common port count of the two blocks. The only valid pairings are yellow cable with two-port blocks, blue cable with three-port blocks, and red or orange-red cable with five-port blocks."
+    },
+    {
+      "id": "A007",
+      "object_name": "single cable between the connector blocks",
+      "category": "logical_position",
+      "part_or_region": "cable insertion positions at both connector blocks",
+      "anomaly_name": "different cable port positions",
+      "visual_description": "The cable enters different relative port positions at its two ends, such as top-to-middle or top-to-bottom instead of the same port index on both blocks."
+    },
+    {
+      "id": "A008",
+      "object_name": "single cable between the connector blocks",
+      "category": "logical_connectivity",
+      "part_or_region": "complete cable span",
+      "anomaly_name": "cable cut into two disconnected pieces",
+      "visual_description": "The cable is completely severed across its width, leaving two disconnected cable pieces or a visible gap while the pieces remain associated with the two connector blocks."
+    },
+    {
+      "id": "A009",
+      "object_name": "single cable between the connector blocks",
+      "category": "structural_integrity",
+      "part_or_region": "cable body and insulation",
+      "anomaly_name": "locally broken or damaged cable",
+      "visual_description": "A localized part of the otherwise spanning cable is split, nicked, sharply kinked, crushed, or has damaged insulation or exposed inner material; do not use this rule for a fully severed cable."
+    },
+    {
+      "id": "A010",
+      "object_name": "lever-operated splicing connector blocks",
+      "category": "structural_integrity",
+      "part_or_region": "transparent housings and orange lever mechanisms",
+      "anomaly_name": "broken connector block",
+      "visual_description": "Either connector block has a visible crack, missing or detached piece, broken orange lever, or deformed transparent housing."
+    },
+    {
+      "id": "A011",
+      "object_name": "single cable and connector blocks",
+      "category": "structural_connection",
+      "part_or_region": "cable ends at the connector ports",
+      "anomaly_name": "cable end not plugged into a connector",
+      "visual_description": "A cable is present but one or both ends are loose, displaced, or visibly stop outside a connector port instead of being inserted into both blocks."
+    },
+    {
+      "id": "A012",
+      "object_name": "pair of lever-operated splicing connector blocks",
+      "category": "structural_orientation",
+      "part_or_region": "orientation of the left and right blocks",
+      "anomaly_name": "flipped connector block",
+      "visual_description": "One connector block is flipped relative to the other and to the reference, so its transparent housing and row of orange levers face the opposite orientation."
+    },
+    {
+      "id": "A013",
+      "object_name": "lever-operated splicing connector blocks",
+      "category": "structural_state",
+      "part_or_region": "orange levers on both connector blocks",
+      "anomaly_name": "open orange lever",
+      "visual_description": "One or more orange levers are visibly raised, swung outward, or separated from the aligned closed row on either connector block."
+    },
+    {
+      "id": "A014",
+      "object_name": "single cable between the connector blocks",
+      "category": "structural_color",
+      "part_or_region": "entire cable",
+      "anomaly_name": "unsupported cable color",
+      "visual_description": "The cable has a uniform overall color outside yellow, blue, and red or orange-red, such as green; this is different from a small localized discoloration."
+    },
+    {
+      "id": "A015",
+      "object_name": "cable and connector blocks",
+      "category": "structural_color",
+      "part_or_region": "local area of a cable, transparent housing, or orange lever",
+      "anomaly_name": "localized abnormal color patch",
+      "visual_description": "A localized patch, streak, or spot has an abnormal color that differs from the surrounding cable or connector material; ignore normal printed cable text, highlights, reflections, and shadows."
+    },
+    {
+      "id": "A016",
+      "object_name": "splicing connector assembly",
+      "category": "structural_contamination",
+      "part_or_region": "cable, connector blocks, and immediately contacting area",
+      "anomaly_name": "foreign material or contaminating object",
+      "visual_description": "Unexpected foreign material or an object lies on, sticks to, crosses, or partly covers the cable or either connector block; do not treat the regular metal-mesh background as contamination."
+    }
+  ]
+}

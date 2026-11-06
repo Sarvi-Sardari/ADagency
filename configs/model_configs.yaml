@@ -1,0 +1,65 @@
+# Model configuration used by local runs.
+#
+# This is the only deployment switch:
+#   local   -> use only this file; the cluster file is not read
+#   cluster -> additionally load and merge model_cluster_configs.yaml
+deployment:
+  mode: local
+  cluster_config: "model_cluster_configs.yaml"
+
+models:
+  vlm:
+    # To test another downloaded VLM, change model_name/local_path below.
+    # Keep chat_template_kwargs={} except for Qwen3.5, where use:
+    #   chat_template_kwargs: {enable_thinking: false}
+    # Available folders include InternVL3_5-8B-HF, llava-1.5-7b-hf,
+    # llava-onevision-qwen2-7b-ov-hf, Ministral-3-8B-Instruct-2512,
+    # Qwen3.5-9B, and Qwen3-VL-8B-Instruct.
+    model_name: "Qwen3-VL-8B-Instruct"
+    source: local                 # local | huggingface
+    local_path: "models/Qwen3-VL-8B-Instruct"
+    huggingface_name: "Qwen/Qwen3-VL-8B-Instruct"
+    device: 0
+
+    # Generic variables passed to this checkpoint's own chat template.
+    # Use {} when the selected model has no template-specific options.
+    # Chat template kwargs can be something like enable_thinking: false, which will be used by thinking models such as Qwen3.5 to disable thinking mode
+    chat_template_kwargs:
+      enable_thinking: false
+
+    image_processing:
+      target_w: [1216, 1216] #[256, 2048]
+      target_h: [1056, 1056] #[256, 2048]
+      resample: "bicubic"
+
+    generation:
+      max_new_tokens: 2040
+      temperature: 0.2
+      do_sample: false
+
+  llm:
+    model_name: "Qwen3-8B"
+    source: local                 # local | huggingface
+    local_path: "models/Qwen3-8B"
+    huggingface_name: "Qwen/Qwen3-8B"
+    device: 0
+
+    # Qwen3 text models think by default; disabling it keeps planner output
+    # direct and preserves the pipeline's expected response format.
+    chat_template_kwargs:
+      enable_thinking: false
+
+    generation:
+      max_new_tokens: 3000
+      temperature: 0.2
+      do_sample: true
+
+  # Used only by standalone mask generation methods that require pixel masks.
+  segmentation_model:
+    model_name: "sam3"
+    source: local
+    local_path: "models/sam3_model/sam3.pt"
+    huggingface_name: null
+    device: "cuda"
+    repo_dir: "models/sam3"
+    confidence_threshold: 0.5

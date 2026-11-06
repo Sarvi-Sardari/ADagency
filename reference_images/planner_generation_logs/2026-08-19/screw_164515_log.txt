@@ -1,0 +1,137 @@
+2026-08-19 16:45:15 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:45:15 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:45:15 | INFO     | __main__ | Dataset  : screw
+2026-08-19 16:45:15 | INFO     | __main__ | Classes  : single
+2026-08-19 16:45:15 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:45:15 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/screw_164515_log.txt
+2026-08-19 16:45:15 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:45:16 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:45:16 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:45:18 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:45:18 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:45:18 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/screw/train/good/209.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/screw/train/good/028.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/screw/train/good/246.png']
+2026-08-19 16:45:18 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:45:18 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/screw_object_labels.txt
+2026-08-19 16:45:18 | INFO     | __main__ | Object names: ['Screw']
+2026-08-19 16:45:18 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:45:18 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/screw/good
+2026-08-19 16:45:18 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 404006 44
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 404062 1304
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 405505 44
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 405561 1304
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 396553 44
+2026-08-19 16:45:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 396609 1304
+2026-08-19 16:45:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:45:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:45:25 | INFO     | models | [VLM] Inference completed in 6.336s (max_new_tokens=2040)
+2026-08-19 16:45:25 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw/good/processed_good_209_2026-08-19 16:45:25.json (inference_time=6.336s)
+2026-08-19 16:45:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:45:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:45:32 | INFO     | models | [VLM] Inference completed in 7.002s (max_new_tokens=2040)
+2026-08-19 16:45:32 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw/good/processed_good_028_2026-08-19 16:45:32.json (inference_time=7.002s)
+2026-08-19 16:45:32 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:45:32 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:45:39 | INFO     | models | [VLM] Inference completed in 6.655s (max_new_tokens=2040)
+2026-08-19 16:45:39 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw/good/processed_good_246_2026-08-19 16:45:39.json (inference_time=6.655s)
+2026-08-19 16:45:39 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:45:39 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:45:41 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:45:41 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/screw/good
+2026-08-19 16:45:41 | DEBUG    | descriptor | Processing image description: processed_good_246_2026-08-19 16:45:39.json
+2026-08-19 16:45:41 | DEBUG    | descriptor | Raw description data: - Object 1 Screw
+    - Attribute 1 Type - A metal wood screw with a flat head and a sharp, tapered point, featuring a helical thread along its shaft.
+    - Attribute 2 Color - Grayish metallic tone, with visible surface texture and slight variations in shading due to lighting and material finish.
+    - Attribute 3 Size - Length appears to be approximately 2 to 3 inches; head diameter is roughly 0.25 to 0.35 inches, with the threaded portion occupying the majority of the shaft.
+    - Attribute 4 Material - Metal, likely steel or a similar alloy, exhibiting a matte, slightly oxidized or unpolished finish.
+    - Attribute 5 Composition - Composed of a cylindrical shaft with a threaded section and a flat head with a recessed drive slot (likely Phillips or similar), designed for self-tapping into wood.
+    - Attribute 6 Quantity - One screw is present.
+    - Attribute 7 Relative Location - Positioned diagonally across the frame, extending from the lower-left to the upper-right.
+    - Attribute 8 Orientation - Lying at an angle, with the head oriented toward the bottom-left and the pointed tip toward the upper-right.
+    - Attribute 9 Connection or Attachments - No visible attachments or connections to other objects; the screw is isolated and appears to be resting on a surface.
+2026-08-19 16:45:41 | DEBUG    | descriptor | Processing image description: processed_good_028_2026-08-19 16:45:32.json
+2026-08-19 16:45:41 | DEBUG    | descriptor | Raw description data: - Object 1 Screw
+    - Attribute 1 Type - A self-tapping screw with a flat head and a Phillips drive recess, featuring a tapered point and helical threads along its shank.
+    - Attribute 2 Color - Monochromatic gray, with variations in tone indicating surface texture and light reflection; no color information is available due to black-and-white imaging.
+    - Attribute 3 Size - Length appears to be approximately 1 to 2 inches, with a head width of roughly 0.25 to 0.35 inches; exact dimensions cannot be determined without scale reference.
+    - Attribute 4 Material - Metal, likely steel or a similar alloy, exhibiting a matte finish with minor surface imperfections or wear.
+    - Attribute 5 Composition - Composed of a threaded shank, a tapered point, and a flat head with a Phillips drive recess; no visible coatings or additional materials.
+    - Attribute 6 Quantity - One screw is present.
+    - Attribute 7 Relative Location - Positioned diagonally across the frame, occupying the central visual space with its head near the upper right and its point near the lower left.
+    - Attribute 8 Orientation - Diagonally oriented, angled from the upper right to the lower left, with the head tilted slightly upward relative to the horizontal plane.
+    - Attribute 9 Connection or Attachments - No visible attachments or connected components; the screw is isolated and appears to be free-standing.
+2026-08-19 16:45:41 | DEBUG    | descriptor | Processing image description: processed_good_209_2026-08-19 16:45:25.json
+2026-08-19 16:45:41 | DEBUG    | descriptor | Raw description data: - Object 1 Screw
+    - Attribute 1 Type - A Phillips-head wood screw with a tapered, self-tapping tip and coarse threading along its shank.
+    - Attribute 2 Color - Grayish metallic tone, consistent with uncoated steel or similar metal.
+    - Attribute 3 Size - Approximately 2 to 3 inches in total length, with a head diameter of about 0.25 inches and a shank width of about 0.12 inches.
+    - Attribute 4 Material - Metal, likely steel, exhibiting a matte finish with minor surface imperfections and machining marks.
+    - Attribute 5 Composition - Composed of a hexagonal head with a Phillips recess, a cylindrical shank with helical threads, and a pointed tip designed for self-tapping into wood.
+    - Attribute 6 Quantity - One screw.
+    - Attribute 7 Relative Location - Positioned diagonally across the frame, occupying the central visual space.
+    - Attribute 8 Orientation - The screw is oriented with its head at the upper-left and its tip pointing toward the lower-right, angled slightly downward.
+    - Attribute 9 Connection or Attachments - No attachments or connections to other objects; the screw is isolated and appears to be resting freely on a surface.
+2026-08-19 16:45:41 | DEBUG    | descriptor | Unique object keys found: {'Screw'}
+2026-08-19 16:45:41 | DEBUG    | descriptor | Class 'good' object description: {'Screw': ['-  Type - A metal wood screw with a flat head and a sharp, tapered point, featuring a helical thread along its shaft.\n    -  Color - Grayish metallic tone, with visible surface texture and slight variations in shading due to lighting and material finish.\n    -  Size - Length appears to be approximately 2 to 3 inches; head diameter is roughly 0.25 to 0.35 inches, with the threaded portion occupying the majority of the shaft.\n    -  Material - Metal, likely steel or a similar alloy, exhibiting a matte, slightly oxidized or unpolished finish.\n    -  Composition - Composed of a cylindrical shaft with a threaded section and a flat head with a recessed drive slot (likely Phillips or similar), designed for self-tapping into wood.\n    -  Quantity - One screw is present.\n    -  Relative Location - Positioned diagonally across the frame, extending from the lower-left to the upper-right.\n    -  Orientation - Lying at an angle, with the head oriented toward the bottom-left and the pointed tip toward the upper-right.\n    -  Connection or Attachments - No visible attachments or connections to other objects; the screw is isolated and appears to be resting on a surface.', '-  Type - A self-tapping screw with a flat head and a Phillips drive recess, featuring a tapered point and helical threads along its shank.\n    -  Color - Monochromatic gray, with variations in tone indicating surface texture and light reflection; no color information is available due to black-and-white imaging.\n    -  Size - Length appears to be approximately 1 to 2 inches, with a head width of roughly 0.25 to 0.35 inches; exact dimensions cannot be determined without scale reference.\n    -  Material - Metal, likely steel or a similar alloy, exhibiting a matte finish with minor surface imperfections or wear.\n    -  Composition - Composed of a threaded shank, a tapered point, and a flat head with a Phillips drive recess; no visible coatings or additional materials.\n    -  Quantity - One screw is present.\n    -  Relative Location - Positioned diagonally across the frame, occupying the central visual space with its head near the upper right and its point near the lower left.\n    -  Orientation - Diagonally oriented, angled from the upper right to the lower left, with the head tilted slightly upward relative to the horizontal plane.\n    -  Connection or Attachments - No visible attachments or connected components; the screw is isolated and appears to be free-standing.', '-  Type - A Phillips-head wood screw with a tapered, self-tapping tip and coarse threading along its shank.\n    -  Color - Grayish metallic tone, consistent with uncoated steel or similar metal.\n    -  Size - Approximately 2 to 3 inches in total length, with a head diameter of about 0.25 inches and a shank width of about 0.12 inches.\n    -  Material - Metal, likely steel, exhibiting a matte finish with minor surface imperfections and machining marks.\n    -  Composition - Composed of a hexagonal head with a Phillips recess, a cylindrical shank with helical threads, and a pointed tip designed for self-tapping into wood.\n    -  Quantity - One screw.\n    -  Relative Location - Positioned diagonally across the frame, occupying the central visual space.\n    -  Orientation - The screw is oriented with its head at the upper-left and its tip pointing toward the lower-right, angled slightly downward.\n    -  Connection or Attachments - No attachments or connections to other objects; the screw is isolated and appears to be resting freely on a surface.']}
+2026-08-19 16:45:48 | INFO     | models | [LLM] Inference completed in 7.899s (max_new_tokens=3000)
+2026-08-19 16:45:48 | INFO     | descriptor | [Screw] Object summarisation completed in 7.899s
+2026-08-19 16:45:48 | DEBUG    | descriptor | Summarised description for 'Screw': 
+
+{
+  "Screw": {
+    "Type": "A Phillips-head wood screw with a tapered, self-tapping tip and coarse threading along its shank, featuring a flat head and a helical thread along its shaft.",
+    "Color": "Grayish metallic tone, consistent with uncoated steel or similar metal, with variations in shading due to surface texture and lighting.",
+    "Size": "Approximately 2 to 3 inches in total length, with a head diameter of about 0.25 inches and a shank width of about 0.12 inches; head width roughly 0.25 to 0.35 inches.",
+    "Material": "Metal, likely steel, exhibiting a matte finish with minor surface imperfections and machining marks.",
+    "Composition": "Composed of a hexagonal head with a Phillips recess, a cylindrical shank with helical threads, and a pointed tip designed for self-tapping into wood.",
+    "Quantity": "One screw is present.",
+    "Relative Location": "Positioned diagonally across the frame, occupying the central visual space with its head near the upper right and its point near the lower left, or with its head at the upper-left and tip pointing toward the lower-right.",
+    "Orientation": "Diagonally oriented, angled from the upper right to the lower left, with the head tilted slightly upward relative to the horizontal plane, or oriented with its head at the upper-left and tip pointing toward the lower-right, angled slightly downward.",
+    "Connection or Attachments": "No attachments or connections to other objects; the screw is isolated and appears to be resting freely on a surface."
+  }
+}
+2026-08-19 16:45:48 | DEBUG    | descriptor | Master description: {'Screw': {'Type': 'A Phillips-head wood screw with a tapered, self-tapping tip and coarse threading along its shank, featuring a flat head and a helical thread along its shaft.', 'Color': 'Grayish metallic tone, consistent with uncoated steel or similar metal, with variations in shading due to surface texture and lighting.', 'Size': 'Approximately 2 to 3 inches in total length, with a head diameter of about 0.25 inches and a shank width of about 0.12 inches; head width roughly 0.25 to 0.35 inches.', 'Material': 'Metal, likely steel, exhibiting a matte finish with minor surface imperfections and machining marks.', 'Composition': 'Composed of a hexagonal head with a Phillips recess, a cylindrical shank with helical threads, and a pointed tip designed for self-tapping into wood.', 'Quantity': 'One screw is present.', 'Relative Location': 'Positioned diagonally across the frame, occupying the central visual space with its head near the upper right and its point near the lower left, or with its head at the upper-left and tip pointing toward the lower-right.', 'Orientation': 'Diagonally oriented, angled from the upper right to the lower left, with the head tilted slightly upward relative to the horizontal plane, or oriented with its head at the upper-left and tip pointing toward the lower-right, angled slightly downward.', 'Connection or Attachments': 'No attachments or connections to other objects; the screw is isolated and appears to be resting freely on a surface.'}}
+2026-08-19 16:45:48 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:45:48 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/screw.txt
+2026-08-19 16:45:48 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=17)
+2026-08-19 16:45:48 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:45:49 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:45:51 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:45:51 | DEBUG    | planner | Class directories for dataset 'screw': ['good']
+2026-08-19 16:45:51 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/screw/good
+2026-08-19 16:45:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:45:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:45:51 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:45:48_master_description.json
+2026-08-19 16:45:59 | INFO     | models | [VLM] Inference completed in 8.573s (max_new_tokens=2040)
+2026-08-19 16:45:59 | INFO     | planner | Planner steps generated in 8.573s (attempt=1, steps=17, approved_rules=17)
+2026-08-19 16:45:59 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw/good/good_2026-08-19 16:45:59_planner.txt
+2026-08-19 16:45:59 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any scratch mark visible on the flat surface of the screw head?  
+Step 2: Is there any dent or indentation visible on the head surface of the screw?  
+Step 3: Is there any crack running across the head of the screw?  
+Step 4: Are there any scratch marks visible along the cylindrical body of the screw shank?  
+Step 5: Is there any dent or bulge visible on the surface of the screw shank?  
+Step 6: Is there any missing or broken thread ridge visible on the screw thread?  
+Step 7: Is there any section of the thread completely absent on the screw?  
+Step 8: Is the tip of the screw visibly bent or curved?  
+Step 9: Is there any chip or flake missing from the tip of the screw?  
+Step 10: Are the thread grooves visibly uneven or offset from the center axis of the screw?  
+Step 11: Is the head of the screw completely absent, leaving only the shank?  
+Step 12: Is the tip of the screw missing or truncated?  
+Step 13: Is there any visible dark or light staining on the surface of the entire screw?  
+Step 14: Is there any visible stain or discoloration on the head of the screw?  
+Step 15: Is there any visible stain or discoloration on the shank of the screw?  
+Step 16: Is there any visible stain or discoloration on the thread of the screw?  
+Step 17: Is there any visible stain or discoloration on the tip of the screw?
+2026-08-19 16:45:59 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw/performance/performance_20260819_164559.json
+2026-08-19 16:45:59 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/screw
+2026-08-19 16:45:59 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/screw_164515_log.txt

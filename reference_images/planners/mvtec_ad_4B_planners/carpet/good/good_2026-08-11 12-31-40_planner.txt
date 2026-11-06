@@ -1,0 +1,6 @@
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the fabric surface?
+Step 2: Is there any bent, warped, crushed, punctured, torn, or broken thread or component?
+Step 3: Is there any missing thread, warp, or weft that is visible in the reference but absent in the candidate?
+Step 4: Is there any foreign object, debris, or loose part present on the fabric?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the fabric?
+Step 6: Is there any significant misalignment or incorrect assembly in the thread pattern compared to the reference?

@@ -1,0 +1,192 @@
+2026-08-19 16:33:54 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:33:54 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:33:54 | INFO     | __main__ | Dataset  : capsule
+2026-08-19 16:33:54 | INFO     | __main__ | Classes  : single
+2026-08-19 16:33:54 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:33:54 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/capsule_163354_log.txt
+2026-08-19 16:33:54 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:33:55 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:33:55 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:33:57 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:33:57 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:33:57 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/capsule/train/good/143.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/capsule/train/good/019.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/capsule/train/good/168.png']
+2026-08-19 16:33:57 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:33:57 | INFO     | object_namer | [Object Namer] Loaded 2 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/capsule_object_labels.txt
+2026-08-19 16:33:57 | INFO     | __main__ | Object names: ['Printed Marking', 'Capsule']
+2026-08-19 16:33:57 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:33:57 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/capsule/good
+2026-08-19 16:33:57 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:33:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:33:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:33:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:33:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1119265 44
+2026-08-19 16:33:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1119321 1304
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1121667 44
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1121723 1304
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1141912 44
+2026-08-19 16:33:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1141968 1304
+2026-08-19 16:33:59 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:33:59 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:34:08 | INFO     | models | [VLM] Inference completed in 9.683s (max_new_tokens=2040)
+2026-08-19 16:34:08 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/capsule/good/processed_good_143_2026-08-19 16:34:08.json (inference_time=9.683s)
+2026-08-19 16:34:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:34:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:34:19 | INFO     | models | [VLM] Inference completed in 10.371s (max_new_tokens=2040)
+2026-08-19 16:34:19 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/capsule/good/processed_good_019_2026-08-19 16:34:19.json (inference_time=10.371s)
+2026-08-19 16:34:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:34:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:34:30 | INFO     | models | [VLM] Inference completed in 11.513s (max_new_tokens=2040)
+2026-08-19 16:34:30 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/capsule/good/processed_good_168_2026-08-19 16:34:30.json (inference_time=11.513s)
+2026-08-19 16:34:30 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:34:31 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:34:32 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:34:32 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/capsule/good
+2026-08-19 16:34:32 | DEBUG    | descriptor | Processing image description: processed_good_168_2026-08-19 16:34:30.json
+2026-08-19 16:34:32 | DEBUG    | descriptor | Raw description data: - Object 1 Capsule
+    - Attribute 1 Type - A two-part, elongated, oval-shaped pharmaceutical capsule with a smooth, glossy surface.
+    - Attribute 2 Color - One half is solid black, the other half is solid orange.
+    - Attribute 3 Size - Approximately 2.5 cm in length and 0.7 cm in diameter, typical for a standard oral capsule.
+    - Attribute 4 Material - Appears to be made of gelatin or a similar pharmaceutical-grade polymer, with a glossy finish.
+    - Attribute 5 Composition - Composed of two distinct colored halves, each half likely containing different active ingredients or coatings.
+    - Attribute 6 Quantity - One capsule.
+    - Attribute 7 Relative Location - Positioned horizontally and centered in the frame, occupying the central visual space.
+    - Attribute 8 Orientation - Lying flat, oriented horizontally with rounded ends facing left and right.
+    - Attribute 9 Connection or Attachments - The two halves are connected seamlessly along a central seam, forming a single, intact capsule unit.
+
+- Object 2 Printed Marking
+    - Attribute 1 Type - Text and logo printed on the capsule surface, including a brand name and numerical value.
+    - Attribute 2 Color - The printed text and logo are in a light gray or silver color, contrasting with the black and orange background.
+    - Attribute 3 Size - The printed text “actavis” and “500” are approximately 0.5 cm in height and 0.8 cm in width, occupying a central position on each respective half.
+    - Attribute 4 Material - Ink or laser-etched marking applied to the capsule surface.
+    - Attribute 5 Composition - Composed of printed characters and a stylized logo, likely representing the manufacturer or product identifier.
+    - Attribute 6 Quantity - Two printed markings: one on the black half (brand name) and one on the orange half (numeric value).
+    - Attribute 7 Relative Location - The “actavis” logo and text are printed on the black half, while “500” is printed on the orange half, both centrally located on their respective halves.
+    - Attribute 8 Orientation - The text and logo are oriented horizontally, aligned with the capsule’s longitudinal axis.
+    - Attribute 9 Connection or Attachments - The printed markings are directly integrated into the capsule’s surface, with no separate attachments or connectors.
+2026-08-19 16:34:32 | DEBUG    | descriptor | Processing image description: processed_good_019_2026-08-19 16:34:19.json
+2026-08-19 16:34:32 | DEBUG    | descriptor | Raw description data: - Object 1 Capsule
+    - Attribute 1 Type - A two-part, oblong, pill-shaped capsule with rounded ends, composed of a black half and an orange half.
+    - Attribute 2 Color - The left half is solid black, and the right half is translucent orange.
+    - Attribute 3 Size - Approximately 2.5 cm in length and 0.7 cm in width, based on typical pharmaceutical capsule dimensions.
+    - Attribute 4 Material - The capsule appears to be made of gelatin or a similar pharmaceutical-grade polymer, with a smooth, glossy surface.
+    - Attribute 5 Composition - The capsule is composed of two halves: a black opaque half and an orange translucent half, joined together to form a single unit.
+    - Attribute 6 Quantity - One capsule.
+    - Attribute 7 Relative Location - The capsule is positioned horizontally and centered in the frame.
+    - Attribute 8 Orientation - Lying horizontally with its long axis parallel to the bottom edge of the image.
+    - Attribute 9 Connection or Attachments - The two halves are fused together, forming a single, sealed capsule unit with no visible seams or attachments.
+
+- Object 2 Printed Marking
+    - Attribute 1 Type - A numerical imprint printed on the surface of the capsule.
+    - Attribute 2 Color - The marking is white or light-colored, contrasting against the orange background.
+    - Attribute 3 Size - The digits are approximately 3 mm in height and 4 mm in width each.
+    - Attribute 4 Material - The marking is an ink or laser-etched imprint on the surface of the capsule.
+    - Attribute 5 Composition - The marking consists of the digits "500" printed in a sans-serif font.
+    - Attribute 6 Quantity - One set of printed digits.
+    - Attribute 7 Relative Location - Located on the orange half of the capsule, centered along its length.
+    - Attribute 8 Orientation - The marking is oriented horizontally, aligned with the capsule's long axis.
+    - Attribute 9 Connection or Attachments - The marking is directly printed onto the surface of the capsule, with no physical connection or attachment to other objects.
+2026-08-19 16:34:32 | DEBUG    | descriptor | Processing image description: processed_good_143_2026-08-19 16:34:08.json
+2026-08-19 16:34:32 | DEBUG    | descriptor | Raw description data: - Object 1 Capsule
+    - Attribute 1 Type - A two-part, elongated, oval-shaped pharmaceutical capsule with rounded ends
+    - Attribute 2 Color - One half is solid black, the other half is translucent orange-brown
+    - Attribute 3 Size - Approximately 2.5 cm in length, with a width of about 0.7 cm
+    - Attribute 4 Material - Hard gelatin material with a smooth, glossy surface
+    - Attribute 5 Composition - Composed of two halves that fit together; the orange half contains an internal substance, while the black half is a protective shell
+    - Attribute 6 Quantity - One capsule
+    - Attribute 7 Relative Location - Positioned horizontally, centered in the frame
+    - Attribute 8 Orientation - Lying flat, aligned parallel to the bottom edge of the image
+    - Attribute 9 Connection or Attachments - The two halves are fused together, forming a single, sealed unit; no external attachments or connections visible
+
+- Object 2 Printed Marking
+    - Attribute 1 Type - A numerical imprint printed on the surface of the capsule
+    - Attribute 2 Color - The marking is light pink or off-white, contrasting with the orange-brown background
+    - Attribute 3 Size - The digits are approximately 0.5 cm in height, spaced evenly
+    - Attribute 4 Material - Ink or laser-etched marking applied to the capsule surface
+    - Attribute 5 Composition - Composed of the digits "5", "0", and "0" arranged sequentially
+    - Attribute 6 Quantity - One printed marking
+    - Attribute 7 Relative Location - Located on the orange-brown half of the capsule, centered along its length
+    - Attribute 8 Orientation - The marking is horizontally aligned with the capsule’s longitudinal axis
+    - Attribute 9 Connection or Attachments - The marking is directly printed onto the capsule surface and is not physically connected to any other object
+2026-08-19 16:34:32 | DEBUG    | descriptor | Unique object keys found: {'Capsule', 'Printed Marking'}
+2026-08-19 16:34:32 | DEBUG    | descriptor | Class 'good' object description: {'Capsule': ['-  Type - A two-part, elongated, oval-shaped pharmaceutical capsule with a smooth, glossy surface.\n    -  Color - One half is solid black, the other half is solid orange.\n    -  Size - Approximately 2.5 cm in length and 0.7 cm in diameter, typical for a standard oral capsule.\n    -  Material - Appears to be made of gelatin or a similar pharmaceutical-grade polymer, with a glossy finish.\n    -  Composition - Composed of two distinct colored halves, each half likely containing different active ingredients or coatings.\n    -  Quantity - One capsule.\n    -  Relative Location - Positioned horizontally and centered in the frame, occupying the central visual space.\n    -  Orientation - Lying flat, oriented horizontally with rounded ends facing left and right.\n    -  Connection or Attachments - The two halves are connected seamlessly along a central seam, forming a single, intact capsule unit.', '-  Type - A two-part, oblong, pill-shaped capsule with rounded ends, composed of a black half and an orange half.\n    -  Color - The left half is solid black, and the right half is translucent orange.\n    -  Size - Approximately 2.5 cm in length and 0.7 cm in width, based on typical pharmaceutical capsule dimensions.\n    -  Material - The capsule appears to be made of gelatin or a similar pharmaceutical-grade polymer, with a smooth, glossy surface.\n    -  Composition - The capsule is composed of two halves: a black opaque half and an orange translucent half, joined together to form a single unit.\n    -  Quantity - One capsule.\n    -  Relative Location - The capsule is positioned horizontally and centered in the frame.\n    -  Orientation - Lying horizontally with its long axis parallel to the bottom edge of the image.\n    -  Connection or Attachments - The two halves are fused together, forming a single, sealed capsule unit with no visible seams or attachments.', '-  Type - A two-part, elongated, oval-shaped pharmaceutical capsule with rounded ends\n    -  Color - One half is solid black, the other half is translucent orange-brown\n    -  Size - Approximately 2.5 cm in length, with a width of about 0.7 cm\n    -  Material - Hard gelatin material with a smooth, glossy surface\n    -  Composition - Composed of two halves that fit together; the orange half contains an internal substance, while the black half is a protective shell\n    -  Quantity - One capsule\n    -  Relative Location - Positioned horizontally, centered in the frame\n    -  Orientation - Lying flat, aligned parallel to the bottom edge of the image\n    -  Connection or Attachments - The two halves are fused together, forming a single, sealed unit; no external attachments or connections visible'], 'Printed Marking': ['-  Type - Text and logo printed on the capsule surface, including a brand name and numerical value.\n    -  Color - The printed text and logo are in a light gray or silver color, contrasting with the black and orange background.\n    -  Size - The printed text “actavis” and “500” are approximately 0.5 cm in height and 0.8 cm in width, occupying a central position on each respective half.\n    -  Material - Ink or laser-etched marking applied to the capsule surface.\n    -  Composition - Composed of printed characters and a stylized logo, likely representing the manufacturer or product identifier.\n    -  Quantity - Two printed markings: one on the black half (brand name) and one on the orange half (numeric value).\n    -  Relative Location - The “actavis” logo and text are printed on the black half, while “500” is printed on the orange half, both centrally located on their respective halves.\n    -  Orientation - The text and logo are oriented horizontally, aligned with the capsule’s longitudinal axis.\n    -  Connection or Attachments - The printed markings are directly integrated into the capsule’s surface, with no separate attachments or connectors.', '-  Type - A numerical imprint printed on the surface of the capsule.\n    -  Color - The marking is white or light-colored, contrasting against the orange background.\n    -  Size - The digits are approximately 3 mm in height and 4 mm in width each.\n    -  Material - The marking is an ink or laser-etched imprint on the surface of the capsule.\n    -  Composition - The marking consists of the digits "500" printed in a sans-serif font.\n    -  Quantity - One set of printed digits.\n    -  Relative Location - Located on the orange half of the capsule, centered along its length.\n    -  Orientation - The marking is oriented horizontally, aligned with the capsule\'s long axis.\n    -  Connection or Attachments - The marking is directly printed onto the surface of the capsule, with no physical connection or attachment to other objects.', '-  Type - A numerical imprint printed on the surface of the capsule\n    -  Color - The marking is light pink or off-white, contrasting with the orange-brown background\n    -  Size - The digits are approximately 0.5 cm in height, spaced evenly\n    -  Material - Ink or laser-etched marking applied to the capsule surface\n    -  Composition - Composed of the digits "5", "0", and "0" arranged sequentially\n    -  Quantity - One printed marking\n    -  Relative Location - Located on the orange-brown half of the capsule, centered along its length\n    -  Orientation - The marking is horizontally aligned with the capsule’s longitudinal axis\n    -  Connection or Attachments - The marking is directly printed onto the capsule surface and is not physically connected to any other object']}
+2026-08-19 16:34:37 | INFO     | models | [LLM] Inference completed in 5.021s (max_new_tokens=3000)
+2026-08-19 16:34:37 | INFO     | descriptor | [Capsule] Object summarisation completed in 5.021s
+2026-08-19 16:34:37 | DEBUG    | descriptor | Summarised description for 'Capsule': 
+
+{
+  "Capsule": {
+    "Type": "A two-part, elongated, oval-shaped pharmaceutical capsule with rounded ends, composed of a black half and an orange half",
+    "Color": "One half is solid black, the other half is translucent orange-brown",
+    "Size": "Approximately 2.5 cm in length and 0.7 cm in diameter / 2.5 cm in length and 0.7 cm in width",
+    "Material": "Hard gelatin material with a smooth, glossy surface",
+    "Composition": "Composed of two halves that fit together; the orange half contains an internal substance, while the black half is a protective shell",
+    "Quantity": "One capsule",
+    "Relative Location": "Positioned horizontally and centered in the frame",
+    "Orientation": "Lying flat, aligned parallel to the bottom edge of the image",
+    "Connection or Attachments": "The two halves are fused together, forming a single, sealed unit; no external attachments or connections visible"
+  }
+}
+2026-08-19 16:34:45 | INFO     | models | [LLM] Inference completed in 7.782s (max_new_tokens=3000)
+2026-08-19 16:34:45 | INFO     | descriptor | [Printed Marking] Object summarisation completed in 7.782s
+2026-08-19 16:34:45 | DEBUG    | descriptor | Summarised description for 'Printed Marking': 
+
+{
+  "Printed Marking": {
+    "Type": "Text and logo printed on the capsule surface, including a brand name and numerical value",
+    "Color": "Light gray or silver, white or light-colored, light pink or off-white, contrasting with black, orange, or orange-brown backgrounds",
+    "Size": "0.5 cm in height and 0.8 cm in width for the text 'actavis' and '500', 3 mm in height and 4 mm in width for digits, 0.5 cm in height for digits spaced evenly",
+    "Material": "Ink or laser-etched marking applied to the capsule surface",
+    "Composition": "Composed of printed characters and a stylized logo, likely representing the manufacturer or product identifier, consisting of the digits '500' printed in a sans-serif font, or the digits '5', '0', and '0' arranged sequentially",
+    "Quantity": "Two printed markings: one on the black half (brand name) and one on the orange half (numeric value), or one set of printed digits",
+    "Relative Location": "The 'actavis' logo and text are printed on the black half, while '500' is printed on the orange half, both centrally located on their respective halves, or located on the orange-brown half of the capsule, centered along its length",
+    "Orientation": "Horizontally aligned with the capsule’s longitudinal axis",
+    "Connection or Attachments": "Directly integrated into the capsule’s surface, with no separate attachments or connectors, and not physically connected to any other object"
+  }
+}
+2026-08-19 16:34:45 | DEBUG    | descriptor | Master description: {'Capsule': {'Type': 'A two-part, elongated, oval-shaped pharmaceutical capsule with rounded ends, composed of a black half and an orange half', 'Color': 'One half is solid black, the other half is translucent orange-brown', 'Size': 'Approximately 2.5 cm in length and 0.7 cm in diameter / 2.5 cm in length and 0.7 cm in width', 'Material': 'Hard gelatin material with a smooth, glossy surface', 'Composition': 'Composed of two halves that fit together; the orange half contains an internal substance, while the black half is a protective shell', 'Quantity': 'One capsule', 'Relative Location': 'Positioned horizontally and centered in the frame', 'Orientation': 'Lying flat, aligned parallel to the bottom edge of the image', 'Connection or Attachments': 'The two halves are fused together, forming a single, sealed unit; no external attachments or connections visible'}, 'Printed Marking': {'Type': 'Text and logo printed on the capsule surface, including a brand name and numerical value', 'Color': 'Light gray or silver, white or light-colored, light pink or off-white, contrasting with black, orange, or orange-brown backgrounds', 'Size': "0.5 cm in height and 0.8 cm in width for the text 'actavis' and '500', 3 mm in height and 4 mm in width for digits, 0.5 cm in height for digits spaced evenly", 'Material': 'Ink or laser-etched marking applied to the capsule surface', 'Composition': "Composed of printed characters and a stylized logo, likely representing the manufacturer or product identifier, consisting of the digits '500' printed in a sans-serif font, or the digits '5', '0', and '0' arranged sequentially", 'Quantity': 'Two printed markings: one on the black half (brand name) and one on the orange half (numeric value), or one set of printed digits', 'Relative Location': "The 'actavis' logo and text are printed on the black half, while '500' is printed on the orange half, both centrally located on their respective halves, or located on the orange-brown half of the capsule, centered along its length", 'Orientation': 'Horizontally aligned with the capsule’s longitudinal axis', 'Connection or Attachments': 'Directly integrated into the capsule’s surface, with no separate attachments or connectors, and not physically connected to any other object'}}
+2026-08-19 16:34:45 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:34:45 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/capsule.txt
+2026-08-19 16:34:45 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=22)
+2026-08-19 16:34:45 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:34:45 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:34:47 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:34:47 | DEBUG    | planner | Class directories for dataset 'capsule': ['good']
+2026-08-19 16:34:47 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/capsule/good
+2026-08-19 16:34:47 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:34:47 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:34:47 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:34:45_master_description.json
+2026-08-19 16:35:00 | INFO     | models | [VLM] Inference completed in 12.590s (max_new_tokens=2040)
+2026-08-19 16:35:00 | INFO     | planner | Planner steps generated in 12.590s (attempt=1, steps=22, approved_rules=22)
+2026-08-19 16:35:00 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/capsule/good/good_2026-08-19 16:35:00_planner.txt
+2026-08-19 16:35:00 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any visible fine scratches or scuff marks on the surface of the orange half of the capsule?  
+Step 2: Is there any visible fine scratches or scuff marks on the surface of the black half of the capsule?  
+Step 3: Is there any visible crack or separation line running along the seam where the black and orange halves meet?  
+Step 4: Is there any small, visible puncture or indentation on the orange surface?  
+Step 5: Is there any small, visible puncture or indentation on the black surface?  
+Step 6: Is there any visible dent or depression on the orange surface?  
+Step 7: Is there any visible dent or depression on the black surface?  
+Step 8: Is there any visible tear or split on the orange surface?  
+Step 9: Is there any visible tear or split on the black surface?  
+Step 10: Is there any visible break or fracture along the seam where the black and orange halves meet?  
+Step 11: Is there any visible residue or substance leaking out from the orange half, staining the surface?  
+Step 12: Is there any visible residue or substance leaking out from the black half, staining the surface?  
+Step 13: Is there any visible crack or fracture line running through the orange half?  
+Step 14: Is there any visible crack or fracture line running through the black half?  
+Step 15: Is the orange half showing visible bulging or irregular shape, not smooth and cylindrical?  
+Step 16: Is the black half showing visible bulging or irregular shape, not smooth and cylindrical?  
+Step 17: Is the junction between black and orange halves showing visible bulging or irregular shape?  
+Step 18: Is the printed '500' on the orange half appearing smeared or out of focus, not sharp?  
+Step 19: Is one or more digits of the '500' on the orange half missing or cut off?  
+Step 20: Is there any additional mark or digit visible next to or overlapping the '500' on the orange half?  
+Step 21: Is the printed '500' on the orange half appearing lighter or less distinct than the surrounding surface?  
+Step 22: Is the printed '500' on the orange half appearing stretched, warped, or deformed?
+2026-08-19 16:35:00 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/capsule/performance/performance_20260819_163500.json
+2026-08-19 16:35:00 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/capsule
+2026-08-19 16:35:00 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/capsule_163354_log.txt

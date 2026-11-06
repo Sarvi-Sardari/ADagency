@@ -1,0 +1,119 @@
+2026-08-14 17:27:48 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-14 17:27:48 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-14 17:27:48 | INFO     | __main__ | Dataset  : zivid_darkblue_box
+2026-08-14 17:27:48 | INFO     | __main__ | Classes  : single
+2026-08-14 17:27:48 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-14 17:27:48 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/zivid_darkblue_box_172748_log.txt
+2026-08-14 17:27:48 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-14 17:27:49 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-14 17:27:49 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:27:51 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:27:51 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-14 17:27:51 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_darkblue_box/train/good/zivid_rgb_00330.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_darkblue_box/train/good/zivid_rgb_00015.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_darkblue_box/train/good/zivid_rgb_00353.png']
+2026-08-14 17:27:51 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-14 17:27:51 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-14 17:27:51 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-14 17:27:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:27:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:27:52 | INFO     | models | [VLM] Inference completed in 0.606s (max_new_tokens=2040)
+2026-08-14 17:27:52 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_darkblue_box/train/good/zivid_rgb_00000.png in 0.606s
+2026-08-14 17:28:24 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/zivid_darkblue_box_object_labels.txt
+2026-08-14 17:28:24 | INFO     | __main__ | Object names: ['blue plastic tray']
+2026-08-14 17:28:24 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-14 17:28:24 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/zivid_darkblue_box/good
+2026-08-14 17:28:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:28:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:28:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:28:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:28:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:28:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:28:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:28:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:28:31 | INFO     | models | [VLM] Inference completed in 5.330s (max_new_tokens=2040)
+2026-08-14 17:28:31 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_darkblue_box/good/processed_good_zivid_rgb_00330_2026-08-14 17:28:31.json (inference_time=5.330s)
+2026-08-14 17:28:31 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:28:31 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:28:37 | INFO     | models | [VLM] Inference completed in 5.919s (max_new_tokens=2040)
+2026-08-14 17:28:37 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_darkblue_box/good/processed_good_zivid_rgb_00015_2026-08-14 17:28:37.json (inference_time=5.919s)
+2026-08-14 17:28:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:28:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:28:42 | INFO     | models | [VLM] Inference completed in 5.145s (max_new_tokens=2040)
+2026-08-14 17:28:42 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_darkblue_box/good/processed_good_zivid_rgb_00353_2026-08-14 17:28:42.json (inference_time=5.145s)
+2026-08-14 17:28:42 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-14 17:28:42 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-14 17:28:44 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-14 17:28:44 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_darkblue_box/good
+2026-08-14 17:28:44 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00353_2026-08-14 17:28:42.json
+2026-08-14 17:28:44 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic tray
+    - Attribute 1 Type - rectangular, open-top container with reinforced rim and molded handles on two sides
+    - Attribute 2 Color - solid dark blue with slight sheen and visible surface wear
+    - Attribute 3 Size - approximately 20 inches in length, 15 inches in width, and 4 inches in height (estimated based on proportions)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer
+    - Attribute 5 Composition - single-piece construction with integrated handles and reinforced corners, no visible seams or separate parts
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - centered within the frame, occupying the majority of the visible area
+    - Attribute 8 Orientation - tilted at an angle, with the top edge angled upward from bottom-left to top-right
+    - Attribute 9 Connection or Attachments - no visible attachments or connections to other objects; handles are molded integrally into the side walls
+2026-08-14 17:28:44 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00015_2026-08-14 17:28:37.json
+2026-08-14 17:28:44 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic tray
+    - Attribute 1 Type - rectangular, open-top container with reinforced edges and integrated handles
+    - Attribute 2 Color - deep blue with slightly darker interior, showing minor white residue or stains on inner surface
+    - Attribute 3 Size - approximately 30 cm in length, 20 cm in width, and 15 cm in height (estimated based on visual proportion)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer
+    - Attribute 5 Composition - single-piece molded construction with reinforced corners, integrated handles, and mounting holes along edges
+    - Attribute 6 Quantity - one visible blue plastic tray in foreground, with additional trays partially visible in background
+    - Attribute 7 Relative Location - positioned centrally in the foreground, resting on a flat surface, with other trays stacked or placed behind it
+    - Attribute 8 Orientation - viewed from above at a slight downward angle, with open top facing viewer
+    - Attribute 9 Connection or Attachments - no visible attachments or connections to other objects; handles are integrated into the side walls; mounting holes along edges suggest potential for stacking or securing to racks
+2026-08-14 17:28:44 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00330_2026-08-14 17:28:31.json
+2026-08-14 17:28:44 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic tray
+    - Attribute 1 Type - rectangular, open-top container with raised rim and integrated latches on each corner
+    - Attribute 2 Color - solid blue, with slight sheen and visible surface texture
+    - Attribute 3 Size - approximately 18 inches in length and 12 inches in width, with a depth of about 4 inches
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer
+    - Attribute 5 Composition - single-piece construction with reinforced corners, integrated latching mechanisms, and a textured interior base
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - centrally positioned within the frame, occupying the majority of the visual space
+    - Attribute 8 Orientation - viewed from directly above, with the long sides horizontal and short sides vertical
+    - Attribute 9 Connection or Attachments - features four corner latches designed for interlocking with another tray or lid, with small holes along the rim for potential stacking or securing
+2026-08-14 17:28:44 | DEBUG    | descriptor | Unique object keys found: {'blue plastic tray'}
+2026-08-14 17:28:44 | DEBUG    | descriptor | Class 'good' object description: {'blue plastic tray': ['-  Type - rectangular, open-top container with reinforced rim and molded handles on two sides\n    -  Color - solid dark blue with slight sheen and visible surface wear\n    -  Size - approximately 20 inches in length, 15 inches in width, and 4 inches in height (estimated based on proportions)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer\n    -  Composition - single-piece construction with integrated handles and reinforced corners, no visible seams or separate parts\n    -  Quantity - one\n    -  Relative Location - centered within the frame, occupying the majority of the visible area\n    -  Orientation - tilted at an angle, with the top edge angled upward from bottom-left to top-right\n    -  Connection or Attachments - no visible attachments or connections to other objects; handles are molded integrally into the side walls', '-  Type - rectangular, open-top container with reinforced edges and integrated handles\n    -  Color - deep blue with slightly darker interior, showing minor white residue or stains on inner surface\n    -  Size - approximately 30 cm in length, 20 cm in width, and 15 cm in height (estimated based on visual proportion)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer\n    -  Composition - single-piece molded construction with reinforced corners, integrated handles, and mounting holes along edges\n    -  Quantity - one visible blue plastic tray in foreground, with additional trays partially visible in background\n    -  Relative Location - positioned centrally in the foreground, resting on a flat surface, with other trays stacked or placed behind it\n    -  Orientation - viewed from above at a slight downward angle, with open top facing viewer\n    -  Connection or Attachments - no visible attachments or connections to other objects; handles are integrated into the side walls; mounting holes along edges suggest potential for stacking or securing to racks', '-  Type - rectangular, open-top container with raised rim and integrated latches on each corner\n    -  Color - solid blue, with slight sheen and visible surface texture\n    -  Size - approximately 18 inches in length and 12 inches in width, with a depth of about 4 inches\n    -  Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer\n    -  Composition - single-piece construction with reinforced corners, integrated latching mechanisms, and a textured interior base\n    -  Quantity - one\n    -  Relative Location - centrally positioned within the frame, occupying the majority of the visual space\n    -  Orientation - viewed from directly above, with the long sides horizontal and short sides vertical\n    -  Connection or Attachments - features four corner latches designed for interlocking with another tray or lid, with small holes along the rim for potential stacking or securing']}
+2026-08-14 17:28:51 | INFO     | models | [LLM] Inference completed in 7.389s (max_new_tokens=3000)
+2026-08-14 17:28:51 | INFO     | descriptor | [blue plastic tray] Object summarisation completed in 7.389s
+2026-08-14 17:28:51 | DEBUG    | descriptor | Summarised description for 'blue plastic tray': 
+
+{
+  "blue plastic tray": {
+    "Type": "rectangular, open-top container with reinforced rim, molded handles on two sides, and integrated latches on each corner",
+    "Color": "solid dark blue with slight sheen and visible surface wear, with a slightly darker interior and minor white residue or stains on inner surface",
+    "Size": "5x5cm / 2x2 inches (approximate) to 30x20cm / 12x8 inches (approximate), with depth of about 4 inches",
+    "Material": "molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer",
+    "Composition": "single-piece construction with reinforced corners, integrated handles, mounting holes along edges, and textured interior base; features four corner latches designed for interlocking with another tray or lid",
+    "Quantity": "one",
+    "Relative Location": "centrally positioned within the frame, occupying the majority of the visible area, with additional trays partially visible in background",
+    "Orientation": "tilted at an angle with the top edge angled upward from bottom-left to top-right, or viewed from directly above with long sides horizontal and short sides vertical",
+    "Connection or Attachments": "no visible attachments or connections to other objects; handles are molded integrally into the side walls; mounting holes along edges suggest potential for stacking or securing to racks; features four corner latches designed for interlocking with another tray or lid, with small holes along the rim for potential stacking or securing"
+  }
+}
+2026-08-14 17:28:51 | DEBUG    | descriptor | Master description: {'blue plastic tray': {'Type': 'rectangular, open-top container with reinforced rim, molded handles on two sides, and integrated latches on each corner', 'Color': 'solid dark blue with slight sheen and visible surface wear, with a slightly darker interior and minor white residue or stains on inner surface', 'Size': '5x5cm / 2x2 inches (approximate) to 30x20cm / 12x8 inches (approximate), with depth of about 4 inches', 'Material': 'molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer', 'Composition': 'single-piece construction with reinforced corners, integrated handles, mounting holes along edges, and textured interior base; features four corner latches designed for interlocking with another tray or lid', 'Quantity': 'one', 'Relative Location': 'centrally positioned within the frame, occupying the majority of the visible area, with additional trays partially visible in background', 'Orientation': 'tilted at an angle with the top edge angled upward from bottom-left to top-right, or viewed from directly above with long sides horizontal and short sides vertical', 'Connection or Attachments': 'no visible attachments or connections to other objects; handles are molded integrally into the side walls; mounting holes along edges suggest potential for stacking or securing to racks; features four corner latches designed for interlocking with another tray or lid, with small holes along the rim for potential stacking or securing'}}
+2026-08-14 17:28:51 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-14 17:28:51 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/zivid_darkblue_box.txt
+2026-08-14 17:28:51 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=3)
+2026-08-14 17:28:51 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-14 17:28:51 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:28:53 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:28:53 | DEBUG    | planner | Class directories for dataset 'zivid_darkblue_box': ['good']
+2026-08-14 17:28:53 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/zivid_darkblue_box/good
+2026-08-14 17:28:53 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:28:53 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:28:54 | DEBUG    | planner | Generating planner steps from: good_2026-08-14 17:28:51_master_description.json
+2026-08-14 17:28:56 | INFO     | models | [VLM] Inference completed in 2.133s (max_new_tokens=2040)
+2026-08-14 17:28:56 | INFO     | planner | Planner steps generated in 2.133s (attempt=1, steps=3, approved_rules=3)
+2026-08-14 17:28:56 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_darkblue_box/good/good_2026-08-14 17:28:56_planner.txt
+2026-08-14 17:28:56 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any dirt, grime, or residue stains visible on the interior surface of the blue plastic tray?  
+Step 2: Is there any discoloration, oil stains, or liquid residue marks present on the interior surface of the blue plastic tray?  
+Step 3: Is there any visible item or part inside the interior of the blue plastic tray?
+2026-08-14 17:28:56 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_darkblue_box/performance/performance_20260814_172856.json
+2026-08-14 17:28:56 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_darkblue_box
+2026-08-14 17:28:56 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/zivid_darkblue_box_172748_log.txt

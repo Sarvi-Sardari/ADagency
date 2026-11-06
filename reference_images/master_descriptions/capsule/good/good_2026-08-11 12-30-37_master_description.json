@@ -1,0 +1,13 @@
+{
+    "capsule": {
+        "Type": "A sealed, pharmaceutical container designed for drug delivery",
+        "Color": "Transparent with a faint blue tint",
+        "Size": "5x5cm / 2x2 inches",
+        "Material": "Thin flexible PVC",
+        "Composition": "Polyvinyl chloride with a plasticized polymer matrix and a sealed lid",
+        "Quantity": "50 units in a single package",
+        "Relative Location": "Stored in a vertical rack on the left side of the dispensary cabinet",
+        "Orientation": "Standing upright with the opening facing downward",
+        "Connection or Attachments": "Attached to a labeling strip via a magnetic adhesive at the base"
+    }
+}

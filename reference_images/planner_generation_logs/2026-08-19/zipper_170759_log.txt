@@ -1,0 +1,187 @@
+2026-08-19 17:07:59 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 17:07:59 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 17:07:59 | INFO     | __main__ | Dataset  : zipper
+2026-08-19 17:07:59 | INFO     | __main__ | Classes  : single
+2026-08-19 17:07:59 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 17:07:59 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/zipper_170759_log.txt
+2026-08-19 17:07:59 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 17:08:01 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 17:08:01 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 17:08:03 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 17:08:03 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 17:08:03 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/zipper/train/good/157.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/zipper/train/good/021.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/zipper/train/good/184.png']
+2026-08-19 17:08:03 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 17:08:03 | INFO     | object_namer | [Object Namer] Loaded 2 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/zipper_object_labels.txt
+2026-08-19 17:08:03 | INFO     | __main__ | Object names: ['Fabric', 'Zipper']
+2026-08-19 17:08:03 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 17:08:03 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/zipper/good
+2026-08-19 17:08:03 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:08:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:08:12 | INFO     | models | [VLM] Inference completed in 8.576s (max_new_tokens=2040)
+2026-08-19 17:08:12 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zipper/good/processed_good_157_2026-08-19 17:08:12.json (inference_time=8.576s)
+2026-08-19 17:08:12 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:08:12 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:08:21 | INFO     | models | [VLM] Inference completed in 9.714s (max_new_tokens=2040)
+2026-08-19 17:08:21 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zipper/good/processed_good_021_2026-08-19 17:08:21.json (inference_time=9.714s)
+2026-08-19 17:08:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:08:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:08:30 | INFO     | models | [VLM] Inference completed in 8.227s (max_new_tokens=2040)
+2026-08-19 17:08:30 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zipper/good/processed_good_184_2026-08-19 17:08:30.json (inference_time=8.227s)
+2026-08-19 17:08:30 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 17:08:30 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 17:08:32 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 17:08:32 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zipper/good
+2026-08-19 17:08:32 | DEBUG    | descriptor | Processing image description: processed_good_184_2026-08-19 17:08:30.json
+2026-08-19 17:08:32 | DEBUG    | descriptor | Raw description data: - Object 1 Fabric
+    - Attribute 1 Type - textured woven fabric with a consistent, tight, grid-like pattern
+    - Attribute 2 Color - solid black
+    - Attribute 3 Size - length and width not fully determinable due to cropped view, but appears as a vertical strip
+    - Attribute 4 Material - synthetic or blended textile, possibly nylon or polyester
+    - Attribute 5 Composition - interlaced threads forming a dense, uniform weave
+    - Attribute 6 Quantity - one continuous piece
+    - Attribute 7 Relative Location - occupies the entire frame from top to bottom, flanking the zipper on both sides
+    - Attribute 8 Orientation - vertical, aligned with the zipper
+    - Attribute 9 Connection or Attachments - directly attached to the zipper teeth along its length
+
+- Object 2 Zipper
+    - Attribute 1 Type - standard coil zipper with interlocking teeth
+    - Attribute 2 Color - black, matching the fabric
+    - Attribute 3 Size - length appears to be the full height of the fabric strip; width is narrow, consistent with typical zipper construction
+    - Attribute 4 Material - metal or hard plastic teeth with a smooth, slightly reflective surface
+    - Attribute 5 Composition - consists of two interlocking rows of teeth, each with a small, rounded profile
+    - Attribute 6 Quantity - one zipper
+    - Attribute 7 Relative Location - centered vertically, running down the middle of the fabric
+    - Attribute 8 Orientation - vertical, aligned with the fabric’s vertical axis
+    - Attribute 9 Connection or Attachments - directly integrated into the fabric, with teeth interlocked and embedded within the textile on both sides
+2026-08-19 17:08:32 | DEBUG    | descriptor | Processing image description: processed_good_021_2026-08-19 17:08:21.json
+2026-08-19 17:08:32 | DEBUG    | descriptor | Raw description data: - Object 1 Fabric
+    - Attribute 1 Type - textured woven fabric with a tight, uniform pattern resembling a crinkled or puckered surface
+    - Attribute 2 Color - solid black, with consistent tone throughout
+    - Attribute 3 Size - length and width not fully visible, but appears to be a narrow vertical strip, possibly part of a garment or accessory
+    - Attribute 4 Material - synthetic or blended textile, likely polyester or nylon, based on texture and sheen
+    - Attribute 5 Composition - interlaced threads forming a dense, crinkled weave; no visible fibers or backing
+    - Attribute 6 Quantity - one continuous piece of fabric
+    - Attribute 7 Relative Location - occupies the entire frame vertically, flanking both sides of the zipper
+    - Attribute 8 Orientation - vertical, aligned with the zipper’s central axis
+    - Attribute 9 Connection or Attachments - directly attached to and encasing the zipper teeth along its length
+
+- Object 2 Zipper
+    - Attribute 1 Type - standard coil or toothed zipper with a continuous track of interlocking teeth
+    - Attribute 2 Color - black, matching the fabric, with a slightly glossy finish on the teeth
+    - Attribute 3 Size - length not fully visible, but appears to be a narrow vertical strip; width of zipper track is consistent with typical zipper construction
+    - Attribute 4 Material - metal or plastic teeth, with a black coating or finish; slider not visible
+    - Attribute 5 Composition - interlocking teeth forming a continuous zipper track; no visible slider or pull tab
+    - Attribute 6 Quantity - one continuous zipper track
+    - Attribute 7 Relative Location - centered vertically, running down the middle of the fabric
+    - Attribute 8 Orientation - vertical, aligned with the fabric’s central axis
+    - Attribute 9 Connection or Attachments - directly embedded within or sewn into the fabric on both sides, with teeth interlocked and secured to the fabric’s surface
+2026-08-19 17:08:32 | DEBUG    | descriptor | Processing image description: processed_good_157_2026-08-19 17:08:12.json
+2026-08-19 17:08:32 | DEBUG    | descriptor | Raw description data: - Object 1 Fabric
+    - Attribute 1 Type - textured woven fabric with a crinkled or pebbled surface pattern
+    - Attribute 2 Color - solid black
+    - Attribute 3 Size - width appears to be approximately 10-12 inches, length not fully visible but extends vertically
+    - Attribute 4 Material - synthetic or blended textile, possibly polyester or nylon
+    - Attribute 5 Composition - interlaced threads forming a consistent, uniform texture
+    - Attribute 6 Quantity - one continuous piece of fabric
+    - Attribute 7 Relative Location - occupies the entire vertical frame, flanking the zipper on both sides
+    - Attribute 8 Orientation - oriented vertically, aligned with the zipper’s direction
+    - Attribute 9 Connection or Attachments - attached to and encasing the zipper, forming a seam or closure edge
+
+- Object 2 Zipper
+    - Attribute 1 Type - standard coil or toothed zipper with a central pull tab
+    - Attribute 2 Color - black, matching the fabric
+    - Attribute 3 Size - length appears to be the full height of the fabric shown, width of zipper teeth is narrow and consistent
+    - Attribute 4 Material - metal or hard plastic teeth with a smooth, slightly glossy finish
+    - Attribute 5 Composition - interlocking teeth connected by a central slider mechanism
+    - Attribute 6 Quantity - one zipper
+    - Attribute 7 Relative Location - centered vertically, running down the middle of the fabric
+    - Attribute 8 Orientation - oriented vertically, aligned with the fabric’s vertical axis
+    - Attribute 9 Connection or Attachments - connected to the fabric on both sides, integrated into the seam or edge of the material
+2026-08-19 17:08:32 | DEBUG    | descriptor | Unique object keys found: {'Zipper', 'Fabric'}
+2026-08-19 17:08:32 | DEBUG    | descriptor | Class 'good' object description: {'Zipper': ['-  Type - standard coil zipper with interlocking teeth\n    -  Color - black, matching the fabric\n    -  Size - length appears to be the full height of the fabric strip; width is narrow, consistent with typical zipper construction\n    -  Material - metal or hard plastic teeth with a smooth, slightly reflective surface\n    -  Composition - consists of two interlocking rows of teeth, each with a small, rounded profile\n    -  Quantity - one zipper\n    -  Relative Location - centered vertically, running down the middle of the fabric\n    -  Orientation - vertical, aligned with the fabric’s vertical axis\n    -  Connection or Attachments - directly integrated into the fabric, with teeth interlocked and embedded within the textile on both sides', '-  Type - standard coil or toothed zipper with a continuous track of interlocking teeth\n    -  Color - black, matching the fabric, with a slightly glossy finish on the teeth\n    -  Size - length not fully visible, but appears to be a narrow vertical strip; width of zipper track is consistent with typical zipper construction\n    -  Material - metal or plastic teeth, with a black coating or finish; slider not visible\n    -  Composition - interlocking teeth forming a continuous zipper track; no visible slider or pull tab\n    -  Quantity - one continuous zipper track\n    -  Relative Location - centered vertically, running down the middle of the fabric\n    -  Orientation - vertical, aligned with the fabric’s central axis\n    -  Connection or Attachments - directly embedded within or sewn into the fabric on both sides, with teeth interlocked and secured to the fabric’s surface', '-  Type - standard coil or toothed zipper with a central pull tab\n    -  Color - black, matching the fabric\n    -  Size - length appears to be the full height of the fabric shown, width of zipper teeth is narrow and consistent\n    -  Material - metal or hard plastic teeth with a smooth, slightly glossy finish\n    -  Composition - interlocking teeth connected by a central slider mechanism\n    -  Quantity - one zipper\n    -  Relative Location - centered vertically, running down the middle of the fabric\n    -  Orientation - oriented vertically, aligned with the fabric’s vertical axis\n    -  Connection or Attachments - connected to the fabric on both sides, integrated into the seam or edge of the material'], 'Fabric': ['-  Type - textured woven fabric with a consistent, tight, grid-like pattern\n    -  Color - solid black\n    -  Size - length and width not fully determinable due to cropped view, but appears as a vertical strip\n    -  Material - synthetic or blended textile, possibly nylon or polyester\n    -  Composition - interlaced threads forming a dense, uniform weave\n    -  Quantity - one continuous piece\n    -  Relative Location - occupies the entire frame from top to bottom, flanking the zipper on both sides\n    -  Orientation - vertical, aligned with the zipper\n    -  Connection or Attachments - directly attached to the zipper teeth along its length', '-  Type - textured woven fabric with a tight, uniform pattern resembling a crinkled or puckered surface\n    -  Color - solid black, with consistent tone throughout\n    -  Size - length and width not fully visible, but appears to be a narrow vertical strip, possibly part of a garment or accessory\n    -  Material - synthetic or blended textile, likely polyester or nylon, based on texture and sheen\n    -  Composition - interlaced threads forming a dense, crinkled weave; no visible fibers or backing\n    -  Quantity - one continuous piece of fabric\n    -  Relative Location - occupies the entire frame vertically, flanking both sides of the zipper\n    -  Orientation - vertical, aligned with the zipper’s central axis\n    -  Connection or Attachments - directly attached to and encasing the zipper teeth along its length', '-  Type - textured woven fabric with a crinkled or pebbled surface pattern\n    -  Color - solid black\n    -  Size - width appears to be approximately 10-12 inches, length not fully visible but extends vertically\n    -  Material - synthetic or blended textile, possibly polyester or nylon\n    -  Composition - interlaced threads forming a consistent, uniform texture\n    -  Quantity - one continuous piece of fabric\n    -  Relative Location - occupies the entire vertical frame, flanking the zipper on both sides\n    -  Orientation - oriented vertically, aligned with the zipper’s direction\n    -  Connection or Attachments - attached to and encasing the zipper, forming a seam or closure edge']}
+2026-08-19 17:08:36 | INFO     | models | [LLM] Inference completed in 4.304s (max_new_tokens=3000)
+2026-08-19 17:08:36 | INFO     | descriptor | [Zipper] Object summarisation completed in 4.304s
+2026-08-19 17:08:36 | DEBUG    | descriptor | Summarised description for 'Zipper': 
+
+{
+  "Zipper": {
+    "Type": "standard coil or toothed zipper with interlocking teeth and a central pull tab",
+    "Color": "black, matching the fabric, with a slightly glossy finish on the teeth",
+    "Size": "length appears to be the full height of the fabric strip; width is narrow, consistent with typical zipper construction",
+    "Material": "metal or hard plastic teeth with a smooth, slightly glossy finish",
+    "Composition": "interlocking teeth forming a continuous zipper track connected by a central slider mechanism",
+    "Quantity": "one zipper",
+    "Relative Location": "centered vertically, running down the middle of the fabric",
+    "Orientation": "vertical, aligned with the fabric’s vertical axis",
+    "Connection/Attachments": "directly integrated into the fabric, with teeth interlocked and embedded within the textile on both sides"
+  }
+}
+2026-08-19 17:08:41 | INFO     | models | [LLM] Inference completed in 4.892s (max_new_tokens=3000)
+2026-08-19 17:08:41 | INFO     | descriptor | [Fabric] Object summarisation completed in 4.892s
+2026-08-19 17:08:41 | DEBUG    | descriptor | Summarised description for 'Fabric': 
+
+{
+  "Fabric": {
+    "Type": "textured woven fabric with a tight, uniform pattern resembling a crinkled or puckered surface",
+    "Color": "solid black, with consistent tone throughout",
+    "Size": "width approximately 10-12 inches, length not fully visible but extends vertically / length and width not fully determinable due to cropped view, but appears as a vertical strip",
+    "Material": "synthetic or blended textile, likely polyester or nylon, based on texture and sheen",
+    "Composition": "interlaced threads forming a dense, crinkled weave; no visible fibers or backing",
+    "Quantity": "one continuous piece of fabric",
+    "Relative Location": "occupies the entire vertical frame, flanking the zipper on both sides",
+    "Orientation": "vertical, aligned with the zipper’s central axis",
+    "Connection/Attachments": "directly attached to and encasing the zipper teeth along its length, forming a seam or closure edge"
+  }
+}
+2026-08-19 17:08:41 | DEBUG    | descriptor | Master description: {'Zipper': {'Type': 'standard coil or toothed zipper with interlocking teeth and a central pull tab', 'Color': 'black, matching the fabric, with a slightly glossy finish on the teeth', 'Size': 'length appears to be the full height of the fabric strip; width is narrow, consistent with typical zipper construction', 'Material': 'metal or hard plastic teeth with a smooth, slightly glossy finish', 'Composition': 'interlocking teeth forming a continuous zipper track connected by a central slider mechanism', 'Quantity': 'one zipper', 'Relative Location': 'centered vertically, running down the middle of the fabric', 'Orientation': 'vertical, aligned with the fabric’s vertical axis', 'Connection/Attachments': 'directly integrated into the fabric, with teeth interlocked and embedded within the textile on both sides'}, 'Fabric': {'Type': 'textured woven fabric with a tight, uniform pattern resembling a crinkled or puckered surface', 'Color': 'solid black, with consistent tone throughout', 'Size': 'width approximately 10-12 inches, length not fully visible but extends vertically / length and width not fully determinable due to cropped view, but appears as a vertical strip', 'Material': 'synthetic or blended textile, likely polyester or nylon, based on texture and sheen', 'Composition': 'interlaced threads forming a dense, crinkled weave; no visible fibers or backing', 'Quantity': 'one continuous piece of fabric', 'Relative Location': 'occupies the entire vertical frame, flanking the zipper on both sides', 'Orientation': 'vertical, aligned with the zipper’s central axis', 'Connection/Attachments': 'directly attached to and encasing the zipper teeth along its length, forming a seam or closure edge'}}
+2026-08-19 17:08:41 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 17:08:41 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/zipper.txt
+2026-08-19 17:08:41 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=14)
+2026-08-19 17:08:41 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 17:08:41 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 17:08:43 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 17:08:43 | DEBUG    | planner | Class directories for dataset 'zipper': ['good']
+2026-08-19 17:08:43 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/zipper/good
+2026-08-19 17:08:43 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:08:43 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:08:43 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 17:08:41_master_description.json
+2026-08-19 17:08:51 | INFO     | models | [VLM] Inference completed in 8.061s (max_new_tokens=2040)
+2026-08-19 17:08:51 | INFO     | planner | Planner steps generated in 8.061s (attempt=1, steps=14, approved_rules=14)
+2026-08-19 17:08:51 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zipper/good/good_2026-08-19 17:08:51_planner.txt
+2026-08-19 17:08:51 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any broken tooth visible as a gap or irregularity in the zipper teeth?
+Step 2: Is there any cracked tooth appearing as a fine line or split along the zipper teeth?
+Step 3: Is there any scratched tooth showing a shallow groove or linear mark on its surface?
+Step 4: Is there any dented slider visible as an indentation or dent on the zipper slider surface?
+Step 5: Is there any punctured fabric visible as a hole or irregular missing area in the fabric?
+Step 6: Is there any torn fabric visible as a jagged or uneven edge in the fabric?
+Step 7: Is there any stained fabric visible as a discoloration or stain appearing as a darker or lighter patch?
+Step 8: Is there any misaligned teeth visible as a bend or skew in the zipper tooth line?
+Step 9: Is there any rotated slider visible at an angle rather than aligned with the zipper teeth?
+Step 10: Is there any missing teeth visible as a gap where teeth should be in the zipper?
+Step 11: Is there any foreign object embedded visible as a small fiber, lint, or debris stuck in the fabric or zipper area?
+Step 12: Is there any discolored teeth visible as a section of zipper teeth showing a different color or shade?
+Step 13: Is there any discolored fabric visible as a section of fabric showing a different color or shade?
+Step 14: Is there any lint accumulation visible as small white or gray specks on the fabric surface?
+2026-08-19 17:08:51 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zipper/performance/performance_20260819_170851.json
+2026-08-19 17:08:51 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zipper
+2026-08-19 17:08:51 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/zipper_170759_log.txt

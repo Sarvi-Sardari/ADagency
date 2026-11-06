@@ -1,0 +1,68 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Nut",
+      "category": "surface_integrity",
+      "part_or_region": "outer surface of the nut",
+      "anomaly_name": "surface pitting",
+      "visual_description": "small, scattered pits or dimples visible on the outer surface"
+    },
+    {
+      "id": "A002",
+      "object_name": "Nut",
+      "category": "surface_integrity",
+      "part_or_region": "outer surface of the nut",
+      "anomaly_name": "surface scratching",
+      "visual_description": "visible linear scratches or scuff marks on the outer surface"
+    },
+    {
+      "id": "A003",
+      "object_name": "Nut",
+      "category": "surface_integrity",
+      "part_or_region": "outer surface of the nut",
+      "anomaly_name": "surface staining",
+      "visual_description": "localized discoloration or dark spots on the outer surface"
+    },
+    {
+      "id": "A004",
+      "object_name": "Nut",
+      "category": "geometry_alignment",
+      "part_or_region": "hexagonal lobes",
+      "anomaly_name": "lobe deformation",
+      "visual_description": "one or more lobes appear bent or unevenly shaped"
+    },
+    {
+      "id": "A005",
+      "object_name": "Nut",
+      "category": "geometry_alignment",
+      "part_or_region": "central hole",
+      "anomaly_name": "hole misalignment",
+      "visual_description": "the central hole appears off-center relative to the nut's symmetry"
+    },
+    {
+      "id": "A006",
+      "object_name": "Nut",
+      "category": "finish_color",
+      "part_or_region": "outer surface of the nut",
+      "anomaly_name": "surface discoloration",
+      "visual_description": "uneven coloration or a patch of darker/lighter tone on the surface"
+    },
+    {
+      "id": "A007",
+      "object_name": "Nut",
+      "category": "surface_integrity",
+      "part_or_region": "outer surface of the nut",
+      "anomaly_name": "surface roughness",
+      "visual_description": "visible rough texture or uneven grain on the outer surface"
+    },
+    {
+      "id": "A008",
+      "object_name": "Nut",
+      "category": "surface_finish",
+      "part_or_region": "entire surface of nut",
+      "anomaly_name": "blur or out-of-focus",
+      "visual_description": "Image is out of focus or blurred "
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "transistor": {
+        "Type": "A three-terminal semiconductor device with a rectangular black plastic casing and three metallic leads extending downward from its base",
+        "Color": "The casing is uniformly black with a matte finish and slight surface wear or residue visible; the metallic leads are silver-colored with some tarnish or oxidation visible",
+        "Size": "1.5 cm in height and 0.8 cm in width, with leads extending about 1 cm downward; alternatively, 10mm in width and 15mm in height, with leads extending downward",
+        "Material": "The casing is made of a rigid, opaque black plastic, likely epoxy or phenolic resin, with metallic leads composed of a metal alloy such as tin-lead or soldered copper",
+        "Composition": "The casing is a molded polymer matrix with embedded conductive traces or metal layers, containing an internal semiconductor structure, while the leads are metallic conductors connected to the internal terminals",
+        "Quantity": "One transistor",
+        "Relative Location": "Positioned centrally within the frame, mounted on a surface with circular holes and parallel lines, with no other objects adjacent to it in the description scope",
+        "Orientation": "Oriented vertically with the top surface facing the viewer and leads extending downward",
+        "Connection or Attachments": "Three metallic leads extend from the bottom of the casing, each bent slightly outward and downward, soldered to a surface and inserted into corresponding holes for electrical connection"
+    }
+}

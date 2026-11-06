@@ -1,0 +1,280 @@
+2026-08-19 14:32:57 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 14:32:57 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 14:32:57 | INFO     | __main__ | Dataset  : bottle
+2026-08-19 14:32:57 | INFO     | __main__ | Classes  : single
+2026-08-19 14:32:57 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 14:32:57 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/bottle_143257_log.txt
+2026-08-19 14:32:57 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 14:32:59 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 14:32:59 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 14:33:01 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 14:33:01 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 14:33:01 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/136.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/018.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/160.png']
+2026-08-19 14:33:01 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 14:33:01 | INFO     | object_namer | [Object Namer] Loaded 4 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/bottle_object_labels.txt
+2026-08-19 14:33:01 | INFO     | __main__ | Object names: ['Inner Bottle Wall', 'Glass Rim', 'Bottle Neck Opening', 'Central Aperture']
+2026-08-19 14:33:01 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 14:33:01 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/bottle/good
+2026-08-19 14:33:01 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 530686 44
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 530742 1304
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 530994 44
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 531050 1304
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 536416 44
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 536472 1304
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 14:33:01 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 14:33:22 | INFO     | models | [VLM] Inference completed in 20.761s (max_new_tokens=2040)
+2026-08-19 14:33:22 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_136_2026-08-19 14:33:22.json (inference_time=20.761s)
+2026-08-19 14:33:22 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 14:33:22 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 14:33:39 | INFO     | models | [VLM] Inference completed in 16.865s (max_new_tokens=2040)
+2026-08-19 14:33:39 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_018_2026-08-19 14:33:39.json (inference_time=16.865s)
+2026-08-19 14:33:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 14:33:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 14:33:56 | INFO     | models | [VLM] Inference completed in 16.566s (max_new_tokens=2040)
+2026-08-19 14:33:56 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_160_2026-08-19 14:33:56.json (inference_time=16.566s)
+2026-08-19 14:33:56 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 14:33:56 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 14:33:58 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 14:33:58 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good
+2026-08-19 14:33:58 | DEBUG    | descriptor | Processing image description: processed_good_160_2026-08-19 14:33:56.json
+2026-08-19 14:33:58 | DEBUG    | descriptor | Raw description data: - Inner Bottle Wall
+    - Attribute 1 Type - smooth, curved inner surface of a bottle
+    - Attribute 2 Color - dark, deep brown to black with subtle amber highlights from reflected light
+    - Attribute 3 Size - circular, with inner diameter approximately 2.5 cm and outer diameter approximately 5 cm (approximate based on visual proportions)
+    - Attribute 4 Material - glass
+    - Attribute 5 Composition - transparent glass with slight texture or residue visible on inner surface
+    - Attribute 6 Quantity - one continuous inner wall surface
+    - Attribute 7 Relative Location - forms the inner boundary of the bottle neck opening, surrounding the central aperture
+    - Attribute 8 Orientation - concentrically aligned with the central aperture, facing inward toward the center
+    - Attribute 9 Connection or Attachments - directly connected to the glass rim and forms the boundary of the central aperture
+
+- Glass Rim
+    - Attribute 1 Type - thick, rounded edge of the bottle neck
+    - Attribute 2 Color - dark brown with reflective amber highlights along the curved edge
+    - Attribute 3 Size - approximately 0.5 cm in height, with a circular outer diameter matching the bottle's opening
+    - Attribute 4 Material - glass
+    - Attribute 5 Composition - solid glass with a smooth, slightly beveled edge
+    - Attribute 6 Quantity - one continuous rim encircling the bottle neck
+    - Attribute 7 Relative Location - located at the outermost edge of the bottle neck, surrounding the inner bottle wall
+    - Attribute 8 Orientation - horizontal, circular, and concentric with the central aperture
+    - Attribute 9 Connection or Attachments - directly attached to the inner bottle wall and forms the outer boundary of the bottle neck opening
+
+- Bottle Neck Opening
+    - Attribute 1 Type - circular opening at the top of the bottle neck
+    - Attribute 2 Color - dark brown to black interior, with amber highlights on the glass rim
+    - Attribute 3 Size - diameter approximately 5 cm, depth approximately 1.5 cm (approximate based on visual proportions)
+    - Attribute 4 Material - glass
+    - Attribute 5 Composition - glass forming a cylindrical neck with a circular opening
+    - Attribute 6 Quantity - one opening
+    - Attribute 7 Relative Location - centered in the image, surrounded by the glass rim and inner bottle wall
+    - Attribute 8 Orientation - circular, facing upward
+    - Attribute 9 Connection or Attachments - connected to the inner bottle wall and glass rim, forming the topmost visible structure
+
+- Central Aperture
+    - Attribute 1 Type - dark, circular void at the center of the bottle neck opening
+    - Attribute 2 Color - deep black, absorbing light, with no visible internal details
+    - Attribute 3 Size - diameter approximately 2.5 cm (approximate based on visual proportions)
+    - Attribute 4 Material - glass (transparent, but appears black due to lack of light penetration)
+    - Attribute 5 Composition - empty space within the bottle neck, surrounded by glass walls
+    - Attribute 6 Quantity - one central aperture
+    - Attribute 7 Relative Location - located at the center of the bottle neck opening, enclosed by the inner bottle wall
+    - Attribute 8 Orientation - circular, facing upward
+    - Attribute 9 Connection or Attachments - directly connected to the inner bottle wall, forming the innermost boundary of the bottle neck opening
+2026-08-19 14:33:58 | DEBUG    | descriptor | Processing image description: processed_good_018_2026-08-19 14:33:39.json
+2026-08-19 14:33:58 | DEBUG    | descriptor | Raw description data: - Inner Bottle Wall
+    - Attribute 1 Type - smooth, curved inner surface of a bottle
+    - Attribute 2 Color - dark, almost black with subtle brownish-orange reflective highlights along the rim
+    - Attribute 3 Size - circular, with a diameter that appears consistent with a standard bottle neck; inner circumference is not fully measurable due to perspective
+    - Attribute 4 Material - glass
+    - Attribute 5 Composition - transparent glass with slight surface texture and reflective properties
+    - Attribute 6 Quantity - one continuous inner wall
+    - Attribute 7 Relative Location - forms the inner boundary of the bottle neck opening, surrounding the central aperture
+    - Attribute 8 Orientation - concentric circular orientation, viewed from directly above
+    - Attribute 9 Connection or Attachments - seamlessly connected to the outer glass rim and encloses the central aperture
+
+- Glass Rim
+    - Attribute 1 Type - thick, rounded edge of the bottle neck
+    - Attribute 2 Color - dark brownish-black with golden-orange reflective highlights due to light refraction
+    - Attribute 3 Size - circular, with a width that appears consistent around the entire circumference; outer diameter is larger than the inner bottle wall
+    - Attribute 4 Material - glass
+    - Attribute 5 Composition - solid glass with slight surface irregularities and reflective properties
+    - Attribute 6 Quantity - one continuous rim
+    - Attribute 7 Relative Location - located at the outermost edge of the bottle neck, surrounding the inner bottle wall
+    - Attribute 8 Orientation - concentric circular orientation, viewed from directly above
+    - Attribute 9 Connection or Attachments - attached to the inner bottle wall and forms the boundary of the bottle neck opening
+
+- Bottle Neck Opening
+    - Attribute 1 Type - circular aperture formed by the inner bottle wall and glass rim
+    - Attribute 2 Color - dark, appearing black due to depth and lack of light penetration, with brownish-orange highlights along the inner rim
+    - Attribute 3 Size - circular, diameter appears to be approximately 3-4 cm based on standard bottle neck proportions; exact measurement not determinable
+    - Attribute 4 Material - glass
+    - Attribute 5 Composition - transparent glass forming a hollow cylindrical opening
+    - Attribute 6 Quantity - one opening
+    - Attribute 7 Relative Location - centered in the image, surrounded by the glass rim and inner bottle wall
+    - Attribute 8 Orientation - concentric circular orientation, viewed from directly above
+    - Attribute 9 Connection or Attachments - connected to the inner bottle wall and glass rim, forming the functional opening of the bottle neck
+
+- Central Aperture
+    - Attribute 1 Type - circular, dark central void within the bottle neck opening
+    - Attribute 2 Color - deep black, with no visible internal details due to lack of light or reflection
+    - Attribute 3 Size - circular, diameter appears smaller than the outer glass rim and inner bottle wall; exact measurement not determinable
+    - Attribute 4 Material - glass (implied by surrounding structure)
+    - Attribute 5 Composition - hollow space within the bottle neck, bounded by the inner bottle wall
+    - Attribute 6 Quantity - one aperture
+    - Attribute 7 Relative Location - located at the center of the bottle neck opening, surrounded by the inner bottle wall
+    - Attribute 8 Orientation - concentric circular orientation, viewed from directly above
+    - Attribute 9 Connection or Attachments - enclosed by the inner bottle wall, forming the functional central passage of the bottle neck
+2026-08-19 14:33:58 | DEBUG    | descriptor | Processing image description: processed_good_136_2026-08-19 14:33:22.json
+2026-08-19 14:33:58 | DEBUG    | descriptor | Raw description data: - Inner Bottle Wall
+    - Attribute 1 Type - A smooth, curved inner surface of a bottle, forming the inner boundary of the neck opening.
+    - Attribute 2 Color - Deep, dark brown with subtle amber or coppery reflections along the rim and inner edge, appearing almost black in shadowed areas.
+    - Attribute 3 Size - The inner wall curves inward from the rim to form a circular aperture; the visible portion is approximately 2-3 cm in diameter at the rim, tapering inward.
+    - Attribute 4 Material - Glass, with a glossy, reflective finish.
+    - Attribute 5 Composition - Composed of transparent glass with a dark tint, possibly due to the glass type or contents, exhibiting slight surface texture or residue.
+    - Attribute 6 Quantity - One continuous inner wall surface.
+    - Attribute 7 Relative Location - Occupies the central interior space of the bottle neck, directly surrounding the central aperture.
+    - Attribute 8 Orientation - Curved inward concentrically, perpendicular to the bottle’s axis of symmetry.
+    - Attribute 9 Connection or Attachments - Attached to and seamlessly integrated with the glass rim and central aperture, forming a continuous inner structure.
+
+- Glass Rim
+    - Attribute 1 Type - The outermost circular edge of the bottle neck, defining the boundary of the opening.
+    - Attribute 2 Color - Dark brown with a glossy sheen, reflecting light in warm amber or copper tones along its upper edge.
+    - Attribute 3 Size - Approximately 2-3 cm in diameter, with a slight thickness and beveled edge.
+    - Attribute 4 Material - Glass, with a smooth, polished surface.
+    - Attribute 5 Composition - Made of dark-tinted glass, possibly borosilicate or soda-lime glass, with a uniform thickness and slight curvature.
+    - Attribute 6 Quantity - One continuous rim.
+    - Attribute 7 Relative Location - Located at the very edge of the bottle neck, encircling the central aperture and inner wall.
+    - Attribute 8 Orientation - Horizontally oriented, forming a complete circular boundary.
+    - Attribute 9 Connection or Attachments - Connected to the inner bottle wall and central aperture, forming the outer boundary of the bottle’s opening.
+
+- Bottle Neck Opening
+    - Attribute 1 Type - The circular aperture formed by the inner bottle wall and glass rim, serving as the entry/exit point of the bottle.
+    - Attribute 2 Color - Dark, deep brown with a blackish center, reflecting ambient light in warm amber tones along the rim.
+    - Attribute 3 Size - Approximately 2-3 cm in diameter, with a slightly tapered inner diameter toward the center.
+    - Attribute 4 Material - Glass, with a smooth, reflective surface.
+    - Attribute 5 Composition - Composed of the inner bottle wall and glass rim, forming a continuous circular opening.
+    - Attribute 6 Quantity - One opening.
+    - Attribute 7 Relative Location - Positioned at the center of the image, surrounded by the inner bottle wall and glass rim.
+    - Attribute 8 Orientation - Circular and centered, with concentric curvature.
+    - Attribute 9 Connection or Attachments - Connected to the inner bottle wall and glass rim, forming the functional opening of the bottle.
+
+- Central Aperture
+    - Attribute 1 Type - The deepest, darkest circular void at the center of the bottle neck, where the bottle’s interior ends.
+    - Attribute 2 Color - Deep black with no visible reflection, appearing as a void due to lack of light penetration.
+    - Attribute 3 Size - Approximately 1.5-2 cm in diameter, slightly smaller than the outer rim due to tapering.
+    - Attribute 4 Material - Glass, with a non-reflective, dark interior surface.
+    - Attribute 5 Composition - Composed of the innermost part of the bottle neck, possibly with a slight residue or texture.
+    - Attribute 6 Quantity - One central aperture.
+    - Attribute 7 Relative Location - Located at the center of the bottle neck, surrounded by the inner bottle wall and glass rim.
+    - Attribute 8 Orientation - Circular, centered, and perpendicular to the bottle’s axis.
+    - Attribute 9 Connection or Attachments - Connected to the inner bottle wall and glass rim, forming the innermost part of the bottle’s opening.
+2026-08-19 14:33:58 | DEBUG    | descriptor | Unique object keys found: {'Central Aperture', 'Inner Bottle Wall', 'Glass Rim', 'Bottle Neck Opening'}
+2026-08-19 14:33:58 | DEBUG    | descriptor | Class 'good' object description: {'Central Aperture': ['-  Type - dark, circular void at the center of the bottle neck opening\n    -  Color - deep black, absorbing light, with no visible internal details\n    -  Size - diameter approximately 2.5 cm (approximate based on visual proportions)\n    -  Material - glass (transparent, but appears black due to lack of light penetration)\n    -  Composition - empty space within the bottle neck, surrounded by glass walls\n    -  Quantity - one central aperture\n    -  Relative Location - located at the center of the bottle neck opening, enclosed by the inner bottle wall\n    -  Orientation - circular, facing upward\n    -  Connection or Attachments - directly connected to the inner bottle wall, forming the innermost boundary of the bottle neck opening', '-  Type - circular, dark central void within the bottle neck opening\n    -  Color - deep black, with no visible internal details due to lack of light or reflection\n    -  Size - circular, diameter appears smaller than the outer glass rim and inner bottle wall; exact measurement not determinable\n    -  Material - glass (implied by surrounding structure)\n    -  Composition - hollow space within the bottle neck, bounded by the inner bottle wall\n    -  Quantity - one aperture\n    -  Relative Location - located at the center of the bottle neck opening, surrounded by the inner bottle wall\n    -  Orientation - concentric circular orientation, viewed from directly above\n    -  Connection or Attachments - enclosed by the inner bottle wall, forming the functional central passage of the bottle neck', '-  Type - The deepest, darkest circular void at the center of the bottle neck, where the bottle’s interior ends.\n    -  Color - Deep black with no visible reflection, appearing as a void due to lack of light penetration.\n    -  Size - Approximately 1.5-2 cm in diameter, slightly smaller than the outer rim due to tapering.\n    -  Material - Glass, with a non-reflective, dark interior surface.\n    -  Composition - Composed of the innermost part of the bottle neck, possibly with a slight residue or texture.\n    -  Quantity - One central aperture.\n    -  Relative Location - Located at the center of the bottle neck, surrounded by the inner bottle wall and glass rim.\n    -  Orientation - Circular, centered, and perpendicular to the bottle’s axis.\n    -  Connection or Attachments - Connected to the inner bottle wall and glass rim, forming the innermost part of the bottle’s opening.'], 'Inner Bottle Wall': ['-  Type - smooth, curved inner surface of a bottle\n    -  Color - dark, deep brown to black with subtle amber highlights from reflected light\n    -  Size - circular, with inner diameter approximately 2.5 cm and outer diameter approximately 5 cm (approximate based on visual proportions)\n    -  Material - glass\n    -  Composition - transparent glass with slight texture or residue visible on inner surface\n    -  Quantity - one continuous inner wall surface\n    -  Relative Location - forms the inner boundary of the bottle neck opening, surrounding the central aperture\n    -  Orientation - concentrically aligned with the central aperture, facing inward toward the center\n    -  Connection or Attachments - directly connected to the glass rim and forms the boundary of the central aperture', '-  Type - smooth, curved inner surface of a bottle\n    -  Color - dark, almost black with subtle brownish-orange reflective highlights along the rim\n    -  Size - circular, with a diameter that appears consistent with a standard bottle neck; inner circumference is not fully measurable due to perspective\n    -  Material - glass\n    -  Composition - transparent glass with slight surface texture and reflective properties\n    -  Quantity - one continuous inner wall\n    -  Relative Location - forms the inner boundary of the bottle neck opening, surrounding the central aperture\n    -  Orientation - concentric circular orientation, viewed from directly above\n    -  Connection or Attachments - seamlessly connected to the outer glass rim and encloses the central aperture', '-  Type - A smooth, curved inner surface of a bottle, forming the inner boundary of the neck opening.\n    -  Color - Deep, dark brown with subtle amber or coppery reflections along the rim and inner edge, appearing almost black in shadowed areas.\n    -  Size - The inner wall curves inward from the rim to form a circular aperture; the visible portion is approximately 2-3 cm in diameter at the rim, tapering inward.\n    -  Material - Glass, with a glossy, reflective finish.\n    -  Composition - Composed of transparent glass with a dark tint, possibly due to the glass type or contents, exhibiting slight surface texture or residue.\n    -  Quantity - One continuous inner wall surface.\n    -  Relative Location - Occupies the central interior space of the bottle neck, directly surrounding the central aperture.\n    -  Orientation - Curved inward concentrically, perpendicular to the bottle’s axis of symmetry.\n    -  Connection or Attachments - Attached to and seamlessly integrated with the glass rim and central aperture, forming a continuous inner structure.'], 'Glass Rim': ["-  Type - thick, rounded edge of the bottle neck\n    -  Color - dark brown with reflective amber highlights along the curved edge\n    -  Size - approximately 0.5 cm in height, with a circular outer diameter matching the bottle's opening\n    -  Material - glass\n    -  Composition - solid glass with a smooth, slightly beveled edge\n    -  Quantity - one continuous rim encircling the bottle neck\n    -  Relative Location - located at the outermost edge of the bottle neck, surrounding the inner bottle wall\n    -  Orientation - horizontal, circular, and concentric with the central aperture\n    -  Connection or Attachments - directly attached to the inner bottle wall and forms the outer boundary of the bottle neck opening", '-  Type - thick, rounded edge of the bottle neck\n    -  Color - dark brownish-black with golden-orange reflective highlights due to light refraction\n    -  Size - circular, with a width that appears consistent around the entire circumference; outer diameter is larger than the inner bottle wall\n    -  Material - glass\n    -  Composition - solid glass with slight surface irregularities and reflective properties\n    -  Quantity - one continuous rim\n    -  Relative Location - located at the outermost edge of the bottle neck, surrounding the inner bottle wall\n    -  Orientation - concentric circular orientation, viewed from directly above\n    -  Connection or Attachments - attached to the inner bottle wall and forms the boundary of the bottle neck opening', '-  Type - The outermost circular edge of the bottle neck, defining the boundary of the opening.\n    -  Color - Dark brown with a glossy sheen, reflecting light in warm amber or copper tones along its upper edge.\n    -  Size - Approximately 2-3 cm in diameter, with a slight thickness and beveled edge.\n    -  Material - Glass, with a smooth, polished surface.\n    -  Composition - Made of dark-tinted glass, possibly borosilicate or soda-lime glass, with a uniform thickness and slight curvature.\n    -  Quantity - One continuous rim.\n    -  Relative Location - Located at the very edge of the bottle neck, encircling the central aperture and inner wall.\n    -  Orientation - Horizontally oriented, forming a complete circular boundary.\n    -  Connection or Attachments - Connected to the inner bottle wall and central aperture, forming the outer boundary of the bottle’s opening.'], 'Bottle Neck Opening': ['-  Type - circular opening at the top of the bottle neck\n    -  Color - dark brown to black interior, with amber highlights on the glass rim\n    -  Size - diameter approximately 5 cm, depth approximately 1.5 cm (approximate based on visual proportions)\n    -  Material - glass\n    -  Composition - glass forming a cylindrical neck with a circular opening\n    -  Quantity - one opening\n    -  Relative Location - centered in the image, surrounded by the glass rim and inner bottle wall\n    -  Orientation - circular, facing upward\n    -  Connection or Attachments - connected to the inner bottle wall and glass rim, forming the topmost visible structure', '-  Type - circular aperture formed by the inner bottle wall and glass rim\n    -  Color - dark, appearing black due to depth and lack of light penetration, with brownish-orange highlights along the inner rim\n    -  Size - circular, diameter appears to be approximately 3-4 cm based on standard bottle neck proportions; exact measurement not determinable\n    -  Material - glass\n    -  Composition - transparent glass forming a hollow cylindrical opening\n    -  Quantity - one opening\n    -  Relative Location - centered in the image, surrounded by the glass rim and inner bottle wall\n    -  Orientation - concentric circular orientation, viewed from directly above\n    -  Connection or Attachments - connected to the inner bottle wall and glass rim, forming the functional opening of the bottle neck', '-  Type - The circular aperture formed by the inner bottle wall and glass rim, serving as the entry/exit point of the bottle.\n    -  Color - Dark, deep brown with a blackish center, reflecting ambient light in warm amber tones along the rim.\n    -  Size - Approximately 2-3 cm in diameter, with a slightly tapered inner diameter toward the center.\n    -  Material - Glass, with a smooth, reflective surface.\n    -  Composition - Composed of the inner bottle wall and glass rim, forming a continuous circular opening.\n    -  Quantity - One opening.\n    -  Relative Location - Positioned at the center of the image, surrounded by the inner bottle wall and glass rim.\n    -  Orientation - Circular and centered, with concentric curvature.\n    -  Connection or Attachments - Connected to the inner bottle wall and glass rim, forming the functional opening of the bottle.']}
+2026-08-19 14:34:03 | INFO     | models | [LLM] Inference completed in 4.988s (max_new_tokens=3000)
+2026-08-19 14:34:03 | INFO     | descriptor | [Central Aperture] Object summarisation completed in 4.988s
+2026-08-19 14:34:03 | DEBUG    | descriptor | Summarised description for 'Central Aperture': 
+
+{
+  "Central Aperture": {
+    "Type": "dark, circular void at the center of the bottle neck opening",
+    "Color": "deep black, absorbing light, with no visible internal details",
+    "Size": "1.5-2 cm in diameter / 5x5mm / approximately 2.5 cm (approximate based on visual proportions)",
+    "Material": "glass, with a non-reflective, dark interior surface",
+    "Composition": "hollow space within the bottle neck, bounded by the inner bottle wall, possibly with a slight residue or texture",
+    "Quantity": "one central aperture",
+    "Relative Location": "located at the center of the bottle neck opening, enclosed by the inner bottle wall and glass rim",
+    "Orientation": "circular, centered, and perpendicular to the bottle’s axis",
+    "Connection or Attachments": "directly connected to the inner bottle wall, forming the innermost boundary of the bottle neck opening and the functional central passage of the bottle neck"
+  }
+}
+2026-08-19 14:34:09 | INFO     | models | [LLM] Inference completed in 5.994s (max_new_tokens=3000)
+2026-08-19 14:34:09 | INFO     | descriptor | [Inner Bottle Wall] Object summarisation completed in 5.994s
+2026-08-19 14:34:09 | DEBUG    | descriptor | Summarised description for 'Inner Bottle Wall': 
+
+{
+  "Inner Bottle Wall": {
+    "Type": "smooth, curved inner surface of a bottle, forming the inner boundary of the neck opening",
+    "Color": "dark, deep brown to black with subtle amber, brownish-orange, or coppery reflections along the rim and inner edge, appearing almost black in shadowed areas",
+    "Size": "circular, with inner diameter approximately 2.5 cm and outer diameter approximately 5 cm; visible portion is approximately 2-3 cm in diameter at the rim, tapering inward",
+    "Material": "glass",
+    "Composition": "transparent glass with slight surface texture or residue, possibly with a dark tint, and a glossy, reflective finish",
+    "Quantity": "one continuous inner wall surface",
+    "Relative Location": "forms the inner boundary of the bottle neck opening, surrounding the central aperture and occupying the central interior space of the bottle neck",
+    "Orientation": "curved inward concentrically, perpendicular to the bottle’s axis of symmetry, concentrically aligned with the central aperture, facing inward toward the center",
+    "Connection or Attachments": "seamlessly connected to the outer glass rim and central aperture, forming a continuous inner structure and directly connected to the glass rim"
+  }
+}
+2026-08-19 14:34:16 | INFO     | models | [LLM] Inference completed in 7.134s (max_new_tokens=3000)
+2026-08-19 14:34:16 | INFO     | descriptor | [Glass Rim] Object summarisation completed in 7.134s
+2026-08-19 14:34:16 | DEBUG    | descriptor | Summarised description for 'Glass Rim': 
+
+{
+  "Glass Rim": {
+    "Type": "The outermost circular edge of the bottle neck, defining the boundary of the opening.",
+    "Color": "Dark brown with reflective amber highlights along the curved edge, dark brownish-black with golden-orange reflective highlights due to light refraction, and a glossy sheen reflecting light in warm amber or copper tones along its upper edge",
+    "Size": "Approximately 0.5 cm in height, with a circular outer diameter matching the bottle's opening / Approximately 2-3 cm in diameter, with a slight thickness and beveled edge",
+    "Material": "Glass",
+    "Composition": "Solid glass with a smooth, slightly beveled edge, slight surface irregularities and reflective properties, made of dark-tinted glass, possibly borosilicate or soda-lime glass, with a uniform thickness and slight curvature",
+    "Quantity": "One continuous rim encircling the bottle neck",
+    "Relative Location": "Located at the outermost edge of the bottle neck, surrounding the inner bottle wall and encircling the central aperture and inner wall",
+    "Orientation": "Horizontal, circular, and concentric with the central aperture / concentric circular orientation, viewed from directly above / horizontally oriented, forming a complete circular boundary",
+    "Connection or Attachments": "Directly attached to the inner bottle wall and forms the outer boundary of the bottle neck opening, connected to the inner bottle wall and central aperture, forming the outer boundary of the bottle’s opening"
+  }
+}
+2026-08-19 14:34:21 | INFO     | models | [LLM] Inference completed in 5.722s (max_new_tokens=3000)
+2026-08-19 14:34:21 | INFO     | descriptor | [Bottle Neck Opening] Object summarisation completed in 5.722s
+2026-08-19 14:34:21 | DEBUG    | descriptor | Summarised description for 'Bottle Neck Opening': 
+
+{
+  "Bottle Neck Opening": {
+    "Type": "circular aperture formed by the inner bottle wall and glass rim, serving as the entry/exit point of the bottle",
+    "Color": "dark, deep brown with a blackish center, reflecting ambient light in warm amber tones along the rim, with amber highlights on the glass rim and brownish-orange highlights along the inner rim",
+    "Size": "approximately 2-5 cm in diameter, with a slightly tapered inner diameter toward the center, depth approximately 1.5 cm",
+    "Material": "glass, with a smooth, reflective surface",
+    "Composition": "transparent glass forming a hollow cylindrical opening, composed of the inner bottle wall and glass rim, forming a continuous circular opening",
+    "Quantity": "one opening",
+    "Relative Location": "centered in the image, surrounded by the inner bottle wall and glass rim",
+    "Orientation": "circular and centered, with concentric curvature, concentric circular orientation, viewed from directly above, facing upward",
+    "Connection or Attachments": "connected to the inner bottle wall and glass rim, forming the functional opening of the bottle, forming the topmost visible structure"
+  }
+}
+2026-08-19 14:34:21 | DEBUG    | descriptor | Master description: {'Central Aperture': {'Type': 'dark, circular void at the center of the bottle neck opening', 'Color': 'deep black, absorbing light, with no visible internal details', 'Size': '1.5-2 cm in diameter / 5x5mm / approximately 2.5 cm (approximate based on visual proportions)', 'Material': 'glass, with a non-reflective, dark interior surface', 'Composition': 'hollow space within the bottle neck, bounded by the inner bottle wall, possibly with a slight residue or texture', 'Quantity': 'one central aperture', 'Relative Location': 'located at the center of the bottle neck opening, enclosed by the inner bottle wall and glass rim', 'Orientation': 'circular, centered, and perpendicular to the bottle’s axis', 'Connection or Attachments': 'directly connected to the inner bottle wall, forming the innermost boundary of the bottle neck opening and the functional central passage of the bottle neck'}, 'Inner Bottle Wall': {'Type': 'smooth, curved inner surface of a bottle, forming the inner boundary of the neck opening', 'Color': 'dark, deep brown to black with subtle amber, brownish-orange, or coppery reflections along the rim and inner edge, appearing almost black in shadowed areas', 'Size': 'circular, with inner diameter approximately 2.5 cm and outer diameter approximately 5 cm; visible portion is approximately 2-3 cm in diameter at the rim, tapering inward', 'Material': 'glass', 'Composition': 'transparent glass with slight surface texture or residue, possibly with a dark tint, and a glossy, reflective finish', 'Quantity': 'one continuous inner wall surface', 'Relative Location': 'forms the inner boundary of the bottle neck opening, surrounding the central aperture and occupying the central interior space of the bottle neck', 'Orientation': 'curved inward concentrically, perpendicular to the bottle’s axis of symmetry, concentrically aligned with the central aperture, facing inward toward the center', 'Connection or Attachments': 'seamlessly connected to the outer glass rim and central aperture, forming a continuous inner structure and directly connected to the glass rim'}, 'Glass Rim': {'Type': 'The outermost circular edge of the bottle neck, defining the boundary of the opening.', 'Color': 'Dark brown with reflective amber highlights along the curved edge, dark brownish-black with golden-orange reflective highlights due to light refraction, and a glossy sheen reflecting light in warm amber or copper tones along its upper edge', 'Size': "Approximately 0.5 cm in height, with a circular outer diameter matching the bottle's opening / Approximately 2-3 cm in diameter, with a slight thickness and beveled edge", 'Material': 'Glass', 'Composition': 'Solid glass with a smooth, slightly beveled edge, slight surface irregularities and reflective properties, made of dark-tinted glass, possibly borosilicate or soda-lime glass, with a uniform thickness and slight curvature', 'Quantity': 'One continuous rim encircling the bottle neck', 'Relative Location': 'Located at the outermost edge of the bottle neck, surrounding the inner bottle wall and encircling the central aperture and inner wall', 'Orientation': 'Horizontal, circular, and concentric with the central aperture / concentric circular orientation, viewed from directly above / horizontally oriented, forming a complete circular boundary', 'Connection or Attachments': 'Directly attached to the inner bottle wall and forms the outer boundary of the bottle neck opening, connected to the inner bottle wall and central aperture, forming the outer boundary of the bottle’s opening'}, 'Bottle Neck Opening': {'Type': 'circular aperture formed by the inner bottle wall and glass rim, serving as the entry/exit point of the bottle', 'Color': 'dark, deep brown with a blackish center, reflecting ambient light in warm amber tones along the rim, with amber highlights on the glass rim and brownish-orange highlights along the inner rim', 'Size': 'approximately 2-5 cm in diameter, with a slightly tapered inner diameter toward the center, depth approximately 1.5 cm', 'Material': 'glass, with a smooth, reflective surface', 'Composition': 'transparent glass forming a hollow cylindrical opening, composed of the inner bottle wall and glass rim, forming a continuous circular opening', 'Quantity': 'one opening', 'Relative Location': 'centered in the image, surrounded by the inner bottle wall and glass rim', 'Orientation': 'circular and centered, with concentric curvature, concentric circular orientation, viewed from directly above, facing upward', 'Connection or Attachments': 'connected to the inner bottle wall and glass rim, forming the functional opening of the bottle, forming the topmost visible structure'}}
+2026-08-19 14:34:21 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 14:34:21 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['bottle'] directly (no generation, no compiled file).
+2026-08-19 14:34:21 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-19 14:34:21 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 14:34:22 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 14:34:24 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 14:34:24 | DEBUG    | planner | Class directories for dataset 'bottle': ['good']
+2026-08-19 14:34:24 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/bottle/good
+2026-08-19 14:34:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 14:34:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 14:34:24 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 14:34:21_master_description.json
+2026-08-19 14:34:32 | INFO     | models | [VLM] Inference completed in 8.140s (max_new_tokens=2040)
+2026-08-19 14:34:32 | INFO     | planner | Planner steps generated in 8.140s (attempt=1, steps=10, approved_rules=legacy-untracked)
+2026-08-19 14:34:32 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle/good/good_2026-08-19 14:34:32_planner.txt
+2026-08-19 14:34:32 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the central aperture surface?  
+Step 2: Is there any physical damage such as warping, bending, crushing, puncturing, wearing, tearing, or broken/snapped part on the inner bottle wall?  
+Step 3: Is there any physical damage such as warping, bending, crushing, puncturing, wearing, tearing, or broken/snapped part on the glass rim?  
+Step 4: Is there any missing component such as the central aperture, inner bottle wall, or glass rim that should be present based on the reference image?  
+Step 5: Is there any extra item such as debris, foreign object, or loose part present inside or around the bottle neck opening?  
+Step 6: Is there any liquid, stain, or fluid leak present on the inner bottle wall, glass rim, or central aperture?  
+Step 7: Is there any rust, corrosion, or peeling coating on the inner bottle wall, glass rim, or central aperture?  
+Step 8: Is there any coloration deviation such as unnatural discoloration, uneven tint, or abnormal amber/coppery reflection pattern on the glass rim or inner bottle wall compared to the reference?  
+Step 9: Is there any surface irregularity such as residue, texture inconsistency, or roughness on the inner bottle wall or central aperture that deviates from the reference?  
+Step 10: Is there any structural deformation such as uneven tapering, misalignment, or asymmetry in the bottle neck opening relative to the reference?
+2026-08-19 14:34:32 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle/performance/performance_20260819_143432.json
+2026-08-19 14:34:32 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle
+2026-08-19 14:34:32 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/bottle_143257_log.txt

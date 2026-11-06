@@ -1,0 +1,234 @@
+# =============================================================================
+# TEMPLATE: anomaly_detection_configs.yaml  (online ANOMALY DETECTION)
+# =============================================================================
+#
+# Used by:   run_anomaly_detection.py --dataset-config <this file>
+#                                     --model-config  <model config>
+#                                     [--resume-dir <existing run dir>]
+#            run_anomaly_detection_ablation.py (configs.anomaly_detection)
+# Parsed by: anomaly_detection/config.py :: load_anomaly_detection_config()
+#            (+ anomaly_detection/secondary_classification.py)
+#
+# What this stage does, per test image:
+#   (optional) crop to the object -> find the most similar normal reference(s)
+#   in train/good -> load that dataset's planner -> ask the VLM every planner
+#   step (YES/NO + confidence) and a final good/anomaly decision -> save
+#   everything under <output.root_dir>/<output.runs_dir>/<timestamp>_/<dataset>/.
+#
+# Prerequisites:
+#   - Planners already generated (run_planner_generation.py) for EVERY dataset
+#     below, under <planners_dir>/<dataset name>/<good | class label>/.
+#   - The model config's models.vlm (models.llm is not used here).
+#
+# Unlike dataset_configs.yaml (ONE dataset), this file lists MANY datasets and
+# processes them one after another in a single run.
+#
+# Fingerprints: this file is hashed by the ablation orchestrator. Changing
+# datasets, planners, prompts, decision policy, cropping or secondary rules
+# changes the method -> use a NEW output.runs_dir / experiment.runs_dir
+# rather than resuming an old run.
+#
+# Relative paths are resolved from the project root unless noted.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# datasets  REQUIRED. Non-empty list. Every `name` must be unique.
+# -----------------------------------------------------------------------------
+datasets:
+  - # name  REQUIRED, non-empty string.
+    # Must equal the dataset name used during planner generation (it selects
+    # <planners_dir>/<name>/) and becomes the output folder <run>/<name>/.
+    # mask_generation / metrics configs refer to the dataset by this name.
+    name: "bottle"                                 # <-- CHANGE
+
+    # root_dir  REQUIRED, existing directory. Needs <root_dir>/train/good
+    # (references) and <root_dir>/test/<label>/ folders (images to inspect).
+    root_dir: "datasets/mvtec_ad/bottle"           # <-- CHANGE
+
+    # merge_anomalies  OPTIONAL (false). Boolean (write true/false).
+    # Controls only how OUTPUT folders are grouped:
+    #   false : every test/ folder keeps its own name, e.g.
+    #           good/, logical_anomalies/, structural_anomalies/  (MVTec LOCO).
+    #   true  : test/good stays "good"; ALL other test/ folders are grouped
+    #           under "anomalies/<original folder>/" (MVTec AD, many defect
+    #           folders). The original folder is kept as a sub-folder so
+    #           same-named images from different defect folders cannot
+    #           overwrite each other.
+    # Metrics are computed per anomaly class either way.
+    merge_anomalies: true
+
+    # classes  OPTIONAL ("single"). "single" | "multi".
+    # Must match how the planners were generated:
+    #   single : the planner in <planners_dir>/<name>/good/ is always used.
+    #   multi  : the closest reference image decides the class, and that
+    #            class's planner <planners_dir>/<name>/<class_label>/ is used.
+    #            Class names never change output folders.
+    classes: "single"
+
+    # class_examples
+    #   FORBIDDEN IF classes == "single" (must be absent/empty).
+    #   OPTIONAL IF classes == "multi", but needed in practice the first time:
+    #     the pipeline reads class descriptions from the cache
+    #     prompts/class_labels/<name>_data_labels.txt. If that file is missing,
+    #     it generates descriptions from these examples and asks you to
+    #     accept / regenerate / quit (interactive), then writes the cache.
+    # Format: <class_label>: "<filename in <root_dir>/train/good>"
+    # Use the SAME class labels as in the planner-generation config.
+    # class_examples:
+    #   Blue_Toothbrush: "000.png"
+    #   Red_Toothbrush: "020.png"
+
+    # object_crop  OPTIONAL mapping. Absent (or enabled: false) = disabled.
+    # When enabled, the VLM first locates the WHOLE object (using the object
+    # labels) and each test image is cropped to it before reference selection
+    # and the decision. If the object is not found, the run stops with an
+    # explicit error instead of inspecting the uncropped image.
+    # Cropping train/good references is a separate manual step:
+    #   python -m anomaly_detection.crop_train_good --datasets <name>  (backs up train/good_uncropped)
+    object_crop:
+      # enabled  OPTIONAL (false). Boolean.
+      enabled: false
+      # labels_file  OPTIONAL (prompts/object_labels/<name>_object_labels.txt).
+      # One label per line; blank lines and lines starting with "#" ignored.
+      # REQUIRED to exist and contain >= 1 label IF enabled is true (checked
+      # at load time). Normally written by planner generation.
+      labels_file: "prompts/object_labels/bottle_object_labels.txt"
+      # padding_ratio  OPTIONAL (0.05). Number in [0, 1]. Fraction of the box
+      # width/height added on every side so object edges are not cut off.
+      padding_ratio: 0.05
+      # prompt_template  OPTIONAL ("image_crop.j2"). Filename relative to
+      # prompts_dir (no absolute path, no ".."). Must exist IF enabled.
+      prompt_template: "image_crop.j2"
+      # save_cropped_png  OPTIONAL (false). Boolean. Also save the
+      # original-resolution crop under the run's cropped_images/ folder.
+      save_cropped_png: false
+
+  # Minimal second entry (MVTec LOCO style, no merging):
+  # - name: "breakfast_box"
+  #   root_dir: "datasets/mvtec_loco/breakfast_box"
+  #   merge_anomalies: false
+  #   classes: "single"
+
+# -----------------------------------------------------------------------------
+# planners_dir  REQUIRED, non-empty string.
+# The folder that planner generation wrote to (its output.planners_dir).
+# Layout read here: <planners_dir>/<dataset name>/<good | class_label>/...
+# If you use secondary_classification, its step numbers refer to THESE planners.
+# -----------------------------------------------------------------------------
+planners_dir: "reference_images/planners/my_model_planners"   # <-- CHANGE
+
+# -----------------------------------------------------------------------------
+# prompts_dir  REQUIRED. Folder with the detection Jinja templates
+# (decision prompt, rerun_step.j2, image_crop.j2, label_generator.j2,
+# bounding_box_localizer.j2, ...). NOT the planner_pipeline prompt folder.
+# -----------------------------------------------------------------------------
+prompts_dir: "prompts/anomaly_detection_pipeline"
+
+# -----------------------------------------------------------------------------
+# decision  OPTIONAL section.
+# -----------------------------------------------------------------------------
+decision:
+  # label_policy  OPTIONAL ("model"). "model" | "steps" (case-insensitive).
+  #   model : keep the VLM's own final good/anomaly label. Contradictory step
+  #           answers are logged as warnings but never rewrite the decision.
+  #   steps : legacy override: any YES step => anomaly, all NO => good.
+  label_policy: "model"
+
+  # prompt_template  OPTIONAL (unset). Filename relative to prompts_dir (no
+  # absolute path, no ".."); must exist. Unset = the built-in default
+  # (decision_maker_v2_original_compact.j2).
+  # Overridden by:  run_anomaly_detection.py --decision-prompt-template <file>
+  #   and by the ablation's experiment.decision_prompt_sequence.
+  # IGNORED when secondary_classification is enabled (its own
+  # prompt_template is used instead).
+  # prompt_template: "decision_maker_v2_original_compact.j2"
+
+# -----------------------------------------------------------------------------
+# secondary_classification  OPTIONAL section.
+# Omit it, or set enabled: false, for the normal binary (good/anomaly)
+# pipeline. When disabled, no other key in this section is read.
+#
+# When enabled, the planner's YES/NO answers are mapped by PYTHON rules (not
+# by the VLM) to one of several named classes, each with a binary label, e.g.
+#   non_empty (anomaly) / empty_dirty (good) / empty_clean (good).
+# The resolved rules + a fingerprint are saved in each dataset's run folder;
+# resume, rerun, masks and metrics refuse to mix results made with different
+# rules. Details: anomaly_detection/README.md.
+# -----------------------------------------------------------------------------
+secondary_classification:
+  # enabled  OPTIONAL (false). Boolean.
+  enabled: false
+
+  # ---- every key below is read ONLY when enabled: true ----
+
+  # schema_version  OPTIONAL (1). Must be 1. It versions the FORMAT/MEANING of
+  # this section (not the model or dataset).
+  # schema_version: 1
+
+  # prompt_template  OPTIONAL ("decision_maker_secondary.j2"). A bare filename
+  # inside prompts_dir; must exist. This prompt receives the planner steps;
+  # class names are never sent to the VLM.
+  # prompt_template: "decision_maker_secondary.j2"
+
+  # classes  REQUIRED (non-empty mapping) when enabled.
+  # Each key is a class name that is saved in results and must EXACTLY match
+  # the class names used by secondary metrics (metrics config) and secondary
+  # masks.
+  # Per class:
+  #   binary_label        REQUIRED. "good" | "anomaly". At least one class
+  #                       must be "anomaly".
+  #   any_yes / all_yes / any_no / all_no
+  #                       At least ONE is REQUIRED per class. Each is a
+  #                       non-empty list of unique positive planner step
+  #                       numbers:
+  #                         any_yes: at least one listed step is YES
+  #                         all_yes: every listed step is YES
+  #                         any_no : at least one listed step is NO
+  #                         all_no : every listed step is NO
+  #                       Several operators in one class are combined with AND.
+  #   localization_steps  OPTIONAL ([]). Steps whose YES evidence may produce
+  #                       this class's mask. Must be a subset of the class's
+  #                       any_yes + all_yes steps. [] = no positive mask.
+  # Validation: every possible YES/NO combination of all referenced steps must
+  # match EXACTLY ONE class (no gaps, no overlaps), otherwise loading fails.
+  # The step numbers must correspond to the planners in planners_dir.
+  #
+  # Example for a 6-step planner (steps 1-4 = dirt, 5-6 = foreign object):
+  # classes:
+  #   non_empty:
+  #     any_yes: [5, 6]
+  #     binary_label: "anomaly"
+  #     localization_steps: [5, 6]
+  #   empty_dirty:
+  #     any_yes: [1, 2, 3, 4]
+  #     all_no: [5, 6]
+  #     binary_label: "good"
+  #     localization_steps: [1, 2, 3, 4]
+  #   empty_clean:
+  #     all_no: [1, 2, 3, 4, 5, 6]
+  #     binary_label: "good"
+  #     localization_steps: []
+
+# -----------------------------------------------------------------------------
+# output  REQUIRED section.
+# A new run writes  <root_dir>/<runs_dir>/<YYYY-MM-DD HH-MM-SS>_/<dataset>/
+#   {preproc/, texts/, all_data_summary.jsonl, ...}
+# That timestamped folder is the "run_dir" that the rerun, mask-generation,
+# metrics and XAI mask-ablation configs point to.
+# --resume-dir <existing run dir> continues that run in place instead:
+# completed datasets are verified and skipped, decided images are reused.
+# The ablation orchestrator always passes --resume-dir with its own run
+# folders, so output.runs_dir is not used for ablation runs.
+# -----------------------------------------------------------------------------
+output:
+  # root_dir  REQUIRED. Relative to the project root.
+  root_dir: "outputs"
+  # runs_dir  REQUIRED. Relative to output.root_dir (absolute also allowed).
+  # Use a new name whenever the method/model/config changes.
+  runs_dir: "runs_my_experiment"                   # <-- CHANGE
+
+# After this stage (separately, against the run folder written above):
+#   python -m anomaly_detection.rerun <run_dir> <dataset>   low-confidence rerun
+#   python run_mask_generation.py --config ...              pixel masks
+#   python run_metrics.py --metrics-config ...              metrics
+# or run all stages with run_anomaly_detection_ablation.py.

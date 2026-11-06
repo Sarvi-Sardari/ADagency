@@ -1,0 +1,274 @@
+# =============================================================================
+# TEMPLATE: model_cluster_configs.yaml  (multi-PC Ray + vLLM settings)
+# =============================================================================
+#
+# Read ONLY when the model config has
+#     deployment:
+#       mode: cluster
+#       cluster_config: "<this file>"
+# In local mode this file is never opened, so it cannot affect local runs.
+# Parsed by: cluster_deployment/config.py (load_model_config_bundle).
+# Background and setup steps: cluster_deployment/README.md.
+#
+# PLACEHOLDERS - this template contains NO real addresses, users or paths:
+#   192.168.XX.YY    the head/controller PC (where the pipeline runs and where
+#                    the managed vLLM server listens)
+#   192.168.XX.ZZ    a worker GPU PC
+#   <ssh-user>       SSH account on the worker PCs
+#   <net-interface>  network interface that carries cluster traffic (see
+#                    `ip -br addr`, e.g. eno1 / eth0 / enp5s0)
+#   <remote-python>  Python executable on the workers
+# Keep the filled-in copy private (do not commit real IPs/users/key paths).
+# Never store passwords or private-key contents in this file.
+#
+# What the pipeline does in cluster mode:
+#   - It does NOT start or stop Ray. Start Ray on the head and on every worker
+#     beforehand (`ray start --head` / `ray start --address=...`).
+#   - It discovers live Ray nodes, checks the requested GPU topology, starts
+#     ITS OWN vLLM server (server_launch), talks to it over HTTP (base_url),
+#     and stops it afterwards.
+#   - Optionally it records hardware telemetry on every remote GPU node via SSH.
+# =============================================================================
+
+deployment:
+  # ---------------------------------------------------------------------------
+  # deployment.cluster  OPTIONAL section (all keys optional).
+  # ---------------------------------------------------------------------------
+  cluster:
+    # ray_address  OPTIONAL ("auto"). Non-empty string.
+    #   "auto"                      connect to the Ray cluster this machine
+    #                               already belongs to (normal choice on the head).
+    #   "ray://192.168.XX.YY:10001" a Ray Client endpoint.
+    # Also available to server_launch.command as {ray_address}.
+    ray_address: "auto"
+
+    # local_host  OPTIONAL (null). Hostname/IP string of THIS (controller) PC
+    # as Ray sees it. Used only to exclude the controller from REMOTE SSH
+    # telemetry (it is already monitored locally). Set it when the controller
+    # has several network addresses and could otherwise be mistaken for a
+    # remote node.
+    local_host: "192.168.XX.YY"                    # <-- CHANGE
+
+    # gpu_count  OPTIONAL (auto). "auto" | null | integer >= 1.
+    #   auto / null : use every GPU advertised by live Ray nodes.
+    #   N           : use N GPUs. Must be <= the GPUs Ray currently advertises,
+    #                 and must be divisible by tensor_parallel_size.
+    # Available to server_launch.command as {gpu_count}.
+    gpu_count: auto
+
+    # tensor_parallel_size  OPTIONAL (1). Integer >= 1.
+    # How many GPUs split EACH layer. Tensor parallelism needs fast links, so
+    # keep 1 when every PC has one GPU connected over Ethernet.
+    # The pipeline derives:  pipeline_parallel_size = gpu_count / tensor_parallel_size
+    # (layers are split across PCs as pipeline stages).
+    # Available as {tensor_parallel_size} and {pipeline_parallel_size}.
+    tensor_parallel_size: 1
+
+  # ---------------------------------------------------------------------------
+  # deployment.remote_monitoring  OPTIONAL section (default: disabled).
+  # SSH-launched hardware telemetry (CPU/GPU/thermal/kernel) on remote nodes,
+  # so a crash on a worker leaves evidence. Requires password-less SSH
+  # (key-based) from the controller to each worker.
+  # ---------------------------------------------------------------------------
+  remote_monitoring:
+    # enabled  OPTIONAL (false). Boolean. Master switch. When false, every
+    # other key in this section is still type-checked but has no effect.
+    enabled: true
+
+    # required  OPTIONAL (true). Boolean. Only meaningful when enabled.
+    #   true  : a telemetry start failure fails the pipeline's preflight.
+    #   false : the failure is logged and the run continues without it.
+    required: true
+
+    # discover_from_ray  OPTIONAL (true). Boolean.
+    #   true  : monitor every live remote Ray GPU node automatically; entries
+    #           in `nodes` act only as per-host overrides (matched by host).
+    #           A discovered node without an override uses the default_* values,
+    #           so default_user becomes REQUIRED (see below).
+    #   false : monitor ONLY the hosts listed in `nodes` (then `nodes` is
+    #           REQUIRED and must be non-empty).
+    discover_from_ray: true
+
+    # monitor_in_local_mode  OPTIONAL (false). Boolean. Legacy: allows remote
+    # telemetry when the effective mode is local. Because this split file is
+    # ignored in local mode, it only matters for old all-in-one configs.
+    monitor_in_local_mode: false
+
+    # sync_monitor_script  OPTIONAL (true). Boolean.
+    #   true  : copy the project's current monitor script to each node (scp)
+    #           before starting it. Recommended.
+    #   false : run a script that is already installed on the node; then
+    #           default_monitor_script (or the node's monitor_script) is
+    #           REQUIRED.
+    sync_monitor_script: true
+
+    # default_user  REQUIRED IF enabled AND discover_from_ray AND a discovered
+    # remote node has no `nodes` override. Otherwise OPTIONAL. SSH user name.
+    default_user: "<ssh-user>"                     # <-- CHANGE
+
+    # default_python  OPTIONAL ("/usr/bin/python3"). Python used on the nodes to
+    # run the monitor. It needs the packages the monitor imports (e.g. the
+    # project environment's interpreter).
+    default_python: "<remote-python>"              # <-- CHANGE e.g. /home/<ssh-user>/envs/xai/bin/python
+
+    # default_remote_output_root  OPTIONAL ("/tmp/pipeline_telemetry").
+    # Directory ON THE NODE where telemetry is written; must be writable by the
+    # SSH user. Prefer a persistent path over /tmp if you want post-crash logs.
+    default_remote_output_root: "/home/<ssh-user>/pipeline_telemetry"   # <-- CHANGE
+
+    # default_monitor_script  OPTIONAL (null). Path ON THE NODE to an installed
+    # monitor script. REQUIRED IF sync_monitor_script is false and a node has
+    # no monitor_script of its own.
+    default_monitor_script: null
+
+    # ssh_options  OPTIONAL ([]). List of strings added to every ssh/scp call,
+    # e.g. ["-p", "2222"] or ["-i", "~/.ssh/<key-name>"].
+    ssh_options: []
+
+    # nodes  OPTIONAL ([]); REQUIRED and non-empty IF enabled AND
+    # discover_from_ray is false. Each entry is a mapping:
+    #   host                REQUIRED. Hostname/IP used for SSH and for matching
+    #                       Ray-discovered nodes.
+    #   name                OPTIONAL (= host). Label used in telemetry folder names.
+    #   user                OPTIONAL (= default_user). Must resolve to non-empty.
+    #   python              OPTIONAL (= default_python).
+    #   remote_output_root  OPTIONAL (= default_remote_output_root).
+    #   monitor_script      OPTIONAL (= default_monitor_script); used only when
+    #                       sync_monitor_script is false.
+    #   ssh_options         OPTIONAL ([]); APPENDED after the global ssh_options.
+    nodes:
+      - name: "worker-1"
+        host: "192.168.XX.ZZ"                      # <-- CHANGE
+        # user: "<ssh-user>"
+        # python: "<remote-python>"
+        # remote_output_root: "/home/<ssh-user>/pipeline_telemetry"
+        # monitor_script: null
+        # ssh_options: []
+
+# -----------------------------------------------------------------------------
+# models  OPTIONAL section.
+# Each mapping here is merged OVER the same-named entry of the model config
+# (key by key: a key here replaces that key there; keys not given here are
+# kept). So model_name, source, local_path, image_processing, generation, etc.
+# stay in model_configs.yaml; only server/endpoint settings belong here.
+#
+# After merging, in cluster mode:
+#   models.vlm.base_url  is REQUIRED for every stage.
+#   models.llm.base_url  is REQUIRED for planner generation.
+# -----------------------------------------------------------------------------
+models:
+  vlm:
+    # base_url  REQUIRED (cluster mode). OpenAI-compatible API root, normally
+    # http://<head-ip>:<port>/v1. The port must match --port in the command.
+    base_url: "http://192.168.XX.YY:8000/v1"       # <-- CHANGE
+
+    # served_model_name  OPTIONAL (= models.vlm.model_name). Model id the API
+    # serves and the pipeline requests. Also the {served_model_name} placeholder.
+    # Keep it stable: it decouples requests from machine-specific paths.
+    served_model_name: "inspection-vlm"
+
+    # server_launch  OPTIONAL. REQUIRES base_url.
+    #   present : the pipeline starts this vLLM server, waits until it answers,
+    #             swaps it when another model is needed, and stops it at the end.
+    #   omitted : the pipeline assumes a server at base_url is already running
+    #             and managed by you (a warning is logged).
+    server_launch:
+      # command  REQUIRED IF server_launch is present. Non-empty list of
+      # non-empty strings; each item is ONE argv element (no shell string,
+      # no quoting tricks). Placeholders substituted at launch:
+      #   {model}                  local_path (source local) or huggingface_name
+      #   {served_model_name}      see above
+      #   {gpu_count}              resolved GPU count
+      #   {tensor_parallel_size}   deployment.cluster.tensor_parallel_size
+      #   {pipeline_parallel_size} gpu_count / tensor_parallel_size
+      #   {ray_address}            deployment.cluster.ray_address
+      # The vLLM flags themselves are vLLM's, not the pipeline's. Common ones:
+      #   --distributed-executor-backend ray   use the running Ray cluster
+      #   --gpu-memory-utilization 0.85        fraction (0,1] of each GPU's memory
+      #   --max-model-len 8192                 context limit; must fit prompt +
+      #                                        images + max_new_tokens
+      #   --limit-mm-per-prompt '{"image": 8}' max images per request (the
+      #                                        decision prompt sends candidate +
+      #                                        references)
+      #   --mm-processor-kwargs '{...}'        processor options (model specific)
+      #   --max-num-seqs 1                     concurrent sequences
+      #   --trust-remote-code                  allow custom HF model code
+      #   --host 0.0.0.0 --port 8000           bind address / port
+      # Add checkpoint-specific flags only when its official docs require them.
+      command:
+        - "vllm"
+        - "serve"
+        - "{model}"
+        - "--served-model-name"
+        - "{served_model_name}"
+        - "--distributed-executor-backend"
+        - "ray"
+        - "--tensor-parallel-size"
+        - "{tensor_parallel_size}"
+        - "--pipeline-parallel-size"
+        - "{pipeline_parallel_size}"
+        - "--gpu-memory-utilization"
+        - "0.85"
+        - "--max-model-len"
+        - "8192"
+        - "--limit-mm-per-prompt"
+        - '{"image": 8}'
+        - "--max-num-seqs"
+        - "1"
+        - "--trust-remote-code"
+        - "--host"
+        - "0.0.0.0"
+        - "--port"
+        - "8000"
+
+      # env  OPTIONAL ({}). Mapping of environment variables given ONLY to the
+      # vLLM process. Keys must be strings; values are converted to strings.
+      env:
+        # Interface that carries NCCL (GPU-to-GPU) traffic between PCs.
+        NCCL_SOCKET_IFNAME: "<net-interface>"      # <-- CHANGE
+        # Interface used by Gloo (CPU-side collectives).
+        GLOO_SOCKET_IFNAME: "<net-interface>"      # <-- CHANGE
+        # Controller IP that every Ray worker can reach.
+        VLLM_HOST_IP: "192.168.XX.YY"              # <-- CHANGE
+
+      # ready_timeout  OPTIONAL (1800). Number > 0, seconds. How long to wait
+      # for the server to become healthy before failing. Large checkpoints,
+      # multi-node loading and first-time kernel compilation can take long.
+      ready_timeout: 2400
+
+  # llm: same keys, types, defaults and rules as vlm above.
+  # Needed for planner generation only (anomaly detection uses vlm only).
+  # vlm and llm may use the same port: the planner stops one managed server
+  # before starting the other, so both are never resident at the same time.
+  llm:
+    base_url: "http://192.168.XX.YY:8000/v1"       # <-- CHANGE
+    served_model_name: "planner-llm"
+    server_launch:
+      command:
+        - "vllm"
+        - "serve"
+        - "{model}"
+        - "--served-model-name"
+        - "{served_model_name}"
+        - "--distributed-executor-backend"
+        - "ray"
+        - "--tensor-parallel-size"
+        - "{tensor_parallel_size}"
+        - "--pipeline-parallel-size"
+        - "{pipeline_parallel_size}"
+        - "--gpu-memory-utilization"
+        - "0.85"
+        - "--max-model-len"
+        - "16384"
+        - "--max-num-seqs"
+        - "1"
+        - "--trust-remote-code"
+        - "--host"
+        - "0.0.0.0"
+        - "--port"
+        - "8000"
+      env:
+        NCCL_SOCKET_IFNAME: "<net-interface>"      # <-- CHANGE
+        GLOO_SOCKET_IFNAME: "<net-interface>"      # <-- CHANGE
+        VLLM_HOST_IP: "192.168.XX.YY"              # <-- CHANGE
+      ready_timeout: 2400

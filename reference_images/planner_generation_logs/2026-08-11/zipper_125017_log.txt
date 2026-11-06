@@ -1,0 +1,141 @@
+2026-08-11 12:50:17 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:50:17 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:50:17 | INFO     | __main__ | Dataset  : zipper
+2026-08-11 12:50:17 | INFO     | __main__ | Classes  : single
+2026-08-11 12:50:17 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:50:17 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/zipper_125017_log.txt
+2026-08-11 12:50:17 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:50:18 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:50:18 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:50:19 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:50:19 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:50:19 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/zipper/train/good/157.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/zipper/train/good/021.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/zipper/train/good/184.png']
+2026-08-11 12:50:19 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:50:19 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:50:19 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:50:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:50:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:50:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-11 12:50:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-11 12:50:19 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-11 12:50:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-11 12:50:20 | INFO     | models | [VLM] Inference completed in 0.515s (max_new_tokens=2040)
+2026-08-11 12:50:20 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/zipper/train/good/100.png in 0.515s
+2026-08-11 12:50:23 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['zipper']
+2026-08-11 12:50:23 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/zipper_object_labels.txt
+2026-08-11 12:50:23 | INFO     | __main__ | Object names: ['zipper']
+2026-08-11 12:50:23 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:50:23 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/zipper/good
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-11 12:50:23 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-11 12:50:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:50:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:50:26 | INFO     | models | [VLM] Inference completed in 2.383s (max_new_tokens=2040)
+2026-08-11 12:50:26 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zipper/good/processed_good_157_2026-08-11 12:50:26.json (inference_time=2.383s)
+2026-08-11 12:50:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:50:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:50:28 | INFO     | models | [VLM] Inference completed in 2.363s (max_new_tokens=2040)
+2026-08-11 12:50:28 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zipper/good/processed_good_021_2026-08-11 12:50:28.json (inference_time=2.363s)
+2026-08-11 12:50:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:50:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:50:31 | INFO     | models | [VLM] Inference completed in 2.352s (max_new_tokens=2040)
+2026-08-11 12:50:31 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zipper/good/processed_good_184_2026-08-11 12:50:31.json (inference_time=2.352s)
+2026-08-11 12:50:31 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:50:31 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:50:32 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:50:32 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zipper/good
+2026-08-11 12:50:32 | DEBUG    | descriptor | Processing image description: processed_good_184_2026-08-11 12:50:31.json
+2026-08-11 12:50:32 | DEBUG    | descriptor | Raw description data: - Object 1 zipper
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:50:32 | DEBUG    | descriptor | Processing image description: processed_good_021_2026-08-11 12:50:28.json
+2026-08-11 12:50:32 | DEBUG    | descriptor | Raw description data: - Object 1 zipper
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:50:32 | DEBUG    | descriptor | Processing image description: processed_good_157_2026-08-11 12:50:26.json
+2026-08-11 12:50:32 | DEBUG    | descriptor | Raw description data: - Object 1 zipper
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:50:32 | DEBUG    | descriptor | Unique object keys found: {'zipper'}
+2026-08-11 12:50:32 | DEBUG    | descriptor | Class 'good' object description: {'zipper': ['-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description']}
+2026-08-11 12:50:35 | INFO     | models | [LLM] Inference completed in 2.729s (max_new_tokens=3000)
+2026-08-11 12:50:35 | INFO     | descriptor | [zipper] Object summarisation completed in 2.729s
+2026-08-11 12:50:35 | DEBUG    | descriptor | Summarised description for 'zipper': {
+  "zipper": {
+    "Type": "A mechanical fastening device used to secure fabric by interlocking teeth",
+    "Color": "Varies depending on application, commonly black, silver, or red",
+    "Size": "5x5cm / 2x2 inches",
+    "Material": "Thin flexible PVC or metal",
+    "Composition": "Composed of interlocking teeth made from plastic or metal, with a slider mechanism",
+    "Quantity": "One per garment or package",
+    "Relative Location": "Attached along the seam or edge of clothing or packaging",
+    "Orientation": "Horizontal, running parallel to the edge of the fabric",
+    "Connection or Attachments": "Connected to fabric via a zipper pull and slider, allowing opening and closing"
+  }
+}
+2026-08-11 12:50:35 | DEBUG    | descriptor | Master description: {'zipper': {'Type': 'A mechanical fastening device used to secure fabric by interlocking teeth', 'Color': 'Varies depending on application, commonly black, silver, or red', 'Size': '5x5cm / 2x2 inches', 'Material': 'Thin flexible PVC or metal', 'Composition': 'Composed of interlocking teeth made from plastic or metal, with a slider mechanism', 'Quantity': 'One per garment or package', 'Relative Location': 'Attached along the seam or edge of clothing or packaging', 'Orientation': 'Horizontal, running parallel to the edge of the fabric', 'Connection or Attachments': 'Connected to fabric via a zipper pull and slider, allowing opening and closing'}}
+2026-08-11 12:50:35 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:50:35 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['zipper'] directly (no generation, no compiled file).
+2026-08-11 12:50:35 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:50:35 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:50:35 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:50:36 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:50:36 | DEBUG    | planner | Class directories for dataset 'zipper': ['good']
+2026-08-11 12:50:36 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/zipper/good
+2026-08-11 12:50:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:50:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:50:36 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:50:35_master_description.json
+2026-08-11 12:50:40 | INFO     | models | [VLM] Inference completed in 4.207s (max_new_tokens=2040)
+2026-08-11 12:50:40 | INFO     | planner | Planner steps generated in 4.207s (attempt=1, steps=10, approved_rules=legacy-untracked)
+2026-08-11 12:50:40 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zipper/good/good_2026-08-11 12:50:40_planner.txt
+2026-08-11 12:50:40 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the zipper’s surface?
+Step 2: Is there any bent, warped, crushed, punctured, worn, torn, or broken/snapped component on the zipper?
+Step 3: Is there any missing component such as a zipper pull or slider that should be present according to the reference?
+Step 4: Is there any extra debris, foreign object, or loose part on the zipper?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, leak, or peeling coating on the zipper?
+Step 6: Is there any deviation from the expected black color as defined in the reference?
+Step 7: Is there any inconsistency in the interlocking teeth structure compared to the reference?
+Step 8: Is there any missing or extra component related to the slider mechanism?
+Step 9: Is there any damage to the fabric surrounding the zipper teeth?
+Step 10: Is there any visible deviation in the zipper’s alignment with the fabric seam?
+2026-08-11 12:50:40 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zipper/performance/performance_20260811_125040.json
+2026-08-11 12:50:40 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zipper
+2026-08-11 12:50:40 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/zipper_125017_log.txt

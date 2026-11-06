@@ -1,0 +1,129 @@
+2026-08-19 16:39:25 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:39:25 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:39:25 | INFO     | __main__ | Dataset  : leather
+2026-08-19 16:39:25 | INFO     | __main__ | Classes  : single
+2026-08-19 16:39:25 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:39:25 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/leather_163925_log.txt
+2026-08-19 16:39:25 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:39:27 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:39:27 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:39:28 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:39:28 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:39:28 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/leather/train/good/160.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/leather/train/good/021.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/leather/train/good/188.png']
+2026-08-19 16:39:28 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:39:28 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/leather_object_labels.txt
+2026-08-19 16:39:28 | INFO     | __main__ | Object names: ['Leather Surface']
+2026-08-19 16:39:28 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:39:28 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/leather/good
+2026-08-19 16:39:29 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1450196 44
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1450252 1304
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1370267 44
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1370323 1304
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1347123 44
+2026-08-19 16:39:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1347179 1304
+2026-08-19 16:39:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:39:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:39:36 | INFO     | models | [VLM] Inference completed in 6.346s (max_new_tokens=2040)
+2026-08-19 16:39:36 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/leather/good/processed_good_160_2026-08-19 16:39:36.json (inference_time=6.346s)
+2026-08-19 16:39:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:39:36 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:39:42 | INFO     | models | [VLM] Inference completed in 5.526s (max_new_tokens=2040)
+2026-08-19 16:39:42 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/leather/good/processed_good_021_2026-08-19 16:39:42.json (inference_time=5.526s)
+2026-08-19 16:39:42 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:39:42 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:39:47 | INFO     | models | [VLM] Inference completed in 5.107s (max_new_tokens=2040)
+2026-08-19 16:39:47 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/leather/good/processed_good_188_2026-08-19 16:39:47.json (inference_time=5.107s)
+2026-08-19 16:39:47 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:39:47 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:39:49 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:39:49 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/leather/good
+2026-08-19 16:39:49 | DEBUG    | descriptor | Processing image description: processed_good_188_2026-08-19 16:39:47.json
+2026-08-19 16:39:49 | DEBUG    | descriptor | Raw description data: - Object 1 Leather Surface
+    - Attribute 1 Type - textured, grainy surface resembling natural leather with irregular polygonal patterns
+    - Attribute 2 Color - uniform medium brown with subtle tonal variations across the surface
+    - Attribute 3 Size - fills the entire frame; no specific length or width measurements provided due to lack of scale reference
+    - Attribute 4 Material - appears to be genuine or synthetic leather, exhibiting a tactile, slightly uneven surface
+    - Attribute 5 Composition - composed of interlocking, irregularly shaped polygons forming a natural grain pattern typical of leather
+    - Attribute 6 Quantity - single continuous surface with no visible seams, edges, or divisions
+    - Attribute 7 Relative Location - occupies the entire visual field from edge to edge, top to bottom
+    - Attribute 8 Orientation - flat and horizontally aligned, with no discernible tilt or rotation
+    - Attribute 9 Connection or Attachments - no visible attachments, seams, or fasteners; appears as a standalone, unadorned surface
+2026-08-19 16:39:49 | DEBUG    | descriptor | Processing image description: processed_good_021_2026-08-19 16:39:42.json
+2026-08-19 16:39:49 | DEBUG    | descriptor | Raw description data: - Object 1 Leather Surface
+    - Attribute 1 Type - textured, grainy surface with irregular, interconnected creases resembling natural leather grain
+    - Attribute 2 Color - uniform medium brown with subtle variations in tone due to surface texture and lighting
+    - Attribute 3 Size - full frame coverage, appearing as a continuous, unbroken surface without visible edges or boundaries
+    - Attribute 4 Material - appears to be genuine or synthetic leather, characterized by its tactile, porous, and slightly uneven surface
+    - Attribute 5 Composition - composed of a dense network of fine, irregular lines and creases forming a natural-looking grain pattern
+    - Attribute 6 Quantity - single continuous surface with no visible seams, cuts, or separations
+    - Attribute 7 Relative Location - occupies entire visual field, centered and filling the frame from top to bottom and left to right
+    - Attribute 8 Orientation - flat and horizontally aligned, with no discernible tilt or angle relative to the viewer
+    - Attribute 9 Connection or Attachments - no visible attachments, seams, or fasteners; appears as a standalone, self-contained surface
+2026-08-19 16:39:49 | DEBUG    | descriptor | Processing image description: processed_good_160_2026-08-19 16:39:36.json
+2026-08-19 16:39:49 | DEBUG    | descriptor | Raw description data: - Object 1 Leather Surface
+    - Attribute 1 Type - A textured surface with a natural grain pattern, characteristic of leather, featuring irregular, interconnected creases and folds.
+    - Attribute 2 Color - A uniform medium to dark brown hue, with subtle tonal variations that enhance the natural appearance of the material.
+    - Attribute 3 Size - The visible area is square-shaped, with no specific length or width measurements provided, but it fills the entire frame of the image.
+    - Attribute 4 Material - Genuine or synthetic leather, exhibiting a tactile, slightly rough surface with a matte finish.
+    - Attribute 5 Composition - Composed of a continuous, seamless layer of leather with a consistent grain structure, showing no seams, stitching, or visible edges.
+    - Attribute 6 Quantity - One continuous surface, with no separate or distinct pieces visible.
+    - Attribute 7 Relative Location - Occupies the entire central and visible area of the image, with no other objects or surfaces present.
+    - Attribute 8 Orientation - Flat and horizontally aligned, with no discernible tilt or rotation relative to the viewer’s perspective.
+    - Attribute 9 Connection or Attachments - No visible connections, attachments, or fasteners; the surface appears as a single, unbroken piece.
+2026-08-19 16:39:49 | DEBUG    | descriptor | Unique object keys found: {'Leather Surface'}
+2026-08-19 16:39:49 | DEBUG    | descriptor | Class 'good' object description: {'Leather Surface': ['-  Type - textured, grainy surface resembling natural leather with irregular polygonal patterns\n    -  Color - uniform medium brown with subtle tonal variations across the surface\n    -  Size - fills the entire frame; no specific length or width measurements provided due to lack of scale reference\n    -  Material - appears to be genuine or synthetic leather, exhibiting a tactile, slightly uneven surface\n    -  Composition - composed of interlocking, irregularly shaped polygons forming a natural grain pattern typical of leather\n    -  Quantity - single continuous surface with no visible seams, edges, or divisions\n    -  Relative Location - occupies the entire visual field from edge to edge, top to bottom\n    -  Orientation - flat and horizontally aligned, with no discernible tilt or rotation\n    -  Connection or Attachments - no visible attachments, seams, or fasteners; appears as a standalone, unadorned surface', '-  Type - textured, grainy surface with irregular, interconnected creases resembling natural leather grain\n    -  Color - uniform medium brown with subtle variations in tone due to surface texture and lighting\n    -  Size - full frame coverage, appearing as a continuous, unbroken surface without visible edges or boundaries\n    -  Material - appears to be genuine or synthetic leather, characterized by its tactile, porous, and slightly uneven surface\n    -  Composition - composed of a dense network of fine, irregular lines and creases forming a natural-looking grain pattern\n    -  Quantity - single continuous surface with no visible seams, cuts, or separations\n    -  Relative Location - occupies entire visual field, centered and filling the frame from top to bottom and left to right\n    -  Orientation - flat and horizontally aligned, with no discernible tilt or angle relative to the viewer\n    -  Connection or Attachments - no visible attachments, seams, or fasteners; appears as a standalone, self-contained surface', '-  Type - A textured surface with a natural grain pattern, characteristic of leather, featuring irregular, interconnected creases and folds.\n    -  Color - A uniform medium to dark brown hue, with subtle tonal variations that enhance the natural appearance of the material.\n    -  Size - The visible area is square-shaped, with no specific length or width measurements provided, but it fills the entire frame of the image.\n    -  Material - Genuine or synthetic leather, exhibiting a tactile, slightly rough surface with a matte finish.\n    -  Composition - Composed of a continuous, seamless layer of leather with a consistent grain structure, showing no seams, stitching, or visible edges.\n    -  Quantity - One continuous surface, with no separate or distinct pieces visible.\n    -  Relative Location - Occupies the entire central and visible area of the image, with no other objects or surfaces present.\n    -  Orientation - Flat and horizontally aligned, with no discernible tilt or rotation relative to the viewer’s perspective.\n    -  Connection or Attachments - No visible connections, attachments, or fasteners; the surface appears as a single, unbroken piece.']}
+2026-08-19 16:39:54 | INFO     | models | [LLM] Inference completed in 5.592s (max_new_tokens=3000)
+2026-08-19 16:39:54 | INFO     | descriptor | [Leather Surface] Object summarisation completed in 5.592s
+2026-08-19 16:39:54 | DEBUG    | descriptor | Summarised description for 'Leather Surface': 
+
+{
+  "Leather Surface": {
+    "Type": "textured, grainy surface with irregular, interconnected creases resembling natural leather grain",
+    "Color": "uniform medium to dark brown hue with subtle tonal variations across the surface",
+    "Size": "fills the entire frame; square-shaped with no specific length or width measurements provided",
+    "Material": "genuine or synthetic leather, characterized by its tactile, porous, and slightly uneven surface with a matte finish",
+    "Composition": "composed of a dense network of fine, irregular lines and creases forming a natural-looking grain pattern, with a continuous, seamless layer showing no seams, stitching, or visible edges",
+    "Quantity": "single continuous surface with no visible seams, edges, cuts, or separations",
+    "Relative Location": "occupies the entire visual field from edge to edge, top to bottom, and centered in the frame",
+    "Orientation": "flat and horizontally aligned with no discernible tilt or rotation relative to the viewer",
+    "Connection or Attachments": "no visible attachments, seams, or fasteners; appears as a standalone, self-contained, unbroken piece"
+  }
+}
+2026-08-19 16:39:54 | DEBUG    | descriptor | Master description: {'Leather Surface': {'Type': 'textured, grainy surface with irregular, interconnected creases resembling natural leather grain', 'Color': 'uniform medium to dark brown hue with subtle tonal variations across the surface', 'Size': 'fills the entire frame; square-shaped with no specific length or width measurements provided', 'Material': 'genuine or synthetic leather, characterized by its tactile, porous, and slightly uneven surface with a matte finish', 'Composition': 'composed of a dense network of fine, irregular lines and creases forming a natural-looking grain pattern, with a continuous, seamless layer showing no seams, stitching, or visible edges', 'Quantity': 'single continuous surface with no visible seams, edges, cuts, or separations', 'Relative Location': 'occupies the entire visual field from edge to edge, top to bottom, and centered in the frame', 'Orientation': 'flat and horizontally aligned with no discernible tilt or rotation relative to the viewer', 'Connection or Attachments': 'no visible attachments, seams, or fasteners; appears as a standalone, self-contained, unbroken piece'}}
+2026-08-19 16:39:54 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:39:54 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/leather.txt
+2026-08-19 16:39:54 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=9)
+2026-08-19 16:39:54 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:39:55 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:39:57 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:39:57 | DEBUG    | planner | Class directories for dataset 'leather': ['good']
+2026-08-19 16:39:57 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/leather/good
+2026-08-19 16:39:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:39:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:39:57 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:39:54_master_description.json
+2026-08-19 16:40:01 | INFO     | models | [VLM] Inference completed in 4.545s (max_new_tokens=2040)
+2026-08-19 16:40:01 | INFO     | planner | Planner steps generated in 4.545s (attempt=1, steps=9, approved_rules=9)
+2026-08-19 16:40:01 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/leather/good/good_2026-08-19 16:40:01_planner.txt
+2026-08-19 16:40:01 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any uneven color shading visible across the entire leather surface?  
+Step 2: Is there any cracked texture forming irregular lines across the grain pattern?  
+Step 3: Is there any deepened creases present in some areas of the surface texture?  
+Step 4: Is there any abrasion marks or worn areas where the texture appears flattened?  
+Step 5: Is there any punctured spot, such as a small indentation or hole, in the surface texture?  
+Step 6: Is there any stained area with a different hue or saturation visible on the surface?  
+Step 7: Is there any raised bump breaking the smoothness of the grain pattern?  
+Step 8: Is there any uneven grain where the pattern is misaligned or broken in sections?  
+Step 9: Is there any embedded foreign particle visible within the leather surface?
+2026-08-19 16:40:01 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/leather/performance/performance_20260819_164001.json
+2026-08-19 16:40:01 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/leather
+2026-08-19 16:40:01 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/leather_163925_log.txt

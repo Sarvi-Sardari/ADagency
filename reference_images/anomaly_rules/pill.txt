@@ -1,0 +1,84 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Pill",
+      "category": "surface_integrity",
+      "part_or_region": "surface of the pill",
+      "anomaly_name": "cracked surface",
+      "visual_description": "a visible crack on the surface of the pill"
+    },
+    {
+      "id": "A002",
+      "object_name": "Pill",
+      "category": "surface_integrity",
+      "part_or_region": "imprint area",
+      "anomaly_name": "imprint partially worn",
+      "visual_description": "the embossed 'F' letters appear shallow or blurred"
+    },
+    {
+      "id": "A003",
+      "object_name": "Pill",
+      "category": "geometry_alignment",
+      "part_or_region": "imprint area",
+      "anomaly_name": "imprint misaligned",
+      "visual_description": "the two 'F' letters are not centered or symmetrically aligned"
+    },
+    {
+      "id": "A004",
+      "object_name": "Pill",
+      "category": "finish_color",
+      "part_or_region": "surface of the pill",
+      "anomaly_name": "color variation",
+      "visual_description": "any color or uneven white coloration with visible darker or lighter patches"
+    },
+    {
+      "id": "A005",
+      "object_name": "Pill",
+      "category": "structural_deformation",
+      "part_or_region": "overall shape",
+      "anomaly_name": "oval shape distorted",
+      "visual_description": "the pill appears slightly irregular or non-oval"
+    },
+    {
+      "id": "A006",
+      "object_name": "Pill",
+      "category": "surface_integrity",
+      "part_or_region": "edges of the pill",
+      "anomaly_name": "edge chipped",
+      "visual_description": "a small chip or notch visible on the pill's perimeter"
+    },
+    {
+      "id": "A007",
+      "object_name": "Pill",
+      "category": "surface_integrity",
+      "part_or_region": "imprint area",
+      "anomaly_name": "imprint missing",
+      "visual_description": "one or both 'F' letters are completely absent"
+    },
+    {
+      "id": "A008",
+      "object_name": "Pill",
+      "category": "surface_integrity",
+      "part_or_region": "imprint area",
+      "anomaly_name": "imprint extra",
+      "visual_description": "an additional mark or letter appears near the 'F' imprint"
+    },
+    {
+      "id": "A009",
+      "object_name": "Pill",
+      "category": "surface_integrity",
+      "part_or_region": "surface of the pill",
+      "anomaly_name": "surface scratch",
+      "visual_description": "a visible scratch or line across the pill surface"
+    },
+    {
+      "id": "A010",
+      "object_name": "Pill",
+      "category": "surface_integrity",
+      "part_or_region": "surface of the pill",
+      "anomaly_name": "surface dent",
+      "visual_description": "a small indentation or dent visible on the pill surface"
+    }
+  ]
+}

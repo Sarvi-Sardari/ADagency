@@ -1,0 +1,52 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "dark-blue plastic storage bin",
+      "category": "sheet_like_nuisance",
+      "part_or_region": "interior and visible exterior surfaces",
+      "anomaly_name": "thin foreign material",
+      "visual_description": "Separate paper, sticker, foil, film, or other thin flexible material with its own edge or contour is anomalous. Permanent or molded features shown in the reference are normal."
+    },
+    {
+      "id": "A002",
+      "object_name": "dark-blue plastic storage bin",
+      "category": "dry_surface_contamination",
+      "part_or_region": "interior surfaces",
+      "anomaly_name": "dry contamination or discoloration",
+      "visual_description": "A clearly visible patch, layer, cluster, or widespread area of dry dirt, residue, accumulated dust, staining, or discoloration is anomalous. Isolated tiny specks are normal."
+    },
+    {
+      "id": "A003",
+      "object_name": "dark-blue plastic storage bin",
+      "category": "wet_or_oily_contamination",
+      "part_or_region": "interior surfaces",
+      "anomaly_name": "wet or oily contamination",
+      "visual_description": "A wet or oily pool, patch, smear, film, or streak that differs from the reference is anomalous. Reflections and normal plastic sheen are normal."
+    },
+    {
+      "id": "A004",
+      "object_name": "dark-blue plastic storage bin",
+      "category": "structural_damage",
+      "part_or_region": "visible body and rim",
+      "anomaly_name": "structural damage or deformation",
+      "visual_description": "A dent, crack, break, damaged section, or deformation is anomalous. Molded structures shown in the reference are normal."
+    },
+    {
+      "id": "A005",
+      "object_name": "dark-blue plastic storage bin",
+      "category": "residual_content",
+      "part_or_region": "interior cavity",
+      "anomaly_name": "three-dimensional residual object",
+      "visual_description": "A separate raised object with its own contour, thickness, occlusion, or shadow is anomalous. Integrated bin structures and the attached lid are normal."
+    },
+    {
+      "id": "A006",
+      "object_name": "dark-blue plastic storage bin lid",
+      "category": "closure_state",
+      "part_or_region": "lid and opening",
+      "anomaly_name": "closed or partly closed lid",
+      "visual_description": "A lid covering or occluding any part of the opening is anomalous. A fully open lid is normal."
+    }
+  ]
+}

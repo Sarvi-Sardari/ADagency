@@ -1,0 +1,3 @@
+Blue_Toothbrush: Toothbrush with blue and white bristles
+Red_Toothbrush: Toothbrush with red and white bristles
+Yellow_Toothbrush: Toothbrush with yellow and white bristles

@@ -1,0 +1,114 @@
+2026-08-14 17:21:42 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-14 17:21:42 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-14 17:21:42 | INFO     | __main__ | Dataset  : rs_darkblue_box
+2026-08-14 17:21:42 | INFO     | __main__ | Classes  : single
+2026-08-14 17:21:42 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-14 17:21:42 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/rs_darkblue_box_172142_log.txt
+2026-08-14 17:21:42 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-14 17:21:43 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-14 17:21:43 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:21:51 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:21:51 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-14 17:21:51 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/rs_darkblue_box/train/good/rgb_00305.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/rs_darkblue_box/train/good/rgb_00198.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/rs_darkblue_box/train/good/rgb_00326.png']
+2026-08-14 17:21:51 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-14 17:21:51 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/rs_darkblue_box_object_labels.txt
+2026-08-14 17:21:51 | INFO     | __main__ | Object names: ['blue plastic storage bin']
+2026-08-14 17:21:51 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-14 17:21:51 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/rs_darkblue_box/good
+2026-08-14 17:21:51 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-14 17:21:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:21:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:21:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:21:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:21:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:21:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:21:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:21:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:21:57 | INFO     | models | [VLM] Inference completed in 5.926s (max_new_tokens=2040)
+2026-08-14 17:21:57 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/rs_darkblue_box/good/processed_good_rgb_00305_2026-08-14 17:21:57.json (inference_time=5.926s)
+2026-08-14 17:21:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:21:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:22:03 | INFO     | models | [VLM] Inference completed in 6.460s (max_new_tokens=2040)
+2026-08-14 17:22:03 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/rs_darkblue_box/good/processed_good_rgb_00198_2026-08-14 17:22:03.json (inference_time=6.460s)
+2026-08-14 17:22:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:22:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:22:09 | INFO     | models | [VLM] Inference completed in 5.122s (max_new_tokens=2040)
+2026-08-14 17:22:09 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/rs_darkblue_box/good/processed_good_rgb_00326_2026-08-14 17:22:09.json (inference_time=5.122s)
+2026-08-14 17:22:09 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-14 17:22:09 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-14 17:22:11 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-14 17:22:11 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/rs_darkblue_box/good
+2026-08-14 17:22:11 | DEBUG    | descriptor | Processing image description: processed_good_rgb_00326_2026-08-14 17:22:09.json
+2026-08-14 17:22:11 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic storage bin
+    - Attribute 1 Type - rectangular, open-top container with reinforced corners and integrated latching mechanisms on the sides
+    - Attribute 2 Color - solid blue, with a slightly darker interior
+    - Attribute 3 Size - approximately 12 inches in length, 9 inches in width, and 4 inches in height (estimated based on visual proportions)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic
+    - Attribute 5 Composition - consists of a single-piece molded body with a slightly raised rim and internal grid pattern for structural reinforcement
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - positioned centrally on a flat surface, with its open top facing upward
+    - Attribute 8 Orientation - upright, with the lid removed and resting separately, exposing the interior
+    - Attribute 9 Connection or Attachments - no visible attachments or connections to other objects; latching mechanisms are present but not engaged
+2026-08-14 17:22:11 | DEBUG    | descriptor | Processing image description: processed_good_rgb_00198_2026-08-14 17:22:03.json
+2026-08-14 17:22:11 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic storage bin
+    - Attribute 1 Type - rectangular, open-top container with a hinged lid, designed for storage
+    - Attribute 2 Color - light blue interior with a darker grayish-blue rim and latches; the exterior of the lid is a muted brownish-gray
+    - Attribute 3 Size - approximately 18 inches long, 12 inches wide, and 6 inches deep (estimated based on proportions relative to other bins in the image)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE), common for durable storage bins
+    - Attribute 5 Composition - consists of a base and a hinged lid with integrated latches on the sides; the lid has a grid pattern and a central handle cutout
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - positioned in the center of the image, slightly tilted, with its lid open and resting on its base
+    - Attribute 8 Orientation - viewed from a top-down perspective, with the bin's interior facing upward and the lid partially raised
+    - Attribute 9 Connection or Attachments - the lid is connected to the base via hinges on the sides and secured by plastic latches on each side; the lid features a central rectangular handle cutout for lifting
+2026-08-14 17:22:11 | DEBUG    | descriptor | Processing image description: processed_good_rgb_00305_2026-08-14 17:21:57.json
+2026-08-14 17:22:11 | DEBUG    | descriptor | Raw description data: - Object 1 blue plastic storage bin
+    - Attribute 1 Type - rectangular, open-top container with reinforced corners and integrated handles or latches on sides
+    - Attribute 2 Color - solid dark blue with slightly lighter blue interior walls and bottom
+    - Attribute 3 Size - approximately 18 inches long, 12 inches wide, and 6 inches deep (estimated based on proportions relative to surrounding objects)
+    - Attribute 4 Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer
+    - Attribute 5 Composition - single-piece molded construction with raised edges and internal structural ribs for strength; includes four corner reinforcements and side latches or tabs for stacking or securing
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - positioned centrally on a flat surface, with other storage bins visible in the background above it
+    - Attribute 8 Orientation - viewed from above at a slight downward angle, with the open top facing upward
+    - Attribute 9 Connection or Attachments - no visible external attachments; features internal structural ribs and molded latching tabs on the sides for stacking or securing to other bins
+2026-08-14 17:22:11 | DEBUG    | descriptor | Unique object keys found: {'blue plastic storage bin'}
+2026-08-14 17:22:11 | DEBUG    | descriptor | Class 'good' object description: {'blue plastic storage bin': ['-  Type - rectangular, open-top container with reinforced corners and integrated latching mechanisms on the sides\n    -  Color - solid blue, with a slightly darker interior\n    -  Size - approximately 12 inches in length, 9 inches in width, and 4 inches in height (estimated based on visual proportions)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable plastic\n    -  Composition - consists of a single-piece molded body with a slightly raised rim and internal grid pattern for structural reinforcement\n    -  Quantity - one\n    -  Relative Location - positioned centrally on a flat surface, with its open top facing upward\n    -  Orientation - upright, with the lid removed and resting separately, exposing the interior\n    -  Connection or Attachments - no visible attachments or connections to other objects; latching mechanisms are present but not engaged', "-  Type - rectangular, open-top container with a hinged lid, designed for storage\n    -  Color - light blue interior with a darker grayish-blue rim and latches; the exterior of the lid is a muted brownish-gray\n    -  Size - approximately 18 inches long, 12 inches wide, and 6 inches deep (estimated based on proportions relative to other bins in the image)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE), common for durable storage bins\n    -  Composition - consists of a base and a hinged lid with integrated latches on the sides; the lid has a grid pattern and a central handle cutout\n    -  Quantity - one\n    -  Relative Location - positioned in the center of the image, slightly tilted, with its lid open and resting on its base\n    -  Orientation - viewed from a top-down perspective, with the bin's interior facing upward and the lid partially raised\n    -  Connection or Attachments - the lid is connected to the base via hinges on the sides and secured by plastic latches on each side; the lid features a central rectangular handle cutout for lifting", '-  Type - rectangular, open-top container with reinforced corners and integrated handles or latches on sides\n    -  Color - solid dark blue with slightly lighter blue interior walls and bottom\n    -  Size - approximately 18 inches long, 12 inches wide, and 6 inches deep (estimated based on proportions relative to surrounding objects)\n    -  Material - molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer\n    -  Composition - single-piece molded construction with raised edges and internal structural ribs for strength; includes four corner reinforcements and side latches or tabs for stacking or securing\n    -  Quantity - one\n    -  Relative Location - positioned centrally on a flat surface, with other storage bins visible in the background above it\n    -  Orientation - viewed from above at a slight downward angle, with the open top facing upward\n    -  Connection or Attachments - no visible external attachments; features internal structural ribs and molded latching tabs on the sides for stacking or securing to other bins']}
+2026-08-14 17:22:18 | INFO     | models | [LLM] Inference completed in 7.449s (max_new_tokens=3000)
+2026-08-14 17:22:18 | INFO     | descriptor | [blue plastic storage bin] Object summarisation completed in 7.449s
+2026-08-14 17:22:18 | DEBUG    | descriptor | Summarised description for 'blue plastic storage bin': 
+
+{
+  "blue plastic storage bin": {
+    "Type": "rectangular, open-top container with reinforced corners, integrated latching mechanisms on the sides, and a hinged lid with integrated latches",
+    "Color": "solid dark blue with slightly lighter blue interior walls and bottom, featuring a darker grayish-blue rim and latches; exterior of the lid is a muted brownish-gray",
+    "Size": "18 inches long, 12 inches wide, and 6 inches deep / 5x5cm / 2x2 inches",
+    "Material": "molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer",
+    "Composition": "single-piece molded construction with raised edges, internal structural ribs for strength, four corner reinforcements, and side latches or tabs for stacking or securing; includes a base and a hinged lid with a grid pattern and central handle cutout",
+    "Quantity": "one",
+    "Relative Location": "positioned centrally on a flat surface, with other storage bins visible in the background above it",
+    "Orientation": "viewed from above at a slight downward angle, with the open top facing upward; viewed from a top-down perspective, with the bin's interior facing upward and the lid partially raised",
+    "Connection or Attachments": "features internal structural ribs and molded latching tabs on the sides for stacking or securing to other bins; the lid is connected to the base via hinges on the sides and secured by plastic latches on each side; no visible external attachments"
+  }
+}
+2026-08-14 17:22:18 | DEBUG    | descriptor | Master description: {'blue plastic storage bin': {'Type': 'rectangular, open-top container with reinforced corners, integrated latching mechanisms on the sides, and a hinged lid with integrated latches', 'Color': 'solid dark blue with slightly lighter blue interior walls and bottom, featuring a darker grayish-blue rim and latches; exterior of the lid is a muted brownish-gray', 'Size': '18 inches long, 12 inches wide, and 6 inches deep / 5x5cm / 2x2 inches', 'Material': 'molded plastic, likely high-density polyethylene (HDPE) or similar durable polymer', 'Composition': 'single-piece molded construction with raised edges, internal structural ribs for strength, four corner reinforcements, and side latches or tabs for stacking or securing; includes a base and a hinged lid with a grid pattern and central handle cutout', 'Quantity': 'one', 'Relative Location': 'positioned centrally on a flat surface, with other storage bins visible in the background above it', 'Orientation': "viewed from above at a slight downward angle, with the open top facing upward; viewed from a top-down perspective, with the bin's interior facing upward and the lid partially raised", 'Connection or Attachments': 'features internal structural ribs and molded latching tabs on the sides for stacking or securing to other bins; the lid is connected to the base via hinges on the sides and secured by plastic latches on each side; no visible external attachments'}}
+2026-08-14 17:22:18 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-14 17:22:18 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/rs_darkblue_box.txt
+2026-08-14 17:22:18 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=3)
+2026-08-14 17:22:18 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-14 17:22:18 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:22:21 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:22:21 | DEBUG    | planner | Class directories for dataset 'rs_darkblue_box': ['good']
+2026-08-14 17:22:21 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/rs_darkblue_box/good
+2026-08-14 17:22:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:22:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:22:21 | DEBUG    | planner | Generating planner steps from: good_2026-08-14 17:22:18_master_description.json
+2026-08-14 17:22:23 | INFO     | models | [VLM] Inference completed in 2.208s (max_new_tokens=2040)
+2026-08-14 17:22:23 | INFO     | planner | Planner steps generated in 2.208s (attempt=1, steps=3, approved_rules=3)
+2026-08-14 17:22:23 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/rs_darkblue_box/good/good_2026-08-14 17:22:23_planner.txt
+2026-08-14 17:22:23 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any dirt, grime, or residue stains visible on the interior surface of the blue plastic storage bin?  
+Step 2: Is there any discoloration, oil stains, or liquid residue marks present on the interior surface of the blue plastic storage bin?  
+Step 3: Is there any visible item or part inside the interior of the blue plastic storage bin?
+2026-08-14 17:22:23 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/rs_darkblue_box/performance/performance_20260814_172223.json
+2026-08-14 17:22:23 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/rs_darkblue_box
+2026-08-14 17:22:23 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/rs_darkblue_box_172142_log.txt

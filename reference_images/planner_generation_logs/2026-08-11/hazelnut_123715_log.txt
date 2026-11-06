@@ -1,0 +1,133 @@
+2026-08-11 12:37:15 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:37:15 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:37:15 | INFO     | __main__ | Dataset  : hazelnut
+2026-08-11 12:37:15 | INFO     | __main__ | Classes  : single
+2026-08-11 12:37:15 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:37:15 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/hazelnut_123715_log.txt
+2026-08-11 12:37:15 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:37:17 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:37:17 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:37:18 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:37:18 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:37:18 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/hazelnut/train/good/255.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/hazelnut/train/good/034.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/hazelnut/train/good/301.png']
+2026-08-11 12:37:18 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:37:18 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:37:18 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:37:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:37:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:37:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:37:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1226791 44
+2026-08-11 12:37:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1226847 1304
+2026-08-11 12:37:18 | INFO     | models | [VLM] Inference completed in 0.525s (max_new_tokens=2040)
+2026-08-11 12:37:18 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/hazelnut/train/good/100.png in 0.525s
+2026-08-11 12:37:21 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['hazelnut']
+2026-08-11 12:37:21 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/hazelnut_object_labels.txt
+2026-08-11 12:37:21 | INFO     | __main__ | Object names: ['hazelnut']
+2026-08-11 12:37:21 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:37:21 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/hazelnut/good
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1241741 44
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1241797 1304
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1212194 44
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1212250 1304
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1242914 44
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1242970 1304
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:37:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:37:24 | INFO     | models | [VLM] Inference completed in 2.396s (max_new_tokens=2040)
+2026-08-11 12:37:24 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/hazelnut/good/processed_good_255_2026-08-11 12:37:24.json (inference_time=2.396s)
+2026-08-11 12:37:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:37:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:37:26 | INFO     | models | [VLM] Inference completed in 2.347s (max_new_tokens=2040)
+2026-08-11 12:37:26 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/hazelnut/good/processed_good_034_2026-08-11 12:37:26.json (inference_time=2.347s)
+2026-08-11 12:37:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:37:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:37:28 | INFO     | models | [VLM] Inference completed in 2.357s (max_new_tokens=2040)
+2026-08-11 12:37:28 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/hazelnut/good/processed_good_301_2026-08-11 12:37:28.json (inference_time=2.357s)
+2026-08-11 12:37:28 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:37:29 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:37:30 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:37:30 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/hazelnut/good
+2026-08-11 12:37:30 | DEBUG    | descriptor | Processing image description: processed_good_301_2026-08-11 12:37:28.json
+2026-08-11 12:37:30 | DEBUG    | descriptor | Raw description data: - Object 1 hazelnut
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:37:30 | DEBUG    | descriptor | Processing image description: processed_good_034_2026-08-11 12:37:26.json
+2026-08-11 12:37:30 | DEBUG    | descriptor | Raw description data: - Object 1 hazelnut
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:37:30 | DEBUG    | descriptor | Processing image description: processed_good_255_2026-08-11 12:37:24.json
+2026-08-11 12:37:30 | DEBUG    | descriptor | Raw description data: - Object 1 hazelnut
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:37:30 | DEBUG    | descriptor | Unique object keys found: {'hazelnut'}
+2026-08-11 12:37:30 | DEBUG    | descriptor | Class 'good' object description: {'hazelnut': ['-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description']}
+2026-08-11 12:37:34 | INFO     | models | [LLM] Inference completed in 4.012s (max_new_tokens=3000)
+2026-08-11 12:37:34 | INFO     | descriptor | [hazelnut] Object summarisation completed in 4.012s
+2026-08-11 12:37:34 | DEBUG    | descriptor | Summarised description for 'hazelnut': {
+  "hazelnut": {
+    "Type": "A small, edible seed commonly found in forests and used in culinary and nut-based products.",
+    "Color": "Brown to dark brown with a slight golden hue on the outer shell, often with a pale yellow or cream-colored interior when roasted.",
+    "Size": "5x5mm / 0.2x0.2 inches",
+    "Material": "Natural seed with a hard outer shell and a soft, oily kernel inside.",
+    "Composition": "Primarily composed of fats, proteins, and carbohydrates, with a high content of monounsaturated fats and fiber.",
+    "Quantity": "Varies depending on the source, typically found in clusters or in small quantities in natural environments or packaged in bulk for consumption.",
+    "Relative Location": "Commonly found in forested areas, under trees such as hazel, or in cultivated gardens and orchards.",
+    "Orientation": "Usually found with the pointed end facing upward or slightly tilted, depending on the environment.",
+    "Connection or Attachments": "No attachments; typically found as individual seeds or in small groups, not connected to other objects."
+  }
+}
+2026-08-11 12:37:34 | DEBUG    | descriptor | Master description: {'hazelnut': {'Type': 'A small, edible seed commonly found in forests and used in culinary and nut-based products.', 'Color': 'Brown to dark brown with a slight golden hue on the outer shell, often with a pale yellow or cream-colored interior when roasted.', 'Size': '5x5mm / 0.2x0.2 inches', 'Material': 'Natural seed with a hard outer shell and a soft, oily kernel inside.', 'Composition': 'Primarily composed of fats, proteins, and carbohydrates, with a high content of monounsaturated fats and fiber.', 'Quantity': 'Varies depending on the source, typically found in clusters or in small quantities in natural environments or packaged in bulk for consumption.', 'Relative Location': 'Commonly found in forested areas, under trees such as hazel, or in cultivated gardens and orchards.', 'Orientation': 'Usually found with the pointed end facing upward or slightly tilted, depending on the environment.', 'Connection or Attachments': 'No attachments; typically found as individual seeds or in small groups, not connected to other objects.'}}
+2026-08-11 12:37:34 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:37:34 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['hazelnut'] directly (no generation, no compiled file).
+2026-08-11 12:37:34 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:37:34 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:37:34 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:37:35 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:37:35 | DEBUG    | planner | Class directories for dataset 'hazelnut': ['good']
+2026-08-11 12:37:35 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/hazelnut/good
+2026-08-11 12:37:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:37:35 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:37:35 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:37:34_master_description.json
+2026-08-11 12:37:38 | INFO     | models | [VLM] Inference completed in 3.046s (max_new_tokens=2040)
+2026-08-11 12:37:38 | INFO     | planner | Planner steps generated in 3.046s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-11 12:37:38 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/hazelnut/good/good_2026-08-11 12:37:38_planner.txt
+2026-08-11 12:37:38 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the hazelnut's surface?
+Step 2: Is there any bending, warping, crushing, puncturing, tearing, or breaking of the hazelnut's structure?
+Step 3: Is there any missing component that should be present according to the reference image?
+Step 4: Is there any extra debris, foreign object, or loose part attached to or surrounding the hazelnut?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the hazelnut?
+Step 6: Is there any significant misalignment or incorrect orientation of the hazelnut compared to the reference image?
+2026-08-11 12:37:38 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/hazelnut/performance/performance_20260811_123738.json
+2026-08-11 12:37:38 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/hazelnut
+2026-08-11 12:37:38 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/hazelnut_123715_log.txt

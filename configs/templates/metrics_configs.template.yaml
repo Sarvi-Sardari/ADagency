@@ -1,0 +1,134 @@
+# =============================================================================
+# TEMPLATE: metrics_configs.yaml  (standalone METRICS)
+# =============================================================================
+#
+# Used by:   run_metrics.py --metrics-config <this file>
+#            run_anomaly_detection_ablation.py (configs.metrics)
+# Parsed by: anomaly_detection/config.py :: load_metrics_config()
+#
+# What this stage does:
+#   Reads files that earlier stages already wrote under <run_dir>/<dataset>/
+#   (all_data_summary.jsonl, optional rerun results, optional masks/) and
+#   computes image-level metrics (accuracy, F1, confusion matrix, image AUROC)
+#   and, when ground-truth masks and predicted masks exist, pixel AUROC and
+#   AUPRO per mask method. No model is loaded, so it is cheap to re-run.
+#   Output: <run_dir>/<dataset>/<output.subdir>/metrics_<timestamp>.csv
+#   (metrics_w_rerun_<timestamp>.csv when rerun predictions are used).
+#   One row per anomaly class (test/ sub-folder other than good) plus an
+#   "overall" row when there are several anomaly classes. Never overwritten.
+#
+# CLI (all optional):
+#   --run-dir PATH            replace run_dir
+#   --combine                 also write one combined CSV directly in run_dir
+#   --include-rerun           force include_rerun: true for ALL datasets
+#   --base-results            force include_rerun: false for ALL datasets
+#                             (the two flags are mutually exclusive; with
+#                             neither, the per-dataset values below apply)
+#   --include-secondary       compute secondary metrics where enabled below
+#   --binary-only             skip secondary metrics even where enabled
+#                             (mutually exclusive; with neither, the YAML
+#                             secondary_metrics.enabled values apply)
+#   --omit aupro pixel-auroc image-auroc   skip some calculations
+#   --model-config PATH       only used to pick local/cluster telemetry
+# The ablation orchestrator sets run_dir, --include-rerun/--base-results,
+# --combine and --omit from its own config.
+#
+# Path rules (important, they differ by key):
+#   run_dir, root_dir, ground_truth_dir  -> relative to the PROJECT ROOT
+#   secondary_metrics.ground_truth_file / ground_truth_masks
+#                                        -> relative to that entry's ROOT_DIR
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# run_dir  REQUIRED (unless --run-dir is given). Existing directory.
+# The timestamped detection run folder
+#   <output.root_dir>/<output.runs_dir>/<YYYY-MM-DD HH-MM-SS>_
+# The ablation orchestrator writes a per-run copy of this file with run_dir
+# replaced, so the value here does not matter for ablations.
+# -----------------------------------------------------------------------------
+run_dir: "outputs/runs_my_experiment/2026-01-01 00-00-00_"   # <-- CHANGE
+
+# -----------------------------------------------------------------------------
+# datasets  REQUIRED. Non-empty list.
+# In an ablation the set of names must EXACTLY equal the anomaly-detection
+# config's dataset names.
+# -----------------------------------------------------------------------------
+datasets:
+  - # name  REQUIRED. A dataset `name` from the anomaly-detection config
+    # (a folder under run_dir).
+    name: "bottle"                                 # <-- CHANGE
+
+    # include_rerun  OPTIONAL (false). Boolean.
+    #   false : use first-pass predictions (all_data_summary.jsonl).
+    #   true  : replace predictions/scores per image with
+    #           <run_dir>/<name>/rerun_results/rerun_result.jsonl, matched by
+    #           (label_folder, source_label_folder, img_name). The rerun stage
+    #           must have run. It controls BOTH binary and secondary metrics.
+    # Keep it consistent with the mask-generation config's include_rerun.
+    include_rerun: false
+
+    # root_dir  OPTIONAL. Existing directory: the ORIGINAL dataset root.
+    #   Needed for pixel metrics unless ground_truth_dir is given; ground
+    #   truth is auto-detected at <root_dir>/ground_truth (per-label or flat)
+    #   or <root_dir>/mask_all (all masks in one folder).
+    #   REQUIRED IF secondary_metrics.enabled is true.
+    root_dir: "datasets/mvtec_ad/bottle"           # <-- CHANGE
+
+    # ground_truth_dir  OPTIONAL. Existing directory holding the BINARY
+    # ground-truth masks when they are not in one of the auto-detected
+    # locations above. Works with or without root_dir. Unrelated to the
+    # class-specific paths under secondary_metrics.
+    # ground_truth_dir: "datasets/my_dataset/my_masks"
+    #
+    # Pixel AUROC / AUPRO are computed only if ground truth resolves AND
+    # <run_dir>/<name>/masks/ exists. One "Pixel AUROC (<method>)" /
+    # "AUPRO (<method>)" column pair is added per masks/<method>/ folder found
+    # (from mask generation and/or the XAI mask ablation).
+
+    # secondary_metrics  OPTIONAL mapping. Omit it, or enabled: false, for
+    # binary metrics only. Only meaningful for runs made with
+    # secondary_classification enabled.
+    secondary_metrics:
+      # enabled  OPTIONAL (false). Boolean. When true, ground_truth_file and
+      # ground_truth_masks are REQUIRED and root_dir must be set.
+      enabled: false
+
+      # ground_truth_file  REQUIRED IF enabled. Existing JSON file, relative
+      # to root_dir. A JSON object mapping image stem -> class name, e.g.
+      #   {"00001": "non_empty", "00002": "empty_clean"}
+      # ground_truth_file: "test/secondary_classification_ground_truth.json"
+
+      # ground_truth_masks  REQUIRED IF enabled. Non-empty mapping whose keys
+      # must EXACTLY equal the class names of the run's saved secondary
+      # profile. Each value is a mask directory relative to root_dir, or null
+      # for a class whose true mask is always empty (e.g. empty_clean: such a
+      # class gets false-positive mask-area diagnostics instead of pixel
+      # AUROC/AUPRO). Do NOT repeat root_dir inside these paths.
+      # Predicted secondary masks must exist first (mask generation with
+      # generate_secondary_masks: true and the same include_rerun).
+      # ground_truth_masks:
+      #   empty_clean: null
+      #   empty_dirty: "mask_empty_dirty"
+      #   non_empty: "mask_non_empty"
+
+  # Example: dataset with secondary metrics
+  # - name: "rs_darkblue_box"
+  #   include_rerun: true
+  #   root_dir: "datasets/ibadas_02/rs_darkblue_box"
+  #   ground_truth_dir: "datasets/ibadas_02/rs_darkblue_box/mask_non_empty"
+  #   secondary_metrics:
+  #     enabled: true
+  #     ground_truth_file: "test/secondary_classification_ground_truth.json"
+  #     ground_truth_masks:
+  #       empty_clean: null
+  #       empty_dirty: "mask_empty_dirty"
+  #       non_empty: "mask_non_empty"
+
+# -----------------------------------------------------------------------------
+# output  OPTIONAL section.
+# -----------------------------------------------------------------------------
+output:
+  # subdir  OPTIONAL ("metrics"). Non-empty folder name created inside each
+  # <run_dir>/<dataset>/ for the CSVs, so metrics never touch the run's own
+  # detection files.
+  subdir: "metrics"

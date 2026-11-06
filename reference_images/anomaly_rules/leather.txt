@@ -1,0 +1,76 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Leather Surface",
+      "category": "finish_color",
+      "part_or_region": "entire surface",
+      "anomaly_name": "uneven color shading",
+      "visual_description": "patches of darker or lighter brown visible across the surface"
+    },
+    {
+      "id": "A002",
+      "object_name": "Leather Surface",
+      "category": "surface_integrity",
+      "part_or_region": "surface texture",
+      "anomaly_name": "cracked texture",
+      "visual_description": "visible fine cracks forming irregular lines across the grain pattern"
+    },
+    {
+      "id": "A003",
+      "object_name": "Leather Surface",
+      "category": "surface_integrity",
+      "part_or_region": "surface texture",
+      "anomaly_name": "deepened creases",
+      "visual_description": "some areas show deeper, more pronounced grooves than others"
+    },
+    {
+      "id": "A004",
+      "object_name": "Leather Surface",
+      "category": "surface_integrity",
+      "part_or_region": "surface texture",
+      "anomaly_name": "abrasion marks",
+      "visual_description": "faint scuff marks or worn areas where texture is flattened"
+    },
+    {
+      "id": "A005",
+      "object_name": "Leather Surface",
+      "category": "surface_integrity",
+      "part_or_region": "surface texture",
+      "anomaly_name": "punctured spot",
+      "visual_description": "a small, localized indentation or hole in the texture"
+    },
+    {
+      "id": "A006",
+      "object_name": "Leather Surface",
+      "category": "surface_integrity",
+      "part_or_region": "surface texture",
+      "anomaly_name": "stained area",
+      "visual_description": "a visible discoloration spot with different hue or saturation"
+    },
+    {
+      "id": "A007",
+      "object_name": "Leather Surface",
+      "category": "surface_integrity",
+      "part_or_region": "surface texture",
+      "anomaly_name": "raised bump",
+      "visual_description": "a localized protrusion breaking the smoothness of the grain"
+    },
+    {
+      "id": "A008",
+      "object_name": "Leather Surface",
+      "category": "surface_integrity",
+      "part_or_region": "surface texture",
+      "anomaly_name": "uneven grain",
+      "visual_description": "sections where the grain pattern is misaligned or broken"
+    },
+    {
+      "id": "A009",
+      "object_name": "Leather Surface",
+      "category": "surface_integrity",
+      "part_or_region": "entire surface",
+      "anomaly_name": "embedded foreign particle",
+      "visual_description": "a small, visible foreign object within the leather surface."
+    }
+  ]
+}

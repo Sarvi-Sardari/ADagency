@@ -1,0 +1,131 @@
+2026-08-19 17:06:45 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 17:06:45 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 17:06:45 | INFO     | __main__ | Dataset  : wood
+2026-08-19 17:06:45 | INFO     | __main__ | Classes  : single
+2026-08-19 17:06:45 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 17:06:45 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/wood_170645_log.txt
+2026-08-19 17:06:45 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 17:06:46 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 17:06:46 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 17:06:48 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 17:06:48 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 17:06:48 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/wood/train/good/161.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/wood/train/good/021.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/wood/train/good/190.png']
+2026-08-19 17:06:48 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 17:06:48 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/wood_object_labels.txt
+2026-08-19 17:06:48 | INFO     | __main__ | Object names: ['Wood Grain Pattern']
+2026-08-19 17:06:48 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 17:06:48 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/wood/good
+2026-08-19 17:06:48 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 17:06:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:06:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:06:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:06:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1531637 44
+2026-08-19 17:06:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1531693 1304
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1561633 44
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1561689 1304
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1478564 44
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1478620 1304
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:06:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:06:55 | INFO     | models | [VLM] Inference completed in 6.128s (max_new_tokens=2040)
+2026-08-19 17:06:55 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/wood/good/processed_good_161_2026-08-19 17:06:55.json (inference_time=6.128s)
+2026-08-19 17:06:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:06:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:07:03 | INFO     | models | [VLM] Inference completed in 7.707s (max_new_tokens=2040)
+2026-08-19 17:07:03 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/wood/good/processed_good_021_2026-08-19 17:07:03.json (inference_time=7.707s)
+2026-08-19 17:07:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:07:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:07:09 | INFO     | models | [VLM] Inference completed in 5.705s (max_new_tokens=2040)
+2026-08-19 17:07:09 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/wood/good/processed_good_190_2026-08-19 17:07:09.json (inference_time=5.705s)
+2026-08-19 17:07:09 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 17:07:09 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 17:07:11 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 17:07:11 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/wood/good
+2026-08-19 17:07:11 | DEBUG    | descriptor | Processing image description: processed_good_190_2026-08-19 17:07:09.json
+2026-08-19 17:07:11 | DEBUG    | descriptor | Raw description data: - Object 1 Wood Grain Pattern
+    - Attribute 1 Type - Vertical linear grain pattern with subtle waviness and fine, closely spaced lines running parallel to each other.
+    - Attribute 2 Color - Warm brown tones ranging from light tan to medium brown, with darker streaks and natural variations in shading.
+    - Attribute 3 Size - The pattern fills the entire visible area, with lines extending from top to bottom, suggesting a continuous surface.
+    - Attribute 4 Material - Natural wood, likely hardwood, with a smooth, polished finish.
+    - Attribute 5 Composition - Composed of parallel wood fibers and grain lines, with occasional small knots or mineral streaks embedded within the structure.
+    - Attribute 6 Quantity - Single continuous pattern across the entire surface, with no visible breaks or seams.
+    - Attribute 7 Relative Location - Occupies the full frame of the image, centered and uniformly distributed.
+    - Attribute 8 Orientation - Vertically aligned, with grain lines running parallel to the top and bottom edges of the image.
+    - Attribute 9 Connection or Attachments - No visible connections or attachments; the pattern appears as a standalone, self-contained surface.
+2026-08-19 17:07:11 | DEBUG    | descriptor | Processing image description: processed_good_021_2026-08-19 17:07:03.json
+2026-08-19 17:07:11 | DEBUG    | descriptor | Raw description data: - Object 1 Wood Grain Pattern
+    - Attribute 1 Type - The pattern exhibits a straight, linear grain structure with fine, parallel lines running predominantly vertically, interspersed with subtle variations in density and slight waviness.
+    - Attribute 2 Color - The color palette consists of warm, earthy tones ranging from medium to dark brown, with lighter brown streaks and occasional darker knots or mineral streaks adding depth and contrast.
+    - Attribute 3 Size - The pattern fills the entire visible area, with grain lines extending vertically from top to bottom, and the width spans the full horizontal dimension of the image, indicating a continuous and uninterrupted surface.
+    - Attribute 4 Material - The material is natural wood, as evidenced by the organic texture, natural imperfections, and consistent grain direction typical of wood surfaces.
+    - Attribute 5 Composition - The composition is composed of cellulose fibers arranged in longitudinal lines, with embedded lignin and natural inclusions, creating the characteristic grain lines and color variations.
+    - Attribute 6 Quantity - There is one continuous Wood Grain Pattern covering the entire visible surface, with no separate or distinct instances.
+    - Attribute 7 Relative Location - The pattern is centrally located and uniformly distributed across the entire frame, with no offset or partial coverage.
+    - Attribute 8 Orientation - The grain lines are oriented vertically, running parallel to the top and bottom edges of the image, indicating a vertically aligned grain direction.
+    - Attribute 9 Connection or Attachments - The pattern is self-contained and appears as a single, continuous surface without visible seams, joints, or attachments to other materials.
+2026-08-19 17:07:11 | DEBUG    | descriptor | Processing image description: processed_good_161_2026-08-19 17:06:55.json
+2026-08-19 17:07:11 | DEBUG    | descriptor | Raw description data: - Object 1 Wood Grain Pattern
+    - Attribute 1 Type - straight and predominantly vertical grain lines with subtle natural variations and minor imperfections, including small knots and dark streaks.
+    - Attribute 2 Color - warm brown tones with variations ranging from light tan to medium brown, featuring darker lines that accentuate the grain.
+    - Attribute 3 Size - spans the full visible area of the image, with length extending vertically from top to bottom and width covering the entire horizontal span.
+    - Attribute 4 Material - natural wood, likely a hardwood species, with a smooth, finished surface.
+    - Attribute 5 Composition - composed of cellulose fibers arranged in parallel lines, with natural imperfections such as knots, grain irregularities, and minor discolorations.
+    - Attribute 6 Quantity - single continuous pattern covering the entire surface.
+    - Attribute 7 Relative Location - occupies the entire central area of the image, filling the frame from edge to edge.
+    - Attribute 8 Orientation - vertically aligned, with grain lines running parallel to the top and bottom edges of the image.
+    - Attribute 9 Connection or Attachments - no visible connections or attachments; appears as a standalone, self-contained wood surface pattern.
+2026-08-19 17:07:11 | DEBUG    | descriptor | Unique object keys found: {'Wood Grain Pattern'}
+2026-08-19 17:07:11 | DEBUG    | descriptor | Class 'good' object description: {'Wood Grain Pattern': ['-  Type - Vertical linear grain pattern with subtle waviness and fine, closely spaced lines running parallel to each other.\n    -  Color - Warm brown tones ranging from light tan to medium brown, with darker streaks and natural variations in shading.\n    -  Size - The pattern fills the entire visible area, with lines extending from top to bottom, suggesting a continuous surface.\n    -  Material - Natural wood, likely hardwood, with a smooth, polished finish.\n    -  Composition - Composed of parallel wood fibers and grain lines, with occasional small knots or mineral streaks embedded within the structure.\n    -  Quantity - Single continuous pattern across the entire surface, with no visible breaks or seams.\n    -  Relative Location - Occupies the full frame of the image, centered and uniformly distributed.\n    -  Orientation - Vertically aligned, with grain lines running parallel to the top and bottom edges of the image.\n    -  Connection or Attachments - No visible connections or attachments; the pattern appears as a standalone, self-contained surface.', '-  Type - The pattern exhibits a straight, linear grain structure with fine, parallel lines running predominantly vertically, interspersed with subtle variations in density and slight waviness.\n    -  Color - The color palette consists of warm, earthy tones ranging from medium to dark brown, with lighter brown streaks and occasional darker knots or mineral streaks adding depth and contrast.\n    -  Size - The pattern fills the entire visible area, with grain lines extending vertically from top to bottom, and the width spans the full horizontal dimension of the image, indicating a continuous and uninterrupted surface.\n    -  Material - The material is natural wood, as evidenced by the organic texture, natural imperfections, and consistent grain direction typical of wood surfaces.\n    -  Composition - The composition is composed of cellulose fibers arranged in longitudinal lines, with embedded lignin and natural inclusions, creating the characteristic grain lines and color variations.\n    -  Quantity - There is one continuous Wood Grain Pattern covering the entire visible surface, with no separate or distinct instances.\n    -  Relative Location - The pattern is centrally located and uniformly distributed across the entire frame, with no offset or partial coverage.\n    -  Orientation - The grain lines are oriented vertically, running parallel to the top and bottom edges of the image, indicating a vertically aligned grain direction.\n    -  Connection or Attachments - The pattern is self-contained and appears as a single, continuous surface without visible seams, joints, or attachments to other materials.', '-  Type - straight and predominantly vertical grain lines with subtle natural variations and minor imperfections, including small knots and dark streaks.\n    -  Color - warm brown tones with variations ranging from light tan to medium brown, featuring darker lines that accentuate the grain.\n    -  Size - spans the full visible area of the image, with length extending vertically from top to bottom and width covering the entire horizontal span.\n    -  Material - natural wood, likely a hardwood species, with a smooth, finished surface.\n    -  Composition - composed of cellulose fibers arranged in parallel lines, with natural imperfections such as knots, grain irregularities, and minor discolorations.\n    -  Quantity - single continuous pattern covering the entire surface.\n    -  Relative Location - occupies the entire central area of the image, filling the frame from edge to edge.\n    -  Orientation - vertically aligned, with grain lines running parallel to the top and bottom edges of the image.\n    -  Connection or Attachments - no visible connections or attachments; appears as a standalone, self-contained wood surface pattern.']}
+2026-08-19 17:07:17 | INFO     | models | [LLM] Inference completed in 6.247s (max_new_tokens=3000)
+2026-08-19 17:07:17 | INFO     | descriptor | [Wood Grain Pattern] Object summarisation completed in 6.247s
+2026-08-19 17:07:17 | DEBUG    | descriptor | Summarised description for 'Wood Grain Pattern': 
+
+{
+  "Wood Grain Pattern": {
+    "Type": "Vertical linear grain pattern with subtle waviness and fine, closely spaced lines running parallel to each other, interspersed with variations in density and slight waviness",
+    "Color": "Warm brown tones ranging from light tan to medium brown, with darker streaks, knots, and mineral streaks adding depth and contrast",
+    "Size": "Spans the full visible area of the image, with lines extending from top to bottom and width covering the entire horizontal span",
+    "Material": "Natural wood, likely hardwood, with a smooth, polished finish",
+    "Composition": "Composed of cellulose fibers arranged in longitudinal lines, with embedded lignin, natural inclusions, knots, and minor discolorations creating the characteristic grain lines and color variations",
+    "Quantity": "Single continuous pattern across the entire surface, with no visible breaks, seams, or separate instances",
+    "Relative Location": "Occupies the entire central area of the image, filling the frame from edge to edge and centered uniformly",
+    "Orientation": "Vertically aligned, with grain lines running parallel to the top and bottom edges of the image",
+    "Connection/Attachments": "No visible connections or attachments; appears as a standalone, self-contained wood surface pattern"
+  }
+}
+2026-08-19 17:07:17 | DEBUG    | descriptor | Master description: {'Wood Grain Pattern': {'Type': 'Vertical linear grain pattern with subtle waviness and fine, closely spaced lines running parallel to each other, interspersed with variations in density and slight waviness', 'Color': 'Warm brown tones ranging from light tan to medium brown, with darker streaks, knots, and mineral streaks adding depth and contrast', 'Size': 'Spans the full visible area of the image, with lines extending from top to bottom and width covering the entire horizontal span', 'Material': 'Natural wood, likely hardwood, with a smooth, polished finish', 'Composition': 'Composed of cellulose fibers arranged in longitudinal lines, with embedded lignin, natural inclusions, knots, and minor discolorations creating the characteristic grain lines and color variations', 'Quantity': 'Single continuous pattern across the entire surface, with no visible breaks, seams, or separate instances', 'Relative Location': 'Occupies the entire central area of the image, filling the frame from edge to edge and centered uniformly', 'Orientation': 'Vertically aligned, with grain lines running parallel to the top and bottom edges of the image', 'Connection/Attachments': 'No visible connections or attachments; appears as a standalone, self-contained wood surface pattern'}}
+2026-08-19 17:07:17 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 17:07:17 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/wood.txt
+2026-08-19 17:07:17 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=11)
+2026-08-19 17:07:17 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 17:07:17 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 17:07:19 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 17:07:19 | DEBUG    | planner | Class directories for dataset 'wood': ['good']
+2026-08-19 17:07:19 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/wood/good
+2026-08-19 17:07:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:07:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:07:19 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 17:07:17_master_description.json
+2026-08-19 17:07:25 | INFO     | models | [VLM] Inference completed in 5.189s (max_new_tokens=2040)
+2026-08-19 17:07:25 | INFO     | planner | Planner steps generated in 5.189s (attempt=1, steps=11, approved_rules=11)
+2026-08-19 17:07:25 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/wood/good/good_2026-08-19 17:07:25_planner.txt
+2026-08-19 17:07:25 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any visible split or fracture running along the grain lines?
+Step 2: Is there any narrow, linear groove cutting across the wood surface?
+Step 3: Is there any small, circular indentation or hole in the wood surface?
+Step 4: Is there any localized discoloration contrasting with surrounding wood tone?
+Step 5: Is there any bulge or bump protruding from the wood surface?
+Step 6: Is there any shallow depression or dent in the wood surface?
+Step 7: Is there any frayed or broken edge where the wood fibers are separated?
+Step 8: Is there any fuzzy or discolored patch indicating microbial growth?
+Step 9: Is there any flaking or lifting of surface coating exposing underlying wood?
+Step 10: Is there any section of grain that appears bent or curved out of alignment?
+Step 11: Is there any small, contrasting dark or light speck visibly protruding or embedded within the wood surface?
+2026-08-19 17:07:25 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/wood/performance/performance_20260819_170725.json
+2026-08-19 17:07:25 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/wood
+2026-08-19 17:07:25 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/wood_170645_log.txt

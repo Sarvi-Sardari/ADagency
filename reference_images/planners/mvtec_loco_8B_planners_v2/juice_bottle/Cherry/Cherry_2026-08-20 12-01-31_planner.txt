@@ -1,0 +1,27 @@
+Step 1: Is there any tear or hole in the golden label exposing the glass bottle underneath?
+Step 2: Is there any stain or discoloration on the golden label that doesn't match the uniform color?
+Step 3: Is there any crack or fracture line across the golden label surface?
+Step 4: Is there any scratch or scuff mark on the golden label surface?
+Step 5: Is the golden label partially or fully peeled away from the bottle surface?
+Step 6: Is the golden label visibly rotated or skewed, not aligned with the bottle's vertical axis?
+Step 7: Is the golden label showing uneven or faded coloration, not uniform across its surface?
+Step 8: Is there any puncture or hole in the golden label, possibly from a pin or sharp object?
+Step 9: Is there any stain or discoloration on the surface of the bottom label?
+Step 10: Is there any crack or split in the material of the bottom label?
+Step 11: Is there any tear or hole in the bottom label?
+Step 12: Is the bottom label visibly shifted or not centered on the bottle?
+Step 13: Is the bottom label showing a visible color change or uneven tone compared to its original appearance?
+Step 14: Is there any scratch or scuff mark on the surface of the bottom label?
+Step 15: Is the bottom label visibly turned at an angle, not aligned with the bottle's vertical axis?
+Step 16: Is the bottom golden label partially or fully peeled away from the bottle surface?
+Step 17: Is there any visible sediment, cloudiness, or foreign particles suspended within the liquid, inconsistent with the described homogeneous, pure juice?
+Step 18: Is the top label appearing rectangular or irregularly shaped instead of being a perfect square?
+Step 19: Is the top label visibly offset to the left or right, not aligned centrally on the front of the bottle?
+Step 20: Is the bottom label appearing rounded or irregularly shaped instead of being a clean rectangle?
+Step 21: Does the text on the bottom label read something other than '100% Juice'?
+Step 22: Is the bottom label containing '100% Juice' absent, leaving the glass surface bare in that region?
+Step 23: Is the liquid level in the bottle higher than 85% of its total height?
+Step 24: Is the liquid level in the bottle lower than 80% of its total height?
+Step 25: Is the top label missing the two cherries illustration, even though the bottle contains cherry juice?
+Step 26: Is there any deviation in the shape of the top label from a perfect square?
+Step 27: Is there any misalignment of the top label with the bottle's vertical axis?

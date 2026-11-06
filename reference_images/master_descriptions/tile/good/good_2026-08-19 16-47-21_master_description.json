@@ -1,0 +1,24 @@
+{
+    "Speckles": {
+        "Type": "irregularly shaped, dispersed particulate clusters and isolated dots",
+        "Color": "dark gray to black, contrasting sharply with the Background Matrix",
+        "Size": "0.1 mm to 2 mm in apparent diameter / 5x5cm / 2x2 inches",
+        "Material": "solid, opaque, non-reflective particulate matter, possibly mineral or synthetic",
+        "Composition": "discrete, non-uniform particulates distributed within the Background Matrix, likely mineral or metallic inclusions",
+        "Quantity": "numerous, densely distributed across the entire matrix; estimated in the hundreds to thousands per square centimeter",
+        "Relative Location": "scattered randomly across the entire Background Matrix, with no preferred clustering or alignment",
+        "Orientation": "randomly oriented, with no consistent directionality; some clusters appear elongated, others circular or irregular",
+        "Connection or Attachments": "embedded within and adhering to the Background Matrix; no visible connections to each other or to external elements"
+    },
+    "Background Matrix": {
+        "Type": "uniform, granular, continuous surface with fine, speckled texture",
+        "Color": "light gray with subtle variations in tone and pale grayish-white with subtle variations in luminance",
+        "Size": "fills entire visible area; no defined length or width as it is a continuous matrix",
+        "Material": "solid, non-reflective, possibly mineral-based or synthetic composite surface",
+        "Composition": "homogeneous base material with embedded particulates and no visible internal structure or phase separation",
+        "Quantity": "one continuous unit covering entire field of view",
+        "Relative Location": "occupies entire image plane as foundational layer beneath all other features",
+        "Orientation": "flat, horizontal, uniformly distributed across the field with no discernible tilt or directional alignment",
+        "Connection or Attachments": "serves as substrate for embedded speckles with no visible attachment points, seams, or separations"
+    }
+}

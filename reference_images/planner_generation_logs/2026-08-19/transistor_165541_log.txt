@@ -1,0 +1,319 @@
+2026-08-19 16:55:41 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:55:41 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:55:41 | INFO     | __main__ | Dataset  : transistor
+2026-08-19 16:55:41 | INFO     | __main__ | Classes  : single
+2026-08-19 16:55:41 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:55:41 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/transistor_165541_log.txt
+2026-08-19 16:55:41 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:55:42 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:55:42 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:55:44 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:55:44 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:55:44 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/transistor/train/good/139.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/transistor/train/good/018.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/transistor/train/good/164.png']
+2026-08-19 16:55:44 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:55:44 | INFO     | object_namer | [Object Namer] Loaded 5 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/transistor_object_labels.txt
+2026-08-19 16:55:44 | INFO     | __main__ | Object names: ['Copper Trace', 'Transistor', 'Solder Joint', 'Hole', 'Perforated Board']
+2026-08-19 16:55:44 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:55:44 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/transistor/good
+2026-08-19 16:55:44 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:55:44 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:55:44 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:55:44 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:55:44 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1282903 44
+2026-08-19 16:55:44 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1282959 1304
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1277789 44
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1277845 1304
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1293549 44
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1293605 1304
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:55:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:56:04 | INFO     | models | [VLM] Inference completed in 18.764s (max_new_tokens=2040)
+2026-08-19 16:56:04 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/transistor/good/processed_good_139_2026-08-19 16:56:04.json (inference_time=18.764s)
+2026-08-19 16:56:04 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:56:04 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:56:25 | INFO     | models | [VLM] Inference completed in 20.739s (max_new_tokens=2040)
+2026-08-19 16:56:25 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/transistor/good/processed_good_018_2026-08-19 16:56:25.json (inference_time=20.739s)
+2026-08-19 16:56:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:56:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:56:43 | INFO     | models | [VLM] Inference completed in 17.665s (max_new_tokens=2040)
+2026-08-19 16:56:43 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/transistor/good/processed_good_164_2026-08-19 16:56:43.json (inference_time=17.665s)
+2026-08-19 16:56:43 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:56:43 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:56:45 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:56:45 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/transistor/good
+2026-08-19 16:56:45 | DEBUG    | descriptor | Processing image description: processed_good_164_2026-08-19 16:56:43.json
+2026-08-19 16:56:45 | DEBUG    | descriptor | Raw description data: - Transistor
+    - Type - Through-hole electronic component with three metallic leads, housed in a black plastic TO-92 style casing.
+    - Color - Black body with a matte finish; metallic leads are silver-colored.
+    - Size - Body approximately 10mm in height and 5mm in width; leads extend downward, each about 15mm in length from the base.
+    - Material - Plastic body; metallic leads made of copper or tin-plated copper alloy.
+    - Composition - Plastic encapsulation with internal semiconductor material; leads are metal wire or ribbon.
+    - Quantity - One transistor.
+    - Relative Location - Centered in the image, mounted on the perforated board.
+    - Orientation - Body oriented vertically, leads pointing downward.
+    - Connection or Attachments - Leads inserted into three adjacent holes on the perforated board, soldered to the copper traces.
+
+- Copper Trace
+    - Type - Thin, flat conductive pathways on the perforated board.
+    - Color - Copper-colored, with some areas appearing darker due to oxidation or solder residue.
+    - Size - Width varies between 0.5mm and 1mm; length extends across the board, connecting multiple holes.
+    - Material - Copper.
+    - Composition - Pure copper or copper alloy.
+    - Quantity - Multiple traces visible, forming a grid pattern.
+    - Relative Location - Runs horizontally and vertically, intersecting at the holes where the transistor is mounted.
+    - Orientation - Horizontal and vertical, forming a grid.
+    - Connection or Attachments - Connected to the holes via solder joints, forming electrical pathways.
+
+- Solder Joint
+    - Type - Melted metal connecting the transistor leads to the copper traces.
+    - Color - Metallic grayish-silver, with some darkened areas due to oxidation or residue.
+    - Size - Small, approximately 1-2mm in diameter at each connection point.
+    - Material - Solder, typically tin-lead or lead-free alloy.
+    - Composition - Melted metal alloy.
+    - Quantity - Three solder joints, one for each lead of the transistor.
+    - Relative Location - Located at the base of each transistor lead, where it meets the copper trace.
+    - Orientation - Circular, conforming to the shape of the hole and lead.
+    - Connection or Attachments - Electrically connects the transistor leads to the copper traces, completing the circuit.
+
+- Hole
+    - Type - Circular openings in the perforated board for component mounting.
+    - Color - Dark brown or black, appearing slightly oxidized or covered with solder residue.
+    - Size - Diameter approximately 2-3mm.
+    - Material - Copper-plated metal.
+    - Composition - Metal with a hole drilled or punched through.
+    - Quantity - Multiple holes visible, arranged in a grid pattern.
+    - Relative Location - Surrounding the transistor, with three holes directly beneath the leads.
+    - Orientation - Circular, aligned vertically and horizontally.
+    - Connection or Attachments - Used to secure the transistor leads and provide electrical connection via solder joints.
+
+- Perforated Board
+    - Type - Printed circuit board with a grid of holes and copper traces.
+    - Color - Copper-colored with darkened areas due to oxidation or solder residue.
+    - Size - Visible portion is rectangular, with multiple rows and columns of holes.
+    - Material - Copper-clad laminate.
+    - Composition - Copper traces and insulating substrate (typically FR-4).
+    - Quantity - One board visible.
+    - Relative Location - Occupies the entire visible area of the image.
+    - Orientation - Horizontal and vertical grid pattern.
+    - Connection or Attachments - Provides mounting points and electrical pathways for components like the transistor.
+2026-08-19 16:56:45 | DEBUG    | descriptor | Processing image description: processed_good_018_2026-08-19 16:56:25.json
+2026-08-19 16:56:45 | DEBUG    | descriptor | Raw description data: - Transistor
+    - Type - A black, rectangular through-hole transistor with three metallic leads extending downward.
+    - Color - The body is matte black, with a circular marking (a stylized "T") on its surface; the leads are metallic silver.
+    - Size - Approximately 5mm in width and height, with leads extending about 10mm downward from the body.
+    - Material - The body is made of plastic or epoxy; the leads are made of metal, likely tin-plated copper or similar conductive alloy.
+    - Composition - The transistor body is composed of a molded plastic housing with a printed marking; the leads are metallic conductors.
+    - Quantity - One transistor.
+    - Relative Location - Positioned centrally in the image, mounted on a perforated board.
+    - Orientation - The transistor is oriented vertically, with its body aligned perpendicular to the board surface and leads pointing downward.
+    - Connection or Attachments - The three leads are soldered into three adjacent holes on the perforated board, forming electrical connections.
+
+- Copper Trace
+    - Type - Thin, flat conductive paths on the surface of the board.
+    - Color - Copper-colored, appearing reddish-brown due to oxidation.
+    - Size - Width varies but is typically less than 1mm; length extends across the board surface.
+    - Material - Copper metal.
+    - Composition - Pure copper or copper alloy, etched into the board surface.
+    - Quantity - Multiple traces visible, forming horizontal lines across the board.
+    - Relative Location - Located beneath and surrounding the transistor, running parallel to the board’s surface.
+    - Orientation - Horizontal, running left to right across the board.
+    - Connection or Attachments - The traces connect to the holes where the transistor’s leads are soldered, forming part of the circuit.
+
+- Solder Joint
+    - Type - Metallic connections formed by melting solder to join the transistor leads to the board holes.
+    - Color - Shiny, silvery-gray, with some darkened areas from oxidation or residue.
+    - Size - Each joint is approximately 1-2mm in diameter.
+    - Material - Tin-lead or lead-free solder alloy.
+    - Composition - Melted solder alloy bonded to both the lead and the copper pad inside the hole.
+    - Quantity - Three solder joints, one for each lead of the transistor.
+    - Relative Location - Located at the bottom of each hole, where the transistor leads enter the board.
+    - Orientation - Each joint is centered within its respective hole, aligned with the direction of the lead.
+    - Connection or Attachments - Each joint connects the transistor lead to the copper trace beneath the hole, completing the electrical path.
+
+- Hole
+    - Type - Circular openings in the perforated board for mounting components.
+    - Color - Dark, appearing black or dark brown due to shadowing and oxidation.
+    - Size - Diameter approximately 2-3mm.
+    - Material - Copper metal, with the surrounding board material being plastic or fiberglass.
+    - Composition - The hole is formed by drilling or punching through the board, exposing the copper pad underneath.
+    - Quantity - Multiple holes visible, arranged in a grid pattern; at least 15 holes visible in the image.
+    - Relative Location - Located in a grid pattern across the board surface, with three holes directly beneath the transistor leads.
+    - Orientation - Circular, aligned vertically and horizontally with the grid.
+    - Connection or Attachments - The holes are connected to copper traces and serve as mounting points for component leads.
+
+- Perforated Board
+    - Type - A circuit board with a grid of holes for mounting electronic components.
+    - Color - Copper-colored with dark brown or black areas due to oxidation or shadowing.
+    - Size - The visible portion is rectangular, with dimensions approximately 3cm by 4cm.
+    - Material - Made of a rigid substrate, likely fiberglass or plastic, with copper traces and holes.
+    - Composition - Composed of a base material with copper traces and holes drilled through it.
+    - Quantity - One perforated board.
+    - Relative Location - Occupies the entire visible area of the image.
+    - Orientation - Flat and horizontal, aligned with the camera’s viewpoint.
+    - Connection or Attachments - The board provides a mounting surface for the transistor and electrical connections via the copper traces and holes.
+2026-08-19 16:56:45 | DEBUG    | descriptor | Processing image description: processed_good_139_2026-08-19 16:56:04.json
+2026-08-19 16:56:45 | DEBUG    | descriptor | Raw description data: - Transistor
+    - Type - Through-hole transistor with three metallic leads extending downward
+    - Color - Black plastic body with a circular marking containing a "T" symbol; metallic leads are silver-colored
+    - Size - Body approximately 5mm square; leads extend approximately 10mm downward from the body
+    - Material - Black plastic encapsulation; metallic leads likely made of tin-plated copper or similar conductive alloy
+    - Composition - Encapsulated semiconductor device with three electrical terminals (leads)
+    - Quantity - One transistor
+    - Relative Location - Centered on the perforated board, positioned between vertical copper traces
+    - Orientation - Leads oriented vertically downward, aligned with the copper traces below
+    - Connection or Attachments - Leads soldered into three adjacent holes on the perforated board, electrically connecting to the copper traces
+
+- Copper Trace
+    - Type - Conductive pathways etched into the board surface
+    - Color - Copper-colored metallic surface
+    - Size - Width varies slightly but generally around 0.5mm to 1mm; length extends vertically along the board from the holes to the edges
+    - Material - Copper metal
+    - Composition - Pure copper or copper alloy, forming conductive paths
+    - Quantity - Multiple traces visible, arranged in vertical columns
+    - Relative Location - Located directly beneath the transistor leads and surrounding the holes
+    - Orientation - Vertical, running parallel to each other in columns
+    - Connection or Attachments - Connected to the solder joints at the holes, forming electrical paths between the transistor and other components
+
+- Solder Joint
+    - Type - Melted solder connecting the transistor leads to the board holes
+    - Color - Metallic grayish-silver, with some darkened areas from oxidation or heat
+    - Size - Approximately 1mm in diameter at the point of connection
+    - Material - Solder alloy, likely tin-lead or lead-free tin-silver-copper
+    - Composition - Molten metal alloy solidified around the lead and hole interface
+    - Quantity - Three solder joints, one for each lead of the transistor
+    - Relative Location - Located at the base of each transistor lead, within the corresponding hole
+    - Orientation - Circular, conforming to the shape of the hole and lead
+    - Connection or Attachments - Electrically connects the transistor’s leads to the copper traces via the holes
+
+- Hole
+    - Type - Through-hole for component mounting
+    - Color - Dark, circular voids appearing black or dark gray due to shadowing and soldering
+    - Size - Diameter approximately 1mm to 1.2mm
+    - Material - Copper board material, with solder and possibly flux residue
+    - Composition - Copper conductive material with solder and possibly flux residue
+    - Quantity - Multiple holes visible, arranged in vertical columns
+    - Relative Location - Positioned in vertical columns on the board, directly under the transistor leads
+    - Orientation - Circular, aligned vertically with the copper traces
+    - Connection or Attachments - Connected to the copper traces via solder joints and serve as mounting points for the transistor leads
+
+- Perforated Board
+    - Type - Printed circuit board with a grid of holes for component mounting
+    - Color - Copper-colored metallic surface with dark holes
+    - Size - Visible portion shows multiple vertical columns of holes and traces; overall dimensions not fully visible
+    - Material - Copper-clad laminate, likely FR-4 (glass fiber reinforced epoxy)
+    - Composition - Copper conductive layer on a non-conductive substrate
+    - Quantity - One perforated board
+    - Relative Location - Serves as the base substrate for the transistor and copper traces
+    - Orientation - Horizontal plane, with vertical copper traces running perpendicular to the board edges
+    - Connection or Attachments - Provides mounting and electrical connectivity for the transistor via holes and copper traces
+2026-08-19 16:56:45 | DEBUG    | descriptor | Unique object keys found: {'Solder Joint', 'Perforated Board', 'Copper Trace', 'Transistor', 'Hole'}
+2026-08-19 16:56:45 | DEBUG    | descriptor | Class 'good' object description: {'Solder Joint': ['- Type - Melted metal connecting the transistor leads to the copper traces.\n    - Color - Metallic grayish-silver, with some darkened areas due to oxidation or residue.\n    - Size - Small, approximately 1-2mm in diameter at each connection point.\n    - Material - Solder, typically tin-lead or lead-free alloy.\n    - Composition - Melted metal alloy.\n    - Quantity - Three solder joints, one for each lead of the transistor.\n    - Relative Location - Located at the base of each transistor lead, where it meets the copper trace.\n    - Orientation - Circular, conforming to the shape of the hole and lead.\n    - Connection or Attachments - Electrically connects the transistor leads to the copper traces, completing the circuit.', '- Type - Metallic connections formed by melting solder to join the transistor leads to the board holes.\n    - Color - Shiny, silvery-gray, with some darkened areas from oxidation or residue.\n    - Size - Each joint is approximately 1-2mm in diameter.\n    - Material - Tin-lead or lead-free solder alloy.\n    - Composition - Melted solder alloy bonded to both the lead and the copper pad inside the hole.\n    - Quantity - Three solder joints, one for each lead of the transistor.\n    - Relative Location - Located at the bottom of each hole, where the transistor leads enter the board.\n    - Orientation - Each joint is centered within its respective hole, aligned with the direction of the lead.\n    - Connection or Attachments - Each joint connects the transistor lead to the copper trace beneath the hole, completing the electrical path.', '- Type - Melted solder connecting the transistor leads to the board holes\n    - Color - Metallic grayish-silver, with some darkened areas from oxidation or heat\n    - Size - Approximately 1mm in diameter at the point of connection\n    - Material - Solder alloy, likely tin-lead or lead-free tin-silver-copper\n    - Composition - Molten metal alloy solidified around the lead and hole interface\n    - Quantity - Three solder joints, one for each lead of the transistor\n    - Relative Location - Located at the base of each transistor lead, within the corresponding hole\n    - Orientation - Circular, conforming to the shape of the hole and lead\n    - Connection or Attachments - Electrically connects the transistor’s leads to the copper traces via the holes'], 'Perforated Board': ['- Type - Printed circuit board with a grid of holes and copper traces.\n    - Color - Copper-colored with darkened areas due to oxidation or solder residue.\n    - Size - Visible portion is rectangular, with multiple rows and columns of holes.\n    - Material - Copper-clad laminate.\n    - Composition - Copper traces and insulating substrate (typically FR-4).\n    - Quantity - One board visible.\n    - Relative Location - Occupies the entire visible area of the image.\n    - Orientation - Horizontal and vertical grid pattern.\n    - Connection or Attachments - Provides mounting points and electrical pathways for components like the transistor.', '- Type - A circuit board with a grid of holes for mounting electronic components.\n    - Color - Copper-colored with dark brown or black areas due to oxidation or shadowing.\n    - Size - The visible portion is rectangular, with dimensions approximately 3cm by 4cm.\n    - Material - Made of a rigid substrate, likely fiberglass or plastic, with copper traces and holes.\n    - Composition - Composed of a base material with copper traces and holes drilled through it.\n    - Quantity - One perforated board.\n    - Relative Location - Occupies the entire visible area of the image.\n    - Orientation - Flat and horizontal, aligned with the camera’s viewpoint.\n    - Connection or Attachments - The board provides a mounting surface for the transistor and electrical connections via the copper traces and holes.', '- Type - Printed circuit board with a grid of holes for component mounting\n    - Color - Copper-colored metallic surface with dark holes\n    - Size - Visible portion shows multiple vertical columns of holes and traces; overall dimensions not fully visible\n    - Material - Copper-clad laminate, likely FR-4 (glass fiber reinforced epoxy)\n    - Composition - Copper conductive layer on a non-conductive substrate\n    - Quantity - One perforated board\n    - Relative Location - Serves as the base substrate for the transistor and copper traces\n    - Orientation - Horizontal plane, with vertical copper traces running perpendicular to the board edges\n    - Connection or Attachments - Provides mounting and electrical connectivity for the transistor via holes and copper traces'], 'Copper Trace': ['- Type - Thin, flat conductive pathways on the perforated board.\n    - Color - Copper-colored, with some areas appearing darker due to oxidation or solder residue.\n    - Size - Width varies between 0.5mm and 1mm; length extends across the board, connecting multiple holes.\n    - Material - Copper.\n    - Composition - Pure copper or copper alloy.\n    - Quantity - Multiple traces visible, forming a grid pattern.\n    - Relative Location - Runs horizontally and vertically, intersecting at the holes where the transistor is mounted.\n    - Orientation - Horizontal and vertical, forming a grid.\n    - Connection or Attachments - Connected to the holes via solder joints, forming electrical pathways.', '- Type - Thin, flat conductive paths on the surface of the board.\n    - Color - Copper-colored, appearing reddish-brown due to oxidation.\n    - Size - Width varies but is typically less than 1mm; length extends across the board surface.\n    - Material - Copper metal.\n    - Composition - Pure copper or copper alloy, etched into the board surface.\n    - Quantity - Multiple traces visible, forming horizontal lines across the board.\n    - Relative Location - Located beneath and surrounding the transistor, running parallel to the board’s surface.\n    - Orientation - Horizontal, running left to right across the board.\n    - Connection or Attachments - The traces connect to the holes where the transistor’s leads are soldered, forming part of the circuit.', '- Type - Conductive pathways etched into the board surface\n    - Color - Copper-colored metallic surface\n    - Size - Width varies slightly but generally around 0.5mm to 1mm; length extends vertically along the board from the holes to the edges\n    - Material - Copper metal\n    - Composition - Pure copper or copper alloy, forming conductive paths\n    - Quantity - Multiple traces visible, arranged in vertical columns\n    - Relative Location - Located directly beneath the transistor leads and surrounding the holes\n    - Orientation - Vertical, running parallel to each other in columns\n    - Connection or Attachments - Connected to the solder joints at the holes, forming electrical paths between the transistor and other components'], 'Transistor': ['- Type - Through-hole electronic component with three metallic leads, housed in a black plastic TO-92 style casing.\n    - Color - Black body with a matte finish; metallic leads are silver-colored.\n    - Size - Body approximately 10mm in height and 5mm in width; leads extend downward, each about 15mm in length from the base.\n    - Material - Plastic body; metallic leads made of copper or tin-plated copper alloy.\n    - Composition - Plastic encapsulation with internal semiconductor material; leads are metal wire or ribbon.\n    - Quantity - One transistor.\n    - Relative Location - Centered in the image, mounted on the perforated board.\n    - Orientation - Body oriented vertically, leads pointing downward.\n    - Connection or Attachments - Leads inserted into three adjacent holes on the perforated board, soldered to the copper traces.', '- Type - A black, rectangular through-hole transistor with three metallic leads extending downward.\n    - Color - The body is matte black, with a circular marking (a stylized "T") on its surface; the leads are metallic silver.\n    - Size - Approximately 5mm in width and height, with leads extending about 10mm downward from the body.\n    - Material - The body is made of plastic or epoxy; the leads are made of metal, likely tin-plated copper or similar conductive alloy.\n    - Composition - The transistor body is composed of a molded plastic housing with a printed marking; the leads are metallic conductors.\n    - Quantity - One transistor.\n    - Relative Location - Positioned centrally in the image, mounted on a perforated board.\n    - Orientation - The transistor is oriented vertically, with its body aligned perpendicular to the board surface and leads pointing downward.\n    - Connection or Attachments - The three leads are soldered into three adjacent holes on the perforated board, forming electrical connections.', '- Type - Through-hole transistor with three metallic leads extending downward\n    - Color - Black plastic body with a circular marking containing a "T" symbol; metallic leads are silver-colored\n    - Size - Body approximately 5mm square; leads extend approximately 10mm downward from the body\n    - Material - Black plastic encapsulation; metallic leads likely made of tin-plated copper or similar conductive alloy\n    - Composition - Encapsulated semiconductor device with three electrical terminals (leads)\n    - Quantity - One transistor\n    - Relative Location - Centered on the perforated board, positioned between vertical copper traces\n    - Orientation - Leads oriented vertically downward, aligned with the copper traces below\n    - Connection or Attachments - Leads soldered into three adjacent holes on the perforated board, electrically connecting to the copper traces'], 'Hole': ['- Type - Circular openings in the perforated board for component mounting.\n    - Color - Dark brown or black, appearing slightly oxidized or covered with solder residue.\n    - Size - Diameter approximately 2-3mm.\n    - Material - Copper-plated metal.\n    - Composition - Metal with a hole drilled or punched through.\n    - Quantity - Multiple holes visible, arranged in a grid pattern.\n    - Relative Location - Surrounding the transistor, with three holes directly beneath the leads.\n    - Orientation - Circular, aligned vertically and horizontally.\n    - Connection or Attachments - Used to secure the transistor leads and provide electrical connection via solder joints.', '- Type - Circular openings in the perforated board for mounting components.\n    - Color - Dark, appearing black or dark brown due to shadowing and oxidation.\n    - Size - Diameter approximately 2-3mm.\n    - Material - Copper metal, with the surrounding board material being plastic or fiberglass.\n    - Composition - The hole is formed by drilling or punching through the board, exposing the copper pad underneath.\n    - Quantity - Multiple holes visible, arranged in a grid pattern; at least 15 holes visible in the image.\n    - Relative Location - Located in a grid pattern across the board surface, with three holes directly beneath the transistor leads.\n    - Orientation - Circular, aligned vertically and horizontally with the grid.\n    - Connection or Attachments - The holes are connected to copper traces and serve as mounting points for component leads.', '- Type - Through-hole for component mounting\n    - Color - Dark, circular voids appearing black or dark gray due to shadowing and soldering\n    - Size - Diameter approximately 1mm to 1.2mm\n    - Material - Copper board material, with solder and possibly flux residue\n    - Composition - Copper conductive material with solder and possibly flux residue\n    - Quantity - Multiple holes visible, arranged in vertical columns\n    - Relative Location - Positioned in vertical columns on the board, directly under the transistor leads\n    - Orientation - Circular, aligned vertically with the copper traces\n    - Connection or Attachments - Connected to the copper traces via solder joints and serve as mounting points for the transistor leads']}
+2026-08-19 16:56:49 | INFO     | models | [LLM] Inference completed in 4.360s (max_new_tokens=3000)
+2026-08-19 16:56:49 | INFO     | descriptor | [Solder Joint] Object summarisation completed in 4.360s
+2026-08-19 16:56:49 | DEBUG    | descriptor | Summarised description for 'Solder Joint': 
+
+{
+  "Solder Joint": {
+    "Type": "Metallic connections formed by melting solder to join the transistor leads to the board holes",
+    "Color": "Metallic grayish-silver, with some darkened areas due to oxidation or residue",
+    "Size": "1-2mm in diameter at each connection point",
+    "Material": "Tin-lead or lead-free solder alloy",
+    "Composition": "Melted solder alloy bonded to both the lead and the copper pad inside the hole",
+    "Quantity": "Three solder joints, one for each lead of the transistor",
+    "Relative Location": "Located at the base of each transistor lead, within the corresponding hole",
+    "Orientation": "Circular, conforming to the shape of the hole and lead",
+    "Connection/Attachments": "Electrically connects the transistor’s leads to the copper traces via the holes"
+  }
+}
+2026-08-19 16:56:55 | INFO     | models | [LLM] Inference completed in 6.002s (max_new_tokens=3000)
+2026-08-19 16:56:55 | INFO     | descriptor | [Perforated Board] Object summarisation completed in 6.002s
+2026-08-19 16:56:55 | DEBUG    | descriptor | Summarised description for 'Perforated Board': 
+
+{
+  "Perforated Board": {
+    "Type": "Printed circuit board with a grid of holes and copper traces for mounting electronic components",
+    "Color": "Copper-colored metallic surface with darkened areas due to oxidation or solder residue, and dark holes",
+    "Size": "Visible portion is rectangular with multiple rows and columns of holes, approximately 3cm by 4cm, and multiple vertical columns of holes and traces with overall dimensions not fully visible",
+    "Material": "Copper-clad laminate, likely FR-4 (glass fiber reinforced epoxy)",
+    "Composition": "Copper conductive layer on a non-conductive substrate with insulating material (typically FR-4) and holes drilled through it",
+    "Quantity": "One board visible",
+    "Relative Location": "Occupies the entire visible area of the image and serves as the base substrate for the transistor and copper traces",
+    "Orientation": "Horizontal plane with horizontal and vertical grid pattern, flat and horizontal, aligned with the camera’s viewpoint, and vertical copper traces running perpendicular to the board edges",
+    "Connection/Attachments": "Provides mounting points and electrical pathways for components like the transistor, and serves as a mounting surface with electrical connections via the copper traces and holes"
+  }
+}
+2026-08-19 16:57:00 | INFO     | models | [LLM] Inference completed in 5.151s (max_new_tokens=3000)
+2026-08-19 16:57:00 | INFO     | descriptor | [Copper Trace] Object summarisation completed in 5.151s
+2026-08-19 16:57:00 | DEBUG    | descriptor | Summarised description for 'Copper Trace': 
+
+{
+  "Copper Trace": {
+    "Type": "Thin, flat conductive pathways etched into the board surface",
+    "Color": "Copper-colored, appearing reddish-brown due to oxidation, with some areas darker from oxidation or solder residue",
+    "Size": "Width varies between 0.5mm and 1mm; length extends across the board, connecting multiple holes",
+    "Material": "Copper metal",
+    "Composition": "Pure copper or copper alloy, etched into the board surface to form conductive paths",
+    "Quantity": "Multiple traces visible, forming a grid pattern with horizontal and vertical lines",
+    "Relative Location": "Runs horizontally and vertically, intersecting at the holes where the transistor is mounted, located beneath and surrounding the transistor leads and holes",
+    "Orientation": "Horizontal and vertical, forming a grid with horizontal lines running left to right and vertical lines running parallel to each other in columns",
+    "Connection/Attachments": "Connected to the holes via solder joints, forming electrical pathways between the transistor and other components"
+  }
+}
+2026-08-19 16:57:06 | INFO     | models | [LLM] Inference completed in 5.653s (max_new_tokens=3000)
+2026-08-19 16:57:06 | INFO     | descriptor | [Transistor] Object summarisation completed in 5.653s
+2026-08-19 16:57:06 | DEBUG    | descriptor | Summarised description for 'Transistor': 
+
+{
+  "Transistor": {
+    "Type": "Through-hole electronic component with three metallic leads, housed in a black plastic TO-92 style casing",
+    "Color": "Black body with a matte finish and a circular marking containing a 'T' symbol; metallic leads are silver-colored",
+    "Size": "Body approximately 5mm square or 5mm in width and height; leads extend approximately 10mm or about 15mm downward from the body",
+    "Material": "Plastic body; metallic leads made of tin-plated copper or similar conductive alloy",
+    "Composition": "Plastic encapsulation with internal semiconductor material; leads are metal wire or ribbon; body composed of molded plastic housing with a printed marking",
+    "Quantity": "One transistor",
+    "Relative Location": "Centered on the perforated board, positioned between vertical copper traces or mounted on the perforated board",
+    "Orientation": "Body oriented vertically, leads pointing downward and aligned with the copper traces below",
+    "Connection/Attachments": "Leads soldered into three adjacent holes on the perforated board, electrically connecting to the copper traces or forming electrical connections"
+  }
+}
+2026-08-19 16:57:11 | INFO     | models | [LLM] Inference completed in 5.599s (max_new_tokens=3000)
+2026-08-19 16:57:11 | INFO     | descriptor | [Hole] Object summarisation completed in 5.599s
+2026-08-19 16:57:11 | DEBUG    | descriptor | Summarised description for 'Hole': 
+
+{
+  "Hole": {
+    "Type": "Circular openings in the perforated board for component mounting",
+    "Color": "Dark brown or black, appearing slightly oxidized or covered with solder residue",
+    "Size": "Diameter approximately 1mm to 1.2mm / 2-3mm",
+    "Material": "Copper-plated metal, with surrounding board material being plastic or fiberglass",
+    "Composition": "Metal with a hole drilled or punched through, exposing the copper pad underneath, with solder and possibly flux residue",
+    "Quantity": "Multiple holes visible, arranged in a grid pattern; at least 15 holes visible in the image",
+    "Relative Location": "Located in a grid pattern across the board surface, with three holes directly beneath the transistor leads, positioned in vertical columns on the board, directly under the transistor leads",
+    "Orientation": "Circular, aligned vertically and horizontally with the grid, aligned vertically with the copper traces",
+    "Connection/Attachments": "Used to secure the transistor leads and provide electrical connection via solder joints, connected to the copper traces via solder joints and serve as mounting points for the transistor leads"
+  }
+}
+2026-08-19 16:57:11 | DEBUG    | descriptor | Master description: {'Solder Joint': {'Type': 'Metallic connections formed by melting solder to join the transistor leads to the board holes', 'Color': 'Metallic grayish-silver, with some darkened areas due to oxidation or residue', 'Size': '1-2mm in diameter at each connection point', 'Material': 'Tin-lead or lead-free solder alloy', 'Composition': 'Melted solder alloy bonded to both the lead and the copper pad inside the hole', 'Quantity': 'Three solder joints, one for each lead of the transistor', 'Relative Location': 'Located at the base of each transistor lead, within the corresponding hole', 'Orientation': 'Circular, conforming to the shape of the hole and lead', 'Connection/Attachments': 'Electrically connects the transistor’s leads to the copper traces via the holes'}, 'Perforated Board': {'Type': 'Printed circuit board with a grid of holes and copper traces for mounting electronic components', 'Color': 'Copper-colored metallic surface with darkened areas due to oxidation or solder residue, and dark holes', 'Size': 'Visible portion is rectangular with multiple rows and columns of holes, approximately 3cm by 4cm, and multiple vertical columns of holes and traces with overall dimensions not fully visible', 'Material': 'Copper-clad laminate, likely FR-4 (glass fiber reinforced epoxy)', 'Composition': 'Copper conductive layer on a non-conductive substrate with insulating material (typically FR-4) and holes drilled through it', 'Quantity': 'One board visible', 'Relative Location': 'Occupies the entire visible area of the image and serves as the base substrate for the transistor and copper traces', 'Orientation': 'Horizontal plane with horizontal and vertical grid pattern, flat and horizontal, aligned with the camera’s viewpoint, and vertical copper traces running perpendicular to the board edges', 'Connection/Attachments': 'Provides mounting points and electrical pathways for components like the transistor, and serves as a mounting surface with electrical connections via the copper traces and holes'}, 'Copper Trace': {'Type': 'Thin, flat conductive pathways etched into the board surface', 'Color': 'Copper-colored, appearing reddish-brown due to oxidation, with some areas darker from oxidation or solder residue', 'Size': 'Width varies between 0.5mm and 1mm; length extends across the board, connecting multiple holes', 'Material': 'Copper metal', 'Composition': 'Pure copper or copper alloy, etched into the board surface to form conductive paths', 'Quantity': 'Multiple traces visible, forming a grid pattern with horizontal and vertical lines', 'Relative Location': 'Runs horizontally and vertically, intersecting at the holes where the transistor is mounted, located beneath and surrounding the transistor leads and holes', 'Orientation': 'Horizontal and vertical, forming a grid with horizontal lines running left to right and vertical lines running parallel to each other in columns', 'Connection/Attachments': 'Connected to the holes via solder joints, forming electrical pathways between the transistor and other components'}, 'Transistor': {'Type': 'Through-hole electronic component with three metallic leads, housed in a black plastic TO-92 style casing', 'Color': "Black body with a matte finish and a circular marking containing a 'T' symbol; metallic leads are silver-colored", 'Size': 'Body approximately 5mm square or 5mm in width and height; leads extend approximately 10mm or about 15mm downward from the body', 'Material': 'Plastic body; metallic leads made of tin-plated copper or similar conductive alloy', 'Composition': 'Plastic encapsulation with internal semiconductor material; leads are metal wire or ribbon; body composed of molded plastic housing with a printed marking', 'Quantity': 'One transistor', 'Relative Location': 'Centered on the perforated board, positioned between vertical copper traces or mounted on the perforated board', 'Orientation': 'Body oriented vertically, leads pointing downward and aligned with the copper traces below', 'Connection/Attachments': 'Leads soldered into three adjacent holes on the perforated board, electrically connecting to the copper traces or forming electrical connections'}, 'Hole': {'Type': 'Circular openings in the perforated board for component mounting', 'Color': 'Dark brown or black, appearing slightly oxidized or covered with solder residue', 'Size': 'Diameter approximately 1mm to 1.2mm / 2-3mm', 'Material': 'Copper-plated metal, with surrounding board material being plastic or fiberglass', 'Composition': 'Metal with a hole drilled or punched through, exposing the copper pad underneath, with solder and possibly flux residue', 'Quantity': 'Multiple holes visible, arranged in a grid pattern; at least 15 holes visible in the image', 'Relative Location': 'Located in a grid pattern across the board surface, with three holes directly beneath the transistor leads, positioned in vertical columns on the board, directly under the transistor leads', 'Orientation': 'Circular, aligned vertically and horizontally with the grid, aligned vertically with the copper traces', 'Connection/Attachments': 'Used to secure the transistor leads and provide electrical connection via solder joints, connected to the copper traces via solder joints and serve as mounting points for the transistor leads'}}
+2026-08-19 16:57:11 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:57:11 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/transistor.txt
+2026-08-19 16:57:11 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=10)
+2026-08-19 16:57:11 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:57:12 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:57:14 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:57:14 | DEBUG    | planner | Class directories for dataset 'transistor': ['good']
+2026-08-19 16:57:14 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/transistor/good
+2026-08-19 16:57:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:57:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:57:14 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:57:11_master_description.json
+2026-08-19 16:57:18 | INFO     | models | [VLM] Inference completed in 4.299s (max_new_tokens=2040)
+2026-08-19 16:57:18 | INFO     | planner | Planner steps generated in 4.299s (attempt=1, steps=0, approved_rules=10)
+2026-08-19 16:57:18 | WARNING  | planner | Planner produced 0 steps for 10 approved rules; retrying once.
+2026-08-19 16:57:22 | INFO     | models | [VLM] Inference completed in 4.270s (max_new_tokens=2040)
+2026-08-19 16:57:22 | INFO     | planner | Planner steps generated in 4.270s (attempt=2, steps=0, approved_rules=10)
+2026-08-19 16:57:22 | WARNING  | planner | Planner produced 0 steps for 10 approved rules; retrying once.

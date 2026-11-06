@@ -1,0 +1,140 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "head",
+      "anomaly_name": "scratched head",
+      "visual_description": "visible scratch marks on the flat surface of the screw head"
+    },
+    {
+      "id": "A002",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "head",
+      "anomaly_name": "dented head",
+      "visual_description": "a visible dent or indentation on the head surface"
+    },
+    {
+      "id": "A003",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "head",
+      "anomaly_name": "cracked head",
+      "visual_description": "a visible crack running across the head"
+    },
+    {
+      "id": "A004",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "shank",
+      "anomaly_name": "scratched shank",
+      "visual_description": "visible scratch marks along the cylindrical body of the screw"
+    },
+    {
+      "id": "A005",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "shank",
+      "anomaly_name": "dented shank",
+      "visual_description": "a visible dent or bulge on the shank surface"
+    },
+    {
+      "id": "A006",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "thread",
+      "anomaly_name": "broken thread",
+      "visual_description": "a missing or broken thread ridge on the screw"
+    },
+    {
+      "id": "A007",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "thread",
+      "anomaly_name": "missing thread",
+      "visual_description": "a section of the thread is completely absent"
+    },
+    {
+      "id": "A008",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "point",
+      "anomaly_name": "bent point",
+      "visual_description": "the tip of the screw is visibly bent or curved"
+    },
+    {
+      "id": "A009",
+      "object_name": "Screw",
+      "category": "surface_integrity",
+      "part_or_region": "point",
+      "anomaly_name": "chipped point",
+      "visual_description": "a chip or flake missing from the tip of the screw"
+    },
+    {
+      "id": "A010",
+      "object_name": "Screw",
+      "category": "geometry_alignment",
+      "part_or_region": "thread",
+      "anomaly_name": "misaligned thread",
+      "visual_description": "the thread grooves are visibly uneven or offset from the center axis"
+    },
+    {
+      "id": "A011",
+      "object_name": "Screw",
+      "category": "missing_component",
+      "part_or_region": "head",
+      "anomaly_name": "missing head",
+      "visual_description": "the head is completely absent, leaving only the shank"
+    },
+    {
+      "id": "A012",
+      "object_name": "Screw",
+      "category": "missing_component",
+      "part_or_region": "point",
+      "anomaly_name": "missing point",
+      "visual_description": "the tip of the screw is missing or truncated"
+    },
+    {
+      "id": "A013",
+      "object_name": "Screw",
+      "category": "finish_color",
+      "part_or_region": "entire screw",
+      "anomaly_name": "discolored finish",
+      "visual_description": "visible dark or light staining on the screw surface"
+    },
+    {
+      "id": "A014",
+      "object_name": "Screw",
+      "category": "finish_color",
+      "part_or_region": "head",
+      "anomaly_name": "stained head",
+      "visual_description": "a visible stain or discoloration on the head"
+    },
+    {
+      "id": "A015",
+      "object_name": "Screw",
+      "category": "finish_color",
+      "part_or_region": "shank",
+      "anomaly_name": "stained shank",
+      "visual_description": "a visible stain or discoloration on the shank"
+    },
+    {
+      "id": "A016",
+      "object_name": "Screw",
+      "category": "finish_color",
+      "part_or_region": "thread",
+      "anomaly_name": "stained thread",
+      "visual_description": "a visible stain or discoloration on the thread"
+    },
+    {
+      "id": "A017",
+      "object_name": "Screw",
+      "category": "finish_color",
+      "part_or_region": "point",
+      "anomaly_name": "stained point",
+      "visual_description": "a visible stain or discoloration on the tip"
+    }
+  ]
+}

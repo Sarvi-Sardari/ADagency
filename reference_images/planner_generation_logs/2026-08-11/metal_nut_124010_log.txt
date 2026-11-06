@@ -1,0 +1,133 @@
+2026-08-11 12:40:10 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:40:10 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:40:10 | INFO     | __main__ | Dataset  : metal_nut
+2026-08-11 12:40:10 | INFO     | __main__ | Classes  : single
+2026-08-11 12:40:10 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:40:10 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/metal_nut_124010_log.txt
+2026-08-11 12:40:10 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:40:12 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:40:12 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:40:13 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:40:13 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:40:13 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/metal_nut/train/good/144.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/metal_nut/train/good/019.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/metal_nut/train/good/169.png']
+2026-08-11 12:40:13 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:40:13 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:40:13 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:40:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:40:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:40:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:40:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 497862 44
+2026-08-11 12:40:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 497918 1304
+2026-08-11 12:40:13 | INFO     | models | [VLM] Inference completed in 0.420s (max_new_tokens=2040)
+2026-08-11 12:40:13 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/metal_nut/train/good/100.png in 0.420s
+2026-08-11 12:40:16 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['nut']
+2026-08-11 12:40:16 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/metal_nut_object_labels.txt
+2026-08-11 12:40:16 | INFO     | __main__ | Object names: ['nut']
+2026-08-11 12:40:16 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:40:16 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/metal_nut/good
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 497578 44
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 497634 1304
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 497671 44
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 497727 1304
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 500926 44
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 500982 1304
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:40:16 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:40:18 | INFO     | models | [VLM] Inference completed in 2.332s (max_new_tokens=2040)
+2026-08-11 12:40:18 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/metal_nut/good/processed_good_144_2026-08-11 12:40:18.json (inference_time=2.332s)
+2026-08-11 12:40:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:40:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:40:21 | INFO     | models | [VLM] Inference completed in 2.311s (max_new_tokens=2040)
+2026-08-11 12:40:21 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/metal_nut/good/processed_good_019_2026-08-11 12:40:21.json (inference_time=2.311s)
+2026-08-11 12:40:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:40:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:40:23 | INFO     | models | [VLM] Inference completed in 2.308s (max_new_tokens=2040)
+2026-08-11 12:40:23 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/metal_nut/good/processed_good_169_2026-08-11 12:40:23.json (inference_time=2.308s)
+2026-08-11 12:40:23 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:40:23 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:40:24 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:40:24 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/metal_nut/good
+2026-08-11 12:40:24 | DEBUG    | descriptor | Processing image description: processed_good_169_2026-08-11 12:40:23.json
+2026-08-11 12:40:24 | DEBUG    | descriptor | Raw description data: - Object 1 nut
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:40:24 | DEBUG    | descriptor | Processing image description: processed_good_019_2026-08-11 12:40:21.json
+2026-08-11 12:40:24 | DEBUG    | descriptor | Raw description data: - Object 1 nut
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:40:24 | DEBUG    | descriptor | Processing image description: processed_good_144_2026-08-11 12:40:18.json
+2026-08-11 12:40:24 | DEBUG    | descriptor | Raw description data: - Object 1 nut
+    - Attribute 1 <Type> -detailed description
+    - Attribute 2 <Color> - detailed description
+    - Attribute 3 <Size> - detailed description
+    - Attribute 4 <Material> - detailed description
+    - Attribute 5 <Composition> - detailed description
+    - Attribute 6 <Quantity> - detailed description.
+    - Attribute 7 <Relative Location> - detailed description
+    - Attribute 8 <Orientation> - detailed description
+    - Attribute 9 <Connection or Attachments> - detailed description
+2026-08-11 12:40:24 | DEBUG    | descriptor | Unique object keys found: {'nut'}
+2026-08-11 12:40:24 | DEBUG    | descriptor | Class 'good' object description: {'nut': ['-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description', '-  <Type> -detailed description\n    -  <Color> - detailed description\n    -  <Size> - detailed description\n    -  <Material> - detailed description\n    -  <Composition> - detailed description\n    -  <Quantity> - detailed description.\n    -  <Relative Location> - detailed description\n    -  <Orientation> - detailed description\n    -  <Connection or Attachments> - detailed description']}
+2026-08-11 12:40:27 | INFO     | models | [LLM] Inference completed in 2.668s (max_new_tokens=3000)
+2026-08-11 12:40:27 | INFO     | descriptor | [nut] Object summarisation completed in 2.668s
+2026-08-11 12:40:27 | DEBUG    | descriptor | Summarised description for 'nut': {
+  "nut": {
+    "Type": "Nut",
+    "Color": "Variably colored, including black, silver, and brass",
+    "Size": "5x5cm / 2x2 inches",
+    "Material": "Steel, brass, or stainless steel",
+    "Composition": "Forged metal with a threaded interior and flat outer surface",
+    "Quantity": "Multiple units present, ranging from single to dozens",
+    "Relative Location": "Attached to bolts or screws, typically found on mechanical assemblies or structural joints",
+    "Orientation": "Standard orientation with flat face facing upward and threaded side engaging a bolt",
+    "Connection or Attachments": "Secures bolts or screws by tightening against a threaded shaft, forming a mechanical fastening joint"
+  }
+}
+2026-08-11 12:40:27 | DEBUG    | descriptor | Master description: {'nut': {'Type': 'Nut', 'Color': 'Variably colored, including black, silver, and brass', 'Size': '5x5cm / 2x2 inches', 'Material': 'Steel, brass, or stainless steel', 'Composition': 'Forged metal with a threaded interior and flat outer surface', 'Quantity': 'Multiple units present, ranging from single to dozens', 'Relative Location': 'Attached to bolts or screws, typically found on mechanical assemblies or structural joints', 'Orientation': 'Standard orientation with flat face facing upward and threaded side engaging a bolt', 'Connection or Attachments': 'Secures bolts or screws by tightening against a threaded shaft, forming a mechanical fastening joint'}}
+2026-08-11 12:40:27 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:40:27 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['metal_nut'] directly (no generation, no compiled file).
+2026-08-11 12:40:27 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:40:27 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:40:27 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:40:28 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:40:28 | DEBUG    | planner | Class directories for dataset 'metal_nut': ['good']
+2026-08-11 12:40:28 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/metal_nut/good
+2026-08-11 12:40:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:40:28 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:40:28 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:40:27_master_description.json
+2026-08-11 12:40:31 | INFO     | models | [VLM] Inference completed in 2.542s (max_new_tokens=2040)
+2026-08-11 12:40:31 | INFO     | planner | Planner steps generated in 2.542s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-11 12:40:31 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/metal_nut/good/good_2026-08-11 12:40:31_planner.txt
+2026-08-11 12:40:31 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, dent, or cut on the surface of the nut?
+Step 2: Is there any bending, warping, crushing, puncturing, tearing, or snapping of the nut's structure?
+Step 3: Is there any missing component compared to the reference image?
+Step 4: Is there any extra debris, foreign object, or liquid present in the candidate image?
+Step 5: Is there any rust, corrosion, fluid stain, or peeling coating on the nut?
+Step 6: Is there any significant misalignment or incorrect assembly orientation of the nut?
+2026-08-11 12:40:31 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/metal_nut/performance/performance_20260811_124031.json
+2026-08-11 12:40:31 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/metal_nut
+2026-08-11 12:40:31 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/metal_nut_124010_log.txt

@@ -1,0 +1,6 @@
+Step 1: Is there any crack, fracture, chip, scratch, dent, or cut on the surface?
+Step 2: Is there any bending, warping, crushing, puncturing, tearing, or snapping of the structure?
+Step 3: Are there any missing speckles compared to the reference image?
+Step 4: Are there any extra speckles, debris, or foreign objects in the Candidate that are not present in the reference image?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the surface?
+Step 6: Is there any significant misalignment or incorrect assembly orientation of components compared to the reference image?

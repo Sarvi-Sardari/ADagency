@@ -1,0 +1,198 @@
+# =============================================================================
+# TEMPLATE: ablation config  (repeated end-to-end EXPERIMENT ORCHESTRATION)
+# =============================================================================
+#
+# Used by:   run_anomaly_detection_ablation.py --config <this file>
+# Parsed by: anomaly_detection/ablation/orchestration.py :: load_ablation_config()
+# Existing examples: configs/ablation_configs/, configs/ablation_<model>/.
+#
+# What it does:
+#   Runs the whole pipeline num_runs times, each run in its own timestamped
+#   folder under experiment.runs_dir, stage by stage:
+#     detection -> rerun -> masks -> metrics
+#   then aggregates metrics, timing, tokens and GPU telemetry across runs
+#   (mean / std CSVs in experiment.runs_dir).
+#   It does NOT contain stage settings itself: it points to the four stage
+#   configs below and passes them to each stage.
+#
+# Resume: progress is stored in <runs_dir>/ablation_manifest.json. After Ctrl+C
+#   (or a crash) run the SAME command again; finished stages are validated and
+#   skipped. Do not start a second copy while one is running.
+#
+# Fingerprint: the manifest stores a hash of
+#   experiment.name, dataset names, the CONTENT of the four stage config files,
+#   command_prefix, telemetry.interval_seconds, telemetry.process_specific,
+#   telemetry.generation_profile, rerun.num_steps, rerun.policy,
+#   masks.include_rerun, metrics.include_rerun / before_rerun / combine / omit,
+#   aggregation.std_ddof and decision_prompt_sequence (when used).
+#   If any of these change, resuming the old runs_dir is refused. That is
+#   intentional: use a NEW experiment.runs_dir for a changed experiment.
+#   (experiment.num_runs and cooldown_seconds are NOT fingerprinted, so you
+#   can extend an experiment with more runs.)
+#
+# CLI overrides:
+#   --runs N                  override experiment.num_runs
+#   --stages S [S ...]        run only these stages (detection rerun masks metrics)
+#   --skip S [S ...]          skip these stages
+#   --prediction-source rerun|base
+#                             override masks.include_rerun AND
+#                             metrics.include_rerun together (use base when
+#                             skipping rerun but still making masks/metrics)
+#   --dry-run                 validate config/paths and print commands only
+#                             (no GPU work). Always do this first.
+#   --aggregate-only          only rebuild the aggregate CSVs
+#   --show-child-output       echo each stage's output to the terminal
+#   --[no-]generation-profile override telemetry.generation_profile
+#
+# PATHS: every relative path in this file is resolved from the PROJECT ROOT
+# (not from this file's folder).
+# =============================================================================
+
+experiment:
+  # name  REQUIRED, non-empty string. Label stored in the manifest and
+  # aggregate files. Part of the fingerprint.
+  name: "mvtec_ad_qwen3_vl_8b"                     # <-- CHANGE
+
+  # num_runs  OPTIONAL (10). Integer >= 1. How many repetitions of the
+  # complete pipeline. Repetitions measure run-to-run variance.
+  num_runs: 3
+
+  # runs_dir  REQUIRED. Where run folders, the manifest, orchestrator logs and
+  # aggregate CSVs are written. The orchestrator creates and remembers its own
+  # timestamped run folders here and passes them to detection via
+  # --resume-dir, so the anomaly-detection config's output.runs_dir is NOT
+  # used. One runs_dir per experiment (model x dataset family x settings).
+  runs_dir: "outputs/my_model/runs_mvtec_ad"       # <-- CHANGE
+
+  # command_prefix  OPTIONAL ([]). List of strings put in front of every stage
+  # command, e.g. CPU pinning: ["taskset", "-c", "0-7,10-31"]. Fingerprinted.
+  command_prefix: []
+
+  # decision_prompt_sequence  OPTIONAL ([] = use the anomaly config's decision
+  # prompt). List of prompt filenames relative to the anomaly config's
+  # prompts_dir (no absolute paths, no ".."); each must exist.
+  #   one entry      : used by every run;
+  #   several entries: entry N is used by run N, and there must be at least as
+  #                    many entries as runs.
+  # Overrides decision.prompt_template for the detection stage. (When the
+  # anomaly config enables secondary_classification, its own prompt is used.)
+  # decision_prompt_sequence:
+  #   - "decision_maker_v2_original_compact.j2"
+
+  # cooldown_seconds  OPTIONAL (0). Number >= 0. Pause between runs (e.g. for
+  # thermal consistency). Not fingerprinted.
+  cooldown_seconds: 0
+
+# -----------------------------------------------------------------------------
+# configs  Paths to the per-stage configuration files.
+# Their CONTENT is fingerprinted, so do not edit them during an experiment.
+# Their dataset lists must match: the mask_generation and metrics configs must
+# contain EXACTLY the anomaly_detection config's dataset names (checked
+# before anything runs). Their run_dir values are replaced per run.
+# -----------------------------------------------------------------------------
+configs:
+  # anomaly_detection  REQUIRED.
+  anomaly_detection: "configs/anomaly_detection_configs_mvtec_ad.yaml"   # <-- CHANGE
+  # model  REQUIRED. Passed as --model-config to EVERY stage.
+  model: "configs/model_configs.yaml"                                    # <-- CHANGE
+  # mask_generation  REQUIRED IF stages.masks is enabled.
+  mask_generation: "configs/mask_generation_configs_mvtec_ad.yaml"       # <-- CHANGE
+  # metrics  REQUIRED IF stages.metrics is enabled OR rerun.policy is
+  # "global-secondary" (it supplies the secondary ground-truth labels).
+  metrics: "configs/metrics_configs_mvtec_ad.yaml"                       # <-- CHANGE
+
+# -----------------------------------------------------------------------------
+# stages  OPTIONAL. Each OPTIONAL (true). Stages always run in this order.
+# A later stage needs the outputs of the earlier ones (masks/metrics with
+# include_rerun: true need a completed rerun).
+# -----------------------------------------------------------------------------
+stages:
+  detection: true   # VLM anomaly decision on every test image
+  rerun: true       # re-ask low-confidence planner steps
+  masks: true       # pixel masks (run_mask_generation.py)
+  metrics: true     # metrics CSVs (run_metrics.py)
+
+# -----------------------------------------------------------------------------
+# rerun  OPTIONAL section. Settings of the low-confidence rerun stage
+# (anomaly_detection.rerun). The rerun first calibrates a score threshold on
+# the run's own results (ROC), then re-asks the selected planner steps one at
+# a time for eligible images.
+# -----------------------------------------------------------------------------
+rerun:
+  # num_steps  OPTIONAL (3). Integer >= 1 (smaller values are raised to 1).
+  # How many lowest-confidence planner steps are re-asked per eligible image.
+  num_steps: 3
+
+  # policy  OPTIONAL ("binary-gate").
+  #   binary-gate      : classic binary rerun. Only images predicted "good"
+  #                      whose score is >= the threshold are rerun; the first
+  #                      re-asked step answered YES flips the image to anomaly.
+  #   class-aware      : for runs WITH secondary_classification. Chooses steps
+  #                      per class when either the binary score or the
+  #                      secondary-class confidence is uncertain.
+  #   global-secondary : for runs WITH secondary_classification. Reruns the
+  #                      globally lowest-confidence configured steps, calibrates
+  #                      against secondary-class correctness, re-derives the
+  #                      class from all updated answers, and confirms any
+  #                      good<->anomaly change against a separately calibrated
+  #                      binary threshold. REQUIRES configs.metrics (with
+  #                      secondary_metrics ground truth for each dataset).
+  policy: "binary-gate"
+
+# -----------------------------------------------------------------------------
+# masks  OPTIONAL section.
+# -----------------------------------------------------------------------------
+masks:
+  # include_rerun  OPTIONAL (true). Boolean. Masks from rerun predictions
+  # (true) or first-pass predictions (false). OVERRIDES the per-dataset
+  # include_rerun in the mask-generation config. With true, the rerun stage
+  # must have completed (set it false, or use --prediction-source base, when
+  # the rerun stage is skipped).
+  include_rerun: true
+
+# -----------------------------------------------------------------------------
+# metrics  OPTIONAL section.
+# -----------------------------------------------------------------------------
+metrics:
+  # include_rerun  OPTIONAL (true). Boolean. Same meaning/requirement as
+  # masks.include_rerun; overrides the metrics config's per-dataset values.
+  # Keep it equal to masks.include_rerun.
+  include_rerun: true
+
+  # combine  OPTIONAL (true). Boolean. Also write one combined CSV per run
+  # (run_metrics.py --combine). Its "overall" row becomes the cross-dataset
+  # "__experiment__" row in the aggregate CSVs; with false that row is absent.
+  combine: true
+
+  # omit  OPTIONAL (["pixel-auroc", "aupro"]). List; allowed items:
+  # "pixel-auroc", "aupro", "image-auroc". Calculations to skip. AUPRO is the
+  # slowest. Use [] to compute everything; omit both pixel metrics to skip
+  # all pixel-level evaluation.
+  omit: ["aupro"]
+
+  # before_rerun  OPTIONAL (false). Boolean. Also produce base (pre-rerun)
+  # masks + metrics in each run, aggregated separately as
+  # metrics_before_rerun_*.csv, to compare before vs after rerun.
+  # REQUIRES the rerun, masks and metrics stages to be enabled.
+  before_rerun: false
+
+# -----------------------------------------------------------------------------
+# telemetry  OPTIONAL section. Hardware monitoring during the stages.
+# -----------------------------------------------------------------------------
+telemetry:
+  # interval_seconds  OPTIONAL (1.0). Sampling interval; minimum 0.2.
+  interval_seconds: 1.0
+  # process_specific  OPTIONAL (true). Also record the pipeline process's own
+  # GPU memory/utilization (NVML). Power/temperature/energy stay device-wide.
+  process_specific: true
+  # generation_profile  OPTIONAL (true). Record generated-token counts,
+  # average output length and tokens/second in progress, logs and CSVs.
+  generation_profile: true
+
+# -----------------------------------------------------------------------------
+# aggregation  OPTIONAL section.
+# -----------------------------------------------------------------------------
+aggregation:
+  # std_ddof  OPTIONAL (1). 1 = sample standard deviation (recommended for
+  # repeated runs); 0 = population standard deviation.
+  std_ddof: 1

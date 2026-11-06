@@ -1,0 +1,133 @@
+2026-08-19 13:32:26 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 13:32:26 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 13:32:26 | INFO     | __main__ | Dataset  : bottle
+2026-08-19 13:32:26 | INFO     | __main__ | Classes  : single
+2026-08-19 13:32:26 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 13:32:26 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/bottle_133226_log.txt
+2026-08-19 13:32:26 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 13:32:28 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 13:32:28 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 13:32:30 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 13:32:30 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 13:32:30 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/136.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/018.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/160.png']
+2026-08-19 13:32:30 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 13:32:30 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-19 13:32:30 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 13:32:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:32:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 13:32:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 13:32:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 528625 44
+2026-08-19 13:32:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 528681 1304
+2026-08-19 13:32:30 | INFO     | models | [VLM] Inference completed in 0.494s (max_new_tokens=2040)
+2026-08-19 13:32:30 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/100.png in 0.494s
+2026-08-19 13:32:34 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['bottle']
+2026-08-19 13:32:34 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/bottle_object_labels.txt
+2026-08-19 13:32:34 | INFO     | __main__ | Object names: ['bottle']
+2026-08-19 13:32:34 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 13:32:34 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/bottle/good
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 530686 44
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 530742 1304
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 530994 44
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 531050 1304
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 536416 44
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 536472 1304
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:32:34 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 13:32:42 | INFO     | models | [VLM] Inference completed in 7.432s (max_new_tokens=2040)
+2026-08-19 13:32:42 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_136_2026-08-19 13:32:42.json (inference_time=7.432s)
+2026-08-19 13:32:42 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:32:42 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 13:32:49 | INFO     | models | [VLM] Inference completed in 7.274s (max_new_tokens=2040)
+2026-08-19 13:32:49 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_018_2026-08-19 13:32:49.json (inference_time=7.274s)
+2026-08-19 13:32:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:32:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 13:32:53 | INFO     | models | [VLM] Inference completed in 3.693s (max_new_tokens=2040)
+2026-08-19 13:32:53 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_160_2026-08-19 13:32:53.json (inference_time=3.693s)
+2026-08-19 13:32:53 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 13:32:53 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 13:33:00 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 13:33:00 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good
+2026-08-19 13:33:00 | DEBUG    | descriptor | Processing image description: processed_good_160_2026-08-19 13:32:53.json
+2026-08-19 13:33:00 | DEBUG    | descriptor | Raw description data: - Object 1 bottle
+    - Attribute 1 Type - circular glass bottle neck viewed from top
+    - Attribute 2 Color - dark brown with amber-orange reflective highlights along the rim
+    - Attribute 3 Size - circular opening with concentric ridges; diameter appears medium-sized relative to frame
+    - Attribute 4 Material - glass
+    - Attribute 5 Composition - smooth glass with textured inner rim and reflective outer surface
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - centered in the frame
+    - Attribute 8 Orientation - viewed directly from above, looking down into the opening
+    - Attribute 9 Connection or Attachments - none visible; no caps, labels, or attachments present
+2026-08-19 13:33:00 | DEBUG    | descriptor | Processing image description: processed_good_018_2026-08-19 13:32:49.json
+2026-08-19 13:33:00 | DEBUG    | descriptor | Raw description data: - Object 1 bottle
+    - Attribute 1 Type - The object is the top opening of a cylindrical bottle, viewed from directly above, showing concentric circular ridges and a central dark aperture.
+    - Attribute 2 Color - The bottle has a dark, deep brown or black hue with reflective highlights that appear amber or copper-toned along the rim and ridges due to light interaction.
+    - Attribute 3 Size - The visible portion is circular, with the outermost rim appearing approximately 3-4 cm in diameter based on visual proportion, though exact dimensions cannot be determined without scale reference.
+    - Attribute 4 Material - The material appears to be glass, indicated by the smooth, glossy surface and the way light reflects and refracts along the curved edges.
+    - Attribute 5 Composition - The composition consists of a dark, opaque glass body with a thick, rounded rim and concentric ridges, likely formed by the molding or shaping process of glass manufacturing.
+    - Attribute 6 Quantity - There is one bottle shown in the image.
+    - Attribute 7 Relative Location - The bottle is centered in the frame, occupying the central visual space with no other objects or structures visible around it.
+    - Attribute 8 Orientation - The bottle is oriented upright and viewed directly from the top, with the opening facing the viewer.
+    - Attribute 9 Connection or Attachments - No visible connections or attachments are present; the bottle appears as a standalone, sealed unit with no caps, labels, or other components attached.
+2026-08-19 13:33:00 | DEBUG    | descriptor | Processing image description: processed_good_136_2026-08-19 13:32:42.json
+2026-08-19 13:33:00 | DEBUG    | descriptor | Raw description data: - Object 1 bottle
+    - Attribute 1 Type - The object is a cylindrical container with a narrow neck and a circular opening, viewed from directly above, suggesting it is a bottle with a sealed or capped top.
+    - Attribute 2 Color - The bottle is dark, appearing black or very dark brown, with subtle amber or copper-colored highlights along the rim and inner edges, likely from light reflecting off the glass surface.
+    - Attribute 3 Size - The visible portion is circular and appears to be of standard bottle proportions, with the rim suggesting a medium-sized opening, though exact dimensions cannot be determined from the image alone.
+    - Attribute 4 Material - The material appears to be glass, indicated by the smooth, reflective surface and the way light refracts and reflects along the rim.
+    - Attribute 5 Composition - The bottle is composed of a single piece of glass, with a thick, rounded rim and a dark interior, possibly indicating it is made for containing liquids or solids requiring light protection.
+    - Attribute 6 Quantity - There is one bottle visible in the image.
+    - Attribute 7 Relative Location - The bottle is centered in the frame, occupying the majority of the visual space, with no other objects in proximity to it.
+    - Attribute 8 Orientation - The bottle is oriented upright, viewed from directly above, with the opening facing the camera.
+    - Attribute 9 Connection or Attachments - There are no visible caps, labels, or attachments on the bottle; the opening appears sealed or uncapped, with no external connections.
+2026-08-19 13:33:00 | DEBUG    | descriptor | Unique object keys found: {'bottle'}
+2026-08-19 13:33:00 | DEBUG    | descriptor | Class 'good' object description: {'bottle': ['-  Type - circular glass bottle neck viewed from top\n    -  Color - dark brown with amber-orange reflective highlights along the rim\n    -  Size - circular opening with concentric ridges; diameter appears medium-sized relative to frame\n    -  Material - glass\n    -  Composition - smooth glass with textured inner rim and reflective outer surface\n    -  Quantity - one\n    -  Relative Location - centered in the frame\n    -  Orientation - viewed directly from above, looking down into the opening\n    -  Connection or Attachments - none visible; no caps, labels, or attachments present', '-  Type - The object is the top opening of a cylindrical bottle, viewed from directly above, showing concentric circular ridges and a central dark aperture.\n    -  Color - The bottle has a dark, deep brown or black hue with reflective highlights that appear amber or copper-toned along the rim and ridges due to light interaction.\n    -  Size - The visible portion is circular, with the outermost rim appearing approximately 3-4 cm in diameter based on visual proportion, though exact dimensions cannot be determined without scale reference.\n    -  Material - The material appears to be glass, indicated by the smooth, glossy surface and the way light reflects and refracts along the curved edges.\n    -  Composition - The composition consists of a dark, opaque glass body with a thick, rounded rim and concentric ridges, likely formed by the molding or shaping process of glass manufacturing.\n    -  Quantity - There is one bottle shown in the image.\n    -  Relative Location - The bottle is centered in the frame, occupying the central visual space with no other objects or structures visible around it.\n    -  Orientation - The bottle is oriented upright and viewed directly from the top, with the opening facing the viewer.\n    -  Connection or Attachments - No visible connections or attachments are present; the bottle appears as a standalone, sealed unit with no caps, labels, or other components attached.', '-  Type - The object is a cylindrical container with a narrow neck and a circular opening, viewed from directly above, suggesting it is a bottle with a sealed or capped top.\n    -  Color - The bottle is dark, appearing black or very dark brown, with subtle amber or copper-colored highlights along the rim and inner edges, likely from light reflecting off the glass surface.\n    -  Size - The visible portion is circular and appears to be of standard bottle proportions, with the rim suggesting a medium-sized opening, though exact dimensions cannot be determined from the image alone.\n    -  Material - The material appears to be glass, indicated by the smooth, reflective surface and the way light refracts and reflects along the rim.\n    -  Composition - The bottle is composed of a single piece of glass, with a thick, rounded rim and a dark interior, possibly indicating it is made for containing liquids or solids requiring light protection.\n    -  Quantity - There is one bottle visible in the image.\n    -  Relative Location - The bottle is centered in the frame, occupying the majority of the visual space, with no other objects in proximity to it.\n    -  Orientation - The bottle is oriented upright, viewed from directly above, with the opening facing the camera.\n    -  Connection or Attachments - There are no visible caps, labels, or attachments on the bottle; the opening appears sealed or uncapped, with no external connections.']}
+2026-08-19 13:33:04 | INFO     | models | [LLM] Inference completed in 4.334s (max_new_tokens=3000)
+2026-08-19 13:33:04 | INFO     | descriptor | [bottle] Object summarisation completed in 4.334s
+2026-08-19 13:33:04 | DEBUG    | descriptor | Summarised description for 'bottle': 
+
+{
+  "bottle": {
+    "Type": "circular glass bottle neck viewed from top, cylindrical container with a narrow neck and a circular opening, viewed from directly above",
+    "Color": "dark brown with amber-orange reflective highlights along the rim",
+    "Size": "circular opening with concentric ridges; diameter appears medium-sized relative to frame, approximately 3-4 cm in diameter",
+    "Material": "glass",
+    "Composition": "smooth glass with textured inner rim and reflective outer surface, dark, opaque glass body with a thick, rounded rim and concentric ridges",
+    "Quantity": "one",
+    "Relative Location": "centered in the frame",
+    "Orientation": "viewed directly from above, looking down into the opening",
+    "Connection or Attachments": "none visible; no caps, labels, or attachments present"
+  }
+}
+2026-08-19 13:33:04 | DEBUG    | descriptor | Master description: {'bottle': {'Type': 'circular glass bottle neck viewed from top, cylindrical container with a narrow neck and a circular opening, viewed from directly above', 'Color': 'dark brown with amber-orange reflective highlights along the rim', 'Size': 'circular opening with concentric ridges; diameter appears medium-sized relative to frame, approximately 3-4 cm in diameter', 'Material': 'glass', 'Composition': 'smooth glass with textured inner rim and reflective outer surface, dark, opaque glass body with a thick, rounded rim and concentric ridges', 'Quantity': 'one', 'Relative Location': 'centered in the frame', 'Orientation': 'viewed directly from above, looking down into the opening', 'Connection or Attachments': 'none visible; no caps, labels, or attachments present'}}
+2026-08-19 13:33:04 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 13:33:04 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['set_box'] directly (no generation, no compiled file).
+2026-08-19 13:33:04 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-19 13:33:04 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 13:33:04 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 13:33:06 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 13:33:06 | DEBUG    | planner | Class directories for dataset 'bottle': ['good']
+2026-08-19 13:33:06 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/bottle/good
+2026-08-19 13:33:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 13:33:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 13:33:06 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 13:33:04_master_description.json
+2026-08-19 13:33:09 | INFO     | models | [VLM] Inference completed in 2.144s (max_new_tokens=2040)
+2026-08-19 13:33:09 | INFO     | planner | Planner steps generated in 2.144s (attempt=1, steps=4, approved_rules=legacy-untracked)
+2026-08-19 13:33:09 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle/good/good_2026-08-19 13:33:09_planner.txt
+2026-08-19 13:33:09 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any debris, foreign objects, or loose parts inside the bottle neck?  
+Step 2: Is there any liquid present inside the bottle neck?  
+Step 3: Is there any rust, corrosion, fluid stains, or leaks on the inner or outer surface of the bottle neck?  
+Step 4: Is there any peeling coating on the bottle neck?
+2026-08-19 13:33:09 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle/performance/performance_20260819_133309.json
+2026-08-19 13:33:09 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle
+2026-08-19 13:33:09 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/bottle_133226_log.txt

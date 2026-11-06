@@ -1,0 +1,130 @@
+2026-08-19 16:36:46 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:36:46 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:36:46 | INFO     | __main__ | Dataset  : grid
+2026-08-19 16:36:46 | INFO     | __main__ | Classes  : single
+2026-08-19 16:36:46 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:36:46 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/grid_163646_log.txt
+2026-08-19 16:36:46 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:36:47 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:36:47 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:36:49 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:36:49 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:36:49 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/172.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/023.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/grid/train/good/203.png']
+2026-08-19 16:36:49 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:36:49 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/grid_object_labels.txt
+2026-08-19 16:36:49 | INFO     | __main__ | Object names: ['Mesh Grid']
+2026-08-19 16:36:49 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:36:49 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/grid/good
+2026-08-19 16:36:49 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 462535 44
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 462591 1304
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 484574 44
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 484630 1304
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 438795 44
+2026-08-19 16:36:49 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 438851 1304
+2026-08-19 16:36:50 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:36:50 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:36:57 | INFO     | models | [VLM] Inference completed in 7.674s (max_new_tokens=2040)
+2026-08-19 16:36:57 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/grid/good/processed_good_172_2026-08-19 16:36:57.json (inference_time=7.674s)
+2026-08-19 16:36:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:36:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:37:04 | INFO     | models | [VLM] Inference completed in 6.403s (max_new_tokens=2040)
+2026-08-19 16:37:04 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/grid/good/processed_good_023_2026-08-19 16:37:04.json (inference_time=6.403s)
+2026-08-19 16:37:04 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:37:04 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:37:11 | INFO     | models | [VLM] Inference completed in 6.858s (max_new_tokens=2040)
+2026-08-19 16:37:11 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/grid/good/processed_good_203_2026-08-19 16:37:11.json (inference_time=6.858s)
+2026-08-19 16:37:11 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:37:11 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:37:13 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:37:13 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/grid/good
+2026-08-19 16:37:13 | DEBUG    | descriptor | Processing image description: processed_good_203_2026-08-19 16:37:11.json
+2026-08-19 16:37:13 | DEBUG    | descriptor | Raw description data: - Object 1 Mesh Grid
+    - Attribute 1 Type - A repeating pattern of interconnected, rounded rectangular cells forming a continuous, tessellated grid structure.
+    - Attribute 2 Color - Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and dimensionality.
+    - Attribute 3 Size - The grid extends across the entire visible frame, with individual cells appearing uniformly sized and spaced, though perspective distortion makes them appear to vary slightly in size.
+    - Attribute 4 Material - Appears to be a synthetic or engineered material, possibly plastic or metal, with a smooth, slightly reflective surface.
+    - Attribute 5 Composition - Composed of a series of interconnected, rounded rectangular segments arranged in a diagonal grid pattern, with each cell sharing edges with adjacent cells.
+    - Attribute 6 Quantity - The grid contains numerous repeating cells, filling the entire frame without visible gaps or interruptions.
+    - Attribute 7 Relative Location - Occupies the entire central area of the image, with no visible boundaries or edges within the frame.
+    - Attribute 8 Orientation - The grid is oriented diagonally, with rows of cells slanting from the top-left to the bottom-right, creating a sense of dynamic perspective.
+    - Attribute 9 Connection or Attachments - Each cell is connected to its adjacent cells via shared edges, forming a continuous, interlocking structure with no visible seams or fasteners.
+2026-08-19 16:37:13 | DEBUG    | descriptor | Processing image description: processed_good_023_2026-08-19 16:37:04.json
+2026-08-19 16:37:13 | DEBUG    | descriptor | Raw description data: - Object 1 Mesh Grid
+    - Attribute 1 Type - A continuous, interwoven pattern of interconnected diamond-shaped openings formed by intersecting strands.
+    - Attribute 2 Color - Monochromatic grayscale, with dark strands and lighter interior diamond cells.
+    - Attribute 3 Size - The visible portion spans the entire frame, with no definitive length or width due to lack of scale reference; the pattern repeats uniformly across the image.
+    - Attribute 4 Material - Appears to be made of a flexible, possibly synthetic or metal wire, exhibiting slight surface texture and curvature.
+    - Attribute 5 Composition - Composed of a network of interlaced, rounded strands forming a repeating diamond lattice structure.
+    - Attribute 6 Quantity - One continuous, single unit of mesh grid filling the entire visual field.
+    - Attribute 7 Relative Location - Occupies the entire central area of the image, extending from the top edge to the bottom edge and from the left edge to the right edge.
+    - Attribute 8 Orientation - The grid is oriented diagonally, with the diamond shapes aligned at a 45-degree angle relative to the horizontal and vertical axes.
+    - Attribute 9 Connection or Attachments - The strands are interconnected at junction points to form a continuous, self-supporting lattice with no visible external attachments or fasteners.
+2026-08-19 16:37:13 | DEBUG    | descriptor | Processing image description: processed_good_172_2026-08-19 16:36:57.json
+2026-08-19 16:37:13 | DEBUG    | descriptor | Raw description data: - Object 1 Mesh Grid
+    - Attribute 1 Type - A repeating pattern of interlocking diamond-shaped cells formed by intersecting lines, creating a continuous, uniform grid structure.
+    - Attribute 2 Color - Monochromatic grayscale, with varying shades from light gray to dark gray due to surface texture and lighting, but no inherent color.
+    - Attribute 3 Size - The grid extends across the entire visible frame, with no definitive length or width as it is cropped; individual diamond cells are small and uniform in size relative to the overall pattern.
+    - Attribute 4 Material - Appears to be made of a rigid, possibly metallic or plastic material, suggested by the smooth, slightly reflective surfaces and defined edges of the cells.
+    - Attribute 5 Composition - Composed of intersecting linear elements forming a continuous, repetitive diamond lattice, with each cell bounded by four connected segments.
+    - Attribute 6 Quantity - A single continuous mesh grid, with no separate or discrete units; the entire visible area is filled with the pattern.
+    - Attribute 7 Relative Location - Occupies the entire central region of the image, filling the frame from edge to edge with no visible gaps or interruptions.
+    - Attribute 8 Orientation - The grid is oriented diagonally, with the diamond cells aligned at a 45-degree angle relative to the horizontal and vertical axes of the image.
+    - Attribute 9 Connection or Attachments - The cells are connected seamlessly at their vertices, forming a continuous, unbroken lattice with no visible fasteners, joints, or attachments to external objects.
+2026-08-19 16:37:13 | DEBUG    | descriptor | Unique object keys found: {'Mesh Grid'}
+2026-08-19 16:37:13 | DEBUG    | descriptor | Class 'good' object description: {'Mesh Grid': ['-  Type - A repeating pattern of interconnected, rounded rectangular cells forming a continuous, tessellated grid structure.\n    -  Color - Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and dimensionality.\n    -  Size - The grid extends across the entire visible frame, with individual cells appearing uniformly sized and spaced, though perspective distortion makes them appear to vary slightly in size.\n    -  Material - Appears to be a synthetic or engineered material, possibly plastic or metal, with a smooth, slightly reflective surface.\n    -  Composition - Composed of a series of interconnected, rounded rectangular segments arranged in a diagonal grid pattern, with each cell sharing edges with adjacent cells.\n    -  Quantity - The grid contains numerous repeating cells, filling the entire frame without visible gaps or interruptions.\n    -  Relative Location - Occupies the entire central area of the image, with no visible boundaries or edges within the frame.\n    -  Orientation - The grid is oriented diagonally, with rows of cells slanting from the top-left to the bottom-right, creating a sense of dynamic perspective.\n    -  Connection or Attachments - Each cell is connected to its adjacent cells via shared edges, forming a continuous, interlocking structure with no visible seams or fasteners.', '-  Type - A continuous, interwoven pattern of interconnected diamond-shaped openings formed by intersecting strands.\n    -  Color - Monochromatic grayscale, with dark strands and lighter interior diamond cells.\n    -  Size - The visible portion spans the entire frame, with no definitive length or width due to lack of scale reference; the pattern repeats uniformly across the image.\n    -  Material - Appears to be made of a flexible, possibly synthetic or metal wire, exhibiting slight surface texture and curvature.\n    -  Composition - Composed of a network of interlaced, rounded strands forming a repeating diamond lattice structure.\n    -  Quantity - One continuous, single unit of mesh grid filling the entire visual field.\n    -  Relative Location - Occupies the entire central area of the image, extending from the top edge to the bottom edge and from the left edge to the right edge.\n    -  Orientation - The grid is oriented diagonally, with the diamond shapes aligned at a 45-degree angle relative to the horizontal and vertical axes.\n    -  Connection or Attachments - The strands are interconnected at junction points to form a continuous, self-supporting lattice with no visible external attachments or fasteners.', '-  Type - A repeating pattern of interlocking diamond-shaped cells formed by intersecting lines, creating a continuous, uniform grid structure.\n    -  Color - Monochromatic grayscale, with varying shades from light gray to dark gray due to surface texture and lighting, but no inherent color.\n    -  Size - The grid extends across the entire visible frame, with no definitive length or width as it is cropped; individual diamond cells are small and uniform in size relative to the overall pattern.\n    -  Material - Appears to be made of a rigid, possibly metallic or plastic material, suggested by the smooth, slightly reflective surfaces and defined edges of the cells.\n    -  Composition - Composed of intersecting linear elements forming a continuous, repetitive diamond lattice, with each cell bounded by four connected segments.\n    -  Quantity - A single continuous mesh grid, with no separate or discrete units; the entire visible area is filled with the pattern.\n    -  Relative Location - Occupies the entire central region of the image, filling the frame from edge to edge with no visible gaps or interruptions.\n    -  Orientation - The grid is oriented diagonally, with the diamond cells aligned at a 45-degree angle relative to the horizontal and vertical axes of the image.\n    -  Connection or Attachments - The cells are connected seamlessly at their vertices, forming a continuous, unbroken lattice with no visible fasteners, joints, or attachments to external objects.']}
+2026-08-19 16:37:24 | INFO     | models | [LLM] Inference completed in 11.605s (max_new_tokens=3000)
+2026-08-19 16:37:24 | INFO     | descriptor | [Mesh Grid] Object summarisation completed in 11.605s
+2026-08-19 16:37:24 | DEBUG    | descriptor | Summarised description for 'Mesh Grid': 
+
+{
+  "Mesh Grid": {
+    "Type": "A repeating pattern of interlocking diamond-shaped cells formed by intersecting lines, creating a continuous, uniform grid structure, or a continuous, interwoven pattern of interconnected diamond-shaped openings formed by intersecting strands.",
+    "Color": "Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and dimensionality, with dark strands and lighter interior diamond cells, or due to surface texture and lighting, but no inherent color.",
+    "Size": "The grid extends across the entire visible frame, with no definitive length or width as it is cropped; individual diamond cells are small and uniform in size relative to the overall pattern, or the visible portion spans the entire frame, with no definitive length or width due to lack of scale reference; the pattern repeats uniformly across the image.",
+    "Material": "Appears to be made of a rigid, possibly metallic or plastic material, suggested by the smooth, slightly reflective surfaces and defined edges of the cells, or a flexible, possibly synthetic or metal wire, exhibiting slight surface texture and curvature.",
+    "Composition": "Composed of intersecting linear elements forming a continuous, repetitive diamond lattice, with each cell bounded by four connected segments, or a network of interlaced, rounded strands forming a repeating diamond lattice structure.",
+    "Quantity": "A single continuous mesh grid, with no separate or discrete units; the entire visible area is filled with the pattern, or one continuous, single unit of mesh grid filling the entire visual field.",
+    "Relative Location": "Occupies the entire central region of the image, filling the frame from edge to edge with no visible gaps or interruptions, or occupies the entire central area of the image, extending from the top edge to the bottom edge and from the left edge to the right edge.",
+    "Orientation": "The grid is oriented diagonally, with the diamond cells aligned at a 45-degree angle relative to the horizontal and vertical axes of the image, or the grid is oriented diagonally, with rows of cells slanting from the top-left to the bottom-right, creating a sense of dynamic perspective.",
+    "Connection or Attachments": "The cells are connected seamlessly at their vertices, forming a continuous, unbroken lattice with no visible fasteners, joints, or attachments to external objects, or the strands are interconnected at junction points to form a continuous, self-supporting lattice with no visible external attachments or fasteners."
+  }
+}
+2026-08-19 16:37:24 | DEBUG    | descriptor | Master description: {'Mesh Grid': {'Type': 'A repeating pattern of interlocking diamond-shaped cells formed by intersecting lines, creating a continuous, uniform grid structure, or a continuous, interwoven pattern of interconnected diamond-shaped openings formed by intersecting strands.', 'Color': 'Monochromatic grayscale, with varying shades from light gray to dark gray, creating a sense of depth and dimensionality, with dark strands and lighter interior diamond cells, or due to surface texture and lighting, but no inherent color.', 'Size': 'The grid extends across the entire visible frame, with no definitive length or width as it is cropped; individual diamond cells are small and uniform in size relative to the overall pattern, or the visible portion spans the entire frame, with no definitive length or width due to lack of scale reference; the pattern repeats uniformly across the image.', 'Material': 'Appears to be made of a rigid, possibly metallic or plastic material, suggested by the smooth, slightly reflective surfaces and defined edges of the cells, or a flexible, possibly synthetic or metal wire, exhibiting slight surface texture and curvature.', 'Composition': 'Composed of intersecting linear elements forming a continuous, repetitive diamond lattice, with each cell bounded by four connected segments, or a network of interlaced, rounded strands forming a repeating diamond lattice structure.', 'Quantity': 'A single continuous mesh grid, with no separate or discrete units; the entire visible area is filled with the pattern, or one continuous, single unit of mesh grid filling the entire visual field.', 'Relative Location': 'Occupies the entire central region of the image, filling the frame from edge to edge with no visible gaps or interruptions, or occupies the entire central area of the image, extending from the top edge to the bottom edge and from the left edge to the right edge.', 'Orientation': 'The grid is oriented diagonally, with the diamond cells aligned at a 45-degree angle relative to the horizontal and vertical axes of the image, or the grid is oriented diagonally, with rows of cells slanting from the top-left to the bottom-right, creating a sense of dynamic perspective.', 'Connection or Attachments': 'The cells are connected seamlessly at their vertices, forming a continuous, unbroken lattice with no visible fasteners, joints, or attachments to external objects, or the strands are interconnected at junction points to form a continuous, self-supporting lattice with no visible external attachments or fasteners.'}}
+2026-08-19 16:37:24 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:37:24 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/grid.txt
+2026-08-19 16:37:24 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=10)
+2026-08-19 16:37:24 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:37:24 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:37:26 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:37:26 | DEBUG    | planner | Class directories for dataset 'grid': ['good']
+2026-08-19 16:37:26 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/grid/good
+2026-08-19 16:37:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:37:26 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:37:26 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:37:24_master_description.json
+2026-08-19 16:37:31 | INFO     | models | [VLM] Inference completed in 4.419s (max_new_tokens=2040)
+2026-08-19 16:37:31 | INFO     | planner | Planner steps generated in 4.419s (attempt=1, steps=10, approved_rules=10)
+2026-08-19 16:37:31 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/grid/good/good_2026-08-19 16:37:31_planner.txt
+2026-08-19 16:37:31 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any punctured cell visible within the mesh grid?  
+Step 2: Is there any cracked cell visible within the mesh grid?  
+Step 3: Is there any scratched cell visible within the mesh grid?  
+Step 4: Is there any bent cell visible within the mesh grid?  
+Step 5: Is there any dented cell visible within the mesh grid?  
+Step 6: Is there any misaligned row visible within the mesh grid?  
+Step 7: Is there any rotated cell group visible within the mesh grid?  
+Step 8: Is there any missing cell visible within the mesh grid?  
+Step 9: Is there any extra protrusion visible on the surface of the mesh grid?  
+Step 10: Is there any discolored cell visible within the mesh grid?
+2026-08-19 16:37:31 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/grid/performance/performance_20260819_163731.json
+2026-08-19 16:37:31 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/grid
+2026-08-19 16:37:31 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/grid_163646_log.txt

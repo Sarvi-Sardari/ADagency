@@ -1,0 +1,137 @@
+2026-08-11 12:43:01 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:43:01 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:43:01 | INFO     | __main__ | Dataset  : pill
+2026-08-11 12:43:01 | INFO     | __main__ | Classes  : single
+2026-08-11 12:43:01 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:43:01 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/pill_124301_log.txt
+2026-08-11 12:43:01 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:43:02 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:43:02 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:43:03 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:43:03 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:43:03 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/pill/train/good/174.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/pill/train/good/023.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/pill/train/good/205.png']
+2026-08-11 12:43:03 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:43:03 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 12:43:03 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:43:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:43:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-11 12:43:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-11 12:43:03 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-11 12:43:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-11 12:43:04 | INFO     | models | [VLM] Inference completed in 0.441s (max_new_tokens=2040)
+2026-08-11 12:43:04 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/pill/train/good/100.png in 0.441s
+2026-08-11 12:43:07 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['pill']
+2026-08-11 12:43:07 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/pill_object_labels.txt
+2026-08-11 12:43:07 | INFO     | __main__ | Object names: ['pill']
+2026-08-11 12:43:07 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:43:07 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/pill/good
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'pHYs' 57 9
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tIME' 78 7
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | b'tIME' 78 7 (unknown)
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 97 8192
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:43:10 | INFO     | models | [VLM] Inference completed in 3.248s (max_new_tokens=2040)
+2026-08-11 12:43:10 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pill/good/processed_good_174_2026-08-11 12:43:10.json (inference_time=3.248s)
+2026-08-11 12:43:10 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:10 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:43:14 | INFO     | models | [VLM] Inference completed in 3.810s (max_new_tokens=2040)
+2026-08-11 12:43:14 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pill/good/processed_good_023_2026-08-11 12:43:14.json (inference_time=3.810s)
+2026-08-11 12:43:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:14 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:43:18 | INFO     | models | [VLM] Inference completed in 3.406s (max_new_tokens=2040)
+2026-08-11 12:43:18 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pill/good/processed_good_205_2026-08-11 12:43:18.json (inference_time=3.406s)
+2026-08-11 12:43:18 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:43:18 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:43:19 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:43:19 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/pill/good
+2026-08-11 12:43:19 | DEBUG    | descriptor | Processing image description: processed_good_205_2026-08-11 12:43:18.json
+2026-08-11 12:43:19 | DEBUG    | descriptor | Raw description data: - Pill
+    - Type - oval-shaped, flat, single unit, with embossed lettering
+    - Color - predominantly off-white with scattered reddish-brown speckles distributed across its surface
+    - Size - approximately oval with length and width roughly equal, estimated to be around 15mm in length and 10mm in width
+    - Material - solid, smooth, and slightly glossy surface suggesting a compressed tablet material
+    - Composition - appears to be a pharmaceutical tablet with embedded colorants or excipients visible as speckles
+    - Quantity - single unit, one pill present
+    - Relative Location - centrally positioned within the frame, no other objects nearby
+    - Orientation - lying flat, horizontally oriented with the embossed "FF" facing upward
+    - Connection or Attachments - no visible connections or attachments; standalone, unattached object
+2026-08-11 12:43:19 | DEBUG    | descriptor | Processing image description: processed_good_023_2026-08-11 12:43:14.json
+2026-08-11 12:43:19 | DEBUG    | descriptor | Raw description data: - Pill
+    - Type - oval-shaped, flat, and smooth-edged tablet with embossed lettering
+    - Color - predominantly off-white with scattered reddish-brown speckles distributed across its surface
+    - Size - approximately oval with dimensions of 1.5 to 2.0 cm in length and 1.0 to 1.2 cm in width
+    - Material - appears to be a compressed pharmaceutical tablet, likely made of a polymer or sugar-based matrix with a coating
+    - Composition - contains embedded or surface-applied reddish-brown particles, possibly indicating a colorant or excipient; embossed with two capital "F" letters
+    - Quantity - single unit
+    - Relative Location - centrally positioned within the frame, isolated without any other objects nearby
+    - Orientation - lying flat, with the embossed "FF" facing upward and centered
+    - Connection or Attachments - no visible attachments or connections to any other object or surface
+2026-08-11 12:43:19 | DEBUG    | descriptor | Processing image description: processed_good_174_2026-08-11 12:43:10.json
+2026-08-11 12:43:19 | DEBUG    | descriptor | Raw description data: - Pill
+    - Type - oval-shaped, flat, single unit
+    - Color - predominantly off-white with scattered reddish-brown speckles
+    - Size - approximately 15mm in length and 10mm in width, with a smooth, rounded edge profile
+    - Material - appears to be a compressed pharmaceutical tablet, likely made of a polymer or compressed powder blend
+    - Composition - contains embedded reddish-brown particles, possibly a pigment or excipient, and has embossed lettering
+    - Quantity - single unit
+    - Relative Location - centrally positioned within the frame, no other objects present
+    - Orientation - lying flat, with the embossed "FF" facing upward, centered horizontally and vertically
+    - Connection or Attachments - no attachments or connections to other objects; standalone unit
+2026-08-11 12:43:19 | DEBUG    | descriptor | Unique object keys found: {'pill'}
+2026-08-11 12:43:19 | DEBUG    | descriptor | Class 'good' object description: {'pill': ['- Type - oval-shaped, flat, single unit, with embossed lettering\n    - Color - predominantly off-white with scattered reddish-brown speckles distributed across its surface\n    - Size - approximately oval with length and width roughly equal, estimated to be around 15mm in length and 10mm in width\n    - Material - solid, smooth, and slightly glossy surface suggesting a compressed tablet material\n    - Composition - appears to be a pharmaceutical tablet with embedded colorants or excipients visible as speckles\n    - Quantity - single unit, one pill present\n    - Relative Location - centrally positioned within the frame, no other objects nearby\n    - Orientation - lying flat, horizontally oriented with the embossed "FF" facing upward\n    - Connection or Attachments - no visible connections or attachments; standalone, unattached object', '- Type - oval-shaped, flat, and smooth-edged tablet with embossed lettering\n    - Color - predominantly off-white with scattered reddish-brown speckles distributed across its surface\n    - Size - approximately oval with dimensions of 1.5 to 2.0 cm in length and 1.0 to 1.2 cm in width\n    - Material - appears to be a compressed pharmaceutical tablet, likely made of a polymer or sugar-based matrix with a coating\n    - Composition - contains embedded or surface-applied reddish-brown particles, possibly indicating a colorant or excipient; embossed with two capital "F" letters\n    - Quantity - single unit\n    - Relative Location - centrally positioned within the frame, isolated without any other objects nearby\n    - Orientation - lying flat, with the embossed "FF" facing upward and centered\n    - Connection or Attachments - no visible attachments or connections to any other object or surface', '- Type - oval-shaped, flat, single unit\n    - Color - predominantly off-white with scattered reddish-brown speckles\n    - Size - approximately 15mm in length and 10mm in width, with a smooth, rounded edge profile\n    - Material - appears to be a compressed pharmaceutical tablet, likely made of a polymer or compressed powder blend\n    - Composition - contains embedded reddish-brown particles, possibly a pigment or excipient, and has embossed lettering\n    - Quantity - single unit\n    - Relative Location - centrally positioned within the frame, no other objects present\n    - Orientation - lying flat, with the embossed "FF" facing upward, centered horizontally and vertically\n    - Connection or Attachments - no attachments or connections to other objects; standalone unit']}
+2026-08-11 12:43:23 | INFO     | models | [LLM] Inference completed in 3.865s (max_new_tokens=3000)
+2026-08-11 12:43:23 | INFO     | descriptor | [pill] Object summarisation completed in 3.865s
+2026-08-11 12:43:23 | DEBUG    | descriptor | Summarised description for 'pill': {
+  "pill": {
+    "Type": "oval-shaped, flat, single unit, smooth-edged pharmaceutical tablet with embossed lettering",
+    "Color": "predominantly off-white with scattered reddish-brown speckles distributed across its surface",
+    "Size": "15mm in length and 10mm in width (approximately 1.5 to 2.0 cm in length and 1.0 to 1.2 cm in width)",
+    "Material": "compressed pharmaceutical tablet, likely made of a polymer or sugar-based matrix with a coating",
+    "Composition": "contains embedded reddish-brown particles, possibly a pigment or excipient, and has embossed 'FF' lettering",
+    "Quantity": "single unit",
+    "Relative Location": "centrally positioned within the frame, isolated without any other objects nearby",
+    "Orientation": "lying flat, horizontally oriented with the embossed 'FF' facing upward and centered",
+    "Connection or Attachments": "no visible connections or attachments; standalone, unattached object"
+  }
+}
+2026-08-11 12:43:23 | DEBUG    | descriptor | Master description: {'pill': {'Type': 'oval-shaped, flat, single unit, smooth-edged pharmaceutical tablet with embossed lettering', 'Color': 'predominantly off-white with scattered reddish-brown speckles distributed across its surface', 'Size': '15mm in length and 10mm in width (approximately 1.5 to 2.0 cm in length and 1.0 to 1.2 cm in width)', 'Material': 'compressed pharmaceutical tablet, likely made of a polymer or sugar-based matrix with a coating', 'Composition': "contains embedded reddish-brown particles, possibly a pigment or excipient, and has embossed 'FF' lettering", 'Quantity': 'single unit', 'Relative Location': 'centrally positioned within the frame, isolated without any other objects nearby', 'Orientation': "lying flat, horizontally oriented with the embossed 'FF' facing upward and centered", 'Connection or Attachments': 'no visible connections or attachments; standalone, unattached object'}}
+2026-08-11 12:43:23 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:43:23 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['pill'] directly (no generation, no compiled file).
+2026-08-11 12:43:23 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:43:23 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:43:23 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:43:24 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:43:24 | DEBUG    | planner | Class directories for dataset 'pill': ['good']
+2026-08-11 12:43:24 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/pill/good
+2026-08-11 12:43:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:43:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:43:24 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:43:23_master_description.json
+2026-08-11 12:43:27 | INFO     | models | [VLM] Inference completed in 2.646s (max_new_tokens=2040)
+2026-08-11 12:43:27 | INFO     | planner | Planner steps generated in 2.646s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-11 12:43:27 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/pill/good/good_2026-08-11 12:43:27_planner.txt
+2026-08-11 12:43:27 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, dent, or cut on the pill's surface?
+Step 2: Is there any bending, warping, crushing, puncturing, tearing, or snapping of the pill's structure?
+Step 3: Is there any missing component compared to the reference image?
+Step 4: Is there any extra debris, foreign object, or liquid on the pill?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the pill?
+Step 6: Is there any significant misalignment or incorrect orientation of the pill compared to the reference image?
+2026-08-11 12:43:27 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/pill/performance/performance_20260811_124327.json
+2026-08-11 12:43:27 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/pill
+2026-08-11 12:43:27 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/pill_124301_log.txt

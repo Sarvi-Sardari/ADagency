@@ -1,0 +1,12 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "white plastic organizer tray",
+      "category": "residual_content",
+      "part_or_region": "visible compartment interiors and rim of the white plastic organizer tray",
+      "anomaly_name": "foreign object inside or resting on the tray",
+      "visual_description": "A separate object or fragment is visibly inside a compartment or physically resting on the white organizer tray. A partially visible item counts only when its visible shape or boundary supports that it is separate from the molded tray. Ignore objects on the blue bin, the robot arm, and the background. Do not treat molded dividers, seams, normal shadows, or reflections alone as foreign objects."
+    }
+  ]
+}

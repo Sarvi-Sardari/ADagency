@@ -1,0 +1,116 @@
+2026-08-14 17:34:25 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-14 17:34:25 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-14 17:34:25 | INFO     | __main__ | Dataset  : zivid_set_box
+2026-08-14 17:34:25 | INFO     | __main__ | Classes  : single
+2026-08-14 17:34:25 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-14 17:34:25 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/zivid_set_box_173425_log.txt
+2026-08-14 17:34:25 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-14 17:34:27 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-14 17:34:27 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:34:29 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:34:29 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-14 17:34:29 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_set_box/train/good/zivid_rgb_00556.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_set_box/train/good/zivid_rgb_00407.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/zivid_set_box/train/good/zivid_rgb_00591.png']
+2026-08-14 17:34:29 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-14 17:34:29 | INFO     | object_namer | [Object Namer] Loaded 1 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/zivid_set_box_object_labels.txt
+2026-08-14 17:34:29 | INFO     | __main__ | Object names: ['drawer organizer']
+2026-08-14 17:34:29 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-14 17:34:29 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/zivid_set_box/good
+2026-08-14 17:34:29 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-14 17:34:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:34:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:34:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:34:29 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:34:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:34:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 8192
+2026-08-14 17:34:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:34:30 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:34:37 | INFO     | models | [VLM] Inference completed in 6.942s (max_new_tokens=2040)
+2026-08-14 17:34:37 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_set_box/good/processed_good_zivid_rgb_00556_2026-08-14 17:34:37.json (inference_time=6.942s)
+2026-08-14 17:34:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:34:37 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:34:43 | INFO     | models | [VLM] Inference completed in 6.215s (max_new_tokens=2040)
+2026-08-14 17:34:43 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_set_box/good/processed_good_zivid_rgb_00407_2026-08-14 17:34:43.json (inference_time=6.215s)
+2026-08-14 17:34:43 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:34:43 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:34:48 | INFO     | models | [VLM] Inference completed in 4.420s (max_new_tokens=2040)
+2026-08-14 17:34:48 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_set_box/good/processed_good_zivid_rgb_00591_2026-08-14 17:34:48.json (inference_time=4.420s)
+2026-08-14 17:34:48 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-14 17:34:48 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-14 17:34:50 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-14 17:34:50 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/zivid_set_box/good
+2026-08-14 17:34:50 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00591_2026-08-14 17:34:48.json
+2026-08-14 17:34:50 | DEBUG    | descriptor | Raw description data: - Object 1 drawer organizer
+    - Attribute 1 Type - rectangular, open-fronted storage unit with multiple internal compartments and shelves
+    - Attribute 2 Color - white with a textured surface
+    - Attribute 3 Size - approximately 12 inches in width, 10 inches in depth, and 18 inches in height
+    - Attribute 4 Material - plastic
+    - Attribute 5 Composition - constructed with vertical side panels, horizontal shelves, and internal vertical dividers forming a grid-like structure
+    - Attribute 6 Quantity - one
+    - Attribute 7 Relative Location - centrally positioned in the image, with no other drawer organizers visible
+    - Attribute 8 Orientation - upright, facing forward, with the front opening toward the viewer
+    - Attribute 9 Connection or Attachments - no visible connections or attachments to other objects; stands independently on a flat surface
+2026-08-14 17:34:50 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00407_2026-08-14 17:34:43.json
+2026-08-14 17:34:50 | DEBUG    | descriptor | Raw description data: - Object 1 drawer organizer
+    - Attribute 1 Type - A modular, open-frame organizer with vertical and horizontal bars forming compartments and shelves, including a ladder-style section and a central vertical divider.
+    - Attribute 2 Color - White, with a uniform, grid-like textured surface across all components.
+    - Attribute 3 Size - The overall structure is rectangular, with approximate dimensions of 12 inches in width, 10 inches in height, and 6 inches in depth (estimated based on proportions and typical drawer organizer sizes).
+    - Attribute 4 Material - Appears to be made of plastic or a similar molded polymer, given the uniform texture and smooth edges.
+    - Attribute 5 Composition - Composed of multiple interconnected bars forming a grid pattern with vertical dividers, horizontal shelves, and a ladder-style section with three rungs.
+    - Attribute 6 Quantity - One single unit.
+    - Attribute 7 Relative Location - Positioned centrally within the frame of the drawer, occupying the majority of the visible interior space.
+    - Attribute 8 Orientation - Standing upright with vertical bars aligned perpendicular to the ground and horizontal bars aligned parallel to the ground.
+    - Attribute 9 Connection or Attachments - No visible attachments or fasteners; components are assembled as a single integrated unit.
+2026-08-14 17:34:50 | DEBUG    | descriptor | Processing image description: processed_good_zivid_rgb_00556_2026-08-14 17:34:37.json
+2026-08-14 17:34:50 | DEBUG    | descriptor | Raw description data: - Object 1 drawer organizer
+    - Attribute 1 Type - A rectangular, open-top storage unit with internal compartments and shelves designed for organizing small items.
+    - Attribute 2 Color - White, with a uniform, grid-like textured surface across all visible parts.
+    - Attribute 3 Size - The overall structure appears to be approximately 12 inches in width, 8 inches in depth, and 10 inches in height, though exact dimensions are not measurable from the image.
+    - Attribute 4 Material - Appears to be constructed from a rigid, lightweight material such as molded plastic or lightweight composite, based on its uniform texture and form.
+    - Attribute 5 Composition - Composed of a main frame with internal vertical dividers, horizontal shelves, and a back panel, creating multiple compartments including a large open area, a smaller section with a grid pattern, and a bottom shelf.
+    - Attribute 6 Quantity - One unit is visible.
+    - Attribute 7 Relative Location - Positioned centrally in the frame, with its front facing the viewer.
+    - Attribute 8 Orientation - Oriented upright, with its top edge parallel to the horizontal plane and its front face facing directly toward the viewer.
+    - Attribute 9 Connection or Attachments - Features two black handles, one on each side near the top, for gripping and pulling. The structure is self-contained with no visible external connections or attachments.
+2026-08-14 17:34:50 | DEBUG    | descriptor | Unique object keys found: {'drawer organizer'}
+2026-08-14 17:34:50 | DEBUG    | descriptor | Class 'good' object description: {'drawer organizer': ['-  Type - rectangular, open-fronted storage unit with multiple internal compartments and shelves\n    -  Color - white with a textured surface\n    -  Size - approximately 12 inches in width, 10 inches in depth, and 18 inches in height\n    -  Material - plastic\n    -  Composition - constructed with vertical side panels, horizontal shelves, and internal vertical dividers forming a grid-like structure\n    -  Quantity - one\n    -  Relative Location - centrally positioned in the image, with no other drawer organizers visible\n    -  Orientation - upright, facing forward, with the front opening toward the viewer\n    -  Connection or Attachments - no visible connections or attachments to other objects; stands independently on a flat surface', '-  Type - A modular, open-frame organizer with vertical and horizontal bars forming compartments and shelves, including a ladder-style section and a central vertical divider.\n    -  Color - White, with a uniform, grid-like textured surface across all components.\n    -  Size - The overall structure is rectangular, with approximate dimensions of 12 inches in width, 10 inches in height, and 6 inches in depth (estimated based on proportions and typical drawer organizer sizes).\n    -  Material - Appears to be made of plastic or a similar molded polymer, given the uniform texture and smooth edges.\n    -  Composition - Composed of multiple interconnected bars forming a grid pattern with vertical dividers, horizontal shelves, and a ladder-style section with three rungs.\n    -  Quantity - One single unit.\n    -  Relative Location - Positioned centrally within the frame of the drawer, occupying the majority of the visible interior space.\n    -  Orientation - Standing upright with vertical bars aligned perpendicular to the ground and horizontal bars aligned parallel to the ground.\n    -  Connection or Attachments - No visible attachments or fasteners; components are assembled as a single integrated unit.', '-  Type - A rectangular, open-top storage unit with internal compartments and shelves designed for organizing small items.\n    -  Color - White, with a uniform, grid-like textured surface across all visible parts.\n    -  Size - The overall structure appears to be approximately 12 inches in width, 8 inches in depth, and 10 inches in height, though exact dimensions are not measurable from the image.\n    -  Material - Appears to be constructed from a rigid, lightweight material such as molded plastic or lightweight composite, based on its uniform texture and form.\n    -  Composition - Composed of a main frame with internal vertical dividers, horizontal shelves, and a back panel, creating multiple compartments including a large open area, a smaller section with a grid pattern, and a bottom shelf.\n    -  Quantity - One unit is visible.\n    -  Relative Location - Positioned centrally in the frame, with its front facing the viewer.\n    -  Orientation - Oriented upright, with its top edge parallel to the horizontal plane and its front face facing directly toward the viewer.\n    -  Connection or Attachments - Features two black handles, one on each side near the top, for gripping and pulling. The structure is self-contained with no visible external connections or attachments.']}
+2026-08-14 17:34:55 | INFO     | models | [LLM] Inference completed in 5.327s (max_new_tokens=3000)
+2026-08-14 17:34:55 | INFO     | descriptor | [drawer organizer] Object summarisation completed in 5.327s
+2026-08-14 17:34:55 | DEBUG    | descriptor | Summarised description for 'drawer organizer': 
+
+{
+  "drawer organizer": {
+    "Type": "A rectangular, open-fronted storage unit with multiple internal compartments and shelves, including a ladder-style section and a central vertical divider",
+    "Color": "White, with a uniform, grid-like textured surface across all components",
+    "Size": "12x10x18 inches / 5x5x7.5cm (width x depth x height)",
+    "Material": "Plastic or a similar molded polymer",
+    "Composition": "Constructed with vertical side panels, horizontal shelves, internal vertical dividers forming a grid-like structure, and a ladder-style section with three rungs",
+    "Quantity": "One unit",
+    "Relative Location": "Centrally positioned in the image, occupying the majority of the visible interior space",
+    "Orientation": "Upright, facing forward, with the front opening toward the viewer",
+    "Connection or Attachments": "Features two black handles, one on each side near the top, for gripping and pulling. The structure is self-contained with no visible external connections or attachments"
+  }
+}
+2026-08-14 17:34:55 | DEBUG    | descriptor | Master description: {'drawer organizer': {'Type': 'A rectangular, open-fronted storage unit with multiple internal compartments and shelves, including a ladder-style section and a central vertical divider', 'Color': 'White, with a uniform, grid-like textured surface across all components', 'Size': '12x10x18 inches / 5x5x7.5cm (width x depth x height)', 'Material': 'Plastic or a similar molded polymer', 'Composition': 'Constructed with vertical side panels, horizontal shelves, internal vertical dividers forming a grid-like structure, and a ladder-style section with three rungs', 'Quantity': 'One unit', 'Relative Location': 'Centrally positioned in the image, occupying the majority of the visible interior space', 'Orientation': 'Upright, facing forward, with the front opening toward the viewer', 'Connection or Attachments': 'Features two black handles, one on each side near the top, for gripping and pulling. The structure is self-contained with no visible external connections or attachments'}}
+2026-08-14 17:34:55 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-14 17:34:55 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/zivid_set_box.txt
+2026-08-14 17:34:55 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=3)
+2026-08-14 17:34:55 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-14 17:34:56 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-14 17:34:58 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-14 17:34:58 | DEBUG    | planner | Class directories for dataset 'zivid_set_box': ['good']
+2026-08-14 17:34:58 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/zivid_set_box/good
+2026-08-14 17:34:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-14 17:34:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-14 17:34:58 | DEBUG    | planner | Generating planner steps from: good_2026-08-14 17:34:55_master_description.json
+2026-08-14 17:35:00 | INFO     | models | [VLM] Inference completed in 2.247s (max_new_tokens=2040)
+2026-08-14 17:35:00 | INFO     | planner | Planner steps generated in 2.247s (attempt=1, steps=3, approved_rules=3)
+2026-08-14 17:35:00 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_set_box/good/good_2026-08-14 17:35:00_planner.txt
+2026-08-14 17:35:00 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any visible stains, discoloration, or residue on the interior surface of the drawer organizer?
+
+Step 2: Is there any glossy or smeared patches indicating oil or lubricant contamination on the interior surface of the drawer organizer?
+
+Step 3: Is there any presence of parts, components, or objects inside the drawer organizer, contradicting the requirement that it should be empty?
+2026-08-14 17:35:00 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_set_box/performance/performance_20260814_173500.json
+2026-08-14 17:35:00 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/zivid_set_box
+2026-08-14 17:35:00 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-14/zivid_set_box_173425_log.txt

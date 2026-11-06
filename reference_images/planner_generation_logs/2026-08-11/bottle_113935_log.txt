@@ -1,0 +1,131 @@
+2026-08-11 11:39:35 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 11:39:35 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 11:39:35 | INFO     | __main__ | Dataset  : bottle
+2026-08-11 11:39:35 | INFO     | __main__ | Classes  : single
+2026-08-11 11:39:35 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 11:39:35 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/bottle_113935_log.txt
+2026-08-11 11:39:35 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 11:39:37 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 11:39:37 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 11:39:38 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 11:39:38 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 11:39:38 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/136.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/018.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/160.png']
+2026-08-11 11:39:38 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 11:39:38 | INFO     | object_namer | [Object Namer] Running VLM to identify object names …
+2026-08-11 11:39:38 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 11:39:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 11:39:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 11:39:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 11:39:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 528625 44
+2026-08-11 11:39:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 528681 1304
+2026-08-11 11:39:39 | INFO     | models | [VLM] Inference completed in 0.590s (max_new_tokens=2040)
+2026-08-11 11:39:39 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/bottle/train/good/100.png in 0.590s
+2026-08-11 11:40:07 | INFO     | object_namer | [Object Namer] Saved 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/bottle_object_labels.txt
+2026-08-11 11:40:07 | INFO     | __main__ | Object names: ['container']
+2026-08-11 11:40:07 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 11:40:07 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/bottle/good
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 530686 44
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 530742 1304
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 530994 44
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 531050 1304
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 536416 44
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 536472 1304
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 11:40:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 11:40:11 | INFO     | models | [VLM] Inference completed in 3.442s (max_new_tokens=2040)
+2026-08-11 11:40:11 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_136_2026-08-11 11:40:11.json (inference_time=3.442s)
+2026-08-11 11:40:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 11:40:11 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 11:40:15 | INFO     | models | [VLM] Inference completed in 3.700s (max_new_tokens=2040)
+2026-08-11 11:40:15 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_018_2026-08-11 11:40:15.json (inference_time=3.700s)
+2026-08-11 11:40:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 11:40:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 11:40:18 | INFO     | models | [VLM] Inference completed in 3.885s (max_new_tokens=2040)
+2026-08-11 11:40:18 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good/processed_good_160_2026-08-11 11:40:18.json (inference_time=3.885s)
+2026-08-11 11:40:18 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 11:40:19 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 11:40:20 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 11:40:20 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/bottle/good
+2026-08-11 11:40:20 | DEBUG    | descriptor | Processing image description: processed_good_160_2026-08-11 11:40:18.json
+2026-08-11 11:40:20 | DEBUG    | descriptor | Raw description data: - Object 1 container
+    - Attribute 1 <Type> -circular, cylindrical opening viewed from above, with concentric rings and a dark central void
+    - Attribute 2 <Color> -dark brown to black with reflective highlights in amber and metallic tones along the rim
+    - Attribute 3 <Size> -unspecified dimensions, but appears to be a standard-sized container opening with a circular aperture
+    - Attribute 4 <Material> -glass, with smooth, polished surface and slight translucency
+    - Attribute 5 <Composition> -composed of glass with a dark tint, possibly amber or tinted for light protection
+    - Attribute 6 <Quantity> -one
+    - Attribute 7 <Relative Location> -centered in the frame, no other objects present
+    - Attribute 8 <Orientation> -viewed from directly above, with circular symmetry
+    - Attribute 9 <Connection or Attachments> -no visible attachments or connections to other objects
+2026-08-11 11:40:20 | DEBUG    | descriptor | Processing image description: processed_good_018_2026-08-11 11:40:15.json
+2026-08-11 11:40:20 | DEBUG    | descriptor | Raw description data: - Object 1 container
+    - Attribute 1 <Type> - circular, open-top vessel with a smooth, slightly curved rim
+    - Attribute 2 <Color> - dark brown to black with reflective highlights along the rim and inner edge
+    - Attribute 3 <Size> - indeterminate due to perspective; appears as a circular opening with concentric rings suggesting depth
+    - Attribute 4 <Material> - glass, with a glossy, translucent surface
+    - Attribute 5 <Composition> - likely borosilicate or soda-lime glass, with a thick, rounded rim and a dark interior
+    - Attribute 6 <Quantity> - singular
+    - Attribute 7 <Relative Location> - centered in the frame, viewed from directly above
+    - Attribute 8 <Orientation> - upright, viewed from top-down perspective
+    - Attribute 9 <Connection or Attachments> - no visible attachments or connections; appears standalone
+2026-08-11 11:40:20 | DEBUG    | descriptor | Processing image description: processed_good_136_2026-08-11 11:40:11.json
+2026-08-11 11:40:20 | DEBUG    | descriptor | Raw description data: - Object 1 container
+    - Attribute 1 <Type> -circular opening with concentric rings
+    - Attribute 2 <Color> -dark amber with reflective highlights and a central black void
+    - Attribute 3 <Size> -not specified in dimensions, but appears as a circular aperture with visible rim thickness
+    - Attribute 4 <Material> -glass, smooth and transparent with slight gloss
+    - Attribute 5 <Composition> -composed of glass with internal surface texture and light refraction effects
+    - Attribute 6 <Quantity> -one
+    - Attribute 7 <Relative Location> -centered in the frame, no other objects present
+    - Attribute 8 <Orientation> -viewed from directly above, top-down perspective
+    - Attribute 9 <Connection or Attachments> -no visible attachments or connections to other objects
+2026-08-11 11:40:20 | DEBUG    | descriptor | Unique object keys found: {'container'}
+2026-08-11 11:40:20 | DEBUG    | descriptor | Class 'good' object description: {'container': ['-  <Type> -circular, cylindrical opening viewed from above, with concentric rings and a dark central void\n    -  <Color> -dark brown to black with reflective highlights in amber and metallic tones along the rim\n    -  <Size> -unspecified dimensions, but appears to be a standard-sized container opening with a circular aperture\n    -  <Material> -glass, with smooth, polished surface and slight translucency\n    -  <Composition> -composed of glass with a dark tint, possibly amber or tinted for light protection\n    -  <Quantity> -one\n    -  <Relative Location> -centered in the frame, no other objects present\n    -  <Orientation> -viewed from directly above, with circular symmetry\n    -  <Connection or Attachments> -no visible attachments or connections to other objects', '-  <Type> - circular, open-top vessel with a smooth, slightly curved rim\n    -  <Color> - dark brown to black with reflective highlights along the rim and inner edge\n    -  <Size> - indeterminate due to perspective; appears as a circular opening with concentric rings suggesting depth\n    -  <Material> - glass, with a glossy, translucent surface\n    -  <Composition> - likely borosilicate or soda-lime glass, with a thick, rounded rim and a dark interior\n    -  <Quantity> - singular\n    -  <Relative Location> - centered in the frame, viewed from directly above\n    -  <Orientation> - upright, viewed from top-down perspective\n    -  <Connection or Attachments> - no visible attachments or connections; appears standalone', '-  <Type> -circular opening with concentric rings\n    -  <Color> -dark amber with reflective highlights and a central black void\n    -  <Size> -not specified in dimensions, but appears as a circular aperture with visible rim thickness\n    -  <Material> -glass, smooth and transparent with slight gloss\n    -  <Composition> -composed of glass with internal surface texture and light refraction effects\n    -  <Quantity> -one\n    -  <Relative Location> -centered in the frame, no other objects present\n    -  <Orientation> -viewed from directly above, top-down perspective\n    -  <Connection or Attachments> -no visible attachments or connections to other objects']}
+2026-08-11 11:40:23 | INFO     | models | [LLM] Inference completed in 3.199s (max_new_tokens=3000)
+2026-08-11 11:40:23 | INFO     | descriptor | [container] Object summarisation completed in 3.199s
+2026-08-11 11:40:23 | DEBUG    | descriptor | Summarised description for 'container': {
+  "container": {
+    "Type": "circular, cylindrical opening with concentric rings and a dark central void",
+    "Color": "dark amber with reflective highlights and a central black void, featuring metallic tones along the rim",
+    "Size": "circular aperture with visible rim thickness and concentric rings suggesting depth; dimensions unspecified",
+    "Material": "glass",
+    "Composition": "composed of glass with a dark tint, likely borosilicate or soda-lime, possessing a thick, rounded rim, slight translucency, and internal surface texture that causes light refraction",
+    "Quantity": "one",
+    "Relative Location": "centered in the frame, with no other objects present",
+    "Orientation": "viewed from directly above, with circular symmetry and top-down perspective",
+    "Connection or Attachments": "no visible attachments or connections to other objects"
+  }
+}
+2026-08-11 11:40:23 | DEBUG    | descriptor | Master description: {'container': {'Type': 'circular, cylindrical opening with concentric rings and a dark central void', 'Color': 'dark amber with reflective highlights and a central black void, featuring metallic tones along the rim', 'Size': 'circular aperture with visible rim thickness and concentric rings suggesting depth; dimensions unspecified', 'Material': 'glass', 'Composition': 'composed of glass with a dark tint, likely borosilicate or soda-lime, possessing a thick, rounded rim, slight translucency, and internal surface texture that causes light refraction', 'Quantity': 'one', 'Relative Location': 'centered in the frame, with no other objects present', 'Orientation': 'viewed from directly above, with circular symmetry and top-down perspective', 'Connection or Attachments': 'no visible attachments or connections to other objects'}}
+2026-08-11 11:40:23 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 11:40:23 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['bottle'] directly (no generation, no compiled file).
+2026-08-11 11:40:23 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 11:40:23 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 11:40:23 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 11:40:24 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 11:40:24 | DEBUG    | planner | Class directories for dataset 'bottle': ['good']
+2026-08-11 11:40:24 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/bottle/good
+2026-08-11 11:40:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 11:40:24 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 11:40:24 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 11:40:23_master_description.json
+2026-08-11 11:40:27 | INFO     | models | [VLM] Inference completed in 2.623s (max_new_tokens=2040)
+2026-08-11 11:40:27 | INFO     | planner | Planner steps generated in 2.623s (attempt=1, steps=5, approved_rules=legacy-untracked)
+2026-08-11 11:40:27 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle/good/good_2026-08-11 11:40:27_planner.txt
+2026-08-11 11:40:27 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the surface of the glass rim?  
+Step 2: Is there any bending, warping, crushing, puncturing, tearing, or snapping of the glass rim or concentric rings?  
+Step 3: Is there any missing component compared to the reference image?  
+Step 4: Is there any extra debris, foreign object, or liquid present in the candidate image that is not in the reference image?  
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the glass surface?
+2026-08-11 11:40:27 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle/performance/performance_20260811_114027.json
+2026-08-11 11:40:27 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/bottle
+2026-08-11 11:40:27 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/bottle_113935_log.txt

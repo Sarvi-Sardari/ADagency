@@ -1,0 +1,60 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "yellow pushpins in the compartment organizer",
+      "category": "logical_missing_component",
+      "part_or_region": "all 15 grid compartments inspected separately",
+      "anomaly_name": "empty cell among the 15 separately inspected compartments",
+      "visual_description": "An empty cell among the 15 separately inspected compartments, each of which must contain exactly one complete yellow pushpin."
+    },
+    {
+      "id": "A002",
+      "object_name": "yellow pushpins in the compartment organizer",
+      "category": "logical_extra_component",
+      "part_or_region": "all 15 grid compartments inspected separately",
+      "anomaly_name": "a cell containing two or more complete pushpins even when 15 are visible overall",
+      "visual_description": "A separately inspected cell containing two or more complete pushpins, including when another cell is empty and 15 pushpins remain visible overall."
+    },
+    {
+      "id": "A003",
+      "object_name": "transparent 3-by-5 compartment organizer",
+      "category": "logical_missing_component",
+      "part_or_region": "internal transparent grid dividers",
+      "anomaly_name": "absent internal divider creating an open passage between cells of the 3-by-5 grid",
+      "visual_description": "An absent or broken-away transparent internal divider segment creating an open passage between adjacent cells of the 3-by-5 grid, independent of whole-organizer rotation."
+    },
+    {
+      "id": "A004",
+      "object_name": "yellow pushpin",
+      "category": "structural_deformation",
+      "part_or_region": "metal needle shaft",
+      "anomaly_name": "needle shaft curved or kinked rather than merely straight at an angle",
+      "visual_description": "A metal needle shaft visibly curved or kinked along its length rather than merely straight and pointing horizontally, vertically, or diagonally."
+    },
+    {
+      "id": "A005",
+      "object_name": "yellow pushpin",
+      "category": "structural_integrity",
+      "part_or_region": "yellow plastic head and metal needle",
+      "anomaly_name": "broken or missing head section or snapped shortened blunt missing or detached needle",
+      "visual_description": "A pushpin with a broken or missing plastic-head section or a snapped, shortened, blunt, missing, or detached needle, rather than an intact pushpin whose needle is only bent."
+    },
+    {
+      "id": "A006",
+      "object_name": "yellow pushpin",
+      "category": "structural_color",
+      "part_or_region": "yellow plastic head only",
+      "anomaly_name": "red orange or other non-yellow head region distinct from shading highlights and shadows",
+      "visual_description": "A distinct red, orange, or other non-yellow material-colored region on the plastic head, distinct from the silver needle and from natural yellow shading, highlights, or shadows."
+    },
+    {
+      "id": "A007",
+      "object_name": "compartment organizer and its contents",
+      "category": "structural_contamination",
+      "part_or_region": "inside any compartment or directly on the organizer",
+      "anomaly_name": "small partly hidden or pushpin-like separate foreign object rather than a divider reflection or shadow",
+      "visual_description": "A small, partly hidden, or pushpin-like separate foreign object or material inside a cell or on the organizer, distinct from an additional normal yellow pushpin, a divider, a reflection, or a shadow."
+    }
+  ]
+}

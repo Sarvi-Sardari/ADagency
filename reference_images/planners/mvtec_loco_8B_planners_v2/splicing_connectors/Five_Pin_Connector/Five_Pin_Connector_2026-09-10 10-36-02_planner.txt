@@ -1,0 +1,16 @@
+Step 1: Is there any mismatch between the number of orange lever positions on the left and right connector blocks, such as one being a 2-port, 3-port, or 5-port block while the other is a different size?
+Step 2: Is there any absence of one or both connector blocks, meaning the assembly lacks exactly one block at each end of the cable?
+Step 3: Is there any absence of the cable spanning between the two connector blocks, including cases where the cable and both blocks are missing?
+Step 4: Is there any presence of two or more cables inserted into and spanning between the connector blocks, instead of exactly one connected cable?
+Step 5: Is there any marked shortness of the cable span between the two blocks, making the connector blocks appear markedly too close together compared to the reference?
+Step 6: Is there any invalid pairing between the cable color and the connector block port count, such as a cable color not matching yellow with two-port blocks, blue with three-port blocks, or red/orange-red with five-port blocks?
+Step 7: Is there any difference in the relative port positions where the cable enters the connector blocks, such as top-to-middle or top-to-bottom instead of the same port index on both blocks?
+Step 8: Is there any complete severance of the cable across its width, leaving two disconnected cable pieces or a visible gap while still associated with the two connector blocks?
+Step 9: Is there any localized break, nick, sharp kink, crush, or damage to the cable’s insulation or inner material, excluding cases of full severance?
+Step 10: Is there any visible crack, missing or detached piece, broken orange lever, or deformed transparent housing on either connector block?
+Step 11: Is there any loose, displaced, or visibly stopped cable end outside a connector port, instead of being inserted into both blocks?
+Step 12: Is there any flipped orientation of one connector block relative to the other and to the reference, causing its transparent housing and row of orange levers to face the opposite direction?
+Step 13: Is there any visibly raised, swung outward, or separated orange lever from the aligned closed row on either connector block?
+Step 14: Is there any uniform cable color outside yellow, blue, or red/orange-red, excluding small localized discolorations?
+Step 15: Is there any localized abnormal color patch, streak, or spot on the cable, transparent housing, or orange lever that differs from the surrounding material?
+Step 16: Is there any unexpected foreign material or object lying on, sticking to, crossing, or partly covering the cable or either connector block, excluding the regular metal-mesh background?

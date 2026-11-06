@@ -1,0 +1,4 @@
+blue wire
+yellow wire
+green wire
+gold wire

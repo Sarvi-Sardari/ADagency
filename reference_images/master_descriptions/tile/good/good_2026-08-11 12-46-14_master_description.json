@@ -1,0 +1,24 @@
+{
+    "Background Matrix": {
+        "Type": "A uniform, textured substrate forming the base layer with a granular or speckled appearance and a consistent, non-organic pattern",
+        "Color": "Light gray with subtle tonal variations and slight mottling, appearing matte and evenly distributed across the entire visible area",
+        "Size": "Fills the entire visible area, extending from edge to edge of the frame and approximately square in shape, with no defined boundaries",
+        "Material": "A solid, non-reflective, possibly composite or ceramic-like material with a fine-grained, granular texture",
+        "Composition": "A homogeneous mixture with a fine, porous structure and embedded particulates, forming a consistent and uniform structure throughout",
+        "Quantity": "One continuous, singular matrix covering the entire field of view",
+        "Relative Location": "Occupies the entire visual field and serves as the base layer underlying all speckles",
+        "Orientation": "Flat, horizontal, and isotropic, uniformly aligned across the image with no discernible tilt or directional bias",
+        "Connection or Attachments": "Serves as the substrate for the speckles, with no visible attachment points or separations; forms a single, continuous surface"
+    },
+    "Speckles": {
+        "Type": "discrete, irregularly shaped particles distributed across the surface, varying in density and clustering",
+        "Color": "dark gray to black, with slight tonal variation indicating depth or surface texture differences, some appearing slightly more saturated or shadowed",
+        "Size": "ranging from 0.1 to 5 mm in diameter, with variable shapes and sizes including small dots (sub-millimeter), elongated clusters, and diffuse patches",
+        "Material": "solid, non-organic, dense, and opaque, with a matte or slightly rough texture",
+        "Composition": "composed of discrete, independent particles or aggregated material, possibly mineral or carbonaceous, embedded within the matrix with no visible chemical or structural bonding between them",
+        "Quantity": "numerous, covering the entire visible surface, with no discernible pattern or density gradient, estimated to be in the thousands",
+        "Relative Location": "scattered randomly across the entire background matrix, with no specific focal point or preferred region",
+        "Orientation": "randomly oriented, with no consistent directionality or alignment",
+        "Connection or Attachments": "each speckle is individually separated and independently embedded within the matrix, with no visible bonding, adhesion, or interconnection to other speckles"
+    }
+}

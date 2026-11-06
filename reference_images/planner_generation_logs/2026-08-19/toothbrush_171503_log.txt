@@ -1,0 +1,655 @@
+2026-08-19 17:15:03 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 17:15:03 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 17:15:03 | INFO     | __main__ | Dataset  : toothbrush
+2026-08-19 17:15:03 | INFO     | __main__ | Classes  : multi
+2026-08-19 17:15:03 | INFO     | __main__ | Ref imgs : 3 per class
+2026-08-19 17:15:03 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/toothbrush_171503_log.txt
+2026-08-19 17:15:03 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 17:15:04 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 17:15:04 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 17:15:06 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 17:15:06 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 17:15:06 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1093001 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1093057 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1041615 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1041671 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1088761 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1088817 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1093001 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1093057 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1091315 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1091371 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1104557 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1104613 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1093233 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1093289 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1098627 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1098683 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1092978 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1093034 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1096379 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1096435 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1099610 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1099666 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1095828 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1095884 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1083919 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1083975 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1080373 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1080429 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1119887 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1119943 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1150540 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1150596 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1091898 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1091954 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1101781 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1101837 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1090988 44
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1091044 1304
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1106035 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1106091 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1102995 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1103051 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1103120 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1103176 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1091926 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1091982 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1041615 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1041671 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1052011 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1052067 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1044805 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1044861 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1034359 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1034415 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1053810 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1053866 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1045836 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1045892 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1054305 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1054361 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1039934 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1039990 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1045692 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1045748 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1049658 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1049714 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1058312 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1058368 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1051287 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1051343 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1055693 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1055749 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1059586 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1059642 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1047016 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1047072 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1064750 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1064806 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1033379 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1033435 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1040062 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1040118 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1039431 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1039487 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1035776 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1035832 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1088761 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1088817 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1076695 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1076751 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1065482 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1065538 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1064059 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1064115 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1062282 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1062338 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1053645 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1053701 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1067703 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1067759 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1069614 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1069670 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1059634 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1059690 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1079585 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1079641 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1073837 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1073893 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1067485 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1067541 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1062755 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1062811 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1066898 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1066954 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1069527 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1069583 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1070372 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1070428 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1075575 44
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1075631 1304
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:07 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1064732 44
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1064788 1304
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1060523 44
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1060579 1304
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1071357 44
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1071413 1304
+2026-08-19 17:15:08 | DEBUG    | reference | Reference image selection result:
+   original_index  Predicted_label  minimum_distance
+0               0              0.0          0.000001
+1              20              1.0          0.000001
+2              40              2.0          0.000002
+3              30              1.0          0.008766
+4              50              2.0          0.009583
+5              21              1.0          0.011279
+6              10              0.0          0.013595
+7              14              0.0          0.014714
+8              57              2.0          0.015461
+2026-08-19 17:15:08 | DEBUG    | reference | Selected candidate indices: [0, 20, 40, 30, 50, 21, 10, 14, 57]
+2026-08-19 17:15:08 | DEBUG    | utils | Created reference image directories under /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush for labels: ['Blue_Toothbrush', 'Red_Toothbrush', 'Yellow_Toothbrush']
+2026-08-19 17:15:08 | DEBUG    | __main__ | Reference groups: [['/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Blue_Toothbrush/000.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Blue_Toothbrush/010.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Blue_Toothbrush/014.png'], ['/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Red_Toothbrush/020.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Red_Toothbrush/021.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Red_Toothbrush/030.png'], ['/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Yellow_Toothbrush/040.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Yellow_Toothbrush/050.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/toothbrush/Yellow_Toothbrush/057.png']]
+2026-08-19 17:15:08 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 17:15:08 | INFO     | object_namer | [Object Namer] Generating another object-label candidate batch …
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1099610 44
+2026-08-19 17:15:08 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1099666 1304
+2026-08-19 17:15:08 | INFO     | models | [VLM] Inference completed in 0.535s (max_new_tokens=2040)
+2026-08-19 17:15:08 | INFO     | object_namer | Object names generated for /home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/toothbrush/train/good/007.png in 0.535s
+2026-08-19 17:15:11 | INFO     | object_namer | [Object Namer] Selected 1 labels: ['toothbrush']
+2026-08-19 17:15:11 | INFO     | object_namer | [Object Namer] Appended 1 labels to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/toothbrush_object_labels.txt
+2026-08-19 17:15:18 | INFO     | __main__ | Object names: ['toothbrush']
+2026-08-19 17:15:18 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 17:15:18 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/toothbrush/Blue_Toothbrush
+2026-08-19 17:15:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1093001 44
+2026-08-19 17:15:18 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1093057 1304
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1080373 44
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1080429 1304
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1101781 44
+2026-08-19 17:15:19 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1101837 1304
+2026-08-19 17:15:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:20 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:15:25 | INFO     | models | [VLM] Inference completed in 5.517s (max_new_tokens=2040)
+2026-08-19 17:15:25 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Blue_Toothbrush/processed_Blue_Toothbrush_000_2026-08-19 17:15:25.json (inference_time=5.517s)
+2026-08-19 17:15:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:25 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:15:31 | INFO     | models | [VLM] Inference completed in 6.075s (max_new_tokens=2040)
+2026-08-19 17:15:31 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Blue_Toothbrush/processed_Blue_Toothbrush_010_2026-08-19 17:15:31.json (inference_time=6.075s)
+2026-08-19 17:15:31 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:31 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:15:38 | INFO     | models | [VLM] Inference completed in 6.800s (max_new_tokens=2040)
+2026-08-19 17:15:38 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Blue_Toothbrush/processed_Blue_Toothbrush_014_2026-08-19 17:15:38.json (inference_time=6.800s)
+2026-08-19 17:15:38 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/toothbrush/Red_Toothbrush
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1041615 44
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1041671 1304
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1052011 44
+2026-08-19 17:15:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1052067 1304
+2026-08-19 17:15:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1058312 44
+2026-08-19 17:15:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1058368 1304
+2026-08-19 17:15:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:39 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:15:45 | INFO     | models | [VLM] Inference completed in 6.023s (max_new_tokens=2040)
+2026-08-19 17:15:45 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Red_Toothbrush/processed_Red_Toothbrush_020_2026-08-19 17:15:45.json (inference_time=6.023s)
+2026-08-19 17:15:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:45 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:15:51 | INFO     | models | [VLM] Inference completed in 5.867s (max_new_tokens=2040)
+2026-08-19 17:15:51 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Red_Toothbrush/processed_Red_Toothbrush_021_2026-08-19 17:15:51.json (inference_time=5.867s)
+2026-08-19 17:15:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:15:57 | INFO     | models | [VLM] Inference completed in 5.774s (max_new_tokens=2040)
+2026-08-19 17:15:57 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Red_Toothbrush/processed_Red_Toothbrush_030_2026-08-19 17:15:57.json (inference_time=5.774s)
+2026-08-19 17:15:57 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/toothbrush/Yellow_Toothbrush
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1088761 44
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1088817 1304
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1073837 44
+2026-08-19 17:15:57 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1073893 1304
+2026-08-19 17:15:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 17:15:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 17:15:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1064732 44
+2026-08-19 17:15:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1064788 1304
+2026-08-19 17:15:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:15:58 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:16:06 | INFO     | models | [VLM] Inference completed in 8.116s (max_new_tokens=2040)
+2026-08-19 17:16:06 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Yellow_Toothbrush/processed_Yellow_Toothbrush_040_2026-08-19 17:16:06.json (inference_time=8.116s)
+2026-08-19 17:16:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:16:06 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:16:13 | INFO     | models | [VLM] Inference completed in 7.117s (max_new_tokens=2040)
+2026-08-19 17:16:13 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Yellow_Toothbrush/processed_Yellow_Toothbrush_050_2026-08-19 17:16:13.json (inference_time=7.117s)
+2026-08-19 17:16:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:16:13 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:16:19 | INFO     | models | [VLM] Inference completed in 6.097s (max_new_tokens=2040)
+2026-08-19 17:16:19 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Yellow_Toothbrush/processed_Yellow_Toothbrush_057_2026-08-19 17:16:19.json (inference_time=6.097s)
+2026-08-19 17:16:19 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 17:16:20 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 17:16:21 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 17:16:21 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Blue_Toothbrush
+2026-08-19 17:16:21 | DEBUG    | descriptor | Processing image description: processed_Blue_Toothbrush_014_2026-08-19 17:15:38.json
+2026-08-19 17:16:21 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - A standard manual toothbrush with a rounded, oval-shaped head and a short handle visible at the bottom.
+    - Attribute 2 Color - The brush head is white with bristles arranged in alternating rows of white and dark blue. The handle is white.
+    - Attribute 3 Size - The head is approximately 3.5 cm wide and 6 cm long, with a handle extending downward from the head, though the full length is not visible.
+    - Attribute 4 Material - The head and handle appear to be made of plastic, with bristles made of synthetic polymer.
+    - Attribute 5 Composition - The head consists of densely packed bristles arranged in multiple rows, with some bristle clusters appearing to be grouped or tufted. The handle is a single solid piece attached to the head.
+    - Attribute 6 Quantity - One toothbrush is visible in the image.
+    - Attribute 7 Relative Location - The toothbrush is centered in the frame, occupying the central vertical axis of the image.
+    - Attribute 8 Orientation - The toothbrush is oriented vertically, with the head at the top and the handle extending downward.
+    - Attribute 9 Connection or Attachments - The bristles are firmly attached to the head, and the head is connected to the handle at the base of the head. No other attachments are visible.
+2026-08-19 17:16:21 | DEBUG    | descriptor | Processing image description: processed_Blue_Toothbrush_010_2026-08-19 17:15:31.json
+2026-08-19 17:16:21 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - A manual toothbrush with a rounded, elongated head and a handle partially visible.
+    - Attribute 2 Color - The brush head is white with bristles in two colors: white and dark blue. The handle is white.
+    - Attribute 3 Size - The head is approximately 2.5 inches in length and 1 inch in width, with the handle extending downward from the head.
+    - Attribute 4 Material - The head and handle are made of plastic. The bristles are synthetic nylon.
+    - Attribute 5 Composition - The head consists of multiple rows of bristles arranged in a dense, organized pattern. The handle is a single solid piece.
+    - Attribute 6 Quantity - One toothbrush is present.
+    - Attribute 7 Relative Location - The toothbrush is centered in the frame, with the head occupying the upper portion and the handle extending downward.
+    - Attribute 8 Orientation - The toothbrush is upright, with the head facing upward and the handle pointing downward.
+    - Attribute 9 Connection or Attachments - The bristles are attached to the head via a plastic base, and the head is connected to the handle at the base of the head.
+2026-08-19 17:16:21 | DEBUG    | descriptor | Processing image description: processed_Blue_Toothbrush_000_2026-08-19 17:15:25.json
+2026-08-19 17:16:21 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - electric toothbrush head with bristle tufts arranged in multiple rows
+    - Attribute 2 Color - bristles are white and dark blue, arranged in alternating patterns; head base is white
+    - Attribute 3 Size - head width approximately 2.5 inches, length from bristle tip to handle base approximately 4.5 inches
+    - Attribute 4 Material - bristles made of nylon, head base made of plastic
+    - Attribute 5 Composition - consists of multiple tufts of bristles mounted on a plastic head; each tuft contains densely packed bristles
+    - Attribute 6 Quantity - contains multiple bristle tufts, arranged in approximately 7 rows and 5 columns, totaling around 35 tufts
+    - Attribute 7 Relative Location - the head is centered in the frame, with the bristles facing upward
+    - Attribute 8 Orientation - upright, with bristles pointing vertically upward
+    - Attribute 9 Connection or Attachments - attached to a white plastic handle, partially visible at the bottom of the head
+2026-08-19 17:16:21 | DEBUG    | descriptor | Unique object keys found: {'toothbrush'}
+2026-08-19 17:16:21 | DEBUG    | descriptor | Class 'Blue_Toothbrush' object description: {'toothbrush': ['-  Type - A standard manual toothbrush with a rounded, oval-shaped head and a short handle visible at the bottom.\n    -  Color - The brush head is white with bristles arranged in alternating rows of white and dark blue. The handle is white.\n    -  Size - The head is approximately 3.5 cm wide and 6 cm long, with a handle extending downward from the head, though the full length is not visible.\n    -  Material - The head and handle appear to be made of plastic, with bristles made of synthetic polymer.\n    -  Composition - The head consists of densely packed bristles arranged in multiple rows, with some bristle clusters appearing to be grouped or tufted. The handle is a single solid piece attached to the head.\n    -  Quantity - One toothbrush is visible in the image.\n    -  Relative Location - The toothbrush is centered in the frame, occupying the central vertical axis of the image.\n    -  Orientation - The toothbrush is oriented vertically, with the head at the top and the handle extending downward.\n    -  Connection or Attachments - The bristles are firmly attached to the head, and the head is connected to the handle at the base of the head. No other attachments are visible.', '-  Type - A manual toothbrush with a rounded, elongated head and a handle partially visible.\n    -  Color - The brush head is white with bristles in two colors: white and dark blue. The handle is white.\n    -  Size - The head is approximately 2.5 inches in length and 1 inch in width, with the handle extending downward from the head.\n    -  Material - The head and handle are made of plastic. The bristles are synthetic nylon.\n    -  Composition - The head consists of multiple rows of bristles arranged in a dense, organized pattern. The handle is a single solid piece.\n    -  Quantity - One toothbrush is present.\n    -  Relative Location - The toothbrush is centered in the frame, with the head occupying the upper portion and the handle extending downward.\n    -  Orientation - The toothbrush is upright, with the head facing upward and the handle pointing downward.\n    -  Connection or Attachments - The bristles are attached to the head via a plastic base, and the head is connected to the handle at the base of the head.', '-  Type - electric toothbrush head with bristle tufts arranged in multiple rows\n    -  Color - bristles are white and dark blue, arranged in alternating patterns; head base is white\n    -  Size - head width approximately 2.5 inches, length from bristle tip to handle base approximately 4.5 inches\n    -  Material - bristles made of nylon, head base made of plastic\n    -  Composition - consists of multiple tufts of bristles mounted on a plastic head; each tuft contains densely packed bristles\n    -  Quantity - contains multiple bristle tufts, arranged in approximately 7 rows and 5 columns, totaling around 35 tufts\n    -  Relative Location - the head is centered in the frame, with the bristles facing upward\n    -  Orientation - upright, with bristles pointing vertically upward\n    -  Connection or Attachments - attached to a white plastic handle, partially visible at the bottom of the head']}
+2026-08-19 17:16:28 | INFO     | models | [LLM] Inference completed in 6.292s (max_new_tokens=3000)
+2026-08-19 17:16:28 | INFO     | descriptor | [toothbrush] Object summarisation completed in 6.292s
+2026-08-19 17:16:28 | DEBUG    | descriptor | Summarised description for 'toothbrush': 
+
+{
+  "toothbrush": {
+    "Type": "A standard manual toothbrush with a rounded, oval-shaped head and a short handle",
+    "Color": "The brush head is white with bristles arranged in alternating rows of white and dark blue. The handle is white",
+    "Size": "Head width approximately 2.5 inches (3.5 cm) and length approximately 4.5 inches (6 cm), with a handle extending downward from the head",
+    "Material": "The head and handle are made of plastic, with bristles made of synthetic nylon",
+    "Composition": "The head consists of densely packed bristles arranged in multiple rows, with some bristle clusters appearing to be grouped or tufted. The handle is a single solid piece attached to the head",
+    "Quantity": "One toothbrush is visible in the image",
+    "Relative Location": "The toothbrush is centered in the frame, occupying the central vertical axis of the image",
+    "Orientation": "The toothbrush is oriented vertically, with the head at the top and the handle extending downward",
+    "Connection/Attachments": "The bristles are firmly attached to the head via a plastic base, and the head is connected to the handle at the base of the head. No other attachments are visible"
+  }
+}
+2026-08-19 17:16:28 | DEBUG    | descriptor | Master description: {'toothbrush': {'Type': 'A standard manual toothbrush with a rounded, oval-shaped head and a short handle', 'Color': 'The brush head is white with bristles arranged in alternating rows of white and dark blue. The handle is white', 'Size': 'Head width approximately 2.5 inches (3.5 cm) and length approximately 4.5 inches (6 cm), with a handle extending downward from the head', 'Material': 'The head and handle are made of plastic, with bristles made of synthetic nylon', 'Composition': 'The head consists of densely packed bristles arranged in multiple rows, with some bristle clusters appearing to be grouped or tufted. The handle is a single solid piece attached to the head', 'Quantity': 'One toothbrush is visible in the image', 'Relative Location': 'The toothbrush is centered in the frame, occupying the central vertical axis of the image', 'Orientation': 'The toothbrush is oriented vertically, with the head at the top and the handle extending downward', 'Connection/Attachments': 'The bristles are firmly attached to the head via a plastic base, and the head is connected to the handle at the base of the head. No other attachments are visible'}}
+2026-08-19 17:16:28 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Red_Toothbrush
+2026-08-19 17:16:28 | DEBUG    | descriptor | Processing image description: processed_Red_Toothbrush_030_2026-08-19 17:15:57.json
+2026-08-19 17:16:28 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - standard manual toothbrush with a rounded, elongated head and a short handle
+    - Attribute 2 Color - head is off-white or light cream with bristles in alternating rows of red and white; handle is off-white or light cream
+    - Attribute 3 Size - head width approximately 2.5 cm, head length approximately 5 cm, handle length not fully visible but appears short and standard for a toothbrush
+    - Attribute 4 Material - head and handle appear to be made of plastic; bristles are synthetic
+    - Attribute 5 Composition - head composed of a plastic base with densely packed bristles arranged in multiple rows; handle is a single plastic piece
+    - Attribute 6 Quantity - one toothbrush visible
+    - Attribute 7 Relative Location - centered in the frame, occupying the central vertical axis of the image
+    - Attribute 8 Orientation - upright, with the head facing upward and the handle extending downward
+    - Attribute 9 Connection or Attachments - bristles are firmly attached to the plastic head; handle is connected to the head at the base of the bristle head
+2026-08-19 17:16:28 | DEBUG    | descriptor | Processing image description: processed_Red_Toothbrush_021_2026-08-19 17:15:51.json
+2026-08-19 17:16:28 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - standard manual toothbrush with a rounded, oval-shaped head and a short neck.
+    - Attribute 2 Color - predominantly white plastic with bristles in two colors: white and red, arranged in alternating rows.
+    - Attribute 3 Size - the head is approximately 3 to 4 inches long and 1 to 1.5 inches wide; the neck is short and not fully visible.
+    - Attribute 4 Material - made of plastic for the handle and head, with synthetic bristles.
+    - Attribute 5 Composition - consists of a plastic head with a dense array of bristles, including both white and red bristles, arranged in multiple rows.
+    - Attribute 6 Quantity - one toothbrush is visible.
+    - Attribute 7 Relative Location - centrally positioned in the frame, occupying the majority of the visual space.
+    - Attribute 8 Orientation - viewed from directly above, with the bristle head facing upward.
+    - Attribute 9 Connection or Attachments - the bristles are firmly attached to the head, which is connected to a short neck, though the neck is partially cut off at the bottom of the frame.
+2026-08-19 17:16:28 | DEBUG    | descriptor | Processing image description: processed_Red_Toothbrush_020_2026-08-19 17:15:45.json
+2026-08-19 17:16:28 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - standard manual toothbrush with a rounded, oval-shaped head and a short, cylindrical handle
+    - Attribute 2 Color - predominantly white with bristles in two tones: red and white, arranged in alternating rows
+    - Attribute 3 Size - head width approximately 2.5 cm, head length approximately 5 cm, handle length not fully visible but appears to be standard adult size (around 15-18 cm total)
+    - Attribute 4 Material - bristles appear to be synthetic plastic; handle appears to be plastic
+    - Attribute 5 Composition - head composed of multiple rows of bristles arranged in a dense, organized pattern; handle is a single solid piece
+    - Attribute 6 Quantity - one toothbrush visible in the image
+    - Attribute 7 Relative Location - centrally positioned in the frame, occupying the central vertical axis of the image
+    - Attribute 8 Orientation - upright, with the head facing upward and the handle extending downward
+    - Attribute 9 Connection or Attachments - bristles are attached to the head via a plastic base; handle is attached to the head at the base of the brush head, forming a single unit
+2026-08-19 17:16:28 | DEBUG    | descriptor | Unique object keys found: {'toothbrush'}
+2026-08-19 17:16:28 | DEBUG    | descriptor | Class 'Red_Toothbrush' object description: {'toothbrush': ['-  Type - standard manual toothbrush with a rounded, elongated head and a short handle\n    -  Color - head is off-white or light cream with bristles in alternating rows of red and white; handle is off-white or light cream\n    -  Size - head width approximately 2.5 cm, head length approximately 5 cm, handle length not fully visible but appears short and standard for a toothbrush\n    -  Material - head and handle appear to be made of plastic; bristles are synthetic\n    -  Composition - head composed of a plastic base with densely packed bristles arranged in multiple rows; handle is a single plastic piece\n    -  Quantity - one toothbrush visible\n    -  Relative Location - centered in the frame, occupying the central vertical axis of the image\n    -  Orientation - upright, with the head facing upward and the handle extending downward\n    -  Connection or Attachments - bristles are firmly attached to the plastic head; handle is connected to the head at the base of the bristle head', '-  Type - standard manual toothbrush with a rounded, oval-shaped head and a short neck.\n    -  Color - predominantly white plastic with bristles in two colors: white and red, arranged in alternating rows.\n    -  Size - the head is approximately 3 to 4 inches long and 1 to 1.5 inches wide; the neck is short and not fully visible.\n    -  Material - made of plastic for the handle and head, with synthetic bristles.\n    -  Composition - consists of a plastic head with a dense array of bristles, including both white and red bristles, arranged in multiple rows.\n    -  Quantity - one toothbrush is visible.\n    -  Relative Location - centrally positioned in the frame, occupying the majority of the visual space.\n    -  Orientation - viewed from directly above, with the bristle head facing upward.\n    -  Connection or Attachments - the bristles are firmly attached to the head, which is connected to a short neck, though the neck is partially cut off at the bottom of the frame.', '-  Type - standard manual toothbrush with a rounded, oval-shaped head and a short, cylindrical handle\n    -  Color - predominantly white with bristles in two tones: red and white, arranged in alternating rows\n    -  Size - head width approximately 2.5 cm, head length approximately 5 cm, handle length not fully visible but appears to be standard adult size (around 15-18 cm total)\n    -  Material - bristles appear to be synthetic plastic; handle appears to be plastic\n    -  Composition - head composed of multiple rows of bristles arranged in a dense, organized pattern; handle is a single solid piece\n    -  Quantity - one toothbrush visible in the image\n    -  Relative Location - centrally positioned in the frame, occupying the central vertical axis of the image\n    -  Orientation - upright, with the head facing upward and the handle extending downward\n    -  Connection or Attachments - bristles are attached to the head via a plastic base; handle is attached to the head at the base of the brush head, forming a single unit']}
+2026-08-19 17:16:33 | INFO     | models | [LLM] Inference completed in 5.665s (max_new_tokens=3000)
+2026-08-19 17:16:33 | INFO     | descriptor | [toothbrush] Object summarisation completed in 5.665s
+2026-08-19 17:16:33 | DEBUG    | descriptor | Summarised description for 'toothbrush': 
+
+{
+  "toothbrush": {
+    "Type": "standard manual toothbrush with a rounded, oval-shaped head and a short, cylindrical handle",
+    "Color": "predominantly white plastic with bristles in two tones: red and white, arranged in alternating rows",
+    "Size": "head width approximately 2.5 cm, head length approximately 5 cm, handle length not fully visible but appears to be standard adult size (around 15-18 cm total)",
+    "Material": "plastic for the handle and head, with synthetic bristles",
+    "Composition": "head composed of multiple rows of bristles arranged in a dense, organized pattern; handle is a single solid piece",
+    "Quantity": "one toothbrush visible in the image",
+    "Relative Location": "centrally positioned in the frame, occupying the central vertical axis of the image",
+    "Orientation": "upright, with the head facing upward and the handle extending downward",
+    "Connection/Attachments": "bristles are attached to the head via a plastic base; handle is attached to the head at the base of the brush head, forming a single unit"
+  }
+}
+2026-08-19 17:16:33 | DEBUG    | descriptor | Master description: {'toothbrush': {'Type': 'standard manual toothbrush with a rounded, oval-shaped head and a short, cylindrical handle', 'Color': 'predominantly white plastic with bristles in two tones: red and white, arranged in alternating rows', 'Size': 'head width approximately 2.5 cm, head length approximately 5 cm, handle length not fully visible but appears to be standard adult size (around 15-18 cm total)', 'Material': 'plastic for the handle and head, with synthetic bristles', 'Composition': 'head composed of multiple rows of bristles arranged in a dense, organized pattern; handle is a single solid piece', 'Quantity': 'one toothbrush visible in the image', 'Relative Location': 'centrally positioned in the frame, occupying the central vertical axis of the image', 'Orientation': 'upright, with the head facing upward and the handle extending downward', 'Connection/Attachments': 'bristles are attached to the head via a plastic base; handle is attached to the head at the base of the brush head, forming a single unit'}}
+2026-08-19 17:16:33 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/toothbrush/Yellow_Toothbrush
+2026-08-19 17:16:33 | DEBUG    | descriptor | Processing image description: processed_Yellow_Toothbrush_057_2026-08-19 17:16:19.json
+2026-08-19 17:16:33 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - a standard manual toothbrush with a rounded, oval-shaped head and a handle partially visible
+    - Attribute 2 Color - primarily off-white or cream-colored with bristles that are a mix of white and yellowish-brown
+    - Attribute 3 Size - the head is approximately 2 to 3 inches in length and 1 to 1.5 inches in width; the handle extends downward from the head but is not fully visible
+    - Attribute 4 Material - the head and handle appear to be made of plastic; bristles are synthetic
+    - Attribute 5 Composition - the head contains multiple rows of bristles arranged in a dense, uniform pattern; the handle is attached to the head
+    - Attribute 6 Quantity - one toothbrush is present
+    - Attribute 7 Relative Location - the toothbrush is centered in the frame, with the head occupying the majority of the visual space
+    - Attribute 8 Orientation - the toothbrush is positioned vertically, with the head facing upward and the handle extending downward
+    - Attribute 9 Connection or Attachments - the bristles are attached to the head, which is connected to the handle; no additional attachments are visible
+2026-08-19 17:16:33 | DEBUG    | descriptor | Processing image description: processed_Yellow_Toothbrush_050_2026-08-19 17:16:13.json
+2026-08-19 17:16:33 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - A standard manual toothbrush with a rounded, oval-shaped head and a short handle, designed for oral hygiene.
+    - Attribute 2 Color - The handle and head base are off-white or cream-colored; the bristles are a mix of white and yellowish-brown, indicating wear or staining.
+    - Attribute 3 Size - The head is approximately 2.5 to 3 inches in length and 1 to 1.5 inches in width; the handle extends below the frame, but its full length is not visible.
+    - Attribute 4 Material - The head and handle appear to be made of plastic, typical for toothbrushes; the bristles are synthetic filaments.
+    - Attribute 5 Composition - The head consists of multiple rows of bristles arranged in a dense, organized pattern, with some bristles appearing frayed or worn. The handle is a single molded piece.
+    - Attribute 6 Quantity - One toothbrush is present.
+    - Attribute 7 Relative Location - The toothbrush is centered in the frame, occupying the majority of the visible area.
+    - Attribute 8 Orientation - The toothbrush is positioned upright, with the head facing upward and the handle extending downward.
+    - Attribute 9 Connection or Attachments - The bristles are attached to the head base, which is connected to the handle at the bottom of the head. No additional attachments or accessories are visible.
+2026-08-19 17:16:33 | DEBUG    | descriptor | Processing image description: processed_Yellow_Toothbrush_040_2026-08-19 17:16:06.json
+2026-08-19 17:16:33 | DEBUG    | descriptor | Raw description data: - Object 1 toothbrush
+    - Attribute 1 Type - a standard manual toothbrush with a rounded, elongated head and a handle extending downward from the head.
+    - Attribute 2 Color - the head and handle are primarily off-white or light cream; the bristles are a mix of white and yellowish-brown, indicating wear or staining.
+    - Attribute 3 Size - the head is approximately 2.5 to 3 inches in length and 1 to 1.5 inches in width, typical for a full-sized toothbrush; the handle extends below the frame but its full length is not visible.
+    - Attribute 4 Material - the head and handle appear to be made of plastic, with bristles likely made of nylon or similar synthetic polymer.
+    - Attribute 5 Composition - the head consists of multiple rows of bristles arranged in a grid pattern; the bristles are grouped into clusters, with some clusters appearing more worn or discolored than others.
+    - Attribute 6 Quantity - the bristle head contains multiple rows and columns of bristles, totaling approximately 60 to 80 individual bristle tufts visible in the image.
+    - Attribute 7 Relative Location - the toothbrush is centered in the image frame, with the head occupying the upper portion and the handle extending downward from the bottom of the head.
+    - Attribute 8 Orientation - the toothbrush is oriented vertically, with the head at the top and the handle pointing downward.
+    - Attribute 9 Connection or Attachments - the bristles are attached to the head via a plastic base, which is connected to the handle, though the handle’s connection point is not fully visible.
+2026-08-19 17:16:33 | DEBUG    | descriptor | Unique object keys found: {'toothbrush'}
+2026-08-19 17:16:33 | DEBUG    | descriptor | Class 'Yellow_Toothbrush' object description: {'toothbrush': ['-  Type - a standard manual toothbrush with a rounded, oval-shaped head and a handle partially visible\n    -  Color - primarily off-white or cream-colored with bristles that are a mix of white and yellowish-brown\n    -  Size - the head is approximately 2 to 3 inches in length and 1 to 1.5 inches in width; the handle extends downward from the head but is not fully visible\n    -  Material - the head and handle appear to be made of plastic; bristles are synthetic\n    -  Composition - the head contains multiple rows of bristles arranged in a dense, uniform pattern; the handle is attached to the head\n    -  Quantity - one toothbrush is present\n    -  Relative Location - the toothbrush is centered in the frame, with the head occupying the majority of the visual space\n    -  Orientation - the toothbrush is positioned vertically, with the head facing upward and the handle extending downward\n    -  Connection or Attachments - the bristles are attached to the head, which is connected to the handle; no additional attachments are visible', '-  Type - A standard manual toothbrush with a rounded, oval-shaped head and a short handle, designed for oral hygiene.\n    -  Color - The handle and head base are off-white or cream-colored; the bristles are a mix of white and yellowish-brown, indicating wear or staining.\n    -  Size - The head is approximately 2.5 to 3 inches in length and 1 to 1.5 inches in width; the handle extends below the frame, but its full length is not visible.\n    -  Material - The head and handle appear to be made of plastic, typical for toothbrushes; the bristles are synthetic filaments.\n    -  Composition - The head consists of multiple rows of bristles arranged in a dense, organized pattern, with some bristles appearing frayed or worn. The handle is a single molded piece.\n    -  Quantity - One toothbrush is present.\n    -  Relative Location - The toothbrush is centered in the frame, occupying the majority of the visible area.\n    -  Orientation - The toothbrush is positioned upright, with the head facing upward and the handle extending downward.\n    -  Connection or Attachments - The bristles are attached to the head base, which is connected to the handle at the bottom of the head. No additional attachments or accessories are visible.', '-  Type - a standard manual toothbrush with a rounded, elongated head and a handle extending downward from the head.\n    -  Color - the head and handle are primarily off-white or light cream; the bristles are a mix of white and yellowish-brown, indicating wear or staining.\n    -  Size - the head is approximately 2.5 to 3 inches in length and 1 to 1.5 inches in width, typical for a full-sized toothbrush; the handle extends below the frame but its full length is not visible.\n    -  Material - the head and handle appear to be made of plastic, with bristles likely made of nylon or similar synthetic polymer.\n    -  Composition - the head consists of multiple rows of bristles arranged in a grid pattern; the bristles are grouped into clusters, with some clusters appearing more worn or discolored than others.\n    -  Quantity - the bristle head contains multiple rows and columns of bristles, totaling approximately 60 to 80 individual bristle tufts visible in the image.\n    -  Relative Location - the toothbrush is centered in the image frame, with the head occupying the upper portion and the handle extending downward from the bottom of the head.\n    -  Orientation - the toothbrush is oriented vertically, with the head at the top and the handle pointing downward.\n    -  Connection or Attachments - the bristles are attached to the head via a plastic base, which is connected to the handle, though the handle’s connection point is not fully visible.']}
+2026-08-19 17:16:40 | INFO     | models | [LLM] Inference completed in 6.907s (max_new_tokens=3000)
+2026-08-19 17:16:40 | INFO     | descriptor | [toothbrush] Object summarisation completed in 6.907s
+2026-08-19 17:16:40 | DEBUG    | descriptor | Summarised description for 'toothbrush': 
+
+{
+  "toothbrush": {
+    "Type": "a standard manual toothbrush with a rounded, oval-shaped head and a handle extending downward from the head",
+    "Color": "the head and handle are primarily off-white or light cream; the bristles are a mix of white and yellowish-brown, indicating wear or staining",
+    "Size": "the head is approximately 2.5 to 3 inches in length and 1 to 1.5 inches in width; the handle extends below the frame but its full length is not visible",
+    "Material": "the head and handle appear to be made of plastic, with bristles likely made of nylon or similar synthetic polymer",
+    "Composition": "the head consists of multiple rows of bristles arranged in a dense, uniform pattern; the bristles are grouped into clusters, with some clusters appearing more worn or discolored than others",
+    "Quantity": "one toothbrush is present",
+    "Relative Location": "the toothbrush is centered in the image frame, with the head occupying the upper portion and the handle extending downward from the bottom of the head",
+    "Orientation": "the toothbrush is oriented vertically, with the head at the top and the handle pointing downward",
+    "Connection/Attachments": "the bristles are attached to the head via a plastic base, which is connected to the handle, though the handle’s connection point is not fully visible"
+  }
+}
+2026-08-19 17:16:40 | DEBUG    | descriptor | Master description: {'toothbrush': {'Type': 'a standard manual toothbrush with a rounded, oval-shaped head and a handle extending downward from the head', 'Color': 'the head and handle are primarily off-white or light cream; the bristles are a mix of white and yellowish-brown, indicating wear or staining', 'Size': 'the head is approximately 2.5 to 3 inches in length and 1 to 1.5 inches in width; the handle extends below the frame but its full length is not visible', 'Material': 'the head and handle appear to be made of plastic, with bristles likely made of nylon or similar synthetic polymer', 'Composition': 'the head consists of multiple rows of bristles arranged in a dense, uniform pattern; the bristles are grouped into clusters, with some clusters appearing more worn or discolored than others', 'Quantity': 'one toothbrush is present', 'Relative Location': 'the toothbrush is centered in the image frame, with the head occupying the upper portion and the handle extending downward from the bottom of the head', 'Orientation': 'the toothbrush is oriented vertically, with the head at the top and the handle pointing downward', 'Connection/Attachments': 'the bristles are attached to the head via a plastic base, which is connected to the handle, though the handle’s connection point is not fully visible'}}
+2026-08-19 17:16:40 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 17:16:40 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['toothbrush'] directly (no generation, no compiled file).
+2026-08-19 17:16:40 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-19 17:16:40 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 17:16:41 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 17:16:43 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 17:16:43 | DEBUG    | planner | Class directories for dataset 'toothbrush': ['Blue_Toothbrush', 'Red_Toothbrush', 'Yellow_Toothbrush']
+2026-08-19 17:16:43 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/toothbrush/Blue_Toothbrush
+2026-08-19 17:16:43 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:16:43 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:16:43 | DEBUG    | planner | Generating planner steps from: Blue_Toothbrush_2026-08-19 17:16:28_master_description.json
+2026-08-19 17:16:47 | INFO     | models | [VLM] Inference completed in 3.960s (max_new_tokens=2040)
+2026-08-19 17:16:47 | INFO     | planner | Planner steps generated in 3.960s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-19 17:16:47 | INFO     | planner | Planner steps saved for class 'Blue_Toothbrush' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/toothbrush/Blue_Toothbrush/Blue_Toothbrush_2026-08-19 17:16:47_planner.txt
+2026-08-19 17:16:47 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, dent, or cut on the toothbrush head or handle?  
+Step 2: Is there any bent, warped, crushed, punctured, worn, torn, or broken/snapped component on the toothbrush?  
+Step 3: Is there any missing bristle cluster, head, or handle component compared to the reference?  
+Step 4: Is there any extra debris, foreign object, or loose part on the toothbrush?  
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the toothbrush?  
+Step 6: Is there any significant misalignment, incorrect assembly orientation, or component in wrong pose compared to the reference?
+2026-08-19 17:16:47 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/toothbrush/Red_Toothbrush
+2026-08-19 17:16:47 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:16:47 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:16:47 | DEBUG    | planner | Generating planner steps from: Red_Toothbrush_2026-08-19 17:16:33_master_description.json
+2026-08-19 17:16:51 | INFO     | models | [VLM] Inference completed in 4.347s (max_new_tokens=2040)
+2026-08-19 17:16:51 | INFO     | planner | Planner steps generated in 4.347s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-19 17:16:51 | INFO     | planner | Planner steps saved for class 'Red_Toothbrush' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/toothbrush/Red_Toothbrush/Red_Toothbrush_2026-08-19 17:16:51_planner.txt
+2026-08-19 17:16:51 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the toothbrush surface?  
+Step 2: Is there any bent part, warping, crushed edge, puncture, wear, tear, or broken/snapped component on the toothbrush?  
+Step 3: Is there any missing component that is visible in the reference image but absent in the candidate image?  
+Step 4: Is there any extra debris, foreign object, or loose part present in the candidate image that is not in the reference image?  
+Step 5: Is there any coloration, rust, corrosion, fluid stain, leak, or peeling coating on the toothbrush?  
+Step 6: Is there any significant misalignment, incorrect assembly orientation, or component in the wrong pose compared to the reference image?
+2026-08-19 17:16:51 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/toothbrush/Yellow_Toothbrush
+2026-08-19 17:16:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 17:16:51 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 17:16:51 | DEBUG    | planner | Generating planner steps from: Yellow_Toothbrush_2026-08-19 17:16:40_master_description.json
+2026-08-19 17:16:55 | INFO     | models | [VLM] Inference completed in 4.160s (max_new_tokens=2040)
+2026-08-19 17:16:55 | INFO     | planner | Planner steps generated in 4.160s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-19 17:16:55 | INFO     | planner | Planner steps saved for class 'Yellow_Toothbrush' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/toothbrush/Yellow_Toothbrush/Yellow_Toothbrush_2026-08-19 17:16:55_planner.txt
+2026-08-19 17:16:55 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, abrasion, dent, or cut on the toothbrush head or handle?  
+Step 2: Is there any bent part, warping, crushed edge, puncture, wear, tear, or broken/snapped bristle or component?  
+Step 3: Is there any missing bristle cluster, head, or handle component compared to the reference image?  
+Step 4: Is there any extra debris, foreign object, or loose part present on the toothbrush?  
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the toothbrush?  
+Step 6: Is there any significant misalignment, incorrect assembly orientation, or component in wrong pose compared to the reference image?
+2026-08-19 17:16:55 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/toothbrush/performance/performance_20260819_171655.json
+2026-08-19 17:16:55 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/toothbrush
+2026-08-19 17:16:55 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/toothbrush_171503_log.txt

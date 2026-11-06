@@ -1,0 +1,24 @@
+{
+    "plastic storage box": {
+        "Type": "A transparent, rectangular storage box with a grid of compartments for organizing small items, featuring a 3x5 or 15-compartment layout",
+        "Color": "Clear, transparent plastic with a slight tint, allowing the contents to be visible, and black interior visible through compartments",
+        "Size": "15 cm in width, 10 cm in height, and 2-3 cm in depth",
+        "Material": "Clear, rigid plastic, likely polystyrene or acrylic, with a smooth surface",
+        "Composition": "Molded plastic body with integrated grid dividers and a snap-on lid mechanism, composed of a lid and base with internal partitions forming compartments",
+        "Quantity": "One plastic storage box is present in the image",
+        "Relative Location": "Centrally positioned in the image, occupying the central area and containing the yellow pushpins",
+        "Orientation": "Horizontally oriented with its longer side facing left to right, open top facing upward, and lid open",
+        "Connection/Attachments": "The lid is connected to the base via a snap-fit mechanism, and internal partitions are molded into the box structure to create compartments"
+    },
+    "yellow pushpin": {
+        "Type": "A standard pushpin with a round, flat plastic head and a slender metal pin, designed as a small, pin-like fastener with a rounded plastic head and a sharp metal point.",
+        "Color": "Bright yellow plastic head with a metallic silver pin, consistent across all instances.",
+        "Size": "Approximately 2.5 cm in total length (head to tip), with a head diameter of about 0.8 cm and a pin length of about 2 cm / head diameter approximately 1 cm, pin length approximately 2.5 cm",
+        "Material": "The head is made of plastic, and the pin is made of metal.",
+        "Composition": "Composed of a plastic head and a metal pin, connected together as a single unit; the plastic head is made of polypropylene or similar polymer, and the metal pin is made of steel.",
+        "Quantity": "14 yellow pushpins visible in the image.",
+        "Relative Location": "Scattered within a transparent plastic storage box, occupying various compartments and distributed across multiple compartments of the plastic storage box.",
+        "Orientation": "Each pushpin is oriented differently; some are upright, some are tilted, and others are lying horizontally or diagonally, with some standing upright, some lying horizontally, and others at various angles.",
+        "Connection/Attachments": "The plastic head is attached to the metal pin, forming a single functional unit; each pushpin is a standalone item, not connected to any other object."
+    }
+}

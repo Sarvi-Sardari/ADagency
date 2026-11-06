@@ -1,0 +1,124 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "screws inside the plastic bag",
+      "category": "logical_quantity_missing",
+      "part_or_region": "all screw heads and attached threaded shafts",
+      "anomaly_name": "screw shortage",
+      "visual_description": "Are fewer than exactly two distinct screw heads, each attached to a threaded shaft, visible after ignoring position, rotation, spacing, and partial overlap?"
+    },
+    {
+      "id": "A002",
+      "object_name": "screws inside the plastic bag",
+      "category": "logical_quantity_additional",
+      "part_or_region": "all screw heads and attached threaded shafts",
+      "anomaly_name": "excess screws",
+      "visual_description": "Are three or more distinct screw heads, each attached to a threaded shaft, visible instead of exactly two, after ignoring position, rotation, spacing, and partial overlap?"
+    },
+    {
+      "id": "A003",
+      "object_name": "long and short screws",
+      "category": "logical_length_excess",
+      "part_or_region": "each threaded shaft from head to tip",
+      "anomaly_name": "excessive screw length",
+      "visual_description": "Is either screw longer than its corresponding normal long- or short-screw length in the reference, including a short screw approaching long-screw length, when comparing shaft extent from the underside of the head to the tip while allowing for orientation and perspective?"
+    },
+    {
+      "id": "A004",
+      "object_name": "long and short screws",
+      "category": "logical_length_shortage",
+      "part_or_region": "each threaded shaft from head to tip",
+      "anomaly_name": "insufficient screw length",
+      "visual_description": "Is either screw shorter than its corresponding normal long- or short-screw length in the reference when comparing shaft extent from the underside of the head to the tip while allowing for orientation and perspective?"
+    },
+    {
+      "id": "A005",
+      "object_name": "long and short screws",
+      "category": "logical_length_severe_shortage",
+      "part_or_region": "each threaded shaft from head to tip",
+      "anomaly_name": "very-short screw",
+      "visual_description": "Do one or both screws have a very-short, stub-like shaft substantially shorter than the normal short screw in the reference, after allowing for orientation and perspective?"
+    },
+    {
+      "id": "A006",
+      "object_name": "standard hex nuts",
+      "category": "logical_quantity_missing",
+      "part_or_region": "all six-sided hex nuts",
+      "anomaly_name": "hex-nut shortage",
+      "visual_description": "Are fewer than exactly two six-sided hex nuts visible, without classifying round flat washers as nuts and after ignoring position, rotation, spacing, and partial overlap?"
+    },
+    {
+      "id": "A007",
+      "object_name": "standard hex nuts",
+      "category": "logical_quantity_additional",
+      "part_or_region": "all six-sided hex nuts",
+      "anomaly_name": "excess hex nuts",
+      "visual_description": "Are three or more six-sided hex nuts visible instead of exactly two, including cases in which washers are replaced by nuts, after ignoring position, rotation, spacing, and partial overlap?"
+    },
+    {
+      "id": "A008",
+      "object_name": "standard flat washers",
+      "category": "logical_quantity_missing",
+      "part_or_region": "all round flat washers",
+      "anomaly_name": "flat-washer shortage",
+      "visual_description": "Are fewer than exactly two round flat washers visible, without classifying six-sided hex nuts as washers and after ignoring position, rotation, spacing, and partial overlap?"
+    },
+    {
+      "id": "A009",
+      "object_name": "standard flat washers",
+      "category": "logical_quantity_additional",
+      "part_or_region": "all round flat washers",
+      "anomaly_name": "excess flat washers",
+      "visual_description": "Are three or more round flat washers visible instead of exactly two, including cases in which nuts are replaced by washers, after ignoring position, rotation, spacing, and partial overlap?"
+    },
+    {
+      "id": "A010",
+      "object_name": "transparent plastic bag",
+      "category": "structural_bag_damage",
+      "part_or_region": "the bag body, edges, seams, and closure",
+      "anomaly_name": "broken plastic bag",
+      "visual_description": "Is any hole, puncture, slit, cut, tear, open split, or missing section visible in the bag body, edges, seams, or closure, excluding intact folds, wrinkles, sealed seams, printing, reflections, and shadows?"
+    },
+    {
+      "id": "A011",
+      "object_name": "long and short screws",
+      "category": "structural_screw_damage",
+      "part_or_region": "both screw heads, shafts, threads, and tips",
+      "anomaly_name": "broken or physically damaged screw",
+      "visual_description": "Does either screw have a crack, cut, detached or broken head, severed or missing shaft section, deep chip, crushed tip, or destroyed threads, excluding reflections and an intact screw whose only anomaly is incorrect length?"
+    },
+    {
+      "id": "A012",
+      "object_name": "standard hex nuts",
+      "category": "structural_nut_damage",
+      "part_or_region": "both nut bodies, rims, holes, and threads",
+      "anomaly_name": "broken or physically damaged hex nut",
+      "visual_description": "Does either hex nut have a crack, open split, cut, deep chip, missing sector, crushed body, or destroyed inner rim or threads, excluding apparent changes caused only by reflections, viewing angle, or plastic-bag distortion?"
+    },
+    {
+      "id": "A013",
+      "object_name": "standard flat washers",
+      "category": "structural_washer_damage",
+      "part_or_region": "both washer bodies, outer rims, and inner holes",
+      "anomaly_name": "broken or physically damaged flat washer",
+      "visual_description": "Does either flat washer have a radial crack, open split, cut, deep chip, missing sector, broken rim, or strong physical deformation, excluding apparent changes caused only by perspective, plastic folds, reflections, or shadows?"
+    },
+    {
+      "id": "A014",
+      "object_name": "screws, hex nuts, and flat washers",
+      "category": "structural_color",
+      "part_or_region": "all surfaces of the six expected metal components",
+      "anomaly_name": "abnormal component coloration",
+      "visual_description": "Does any expected metal component have a conspicuous non-metallic color patch, coating, or marking, including red or green, excluding normal silver-gray tones, highlights, bag tint, lighting variation, reflections, and shadows?"
+    },
+    {
+      "id": "A015",
+      "object_name": "contents of the plastic bag",
+      "category": "structural_contamination",
+      "part_or_region": "the bag interior and spaces around all expected components",
+      "anomaly_name": "foreign object or material inside the bag",
+      "visual_description": "Is any foreign object, loose fragment, material, residue, or wrong hardware type, including a small or partially visible item, present in addition to the expected components, excluding bag printing, folds, reflections, highlights, and shadows?"
+    }
+  ]
+}

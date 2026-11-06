@@ -1,0 +1,84 @@
+{
+  "candidate_anomalies": [
+    {
+      "id": "A001",
+      "object_name": "Transistor",
+      "category": "surface_integrity",
+      "part_or_region": "Transistor body",
+      "anomaly_name": "Scratch on Transistor Body",
+      "visual_description": "A visible scratch or gouge on the black surface of the transistor."
+    },
+    {
+      "id": "A002",
+      "object_name": "Transistor",
+      "category": "surface_integrity",
+      "part_or_region": "Transistor body",
+      "anomaly_name": "Crack on Transistor Body",
+      "visual_description": "A visible crack running across the black surface of the transistor."
+    },
+    {
+      "id": "A003",
+      "object_name": "Solder Joint",
+      "category": "surface_integrity",
+      "part_or_region": "Solder Joint",
+      "anomaly_name": "Solder Joint Crack",
+      "visual_description": "A visible crack in the metal solder joint connecting the transistor leg to the board."
+    },
+    {
+      "id": "A004",
+      "object_name": "Solder Joint",
+      "category": "surface_integrity",
+      "part_or_region": "Solder Joint",
+      "anomaly_name": "Solder Joint Dents",
+      "visual_description": "Visible dents or indentations on the surface of the solder joint."
+    },
+    {
+      "id": "A005",
+      "object_name": "Solder Joint",
+      "category": "surface_integrity",
+      "part_or_region": "Solder Joint",
+      "anomaly_name": "Solder Joint Burn",
+      "visual_description": "A darkened or discolored area on the solder joint indicating overheating."
+    },
+    {
+      "id": "A006",
+      "object_name": "Solder Joint",
+      "category": "structural_deformation",
+      "part_or_region": "Solder Joint",
+      "anomaly_name": "Bent Solder Joint",
+      "visual_description": "A solder joint visibly bent away from the board surface."
+    },
+    {
+      "id": "A007",
+      "object_name": "Solder Joint",
+      "category": "structural_deformation",
+      "part_or_region": "Solder Joint",
+      "anomaly_name": "Broken Solder Joint",
+      "visual_description": "A solder joint visibly broken or snapped, with the leg disconnected from the board."
+    },
+    {
+      "id": "A008",
+      "object_name": "Transistor",
+      "category": "geometry_alignment",
+      "part_or_region": "Transistor",
+      "anomaly_name": "Transistor Rotated",
+      "visual_description": "The transistor is rotated at an angle relative to the board grid lines."
+    },
+    {
+      "id": "A009",
+      "object_name": "Transistor",
+      "category": "geometry_alignment",
+      "part_or_region": "Transistor",
+      "anomaly_name": "Transistor Misaligned",
+      "visual_description": "The transistor is not centered on the board grid, with legs off-grid."
+    },
+    {
+      "id": "A010",
+      "object_name": "Transistor",
+      "category": "missing_component",
+      "part_or_region": "Transistor",
+      "anomaly_name": "Missing Transistor Leg",
+      "visual_description": "One of the three legs of the transistor is missing."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+2026-08-11 12:45:35 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-11 12:45:35 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-11 12:45:35 | INFO     | __main__ | Dataset  : tile
+2026-08-11 12:45:35 | INFO     | __main__ | Classes  : single
+2026-08-11 12:45:35 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-11 12:45:35 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/tile_124535_log.txt
+2026-08-11 12:45:35 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-11 12:45:36 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-11 12:45:36 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:45:37 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:45:37 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-11 12:45:37 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/tile/train/good/150.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/tile/train/good/020.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/tile/train/good/177.png']
+2026-08-11 12:45:37 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-11 12:45:37 | INFO     | object_namer | [Object Namer] Loaded 2 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/tile_object_labels.txt
+2026-08-11 12:45:37 | INFO     | __main__ | Object names: ['Background Matrix', 'Speckles']
+2026-08-11 12:45:37 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-11 12:45:37 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/tile/good
+2026-08-11 12:45:38 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1036323 44
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1036379 1304
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1024680 44
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1024736 1304
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 959960 44
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 960016 1304
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:45:38 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:45:48 | INFO     | models | [VLM] Inference completed in 9.729s (max_new_tokens=2040)
+2026-08-11 12:45:48 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/tile/good/processed_good_150_2026-08-11 12:45:48.json (inference_time=9.729s)
+2026-08-11 12:45:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:45:48 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:45:55 | INFO     | models | [VLM] Inference completed in 7.573s (max_new_tokens=2040)
+2026-08-11 12:45:55 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/tile/good/processed_good_020_2026-08-11 12:45:55.json (inference_time=7.573s)
+2026-08-11 12:45:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:45:55 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:46:03 | INFO     | models | [VLM] Inference completed in 7.910s (max_new_tokens=2040)
+2026-08-11 12:46:03 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/tile/good/processed_good_177_2026-08-11 12:46:03.json (inference_time=7.910s)
+2026-08-11 12:46:03 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-11 12:46:03 | INFO     | models | [LLM] loading pipeline model=Qwen3-4B-Instruct-2507 device=0
+2026-08-11 12:46:04 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-4B-Instruct-2507 (device=0)
+2026-08-11 12:46:04 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/tile/good
+2026-08-11 12:46:04 | DEBUG    | descriptor | Processing image description: processed_good_177_2026-08-11 12:46:03.json
+2026-08-11 12:46:04 | DEBUG    | descriptor | Raw description data: - Object 1 Background Matrix
+    - Attribute 1 Type - a uniform, textured substrate forming the base layer
+    - Attribute 2 Color - light gray with subtle tonal variations, appearing matte and non-reflective
+    - Attribute 3 Size - fills entire visible area, no defined boundaries, extending across full frame dimensions
+    - Attribute 4 Material - appears solid, possibly ceramic or composite, with fine granular surface texture
+    - Attribute 5 Composition - homogeneous mixture with micro-irregularities, possibly containing embedded particles or pores
+    - Attribute 6 Quantity - singular, continuous surface layer covering entire field of view
+    - Attribute 7 Relative Location - occupies entire background plane, underlying all speckles
+    - Attribute 8 Orientation - flat, horizontal, and isotropic, with no directional bias
+    - Attribute 9 Connection or Attachments - serves as the base for speckles; speckles are embedded within or adhered to its surface
+
+- Object 2 Speckles
+    - Attribute 1 Type - discrete, irregularly shaped dark inclusions distributed across surface
+    - Attribute 2 Color - dark gray to black, with some variation in shade and intensity, appearing slightly textured or granular
+    - Attribute 3 Size - variable, ranging from small dots to elongated clusters, with average diameter between 0.5 to 3 mm
+    - Attribute 4 Material - appears solid, possibly mineral or particulate, with slight surface roughness
+    - Attribute 5 Composition - composed of aggregated particles or dense material, possibly metallic or carbonaceous
+    - Attribute 6 Quantity - numerous, covering the entire visible area, with no discernible pattern or density gradient
+    - Attribute 7 Relative Location - scattered across the entire Background Matrix, embedded or adhered to its surface
+    - Attribute 8 Orientation - randomly oriented, with no consistent directionality or alignment
+    - Attribute 9 Connection or Attachments - each speckle is individually separated from others, with no visible bonding or interconnection
+2026-08-11 12:46:04 | DEBUG    | descriptor | Processing image description: processed_good_020_2026-08-11 12:45:55.json
+2026-08-11 12:46:04 | DEBUG    | descriptor | Raw description data: - Object 1 Background Matrix
+    - Attribute 1 Type - a uniform, textured surface with a granular appearance
+    - Attribute 2 Color - light gray with subtle variations in tone, appearing slightly mottled
+    - Attribute 3 Size - fills the entire visible area, extending from edge to edge of the frame
+    - Attribute 4 Material - appears to be a solid, possibly mineral or composite material with a matte finish
+    - Attribute 5 Composition - consists of a fine, porous structure with embedded particulates
+    - Attribute 6 Quantity - one continuous surface layer, not discrete units
+    - Attribute 7 Relative Location - occupies the entire field of view, serving as the base layer
+    - Attribute 8 Orientation - flat, horizontal, and uniform across the image
+    - Attribute 9 Connection or Attachments - serves as the substrate for the speckles, with no visible attachment points or separations
+
+- Object 2 Speckles
+    - Attribute 1 Type - irregularly shaped, dispersed particles distributed across the matrix
+    - Attribute 2 Color - dark gray to black, with some appearing slightly more saturated or shadowed
+    - Attribute 3 Size - variable, ranging from small dots (sub-millimeter) to larger, more diffuse patches (up to several millimeters in diameter)
+    - Attribute 4 Material - appears dense and opaque, with a matte or slightly rough texture
+    - Attribute 5 Composition - composed of concentrated material embedded within the matrix, possibly mineral or particulate aggregate
+    - Attribute 6 Quantity - numerous, covering the entire matrix surface, with no discernible pattern or clustering
+    - Attribute 7 Relative Location - scattered across the entire background matrix, with no specific focal point
+    - Attribute 8 Orientation - randomly oriented, with no consistent directionality or alignment
+    - Attribute 9 Connection or Attachments - embedded within the matrix, with no visible boundaries or separation from the substrate
+2026-08-11 12:46:04 | DEBUG    | descriptor | Processing image description: processed_good_150_2026-08-11 12:45:48.json
+2026-08-11 12:46:04 | DEBUG    | descriptor | Raw description data: - Object 1 Background Matrix
+    - Attribute 1 Type - A uniform, textured surface exhibiting a granular or speckled appearance with a consistent, non-organic pattern.
+    - Attribute 2 Color - Light gray with subtle variations in tone, appearing matte and evenly distributed across the entire visible area.
+    - Attribute 3 Size - Extends across the entire frame, with no defined boundaries; occupies the full area of the image, approximately square in shape.
+    - Attribute 4 Material - Appears to be a solid, non-reflective, possibly composite or ceramic-like material with a fine-grained texture.
+    - Attribute 5 Composition - Composed of a base matrix with embedded particulates, forming a consistent, homogenous structure throughout.
+    - Attribute 6 Quantity - One continuous, singular matrix covering the entire field of view.
+    - Attribute 7 Relative Location - Occupies the entire visual field, serving as the base layer for all other features.
+    - Attribute 8 Orientation - Horizontally and vertically aligned, with no discernible tilt or rotation; uniformly presented.
+    - Attribute 9 Connection or Attachments - No attachments or separations; it forms a single, continuous surface.
+
+- Object 2 Speckles
+    - Attribute 1 Type - Small, discrete, irregularly shaped particles distributed across the surface, varying in density and clustering.
+    - Attribute 2 Color - Dark gray to black, with slight tonal variation indicating depth or surface texture differences.
+    - Attribute 3 Size - Varies from microscopic to slightly larger, with diameters ranging from approximately 0.1 to 0.5 mm, with no uniform shape.
+    - Attribute 4 Material - Appears to be solid, non-organic, and embedded within the matrix, possibly metallic or mineral-based with a matte finish.
+    - Attribute 5 Composition - Composed of discrete, independent particles embedded within the matrix, with no visible chemical or structural bonding between them.
+    - Attribute 6 Quantity - Numerous, covering the entire surface, with no fixed count due to density variation; estimated to be in the thousands.
+    - Attribute 7 Relative Location - Distributed randomly across the entire background matrix, with no preferred region or pattern.
+    - Attribute 8 Orientation - Randomly oriented, with no consistent alignment or directional pattern.
+    - Attribute 9 Connection or Attachments - Each speckle is independently embedded and not connected to any other speckle; no visible bonding or adhesion.
+2026-08-11 12:46:04 | DEBUG    | descriptor | Unique object keys found: {'Background Matrix', 'Speckles'}
+2026-08-11 12:46:04 | DEBUG    | descriptor | Class 'good' object description: {'Background Matrix': ['-  Type - a uniform, textured substrate forming the base layer\n    -  Color - light gray with subtle tonal variations, appearing matte and non-reflective\n    -  Size - fills entire visible area, no defined boundaries, extending across full frame dimensions\n    -  Material - appears solid, possibly ceramic or composite, with fine granular surface texture\n    -  Composition - homogeneous mixture with micro-irregularities, possibly containing embedded particles or pores\n    -  Quantity - singular, continuous surface layer covering entire field of view\n    -  Relative Location - occupies entire background plane, underlying all speckles\n    -  Orientation - flat, horizontal, and isotropic, with no directional bias\n    -  Connection or Attachments - serves as the base for speckles; speckles are embedded within or adhered to its surface', '-  Type - a uniform, textured surface with a granular appearance\n    -  Color - light gray with subtle variations in tone, appearing slightly mottled\n    -  Size - fills the entire visible area, extending from edge to edge of the frame\n    -  Material - appears to be a solid, possibly mineral or composite material with a matte finish\n    -  Composition - consists of a fine, porous structure with embedded particulates\n    -  Quantity - one continuous surface layer, not discrete units\n    -  Relative Location - occupies the entire field of view, serving as the base layer\n    -  Orientation - flat, horizontal, and uniform across the image\n    -  Connection or Attachments - serves as the substrate for the speckles, with no visible attachment points or separations', '-  Type - A uniform, textured surface exhibiting a granular or speckled appearance with a consistent, non-organic pattern.\n    -  Color - Light gray with subtle variations in tone, appearing matte and evenly distributed across the entire visible area.\n    -  Size - Extends across the entire frame, with no defined boundaries; occupies the full area of the image, approximately square in shape.\n    -  Material - Appears to be a solid, non-reflective, possibly composite or ceramic-like material with a fine-grained texture.\n    -  Composition - Composed of a base matrix with embedded particulates, forming a consistent, homogenous structure throughout.\n    -  Quantity - One continuous, singular matrix covering the entire field of view.\n    -  Relative Location - Occupies the entire visual field, serving as the base layer for all other features.\n    -  Orientation - Horizontally and vertically aligned, with no discernible tilt or rotation; uniformly presented.\n    -  Connection or Attachments - No attachments or separations; it forms a single, continuous surface.'], 'Speckles': ['-  Type - discrete, irregularly shaped dark inclusions distributed across surface\n    -  Color - dark gray to black, with some variation in shade and intensity, appearing slightly textured or granular\n    -  Size - variable, ranging from small dots to elongated clusters, with average diameter between 0.5 to 3 mm\n    -  Material - appears solid, possibly mineral or particulate, with slight surface roughness\n    -  Composition - composed of aggregated particles or dense material, possibly metallic or carbonaceous\n    -  Quantity - numerous, covering the entire visible area, with no discernible pattern or density gradient\n    -  Relative Location - scattered across the entire Background Matrix, embedded or adhered to its surface\n    -  Orientation - randomly oriented, with no consistent directionality or alignment\n    -  Connection or Attachments - each speckle is individually separated from others, with no visible bonding or interconnection', '-  Type - irregularly shaped, dispersed particles distributed across the matrix\n    -  Color - dark gray to black, with some appearing slightly more saturated or shadowed\n    -  Size - variable, ranging from small dots (sub-millimeter) to larger, more diffuse patches (up to several millimeters in diameter)\n    -  Material - appears dense and opaque, with a matte or slightly rough texture\n    -  Composition - composed of concentrated material embedded within the matrix, possibly mineral or particulate aggregate\n    -  Quantity - numerous, covering the entire matrix surface, with no discernible pattern or clustering\n    -  Relative Location - scattered across the entire background matrix, with no specific focal point\n    -  Orientation - randomly oriented, with no consistent directionality or alignment\n    -  Connection or Attachments - embedded within the matrix, with no visible boundaries or separation from the substrate', '-  Type - Small, discrete, irregularly shaped particles distributed across the surface, varying in density and clustering.\n    -  Color - Dark gray to black, with slight tonal variation indicating depth or surface texture differences.\n    -  Size - Varies from microscopic to slightly larger, with diameters ranging from approximately 0.1 to 0.5 mm, with no uniform shape.\n    -  Material - Appears to be solid, non-organic, and embedded within the matrix, possibly metallic or mineral-based with a matte finish.\n    -  Composition - Composed of discrete, independent particles embedded within the matrix, with no visible chemical or structural bonding between them.\n    -  Quantity - Numerous, covering the entire surface, with no fixed count due to density variation; estimated to be in the thousands.\n    -  Relative Location - Distributed randomly across the entire background matrix, with no preferred region or pattern.\n    -  Orientation - Randomly oriented, with no consistent alignment or directional pattern.\n    -  Connection or Attachments - Each speckle is independently embedded and not connected to any other speckle; no visible bonding or adhesion.']}
+2026-08-11 12:46:09 | INFO     | models | [LLM] Inference completed in 4.486s (max_new_tokens=3000)
+2026-08-11 12:46:09 | INFO     | descriptor | [Background Matrix] Object summarisation completed in 4.486s
+2026-08-11 12:46:09 | DEBUG    | descriptor | Summarised description for 'Background Matrix': {
+  "Background Matrix": {
+    "Type": "A uniform, textured substrate forming the base layer with a granular or speckled appearance and a consistent, non-organic pattern",
+    "Color": "Light gray with subtle tonal variations and slight mottling, appearing matte and evenly distributed across the entire visible area",
+    "Size": "Fills the entire visible area, extending from edge to edge of the frame and approximately square in shape, with no defined boundaries",
+    "Material": "A solid, non-reflective, possibly composite or ceramic-like material with a fine-grained, granular texture",
+    "Composition": "A homogeneous mixture with a fine, porous structure and embedded particulates, forming a consistent and uniform structure throughout",
+    "Quantity": "One continuous, singular matrix covering the entire field of view",
+    "Relative Location": "Occupies the entire visual field and serves as the base layer underlying all speckles",
+    "Orientation": "Flat, horizontal, and isotropic, uniformly aligned across the image with no discernible tilt or directional bias",
+    "Connection or Attachments": "Serves as the substrate for the speckles, with no visible attachment points or separations; forms a single, continuous surface"
+  }
+}
+2026-08-11 12:46:14 | INFO     | models | [LLM] Inference completed in 4.740s (max_new_tokens=3000)
+2026-08-11 12:46:14 | INFO     | descriptor | [Speckles] Object summarisation completed in 4.740s
+2026-08-11 12:46:14 | DEBUG    | descriptor | Summarised description for 'Speckles': {
+  "Speckles": {
+    "Type": "discrete, irregularly shaped particles distributed across the surface, varying in density and clustering",
+    "Color": "dark gray to black, with slight tonal variation indicating depth or surface texture differences, some appearing slightly more saturated or shadowed",
+    "Size": "ranging from 0.1 to 5 mm in diameter, with variable shapes and sizes including small dots (sub-millimeter), elongated clusters, and diffuse patches",
+    "Material": "solid, non-organic, dense, and opaque, with a matte or slightly rough texture",
+    "Composition": "composed of discrete, independent particles or aggregated material, possibly mineral or carbonaceous, embedded within the matrix with no visible chemical or structural bonding between them",
+    "Quantity": "numerous, covering the entire visible surface, with no discernible pattern or density gradient, estimated to be in the thousands",
+    "Relative Location": "scattered randomly across the entire background matrix, with no specific focal point or preferred region",
+    "Orientation": "randomly oriented, with no consistent directionality or alignment",
+    "Connection or Attachments": "each speckle is individually separated and independently embedded within the matrix, with no visible bonding, adhesion, or interconnection to other speckles"
+  }
+}
+2026-08-11 12:46:14 | DEBUG    | descriptor | Master description: {'Background Matrix': {'Type': 'A uniform, textured substrate forming the base layer with a granular or speckled appearance and a consistent, non-organic pattern', 'Color': 'Light gray with subtle tonal variations and slight mottling, appearing matte and evenly distributed across the entire visible area', 'Size': 'Fills the entire visible area, extending from edge to edge of the frame and approximately square in shape, with no defined boundaries', 'Material': 'A solid, non-reflective, possibly composite or ceramic-like material with a fine-grained, granular texture', 'Composition': 'A homogeneous mixture with a fine, porous structure and embedded particulates, forming a consistent and uniform structure throughout', 'Quantity': 'One continuous, singular matrix covering the entire field of view', 'Relative Location': 'Occupies the entire visual field and serves as the base layer underlying all speckles', 'Orientation': 'Flat, horizontal, and isotropic, uniformly aligned across the image with no discernible tilt or directional bias', 'Connection or Attachments': 'Serves as the substrate for the speckles, with no visible attachment points or separations; forms a single, continuous surface'}, 'Speckles': {'Type': 'discrete, irregularly shaped particles distributed across the surface, varying in density and clustering', 'Color': 'dark gray to black, with slight tonal variation indicating depth or surface texture differences, some appearing slightly more saturated or shadowed', 'Size': 'ranging from 0.1 to 5 mm in diameter, with variable shapes and sizes including small dots (sub-millimeter), elongated clusters, and diffuse patches', 'Material': 'solid, non-organic, dense, and opaque, with a matte or slightly rough texture', 'Composition': 'composed of discrete, independent particles or aggregated material, possibly mineral or carbonaceous, embedded within the matrix with no visible chemical or structural bonding between them', 'Quantity': 'numerous, covering the entire visible surface, with no discernible pattern or density gradient, estimated to be in the thousands', 'Relative Location': 'scattered randomly across the entire background matrix, with no specific focal point or preferred region', 'Orientation': 'randomly oriented, with no consistent directionality or alignment', 'Connection or Attachments': 'each speckle is individually separated and independently embedded within the matrix, with no visible bonding, adhesion, or interconnection to other speckles'}}
+2026-08-11 12:46:14 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-11 12:46:14 | INFO     | anomaly_rules | [Anomaly Rules] method=manual -> using /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/anomaly_definition.json['tile'] directly (no generation, no compiled file).
+2026-08-11 12:46:14 | INFO     | __main__ | Anomaly rules resolved (method=manual, expected_planner_steps=legacy-untracked)
+2026-08-11 12:46:14 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-11 12:46:14 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-4B-Instruct device=0
+2026-08-11 12:46:15 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/qwen_vl_4b_instruct (device=0)
+2026-08-11 12:46:15 | DEBUG    | planner | Class directories for dataset 'tile': ['good']
+2026-08-11 12:46:15 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/tile/good
+2026-08-11 12:46:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-11 12:46:15 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-11 12:46:15 | DEBUG    | planner | Generating planner steps from: good_2026-08-11 12:46:14_master_description.json
+2026-08-11 12:46:18 | INFO     | models | [VLM] Inference completed in 2.863s (max_new_tokens=2040)
+2026-08-11 12:46:18 | INFO     | planner | Planner steps generated in 2.863s (attempt=1, steps=6, approved_rules=legacy-untracked)
+2026-08-11 12:46:18 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/tile/good/good_2026-08-11 12:46:18_planner.txt
+2026-08-11 12:46:18 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any crack, fracture, chip, scratch, dent, or cut on the surface?
+Step 2: Is there any bending, warping, crushing, puncturing, tearing, or snapping of the structure?
+Step 3: Are there any missing speckles compared to the reference image?
+Step 4: Are there any extra speckles, debris, or foreign objects in the Candidate that are not present in the reference image?
+Step 5: Is there any coloration, rust, corrosion, fluid stain, or peeling coating on the surface?
+Step 6: Is there any significant misalignment or incorrect assembly orientation of components compared to the reference image?
+2026-08-11 12:46:18 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/tile/performance/performance_20260811_124618.json
+2026-08-11 12:46:18 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/tile
+2026-08-11 12:46:18 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-11/tile_124535_log.txt

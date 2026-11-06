@@ -1,0 +1,294 @@
+2026-08-19 16:26:17 | INFO     | __main__ | Dataset config : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/dataset_configs.yaml
+2026-08-19 16:26:17 | INFO     | __main__ | Model config   : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/configs/model_configs.yaml
+2026-08-19 16:26:17 | INFO     | __main__ | Dataset  : cable
+2026-08-19 16:26:17 | INFO     | __main__ | Classes  : single
+2026-08-19 16:26:17 | INFO     | __main__ | Ref imgs : 3 per dataset
+2026-08-19 16:26:17 | INFO     | __main__ | Log file : /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/cable_162617_log.txt
+2026-08-19 16:26:17 | INFO     | __main__ | [Step 1/8] Initialising CLIP encoder …
+2026-08-19 16:26:19 | INFO     | __main__ | [Step 2/8] Loading VLM …
+2026-08-19 16:26:19 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:26:21 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:26:21 | INFO     | __main__ | [Step 3/8] Selecting reference images …
+2026-08-19 16:26:21 | DEBUG    | __main__ | Reference groups: ['/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/cable/train/good/146.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/cable/train/good/019.png', '/home/vrt/Desktop/Desk/mvtech_loco_playground/Dataset/mvtec_anomaly_detection/cable/train/good/172.png']
+2026-08-19 16:26:21 | INFO     | __main__ | [Step 4/8] Resolving object names …
+2026-08-19 16:26:21 | INFO     | object_namer | [Object Namer] Loaded 4 object labels from cache: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/prompts/object_labels/cable_object_labels.txt
+2026-08-19 16:26:21 | INFO     | __main__ | Object names: ['Copper Conductor Strand (Green Insulated)', 'Copper Conductor Strand (Brown Insulated)', 'Cable Insulation Layer (White/Off-white)', 'Copper Conductor Strand (Blue Insulated)']
+2026-08-19 16:26:21 | INFO     | __main__ | [Step 5/8] Generating image descriptions (VLM) …
+2026-08-19 16:26:21 | DEBUG    | descriptor | Preprocessed image folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/preprocessed/cable/good
+2026-08-19 16:26:21 | DEBUG    | PIL.Image | Importing PngImagePlugin
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1345619 44
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1345675 1304
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1369142 44
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1369198 1304
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'gAMA' 41 4
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 57 8192
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'tEXt' 1323119 44
+2026-08-19 16:26:21 | DEBUG    | PIL.PngImagePlugin | STREAM b'iTXt' 1323175 1304
+2026-08-19 16:26:22 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:26:22 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:26:46 | INFO     | models | [VLM] Inference completed in 23.734s (max_new_tokens=2040)
+2026-08-19 16:26:46 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/cable/good/processed_good_146_2026-08-19 16:26:46.json (inference_time=23.734s)
+2026-08-19 16:26:46 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:26:46 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:27:10 | INFO     | models | [VLM] Inference completed in 23.896s (max_new_tokens=2040)
+2026-08-19 16:27:10 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/cable/good/processed_good_019_2026-08-19 16:27:10.json (inference_time=23.896s)
+2026-08-19 16:27:10 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:27:10 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:27:32 | INFO     | models | [VLM] Inference completed in 22.901s (max_new_tokens=2040)
+2026-08-19 16:27:32 | INFO     | descriptor | Image description saved to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/cable/good/processed_good_172_2026-08-19 16:27:32.json (inference_time=22.901s)
+2026-08-19 16:27:32 | INFO     | __main__ | [Step 6/8] Synthesising master descriptions (LLM) …
+2026-08-19 16:27:33 | INFO     | models | [LLM] loading pipeline model=Qwen3-8B device=0
+2026-08-19 16:27:34 | INFO     | models | [LLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-8B (device=0)
+2026-08-19 16:27:34 | DEBUG    | descriptor | Master description source folder: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/descriptions/cable/good
+2026-08-19 16:27:34 | DEBUG    | descriptor | Processing image description: processed_good_172_2026-08-19 16:27:32.json
+2026-08-19 16:27:34 | DEBUG    | descriptor | Raw description data: - Copper Conductor Strand (Green Insulated)
+    - Attribute 1 Type - A stranded copper conductor encased in a green insulating layer, appearing as a circular cross-section with visible copper strands at the center.
+    - Attribute 2 Color - The insulating layer is primarily green with a yellowish tint near the center, while the exposed copper strands are metallic brownish-orange.
+    - Attribute 3 Size - The cross-sectional diameter is approximately equal to the other conductor strands, fitting within the circular arrangement; exact length not discernible.
+    - Attribute 4 Material - The conductor is made of copper, and the insulation is a polymer or rubber-like material.
+    - Attribute 5 Composition - Composed of multiple fine copper wires twisted together, surrounded by a green insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the top of the circular arrangement, above the blue and brown insulated strands.
+    - Attribute 8 Orientation - The cross-section is viewed directly from above, with the conductor strands radiating outward from the center.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white/off-white insulation layer and is not visibly connected to any external components.
+
+- Copper Conductor Strand (Brown Insulated)
+    - Attribute 1 Type - A stranded copper conductor encased in a brown insulating layer, appearing as a circular cross-section with visible copper strands at the center.
+    - Attribute 2 Color - The insulating layer is a uniform brownish-gray color, with the exposed copper strands appearing metallic brownish-orange.
+    - Attribute 3 Size - The cross-sectional diameter is approximately equal to the other conductor strands, fitting within the circular arrangement; exact length not discernible.
+    - Attribute 4 Material - The conductor is made of copper, and the insulation is a polymer or rubber-like material.
+    - Attribute 5 Composition - Composed of multiple fine copper wires twisted together, surrounded by a brown insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the bottom right of the circular arrangement, adjacent to the blue insulated strand.
+    - Attribute 8 Orientation - The cross-section is viewed directly from above, with the conductor strands radiating outward from the center.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white/off-white insulation layer and is not visibly connected to any external components.
+
+- Cable Insulation Layer (White/Off-white)
+    - Attribute 1 Type - A continuous, thick, circular layer of insulation material surrounding the three copper conductor strands.
+    - Attribute 2 Color - White or off-white with slight discoloration and speckles, appearing somewhat aged or weathered.
+    - Attribute 3 Size - The layer forms a complete circular boundary around the three conductor strands, with a thickness that appears consistent throughout the visible section.
+    - Attribute 4 Material - Likely a polymer-based insulation material such as PVC or rubber.
+    - Attribute 5 Composition - A solid, uniform layer designed to electrically isolate the conductors from each other and from the outer environment.
+    - Attribute 6 Quantity - One continuous layer.
+    - Attribute 7 Relative Location - Envelops all three copper conductor strands, forming the outermost layer of the cable cross-section.
+    - Attribute 8 Orientation - The layer is viewed from the top, appearing as a circular ring surrounding the central conductors.
+    - Attribute 9 Connection or Attachments - The layer is directly attached to and encapsulates the three conductor strands, forming a cohesive unit.
+
+- Copper Conductor Strand (Blue Insulated)
+    - Attribute 1 Type - A stranded copper conductor encased in a blue insulating layer, appearing as a circular cross-section with visible copper strands at the center.
+    - Attribute 2 Color - The insulating layer is a solid blue color, with the exposed copper strands appearing metallic brownish-orange.
+    - Attribute 3 Size - The cross-sectional diameter is approximately equal to the other conductor strands, fitting within the circular arrangement; exact length not discernible.
+    - Attribute 4 Material - The conductor is made of copper, and the insulation is a polymer or rubber-like material.
+    - Attribute 5 Composition - Composed of multiple fine copper wires twisted together, surrounded by a blue insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the bottom left of the circular arrangement, adjacent to the brown insulated strand.
+    - Attribute 8 Orientation - The cross-section is viewed directly from above, with the conductor strands radiating outward from the center.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white/off-white insulation layer and is not visibly connected to any external components.
+2026-08-19 16:27:34 | DEBUG    | descriptor | Processing image description: processed_good_019_2026-08-19 16:27:10.json
+2026-08-19 16:27:34 | DEBUG    | descriptor | Raw description data: - Copper Conductor Strand (Green Insulated)
+    - Attribute 1 Type - A stranded copper conductor encased in a green insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center.
+    - Attribute 2 Color - The insulation is primarily green with a yellowish-green hue, and the exposed copper strands have a metallic brownish-gold color.
+    - Attribute 3 Size - The conductor is circular in cross-section, with a diameter estimated to be approximately 10-12 mm based on visual proportion relative to the surrounding insulation.
+    - Attribute 4 Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.
+    - Attribute 5 Composition - Composed of multiple fine copper strands bundled together, surrounded by a green insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the top of the image, slightly to the upper right, nestled within the white insulation layer.
+    - Attribute 8 Orientation - Oriented horizontally, with the circular cross-section facing the viewer.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white insulation layer and is not visibly connected to any external components in this cross-section view.
+
+- Copper Conductor Strand (Brown Insulated)
+    - Attribute 1 Type - A stranded copper conductor encased in a brown insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center.
+    - Attribute 2 Color - The insulation is a uniform brownish-tan color, and the exposed copper strands have a metallic brownish-gold color.
+    - Attribute 3 Size - The conductor is circular in cross-section, with a diameter estimated to be approximately 10-12 mm based on visual proportion relative to the surrounding insulation.
+    - Attribute 4 Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.
+    - Attribute 5 Composition - Composed of multiple fine copper strands bundled together, surrounded by a brown insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the bottom right of the image, nestled within the white insulation layer.
+    - Attribute 8 Orientation - Oriented slightly diagonally, with the circular cross-section facing the viewer.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white insulation layer and is not visibly connected to any external components in this cross-section view.
+
+- Cable Insulation Layer (White/Off-white)
+    - Attribute 1 Type - A thick, cylindrical insulation layer that surrounds the three copper conductor strands, forming the outermost layer of the cable cross-section.
+    - Attribute 2 Color - White or off-white with slight discoloration and speckles, possibly due to aging or environmental exposure.
+    - Attribute 3 Size - The layer forms a circular boundary around the three conductors, with an estimated outer diameter of approximately 25-30 mm based on visual proportion.
+    - Attribute 4 Material - A rigid or semi-rigid polymer material, likely PVC or XLPE, designed to provide mechanical and electrical insulation.
+    - Attribute 5 Composition - Composed of a uniform insulation material with minor surface imperfections or contaminants.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Surrounds all three conductor strands, forming the outermost layer of the cable cross-section.
+    - Attribute 8 Orientation - Circular, concentrically surrounding the conductors.
+    - Attribute 9 Connection or Attachments - The layer is directly connected to the three conductor strands, encapsulating them within its circular boundary.
+
+- Copper Conductor Strand (Blue Insulated)
+    - Attribute 1 Type - A stranded copper conductor encased in a blue insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center.
+    - Attribute 2 Color - The insulation is a solid blue color, and the exposed copper strands have a metallic brownish-gold color.
+    - Attribute 3 Size - The conductor is circular in cross-section, with a diameter estimated to be approximately 10-12 mm based on visual proportion relative to the surrounding insulation.
+    - Attribute 4 Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.
+    - Attribute 5 Composition - Composed of multiple fine copper strands bundled together, surrounded by a blue insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the bottom left of the image, nestled within the white insulation layer.
+    - Attribute 8 Orientation - Oriented slightly diagonally, with the circular cross-section facing the viewer.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white insulation layer and is not visibly connected to any external components in this cross-section view.
+2026-08-19 16:27:34 | DEBUG    | descriptor | Processing image description: processed_good_146_2026-08-19 16:26:46.json
+2026-08-19 16:27:34 | DEBUG    | descriptor | Raw description data: - Copper Conductor Strand (Green Insulated)
+    - Attribute 1 Type - A circular cross-section of a stranded copper conductor encased in green insulation, arranged in a radial pattern.
+    - Attribute 2 Color - The insulation is a distinct green hue with a slightly weathered or aged appearance; the exposed copper strands beneath have a metallic brownish-gold color.
+    - Attribute 3 Size - The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.
+    - Attribute 4 Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, and the conductor is solid copper.
+    - Attribute 5 Composition - Composed of multiple fine copper strands bundled together, encased in a green insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the top center of the cross-section, above the blue and brown insulated conductors.
+    - Attribute 8 Orientation - The conductor is oriented horizontally, with its circular face facing the viewer.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly.
+
+- Copper Conductor Strand (Brown Insulated)
+    - Attribute 1 Type - A circular cross-section of a stranded copper conductor encased in brown insulation, arranged in a radial pattern.
+    - Attribute 2 Color - The insulation is a matte brown color; the exposed copper strands beneath have a metallic brownish-gold color.
+    - Attribute 3 Size - The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.
+    - Attribute 4 Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, and the conductor is solid copper.
+    - Attribute 5 Composition - Composed of multiple fine copper strands bundled together, encased in a brown insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the bottom right of the cross-section, adjacent to the blue insulated conductor.
+    - Attribute 8 Orientation - The conductor is oriented horizontally, with its circular face facing the viewer.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly.
+
+- Cable Insulation Layer (White/Off-white)
+    - Attribute 1 Type - A thick, circular, cylindrical insulation layer surrounding the three copper conductor strands.
+    - Attribute 2 Color - White or off-white with a slightly textured surface, showing minor speckles or imperfections.
+    - Attribute 3 Size - The outer diameter of the insulation layer appears to be approximately 20-25 mm, based on visual proportion relative to the conductors.
+    - Attribute 4 Material - A flexible polymer material, likely PVC or similar thermoplastic, designed for electrical insulation.
+    - Attribute 5 Composition - Composed of a continuous, uniform layer of insulating material that encapsulates the three conductor strands.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Surrounds and encapsulates the three copper conductor strands, forming the outermost layer of the cable cross-section.
+    - Attribute 8 Orientation - The insulation layer is oriented concentrically around the conductors, with its circular face facing the viewer.
+    - Attribute 9 Connection or Attachments - The insulation layer is directly connected to and encapsulates the three copper conductor strands, forming a unified cable structure.
+
+- Copper Conductor Strand (Blue Insulated)
+    - Attribute 1 Type - A circular cross-section of a stranded copper conductor encased in blue insulation, arranged in a radial pattern.
+    - Attribute 2 Color - The insulation is a vibrant blue color; the exposed copper strands beneath have a metallic brownish-gold color.
+    - Attribute 3 Size - The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.
+    - Attribute 4 Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, and the conductor is solid copper.
+    - Attribute 5 Composition - Composed of multiple fine copper strands bundled together, encased in a blue insulating sheath.
+    - Attribute 6 Quantity - One instance.
+    - Attribute 7 Relative Location - Positioned at the bottom left of the cross-section, adjacent to the brown insulated conductor.
+    - Attribute 8 Orientation - The conductor is oriented horizontally, with its circular face facing the viewer.
+    - Attribute 9 Connection or Attachments - The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly.
+2026-08-19 16:27:34 | DEBUG    | descriptor | Unique object keys found: {'Cable Insulation Layer (White/Off-white)', 'Copper Conductor Strand (Green Insulated)', 'Copper Conductor Strand (Brown Insulated)', 'Copper Conductor Strand (Blue Insulated)'}
+2026-08-19 16:27:34 | DEBUG    | descriptor | Class 'good' object description: {'Cable Insulation Layer (White/Off-white)': ['-  Type - A continuous, thick, circular layer of insulation material surrounding the three copper conductor strands.\n    -  Color - White or off-white with slight discoloration and speckles, appearing somewhat aged or weathered.\n    -  Size - The layer forms a complete circular boundary around the three conductor strands, with a thickness that appears consistent throughout the visible section.\n    -  Material - Likely a polymer-based insulation material such as PVC or rubber.\n    -  Composition - A solid, uniform layer designed to electrically isolate the conductors from each other and from the outer environment.\n    -  Quantity - One continuous layer.\n    -  Relative Location - Envelops all three copper conductor strands, forming the outermost layer of the cable cross-section.\n    -  Orientation - The layer is viewed from the top, appearing as a circular ring surrounding the central conductors.\n    -  Connection or Attachments - The layer is directly attached to and encapsulates the three conductor strands, forming a cohesive unit.', '-  Type - A thick, cylindrical insulation layer that surrounds the three copper conductor strands, forming the outermost layer of the cable cross-section.\n    -  Color - White or off-white with slight discoloration and speckles, possibly due to aging or environmental exposure.\n    -  Size - The layer forms a circular boundary around the three conductors, with an estimated outer diameter of approximately 25-30 mm based on visual proportion.\n    -  Material - A rigid or semi-rigid polymer material, likely PVC or XLPE, designed to provide mechanical and electrical insulation.\n    -  Composition - Composed of a uniform insulation material with minor surface imperfections or contaminants.\n    -  Quantity - One instance.\n    -  Relative Location - Surrounds all three conductor strands, forming the outermost layer of the cable cross-section.\n    -  Orientation - Circular, concentrically surrounding the conductors.\n    -  Connection or Attachments - The layer is directly connected to the three conductor strands, encapsulating them within its circular boundary.', '-  Type - A thick, circular, cylindrical insulation layer surrounding the three copper conductor strands.\n    -  Color - White or off-white with a slightly textured surface, showing minor speckles or imperfections.\n    -  Size - The outer diameter of the insulation layer appears to be approximately 20-25 mm, based on visual proportion relative to the conductors.\n    -  Material - A flexible polymer material, likely PVC or similar thermoplastic, designed for electrical insulation.\n    -  Composition - Composed of a continuous, uniform layer of insulating material that encapsulates the three conductor strands.\n    -  Quantity - One instance.\n    -  Relative Location - Surrounds and encapsulates the three copper conductor strands, forming the outermost layer of the cable cross-section.\n    -  Orientation - The insulation layer is oriented concentrically around the conductors, with its circular face facing the viewer.\n    -  Connection or Attachments - The insulation layer is directly connected to and encapsulates the three copper conductor strands, forming a unified cable structure.'], 'Copper Conductor Strand (Green Insulated)': ['-  Type - A stranded copper conductor encased in a green insulating layer, appearing as a circular cross-section with visible copper strands at the center.\n    -  Color - The insulating layer is primarily green with a yellowish tint near the center, while the exposed copper strands are metallic brownish-orange.\n    -  Size - The cross-sectional diameter is approximately equal to the other conductor strands, fitting within the circular arrangement; exact length not discernible.\n    -  Material - The conductor is made of copper, and the insulation is a polymer or rubber-like material.\n    -  Composition - Composed of multiple fine copper wires twisted together, surrounded by a green insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the top of the circular arrangement, above the blue and brown insulated strands.\n    -  Orientation - The cross-section is viewed directly from above, with the conductor strands radiating outward from the center.\n    -  Connection or Attachments - The conductor is embedded within the white/off-white insulation layer and is not visibly connected to any external components.', '-  Type - A stranded copper conductor encased in a green insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center.\n    -  Color - The insulation is primarily green with a yellowish-green hue, and the exposed copper strands have a metallic brownish-gold color.\n    -  Size - The conductor is circular in cross-section, with a diameter estimated to be approximately 10-12 mm based on visual proportion relative to the surrounding insulation.\n    -  Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.\n    -  Composition - Composed of multiple fine copper strands bundled together, surrounded by a green insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the top of the image, slightly to the upper right, nestled within the white insulation layer.\n    -  Orientation - Oriented horizontally, with the circular cross-section facing the viewer.\n    -  Connection or Attachments - The conductor is embedded within the white insulation layer and is not visibly connected to any external components in this cross-section view.', '-  Type - A circular cross-section of a stranded copper conductor encased in green insulation, arranged in a radial pattern.\n    -  Color - The insulation is a distinct green hue with a slightly weathered or aged appearance; the exposed copper strands beneath have a metallic brownish-gold color.\n    -  Size - The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.\n    -  Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, and the conductor is solid copper.\n    -  Composition - Composed of multiple fine copper strands bundled together, encased in a green insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the top center of the cross-section, above the blue and brown insulated conductors.\n    -  Orientation - The conductor is oriented horizontally, with its circular face facing the viewer.\n    -  Connection or Attachments - The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly.'], 'Copper Conductor Strand (Brown Insulated)': ['-  Type - A stranded copper conductor encased in a brown insulating layer, appearing as a circular cross-section with visible copper strands at the center.\n    -  Color - The insulating layer is a uniform brownish-gray color, with the exposed copper strands appearing metallic brownish-orange.\n    -  Size - The cross-sectional diameter is approximately equal to the other conductor strands, fitting within the circular arrangement; exact length not discernible.\n    -  Material - The conductor is made of copper, and the insulation is a polymer or rubber-like material.\n    -  Composition - Composed of multiple fine copper wires twisted together, surrounded by a brown insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the bottom right of the circular arrangement, adjacent to the blue insulated strand.\n    -  Orientation - The cross-section is viewed directly from above, with the conductor strands radiating outward from the center.\n    -  Connection or Attachments - The conductor is embedded within the white/off-white insulation layer and is not visibly connected to any external components.', '-  Type - A stranded copper conductor encased in a brown insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center.\n    -  Color - The insulation is a uniform brownish-tan color, and the exposed copper strands have a metallic brownish-gold color.\n    -  Size - The conductor is circular in cross-section, with a diameter estimated to be approximately 10-12 mm based on visual proportion relative to the surrounding insulation.\n    -  Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.\n    -  Composition - Composed of multiple fine copper strands bundled together, surrounded by a brown insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the bottom right of the image, nestled within the white insulation layer.\n    -  Orientation - Oriented slightly diagonally, with the circular cross-section facing the viewer.\n    -  Connection or Attachments - The conductor is embedded within the white insulation layer and is not visibly connected to any external components in this cross-section view.', '-  Type - A circular cross-section of a stranded copper conductor encased in brown insulation, arranged in a radial pattern.\n    -  Color - The insulation is a matte brown color; the exposed copper strands beneath have a metallic brownish-gold color.\n    -  Size - The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.\n    -  Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, and the conductor is solid copper.\n    -  Composition - Composed of multiple fine copper strands bundled together, encased in a brown insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the bottom right of the cross-section, adjacent to the blue insulated conductor.\n    -  Orientation - The conductor is oriented horizontally, with its circular face facing the viewer.\n    -  Connection or Attachments - The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly.'], 'Copper Conductor Strand (Blue Insulated)': ['-  Type - A stranded copper conductor encased in a blue insulating layer, appearing as a circular cross-section with visible copper strands at the center.\n    -  Color - The insulating layer is a solid blue color, with the exposed copper strands appearing metallic brownish-orange.\n    -  Size - The cross-sectional diameter is approximately equal to the other conductor strands, fitting within the circular arrangement; exact length not discernible.\n    -  Material - The conductor is made of copper, and the insulation is a polymer or rubber-like material.\n    -  Composition - Composed of multiple fine copper wires twisted together, surrounded by a blue insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the bottom left of the circular arrangement, adjacent to the brown insulated strand.\n    -  Orientation - The cross-section is viewed directly from above, with the conductor strands radiating outward from the center.\n    -  Connection or Attachments - The conductor is embedded within the white/off-white insulation layer and is not visibly connected to any external components.', '-  Type - A stranded copper conductor encased in a blue insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center.\n    -  Color - The insulation is a solid blue color, and the exposed copper strands have a metallic brownish-gold color.\n    -  Size - The conductor is circular in cross-section, with a diameter estimated to be approximately 10-12 mm based on visual proportion relative to the surrounding insulation.\n    -  Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.\n    -  Composition - Composed of multiple fine copper strands bundled together, surrounded by a blue insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the bottom left of the image, nestled within the white insulation layer.\n    -  Orientation - Oriented slightly diagonally, with the circular cross-section facing the viewer.\n    -  Connection or Attachments - The conductor is embedded within the white insulation layer and is not visibly connected to any external components in this cross-section view.', '-  Type - A circular cross-section of a stranded copper conductor encased in blue insulation, arranged in a radial pattern.\n    -  Color - The insulation is a vibrant blue color; the exposed copper strands beneath have a metallic brownish-gold color.\n    -  Size - The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.\n    -  Material - The insulation is a flexible polymer material, likely PVC or similar thermoplastic, and the conductor is solid copper.\n    -  Composition - Composed of multiple fine copper strands bundled together, encased in a blue insulating sheath.\n    -  Quantity - One instance.\n    -  Relative Location - Positioned at the bottom left of the cross-section, adjacent to the brown insulated conductor.\n    -  Orientation - The conductor is oriented horizontally, with its circular face facing the viewer.\n    -  Connection or Attachments - The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly.']}
+2026-08-19 16:27:41 | INFO     | models | [LLM] Inference completed in 6.429s (max_new_tokens=3000)
+2026-08-19 16:27:41 | INFO     | descriptor | [Cable Insulation Layer (White/Off-white)] Object summarisation completed in 6.429s
+2026-08-19 16:27:41 | DEBUG    | descriptor | Summarised description for 'Cable Insulation Layer (White/Off-white)': 
+
+{
+  "Cable Insulation Layer (White/Off-white)": {
+    "Type": "A thick, circular, cylindrical insulation layer surrounding the three copper conductor strands, forming the outermost layer of the cable cross-section.",
+    "Color": "White or off-white with slight discoloration, speckles, and a slightly textured surface, possibly due to aging or environmental exposure.",
+    "Size": "Outer diameter of approximately 20-30 mm, forming a complete circular boundary around the three conductor strands with consistent thickness throughout the visible section.",
+    "Material": "A flexible polymer material, likely PVC or similar thermoplastic, designed for electrical insulation.",
+    "Composition": "A continuous, uniform layer of insulating material that encapsulates the three conductor strands, with minor surface imperfections or contaminants.",
+    "Quantity": "One continuous layer.",
+    "Relative Location": "Envelops all three copper conductor strands, forming the outermost layer of the cable cross-section and encapsulating them within its circular boundary.",
+    "Orientation": "Circular, concentrically surrounding the conductors with its circular face facing the viewer, viewed from the top as a circular ring.",
+    "Connection or Attachments": "The insulation layer is directly connected to and encapsulates the three copper conductor strands, forming a cohesive unit and a unified cable structure."
+  }
+}
+2026-08-19 16:27:48 | INFO     | models | [LLM] Inference completed in 7.324s (max_new_tokens=3000)
+2026-08-19 16:27:48 | INFO     | descriptor | [Copper Conductor Strand (Green Insulated)] Object summarisation completed in 7.324s
+2026-08-19 16:27:48 | DEBUG    | descriptor | Summarised description for 'Copper Conductor Strand (Green Insulated)': 
+
+{
+  "Copper Conductor Strand (Green Insulated)": {
+    "Type": "A stranded copper conductor encased in a green insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.",
+    "Color": "The insulation is primarily green with a yellowish-green or yellowish tint, and the exposed copper strands have a metallic brownish-gold color, with some sources noting a slightly weathered or aged appearance.",
+    "Size": "The cross-sectional diameter is approximately 10-12 mm, fitting within the circular arrangement, with the exact length not discernible.",
+    "Material": "The conductor is solid copper, and the insulation is a flexible polymer material, likely PVC or similar thermoplastic.",
+    "Composition": "Composed of multiple fine copper strands bundled together, encased in a green insulating sheath.",
+    "Quantity": "One instance.",
+    "Relative Location": "Positioned at the top of the image, slightly to the upper right or at the top center of the cross-section, above the blue and brown insulated strands, nestled within the white insulation layer.",
+    "Orientation": "Oriented horizontally, with the circular cross-section facing the viewer, and the conductor strands radiating outward from the center.",
+    "Connection or Attachments": "The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly, though no external connections are visibly present in this cross-section view."
+  }
+}
+2026-08-19 16:27:55 | INFO     | models | [LLM] Inference completed in 6.925s (max_new_tokens=3000)
+2026-08-19 16:27:55 | INFO     | descriptor | [Copper Conductor Strand (Brown Insulated)] Object summarisation completed in 6.925s
+2026-08-19 16:27:55 | DEBUG    | descriptor | Summarised description for 'Copper Conductor Strand (Brown Insulated)': 
+
+{
+  "Copper Conductor Strand (Brown Insulated)": {
+    "Type": "A stranded copper conductor encased in a brown insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.",
+    "Color": "The insulation is a uniform brownish-tan or matte brown color, with the exposed copper strands having a metallic brownish-gold appearance.",
+    "Size": "The diameter of the insulated conductor is approximately 10-12 mm, based on visual proportion relative to the surrounding insulation, with a cross-sectional diameter fitting within the circular arrangement.",
+    "Material": "The conductor is solid copper, and the insulation is a flexible polymer material, likely PVC or similar thermoplastic.",
+    "Composition": "Composed of multiple fine copper strands bundled together, encased in a brown insulating sheath.",
+    "Quantity": "One instance.",
+    "Relative Location": "Positioned at the bottom right of the cross-section, adjacent to the blue insulated conductor and nestled within the white insulation layer.",
+    "Orientation": "The conductor is oriented horizontally, with its circular face facing the viewer, and is slightly diagonally oriented in some views.",
+    "Connection or Attachments": "The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly, though not visibly connected to any external components in the cross-section view."
+  }
+}
+2026-08-19 16:28:01 | INFO     | models | [LLM] Inference completed in 5.950s (max_new_tokens=3000)
+2026-08-19 16:28:01 | INFO     | descriptor | [Copper Conductor Strand (Blue Insulated)] Object summarisation completed in 5.950s
+2026-08-19 16:28:01 | DEBUG    | descriptor | Summarised description for 'Copper Conductor Strand (Blue Insulated)': 
+
+{
+  "Copper Conductor Strand (Blue Insulated)": {
+    "Type": "A stranded copper conductor encased in a blue insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.",
+    "Color": "The insulation is a solid blue color, with the exposed copper strands having a metallic brownish-gold color.",
+    "Size": "The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.",
+    "Material": "The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.",
+    "Composition": "Composed of multiple fine copper strands bundled together, encased in a blue insulating sheath.",
+    "Quantity": "One instance.",
+    "Relative Location": "Positioned at the bottom left of the cross-section, adjacent to the brown insulated conductor.",
+    "Orientation": "The conductor is oriented horizontally, with its circular face facing the viewer.",
+    "Connection or Attachments": "The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly."
+  }
+}
+2026-08-19 16:28:01 | DEBUG    | descriptor | Master description: {'Cable Insulation Layer (White/Off-white)': {'Type': 'A thick, circular, cylindrical insulation layer surrounding the three copper conductor strands, forming the outermost layer of the cable cross-section.', 'Color': 'White or off-white with slight discoloration, speckles, and a slightly textured surface, possibly due to aging or environmental exposure.', 'Size': 'Outer diameter of approximately 20-30 mm, forming a complete circular boundary around the three conductor strands with consistent thickness throughout the visible section.', 'Material': 'A flexible polymer material, likely PVC or similar thermoplastic, designed for electrical insulation.', 'Composition': 'A continuous, uniform layer of insulating material that encapsulates the three conductor strands, with minor surface imperfections or contaminants.', 'Quantity': 'One continuous layer.', 'Relative Location': 'Envelops all three copper conductor strands, forming the outermost layer of the cable cross-section and encapsulating them within its circular boundary.', 'Orientation': 'Circular, concentrically surrounding the conductors with its circular face facing the viewer, viewed from the top as a circular ring.', 'Connection or Attachments': 'The insulation layer is directly connected to and encapsulates the three copper conductor strands, forming a cohesive unit and a unified cable structure.'}, 'Copper Conductor Strand (Green Insulated)': {'Type': 'A stranded copper conductor encased in a green insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.', 'Color': 'The insulation is primarily green with a yellowish-green or yellowish tint, and the exposed copper strands have a metallic brownish-gold color, with some sources noting a slightly weathered or aged appearance.', 'Size': 'The cross-sectional diameter is approximately 10-12 mm, fitting within the circular arrangement, with the exact length not discernible.', 'Material': 'The conductor is solid copper, and the insulation is a flexible polymer material, likely PVC or similar thermoplastic.', 'Composition': 'Composed of multiple fine copper strands bundled together, encased in a green insulating sheath.', 'Quantity': 'One instance.', 'Relative Location': 'Positioned at the top of the image, slightly to the upper right or at the top center of the cross-section, above the blue and brown insulated strands, nestled within the white insulation layer.', 'Orientation': 'Oriented horizontally, with the circular cross-section facing the viewer, and the conductor strands radiating outward from the center.', 'Connection or Attachments': 'The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly, though no external connections are visibly present in this cross-section view.'}, 'Copper Conductor Strand (Brown Insulated)': {'Type': 'A stranded copper conductor encased in a brown insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.', 'Color': 'The insulation is a uniform brownish-tan or matte brown color, with the exposed copper strands having a metallic brownish-gold appearance.', 'Size': 'The diameter of the insulated conductor is approximately 10-12 mm, based on visual proportion relative to the surrounding insulation, with a cross-sectional diameter fitting within the circular arrangement.', 'Material': 'The conductor is solid copper, and the insulation is a flexible polymer material, likely PVC or similar thermoplastic.', 'Composition': 'Composed of multiple fine copper strands bundled together, encased in a brown insulating sheath.', 'Quantity': 'One instance.', 'Relative Location': 'Positioned at the bottom right of the cross-section, adjacent to the blue insulated conductor and nestled within the white insulation layer.', 'Orientation': 'The conductor is oriented horizontally, with its circular face facing the viewer, and is slightly diagonally oriented in some views.', 'Connection or Attachments': 'The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly, though not visibly connected to any external components in the cross-section view.'}, 'Copper Conductor Strand (Blue Insulated)': {'Type': 'A stranded copper conductor encased in a blue insulating layer, appearing as a circular cross-section with multiple copper strands visible at the center, arranged in a radial pattern.', 'Color': 'The insulation is a solid blue color, with the exposed copper strands having a metallic brownish-gold color.', 'Size': 'The diameter of the insulated conductor appears to be approximately 10-12 mm, based on visual proportion relative to the surrounding white insulation layer.', 'Material': 'The insulation is a flexible polymer material, likely PVC or similar thermoplastic, while the conductor is solid copper.', 'Composition': 'Composed of multiple fine copper strands bundled together, encased in a blue insulating sheath.', 'Quantity': 'One instance.', 'Relative Location': 'Positioned at the bottom left of the cross-section, adjacent to the brown insulated conductor.', 'Orientation': 'The conductor is oriented horizontally, with its circular face facing the viewer.', 'Connection or Attachments': 'The conductor is embedded within the white insulation layer and appears to be connected to the other two conductors within the same cable assembly.'}}
+2026-08-19 16:28:01 | INFO     | __main__ | [Step 7/8] Resolving anomaly rules …
+2026-08-19 16:28:01 | INFO     | anomaly_rules | [Anomaly Rules] method=automatic, overwrite=False, existing compiled file found -> reusing /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/anomaly_rules/cable.txt
+2026-08-19 16:28:01 | INFO     | __main__ | Anomaly rules resolved (method=automatic, expected_planner_steps=24)
+2026-08-19 16:28:01 | INFO     | __main__ | [Step 8/8] Generating planner steps (VLM) …
+2026-08-19 16:28:01 | INFO     | models | [VLM] loading pipeline model=Qwen3-VL-8B-Instruct device=0
+2026-08-19 16:28:03 | INFO     | models | [VLM] Loaded model: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/models/Qwen3-VL-8B-Instruct (device=0)
+2026-08-19 16:28:03 | DEBUG    | planner | Class directories for dataset 'cable': ['good']
+2026-08-19 16:28:03 | DEBUG    | planner | Master description directory: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/master_descriptions/cable/good
+2026-08-19 16:28:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IHDR' 16 13
+2026-08-19 16:28:03 | DEBUG    | PIL.PngImagePlugin | STREAM b'IDAT' 41 65536
+2026-08-19 16:28:03 | DEBUG    | planner | Generating planner steps from: good_2026-08-19 16:28:01_master_description.json
+2026-08-19 16:28:22 | INFO     | models | [VLM] Inference completed in 18.156s (max_new_tokens=2040)
+2026-08-19 16:28:22 | INFO     | planner | Planner steps generated in 18.156s (attempt=1, steps=24, approved_rules=24)
+2026-08-19 16:28:22 | INFO     | planner | Planner steps saved for class 'good' to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/cable/good/good_2026-08-19 16:28:22_planner.txt
+2026-08-19 16:28:22 | DEBUG    | planner | Planner steps content:
+Step 1: Is there any scratch or gouge on the green insulation surface of the Copper Conductor Strand (Green Insulated)?  
+Step 2: Is there any crack or split running through the green insulation of the Copper Conductor Strand (Green Insulated)?  
+Step 3: Is there any bulge or irregular curvature on the insulation surface of the Copper Conductor Strand (Green Insulated)?  
+Step 4: Is there any tear or separation in the insulation of the Copper Conductor Strand (Green Insulated)?  
+Step 5: Is there any puncture or hole in the insulation of the Copper Conductor Strand (Green Insulated)?  
+Step 6: Is there any visibly bent or kinked copper strand within the insulation of the Copper Conductor Strand (Green Insulated)?  
+Step 7: Is there any scratch or groove on the brown insulation surface of the Copper Conductor Strand (Brown Insulated)?  
+Step 8: Is there any small hole or puncture mark visible on the brown insulation surface of the Copper Conductor Strand (Brown Insulated)?  
+Step 9: Is there any visible crack or split line running through the brown insulation of the Copper Conductor Strand (Brown Insulated)?  
+Step 10: Is there any visibly bent or kinked copper strand within the insulation of the Copper Conductor Strand (Brown Insulated)?  
+Step 11: Is there any visible separation or rip in the brown insulation material of the Copper Conductor Strand (Brown Insulated)?  
+Step 12: Is there any bulge, sag, or irregular shape on the brown insulation surface of the Copper Conductor Strand (Brown Insulated)?  
+Step 13: Is there any scratch or groove on the surface of the blue insulation of the Copper Conductor Strand (Blue Insulated)?  
+Step 14: Is there any small hole or puncture through the blue insulation of the Copper Conductor Strand (Blue Insulated)?  
+Step 15: Is there any visible tear or split in the blue insulation of the Copper Conductor Strand (Blue Insulated)?  
+Step 16: Is there any visible crack or fissure running across the blue insulation of the Copper Conductor Strand (Blue Insulated)?  
+Step 17: Is there any visibly bent or kinked copper strand within the insulation of the Copper Conductor Strand (Blue Insulated)?  
+Step 18: Is there any visible crack or split running through the white/off-white insulation layer of the Copper Conductor Strand (White/Off-white Insulated)?  
+Step 19: Is there any small hole or puncture in the white/off-white insulation layer of the Copper Conductor Strand (White/Off-white Insulated)?  
+Step 20: Is there any visible tear or separation in the white/off-white insulation layer of the Copper Conductor Strand (White/Off-white Insulated)?  
+Step 21: Is the blue insulated copper strand complete and present without any visible gap or absence in the Good Image?  
+Step 22: Is the green insulated copper strand complete and present without any visible break or absence in the Good Image?  
+Step 23: Is the brown insulated copper strand complete and present without any visible partial or full absence in the Good Image?  
+Step 24: Is there any visible gap or hollow core where copper strands are missing inside any of the coloured insulated wires (blue, green, or brown) in the Good Image?
+2026-08-19 16:28:22 | INFO     | __main__ | Performance summary written to /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/cable/performance/performance_20260819_162822.json
+2026-08-19 16:28:22 | INFO     | __main__ | Planners saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planners/cable
+2026-08-19 16:28:22 | INFO     | __main__ | Full log saved to: /home/vrt/Desktop/Desk/mvtech_loco_playground/pipeline_project/reference_images/planner_generation_logs/2026-08-19/cable_162617_log.txt

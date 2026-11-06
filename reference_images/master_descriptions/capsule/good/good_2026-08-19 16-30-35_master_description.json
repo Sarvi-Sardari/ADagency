@@ -1,0 +1,24 @@
+{
+    "Capsule": {
+        "Type": "A two-part, elongated, oval-shaped capsule with a smooth, glossy surface, divided into two distinct halves, designed for oral administration, composed of two hemispherical ends connected by a cylindrical body.",
+        "Color": "One half is solid black, and the other half is translucent orange-brown; the orange half contains the printed marking.",
+        "Size": "Approximately 1.5 to 3 centimeters in length, with a diameter of about 0.5 to 0.8 centimeters; exact dimensions not measurable from image",
+        "Material": "Composed of gelatin or a similar pharmaceutical-grade polymer, with a smooth, glossy finish on both halves; the orange half appears translucent, suggesting a gelatin or plastic-based material.",
+        "Composition": "Composed of two sealed halves, each with printed markings: the black half has the brand name 'actavis' with a logo, and the orange half has the number '500'; consists of two halves joined together, with the black half likely being opaque gelatin and the orange half translucent gelatin or plastic; contains an internal medication or powder.",
+        "Quantity": "One capsule.",
+        "Relative Location": "Positioned horizontally, centered in the frame, with its longitudinal axis aligned parallel to the image's horizontal plane.",
+        "Orientation": "Lying flat with its long axis parallel to the bottom edge of the frame; oriented horizontally, with rounded ends facing left and right, and its cylindrical body extending along the horizontal axis.",
+        "Connection or Attachments": "The two halves are connected by a seam or joint along the centerline of the capsule; the two halves are fused together, forming a single, sealed unit with no visible seams or attachments; the two halves of the capsule are connected at their ends, forming a continuous, sealed unit with no visible external attachments or connectors."
+    },
+    "Printed Marking": {
+        "Type": "Two distinct printed markings on the capsule: one is a brand logo and text, and the other is a numerical value, serving as a dosage or identification mark.",
+        "Color": "The text and logo on the black half are grayish-white, and the number on the orange half is white or off-white, contrasting against the orange-brown background.",
+        "Size": "The text 'actavis' is approximately 0.4 to 0.5 centimeters in height, and the number '500' is approximately 0.6 to 0.7 centimeters in height, with each digit approximately 2 to 3 millimeters in height.",
+        "Material": "Ink or laser-etched marking on the capsule surface, likely created using a dye or ink applied directly to the capsule shell.",
+        "Composition": "Composed of printed characters: 'actavis' with a stylized logo, and '500' in a bold, sans-serif font, consisting of three numerals ('5', '0', '0') arranged sequentially in a horizontal line with uniform spacing and alignment.",
+        "Quantity": "Two printed markings: one with the brand logo and text, and one with the numerical value '500'.",
+        "Relative Location": "The 'actavis' marking is on the black half, and the '500' marking is on the orange-brown half, both aligned along the central axis of the capsule, with the '500' marking positioned centrally along the longitudinal axis of that half.",
+        "Orientation": "Both markings are oriented parallel to the capsule's long axis, with the text facing forward and the digits aligned horizontally, parallel to the capsule’s longitudinal axis.",
+        "Connection or Attachments": "The markings are directly printed or embossed onto the surface of the capsule shell and are integral to its design, with no physical connection or attachment to other objects."
+    }
+}
